@@ -1,32 +1,40 @@
+// lib/queries.ts
 const baseUrl = "https://static.saynopest.com";
 import { ExtendedPost, Category, Author } from "@/lib/types";
 
-const revalidateTime: number = 86400 // one day in seconds;
+const revalidateTime: number = 86400; // one day in seconds
 
-export async function getAllPosts(pageNumber: number = 1, perPage: number = 10, searchTerm: string = '', categories: number = 0): Promise<{ posts: ExtendedPost[], totalPages: number }> {
+export async function getAllPosts(
+  pageNumber: number = 1,
+  perPage: number = 10,
+  searchTerm: string = '',
+  categories: number = 0
+): Promise<{ posts: ExtendedPost[]; totalPages: number }> {
   const params = new URLSearchParams({
     per_page: perPage.toString(),
     page: pageNumber.toString(),
     search: searchTerm,
+    _embed: 'true',
   });
 
   if (categories !== 0) {
-    params.set('categories', categories.toString());
+    params.set("categories", categories.toString());
   }
 
-  // console.log(`${baseUrl}/wp-json/wp/v2/posts?${params.toString()}`)
   const response = await fetch(`${baseUrl}/wp-json/wp/v2/posts?${params.toString()}`, {
     next: {
       revalidate: revalidateTime,
     },
   });
+
   const posts = await response.json();
-  const totalPages = parseInt(response.headers.get('X-WP-TotalPages') ?? '1');
+  const totalPages = parseInt(response.headers.get("X-WP-TotalPages") ?? "1");
+
   return { posts, totalPages };
 }
 
 export async function getPostBySlug(slug: string): Promise<ExtendedPost | null> {
-  const response = await fetch(`${baseUrl}/wp-json/wp/v2/posts?slug=${slug}`, {
+  const response = await fetch(`${baseUrl}/wp-json/wp/v2/posts?_embed=true&slug=${slug}`, {
     next: {
       revalidate: revalidateTime,
     },
@@ -41,9 +49,8 @@ export async function getAuthorById(id: number): Promise<Author | null> {
   return author;
 }
 
-// make a function getCategoriesById  
 export async function getCategoriesByIds(ids: number[]): Promise<Category[]> {
-  const response = await fetch(`${baseUrl}/wp-json/wp/v2/categories?include=${ids.join(',')}`);
+  const response = await fetch(`${baseUrl}/wp-json/wp/v2/categories?include=${ids.join(",")}`);
   const categories: Category[] = await response.json();
   return categories;
 }
@@ -53,4 +60,3 @@ export async function getCategories(): Promise<Category[]> {
   const data = await response.json();
   return data;
 }
-

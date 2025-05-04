@@ -24,8 +24,8 @@ export default function RootLayout({
         antialiased
         overflow-y-scroll
       `}>
-        <div className="max-w-full p-4 md:p-10 mx-auto bg-white min-h-screen">
-          <Header />
+        <div className="max-w-screen overflow-x-hidden p-4 md:p-10 mx-auto bg-white min-h-screen">
+          <Header/>
           {children}
           <Footer/>
         </div>

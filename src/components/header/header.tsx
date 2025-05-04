@@ -37,7 +37,7 @@ export function Header() {
 
         {/* Nav Links + Search + Socials */}
         <div className={`w-full lg:flex lg:items-center lg:justify-between ${isOpen ? "block" : "hidden"}`}>
-          <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-6 text-gray-600 dark:text-gray-300 mt-4 lg:mt-0">
+          <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-6 text-gray-600 mt-4 lg:mt-0">
             <Link href="#" className="mt-2 lg:mt-0 hover:text-gray-900 dark:hover:text-white">Services</Link>
             <Link href="#" className="mt-2 lg:mt-0 hover:text-gray-900 dark:hover:text-white">Compare</Link>
             <Link href="#" className="mt-2 lg:mt-0 hover:text-gray-900 dark:hover:text-white">Blogs</Link>
@@ -58,7 +58,7 @@ export function Header() {
               <input
                 type="text"
                 placeholder="Search"
-                className="w-full lg:w-56 py-1 pl-10 pr-4 border-b border-gray-400 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 focus:outline-none focus:border-gray-600"
+                className="w-full lg:w-56 py-1 pl-10 pr-4 border-b border-gray-400 bg-white text-gray-700 focus:outline-none focus:border-gray-600"
               />
             </div>
           </div>

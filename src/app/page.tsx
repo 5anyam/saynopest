@@ -9,7 +9,7 @@ export default async function Page() {
   const { posts } = await getAllPosts();
 
   return (
-    <div>
+    <div className="mt-24">
       <Hero/>
       <Services/>
       <Clients/>

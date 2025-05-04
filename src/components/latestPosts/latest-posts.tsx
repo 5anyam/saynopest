@@ -1,4 +1,6 @@
+// components/LatestPosts.tsx
 import Link from "next/link";
+import Image from "next/image";
 import { Post } from "@/lib/types";
 import { SearchBar } from "@/components/searcBar/searchBar";
 
@@ -11,69 +13,94 @@ type LatestPostsProps = {
   categories?: number;
 };
 
-export async function LatestPosts({ title, posts, currentPage = 1, totalPages = 1, searchTerm, categories }: LatestPostsProps) {
-
-  if (posts?.length === 0) {
+export async function LatestPosts({
+  title,
+  posts,
+  currentPage = 1,
+  totalPages = 1,
+  searchTerm,
+  categories,
+}: LatestPostsProps) {
+  if (!posts || posts.length === 0) {
     return <div>No posts available.</div>;
   }
 
   return (
-    <div className="mb-8">
-      <div className="flex justify-between">
-
-        {title ? (
-          <h2 className="text-xl mb-4">{title}</h2>
-        ) : searchTerm ? (
-          <h2 className="text-xl mb-4">Search Results</h2>
-        ) : (
-          <h2 className="text-xl mb-4">Latest Posts</h2>
-        )}
-
-        <div>
-          <SearchBar />
-        </div>
-
+    <div className="mb-12">
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
+        <h2 className="text-2xl font-bold mb-4 sm:mb-0">
+          {title || searchTerm ? "Search Results" : "Latest Posts"}
+        </h2>
+        <SearchBar />
       </div>
-      
 
-      <div className="flex flex-col mb-4">
-        {posts?.map((post: Post) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {posts.slice(0, 6).map((post) => (
           <Link
             key={post.id}
             href={`/posts/${post.slug}`}
-            className="border-b py-4 flex justify-between gap-4 hover:bg-slate-50"
-            scroll={true}
+            className="border rounded-lg shadow hover:shadow-md transition bg-white overflow-hidden"
           >
-            <div dangerouslySetInnerHTML={{ __html: post.title.rendered }}></div>
-            <p>{new Date(post.date).toLocaleDateString("de-DE")}</p>
+            {post._embedded?.["wp:featuredmedia"]?.[0]?.source_url && (
+              <Image
+                src={post._embedded["wp:featuredmedia"][0].source_url}
+                alt={post.title.rendered}
+                width={400}
+                height={250}
+                className="w-full h-48 object-cover"
+              />
+            )}
+
+            <div className="p-4">
+              {post._embedded?.["wp:term"]?.[0]?.[0]?.name && (
+                <span className="inline-block mb-2 text-xs px-2 py-1 bg-green-100 text-green-800 rounded-full">
+                  {post._embedded["wp:term"][0][0].name}
+                </span>
+              )}
+
+              <h3
+                className="text-lg font-semibold mb-2"
+                dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+              />
+              <p className="text-sm text-gray-500">
+                {new Date(post.date).toLocaleDateString("en-US")}
+              </p>
+            </div>
           </Link>
         ))}
       </div>
 
-      {totalPages > 1 ? (
-        <div className="flex justify-between">
-          <div>
+      <div className="text-center mt-8">
+        {totalPages > 1 ? (
+          <div className="flex justify-between items-center">
             {currentPage > 1 && (
-              <Link href={`/posts?page=${currentPage - 1}${searchTerm ? `&search=${searchTerm}` : ''}${categories ? `&categories=${categories}` : ''}`} className="underline">Previous</Link>
+              <Link
+                href={`/posts?page=${currentPage - 1}${searchTerm ? `&search=${searchTerm}` : ""}${categories ? `&categories=${categories}` : ""}`}
+                className="text-blue-600 hover:underline"
+              >
+                Previous
+              </Link>
             )}
-          </div>
 
-          <div className="text-left">
-            Page {currentPage} of {totalPages}
-          </div>
+            <span>
+              Page {currentPage} of {totalPages}
+            </span>
 
-          <div>
             {currentPage < totalPages && (
-              <Link href={`/posts?page=${currentPage + 1}${searchTerm ? `&search=${searchTerm}` : ''}${categories ? `&categories=${categories}` : ''}`} className="underline">Next</Link>
+              <Link
+                href={`/posts?page=${currentPage + 1}${searchTerm ? `&search=${searchTerm}` : ""}${categories ? `&categories=${categories}` : ""}`}
+                className="text-blue-600 hover:underline"
+              >
+                Next
+              </Link>
             )}
           </div>
-        </div>
-      ) : (
-        <div className="text-center">
-          <Link href={`/posts`} className="hover:underline text-gray-900 py-5 block rounded-md">View More Posts</Link>
-        </div>
-      )}
-
+        ) : (
+          <Link href="/posts" className="text-blue-600 hover:underline">
+            View More Posts
+          </Link>
+        )}
+      </div>
     </div>
   );
 }
