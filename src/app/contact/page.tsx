@@ -2,7 +2,7 @@ export default async function Page() {
   return (
     <div>
       <h2 className="text-xl mb-4">Contact Us</h2>
-      <p className="mb-6">If you'd like to get in touch, please don't hesitate to reach out to us using the information below.</p>
+      <p className="mb-6">If you&rsquo;d like to get in touch, please don&rsquo;t hesitate to reach out to us using the information below.</p>
 
       <div className="flex flex-col md:flex-row justify-center  mb-6">
         <div className="w-full md:w-1/3 mb-4">
