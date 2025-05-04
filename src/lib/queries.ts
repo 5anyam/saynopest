@@ -1,4 +1,4 @@
-const baseUrl = process.env.WORDPRESS_URL;
+const baseUrl = "https://static.saynopest.com";
 import { ExtendedPost, Category, Author } from "@/lib/types";
 
 const revalidateTime: number = 86400 // one day in seconds;
