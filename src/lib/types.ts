@@ -1,16 +1,4 @@
-// types/Post.ts
-// export type Post = {
-//   id: number;
-//   title: {
-//     rendered: string;
-//   };
-//   slug: string;
-//   date: string;
-//   modified: string;
-//   content: {
-//     rendered: string;
-//   };
-// }
+// lib/types.ts
 
 export type Post = {
   id: number;
@@ -27,13 +15,29 @@ export type Post = {
   status: string;
   excerpt: {
     rendered: string;
-  }
+  };
   author: number;
   categories: number[];
   featured_media: number;
-}
 
-// Yoast
+  // Optional embed support for featured media and categories
+  _embedded?: {
+    "wp:featuredmedia"?: Array<{
+      source_url: string;
+      alt_text?: string;
+    }>;
+    "wp:term"?: Array<
+      Array<{
+        id: number;
+        name: string;
+        slug: string;
+        taxonomy: string;
+      }>
+    >;
+  };
+};
+
+// Yoast SEO + Open Graph data
 export interface ExtendedPost extends Post {
   yoast_head_json: {
     title: string;
@@ -43,7 +47,7 @@ export interface ExtendedPost extends Post {
       "max-snippet": string;
       "max-image-preview": string;
       "max-video-preview": string;
-    }
+    };
     canonical: string;
     og_locale: string;
     og_type: string;
@@ -66,16 +70,15 @@ export interface ExtendedPost extends Post {
     twitter_misc: {
       "Written by": string;
       "Est. reading time": string;
-    }
+    };
     thumbnail_url: string;
-  }
+  };
 }
-
 
 export type PostsResponse = {
   posts: Post[];
   totalPages: number;
-}
+};
 
 export type Category = {
   id: number;
@@ -86,13 +89,11 @@ export type Category = {
   slug: string;
   taxonomy: "category";
   parent: number;
-
 };
-
 
 export type Author = {
   id: number;
   name: string;
   slug: string;
   link: string;
-}
+};
