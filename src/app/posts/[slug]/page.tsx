@@ -1,6 +1,7 @@
 import type { Metadata, ResolvingMetadata } from 'next';
-import { getPostBySlug, getAuthorById, getCategoriesByIds } from "@/lib/queries";
+import { getPostBySlug, getAuthorById, getCategoriesByIds, getPostsByCategory } from "@/lib/queries";
 import Link from 'next/link';
+import Image from 'next/image';
 
 type Props = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
@@ -25,26 +26,30 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   const author = await getAuthorById(post.author);
   const categories = await getCategoriesByIds(post.categories);
+  const relatedPosts = post.categories.length > 0
+    ? await getPostsByCategory(post.categories[0], 3)
+    : [];
 
-  const formattedDate = new Date(post.date);
-  const date = formattedDate.toLocaleString('en-US', {
+  const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
+    year: 'numeric',
     month: 'long',
     day: 'numeric',
-    year: 'numeric',
   });
 
   return (
     <div className="container mx-auto px-4 mt-24 flex flex-col lg:flex-row gap-12">
       {/* Main Content */}
       <div className="lg:w-2/3 w-full">
+        {/* Title */}
         <h1
-          className="font-bold text-3xl mb-4"
+          className="font-bold text-4xl mb-6 leading-tight"
           dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-        ></h1>
+        />
 
-        <div className="flex justify-between text-sm items-center mb-6 flex-wrap gap-2">
+        {/* Metadata */}
+        <div className="flex justify-between text-sm text-gray-700 mb-6 flex-wrap gap-2">
           <div>
-            Published on <b>{date}</b> by <b>{author?.name}</b>
+            Published on <b>{formattedDate}</b> by <b>{author?.name}</b>
           </div>
           <div className="flex gap-2 text-xs">
             {categories.map((category) => (
@@ -59,17 +64,58 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           </div>
         </div>
 
+        {/* Featured Image */}
+        {post.yoast_head_json?.og_image?.[0]?.url && (
+          <div className="mb-8">
+            <Image
+              src={post.yoast_head_json.og_image[0].url}
+              alt="Featured"
+              width={900}
+              height={600}
+              className="rounded-md w-full h-auto object-cover"
+              priority
+            />
+          </div>
+        )}
+
         {/* Blog Content */}
         <div
-          className="prose max-w-none prose-img:mx-auto prose-img:w-full prose-img:rounded-md prose-p:leading-8 prose-p:my-4"
+          className="prose max-w-none prose-p:leading-8 prose-p:my-4 prose-img:mx-auto prose-img:rounded-md"
           dangerouslySetInnerHTML={{ __html: post.content.rendered }}
         />
+
+        {/* Related Posts */}
+        {relatedPosts.length > 1 && (
+          <div className="mt-16">
+            <h2 className="text-2xl font-semibold mb-4">Related Posts</h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {relatedPosts
+                .filter((p: any) => p.slug !== post.slug)
+                .map((related: any) => (
+                  <Link
+                    href={`/posts/${related.slug}`}
+                    key={related.id}
+                    className="block p-4 border rounded-md hover:shadow transition bg-white"
+                  >
+                    <h3
+                      className="text-lg font-medium mb-2"
+                      dangerouslySetInnerHTML={{ __html: related.title.rendered }}
+                    />
+                    <p
+                      className="text-sm text-gray-600 line-clamp-2"
+                      dangerouslySetInnerHTML={{ __html: related.excerpt.rendered }}
+                    />
+                  </Link>
+                ))}
+            </div>
+          </div>
+        )}
       </div>
 
       {/* Sidebar */}
       <aside className="lg:w-1/3 w-full relative">
         <div className="sticky top-24 space-y-8">
-          
+
           {/* Book Now Form */}
           <div className="border p-6 rounded-md shadow-md bg-white">
             <h3 className="text-xl font-semibold mb-4">Book Now</h3>
@@ -107,9 +153,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             </form>
           </div>
 
-          {/* Table of Contents (if desired, generated manually or via headings extraction) */}
-          {/* You can optionally use a plugin or a script to extract headings */}
-          {/* Example static TOC below: */}
+          {/* Table of Contents */}
           <div className="border p-6 rounded-md shadow-md bg-white">
             <h4 className="text-lg font-semibold mb-4">Table of Contents</h4>
             <ul className="text-sm list-disc list-inside space-y-2">
@@ -119,6 +163,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               <li><a href="#section-4" className="text-green-700 hover:underline">Prevention Tips</a></li>
             </ul>
           </div>
+
         </div>
       </aside>
     </div>

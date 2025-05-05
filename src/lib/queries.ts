@@ -60,3 +60,17 @@ export async function getCategories(): Promise<Category[]> {
   const data = await response.json();
   return data;
 }
+
+// Get posts by category ID
+export async function getPostsByCategory(categoryId: number, limit: number = 3) {
+  const res = await fetch(
+    `${baseUrl}/wp-json/wp/v2/posts?categories=${categoryId}&per_page=${limit}&_embed`
+  );
+
+  if (!res.ok) {
+    console.error("Failed to fetch posts by category", await res.text());
+    return [];
+  }
+
+  return await res.json();
+}
