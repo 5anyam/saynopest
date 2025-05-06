@@ -3,9 +3,9 @@ import { ServiceCard } from "../sevicesCard";
 
 export function Services() {
    return (
-    <div className="flex w-screen min-h-screen">
-        <div className="justify-center w-screen overflow-hidden">
-            <div className="block mb-4 mx-auto border-b border-slate-300 pb-2">
+    <div className="flex">
+        <div className="justify-center w-full">
+            <div className="block mb-4 border-b border-slate-300 pb-2">
                 <a 
                     target="_blank" 
                     href="https://www.material-tailwind.com/docs/html/card" 
@@ -14,7 +14,7 @@ export function Services() {
                     Pest Control <b className="text-primary">Services</b>
                 </a>
             </div>
-    <div className="flex flex-row w-screen justify-start">
+    <div className="flex flex-row justify-start">
            <ServiceCard/>
             </div>
             </div>

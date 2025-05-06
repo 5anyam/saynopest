@@ -27,7 +27,7 @@ export default async function Page(props: {
   };
 
   return (
-    <div>
+    <div className="mt-14 text-center">
       <LatestPosts {...latestPostsProps}  />
       {/* <Suspense fallback={<LatestPostsLoading />}>
         <LatestPosts {...latestPostsProps}  />
