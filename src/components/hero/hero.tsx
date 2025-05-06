@@ -20,7 +20,7 @@ export function Hero() {
     </div>
     <div>
       <h2 className="text-center text-3xl py-6 text-primary font-black">Get Your Free Quote Now</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="flex flex-col lg:flex-col justify-center">
                         <div className="grid grid-cols-2 gap-2 border border-gray-200 p-2 rounded">
                             <div className="flex border rounded bg-gray-100 items-center p-2 ">
                                 <svg className="fill-current text-black mr-2 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
@@ -58,7 +58,7 @@ export function Hero() {
                             </div>
                         </div>
                     </div>
-                    <div className="flex justify-center py-3"><button className="p-2 border w-1/4 rounded-md bg-primary text-white">Get Quotation Now</button></div>   
+                    <div className="flex justify-center py-3"><button className="p-2 border rounded-md bg-primary text-white">Get Quotation Now</button></div>   
                     </div>
     <div className="gap-8 items-center py-8 px-4 mx-auto max-w-screen-xl xl:gap-16 md:grid md:grid-cols-2 sm:py-16 lg:px-6">
         <img className="w-full" src="home-img2.png" alt="dashboard image"/>

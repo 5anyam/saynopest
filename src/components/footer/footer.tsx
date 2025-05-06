@@ -12,8 +12,9 @@ export function Footer() {
 
                 <div className="flex flex-col items-start mt-5 space-y-2">
                     <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Home</a>
-                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Who We Are</a>
-                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Our Philosophy</a>
+                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Contact Us</a>
+                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">About Us</a>
+                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Blogs</a>
                 </div>
             </div>
 
@@ -21,9 +22,10 @@ export function Footer() {
                 <p className="font-semibold text-gray-800">Industries</p>
 
                 <div className="flex flex-col items-start mt-5 space-y-2">
-                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Retail & E-Commerce</a>
-                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Information Technology</a>
-                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Finance & Insurance</a>
+                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Termites</a>
+                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Mosquitoes</a>
+                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Ants</a>
+                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Spiders</a>
                 </div>
             </div>
 
@@ -31,9 +33,10 @@ export function Footer() {
                 <p className="font-semibold text-gray-800 dark:text-white">Services</p>
 
                 <div className="flex flex-col items-start mt-5 space-y-2">
-                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Translation</a>
-                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Proofreading & Editing</a>
-                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Content Creation</a>
+                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Privacy Policy</a>
+                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Terms and conditions</a>
+                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Disclaimer</a>
+                    <a href="https://saynopest.com/sitemap.xml" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Sitemap</a>
                 </div>
             </div>
 
@@ -41,8 +44,10 @@ export function Footer() {
                 <p className="font-semibold text-gray-800 dark:text-white">Contact Us</p>
 
                 <div className="flex flex-col items-start mt-5 space-y-2">
-                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">+880 768 473 4978</a>
-                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">info@saynopest.com</a>
+                <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">Digimach 10 LLC</a>
+                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">16192 Coastal Highway, Lewes, Delaware 19958, Country of Sussex, USA.</a>
+                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">+121-7773-5600</a>
+                    <a href="#" className="text-gray-600 transition-colors duration-300 dark:hover:text-blue-400 hover:underline hover:text-blue-500">support@saynopest.com</a>
                 </div>
             </div>
         </div>
@@ -51,7 +56,7 @@ export function Footer() {
         
         <div className="flex flex-col items-center justify-between sm:flex-row">
             <a href="#">
-                <img className="w-auto h-7" src="SayNoPest-logo.svg" alt="logo"/>
+                <img className="w-auto h-12" src="SayNoPest-logo.svg" alt="logo"/>
             </a>
 
             <p className="mt-4 text-sm text-gray-800 sm:mt-0">© Copyright 2025. All Rights Reserved.</p>

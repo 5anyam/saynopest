@@ -71,7 +71,7 @@ export function ServiceCard() {
                         </div>
                         <p className="text-base font-light text-gray-700">{card.description}</p>
                         <div className="flex flex-row px-3 pt-3">
-                            <button className="block mx-1 w-full rounded-lg bg-gray-900 py-3.5 px-3 text-sm font-bold uppercase text-white shadow-md hover:shadow-lg transition-all">
+                            <button className="block mx-1 w-full rounded-lg bg-primary py-3.5 px-3 text-sm font-bold uppercase text-white shadow-md hover:shadow-lg transition-all">
                                 Book Now
                             </button>
                             <button className="block mx-1 w-full rounded-lg bg-gray-900 py-3.5 px-3 text-sm font-bold uppercase text-white shadow-md hover:shadow-lg transition-all">

@@ -28,7 +28,7 @@ export async function LatestPosts({
   return (
     <div className="mb-12">
       <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
-        <h2 className="text-2xl font-bold mb-4 sm:mb-0">
+        <h2 className="text-2xl text-primary font-bold mb-4 sm:mb-0">
           {title || searchTerm ? "Search Results" : "Latest Posts"}
         </h2>
         <SearchBar />
