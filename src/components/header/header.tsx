@@ -14,7 +14,8 @@ export function Header() {
         <div className="w-full flex items-center justify-between lg:justify-start lg:w-auto">
           {/* Logo */}
           <Link href="/">
-            <Image src="/SayNoPest-logo.svg" alt="Logo" width={220} height={120} />
+            <Image className="hidden lg:block pr-8" src="/SayNoPest-logo.svg" alt="Logo" width={220} height={120} />
+            <Image className="block lg:hidden" src="/SayNoPest-logo.svg" alt="Logo" width={160} height={80} />
           </Link>
 
           {/* Hamburger (mobile only) */}
@@ -45,7 +46,7 @@ export function Header() {
             {/* Search */}
             <div className="relative mt-4 lg:mt-0">
               <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-                <svg className="w-4 h-4 text-gray-600 dark:text-gray-300" viewBox="0 0 24 24" fill="none">
+                <svg className="w-4 h-4 text-black" viewBox="0 0 24 24" fill="none">
                   <path
                     d="M21 21L15 15M17 10C17 13.866 13.866 17 10 17C6.134 17 3 13.866 3 10C3 6.134 6.134 3 10 3C13.866 3 17 6.134 17 10Z"
                     stroke="currentColor"
@@ -58,28 +59,14 @@ export function Header() {
               <input
                 type="text"
                 placeholder="Search"
-                className="w-full lg:w-56 py-1 pl-10 pr-4 border-b border-gray-400 bg-white text-gray-700 focus:outline-none focus:border-gray-600"
+                className="w-full lg:w-56 py-1 pl-10 pr-4 border-b border-black bg-white text-black focus:outline-none focus:border-gray-600"
               />
             </div>
           </div>
 
           {/* Social Icons */}
           <div className="flex justify-center space-x-4 mt-6 lg:mt-0">
-            <a href="https://reddit.com" target="_blank" aria-label="Reddit" className="text-gray-500 hover:text-red-500 dark:text-gray-300">
-              <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48 2 12s4.48..." />
-              </svg>
-            </a>
-            <a href="https://facebook.com" target="_blank" aria-label="Facebook" className="text-gray-500 hover:text-blue-600 dark:text-gray-300">
-              <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                <path d="M22 12c0-5.52-4.48-10-10..." />
-              </svg>
-            </a>
-            <a href="https://github.com" target="_blank" aria-label="GitHub" className="text-gray-500 hover:text-black dark:text-gray-300">
-              <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
-                <path d="M12 2C6.48 2 2 6.48..." />
-              </svg>
-            </a>
+          <button className="p-2 border rounded-md bg-primary text-white">Free Quotation</button>
           </div>
         </div>
       </div>

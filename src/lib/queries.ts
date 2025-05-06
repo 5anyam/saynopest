@@ -2,7 +2,7 @@
 const baseUrl = "https://static.saynopest.com";
 import { ExtendedPost, Category, Author } from "@/lib/types";
 
-const revalidateTime: number = 86400; // one day in seconds
+const revalidateTime: number = 43200; // half day in seconds
 
 export async function getAllPosts(
   pageNumber: number = 1,

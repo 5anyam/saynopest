@@ -45,7 +45,7 @@ export function Testimonials() {
                 </h2>
 
                 <p className="max-w-2xl mx-auto mt-6 text-center text-gray-500 dark:text-gray-300">
-                    Here’s what students and professionals have to say about their experience with Hustle Education.
+                    Here’s what students and professionals have to say about their experience with Saynopest.
                 </p>
 
                 <div className="mt-10">
@@ -70,10 +70,10 @@ export function Testimonials() {
                         {testimonials.map((testimonial, index) => (
                             <SwiperSlide key={index}>
                                 <div className="p-6 bg-gray-100 rounded-lg dark:bg-gray-800 md:p-8 h-full flex flex-col justify-between">
-                                    <p className="leading-loose text-gray-500 dark:text-gray-300 mb-6">
+                                    <p className="text-gray-500 dark:text-gray-300 mb-6 line-clamp-4">
                                         “{testimonial.quote}”
                                     </p>
-                                    <div className="flex items-center">
+                                    <div className="flex items-center mt-auto">
                                         <img
                                             className="object-cover rounded-full w-14 h-14"
                                             src={testimonial.image}

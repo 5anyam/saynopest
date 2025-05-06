@@ -23,8 +23,10 @@ export default function RootLayout({
         className={`${inter.className}
         antialiased
         overflow-y-scroll
+        w-screen
+        overflow-x-hidden
       `}>
-        <div className="max-w-screen overflow-x-hidden p-4 md:p-10 mx-auto bg-white min-h-screen">
+        <div className="w-screen p-4 md:p-10 mx-auto bg-white min-h-screen">
           <Header/>
           {children}
           <Footer/>
