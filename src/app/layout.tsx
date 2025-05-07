@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from 'next/font/google'
 import "./globals.css";
+import Script from "next/script";
+
 
 import { Header } from "@/components/header/header";
 import { Footer } from "@/components/footer/footer";
@@ -42,6 +44,21 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+    {/* Google Tag Manager Script */}
+    <Script
+      src="https://www.googletagmanager.com/gtag/js?id=G-8BRKYL2QR2"
+      strategy="afterInteractive"
+    />
+    <Script id="google-analytics" strategy="afterInteractive">
+      {`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-8BRKYL2QR2');
+      `}
+    </Script>
+  </head>
       <body
         className={`${inter.className}
         antialiased
