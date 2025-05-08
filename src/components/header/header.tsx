@@ -1,8 +1,11 @@
 "use client";
-
+import { RiFacebookBoxLine } from "react-icons/ri";
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { GrInstagram } from "react-icons/gr";
+import { TbBrandLinkedin } from "react-icons/tb";
+
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -65,7 +68,10 @@ export function Header() {
           </div>
 
           {/* Social Icons */}
-          <div className="flex justify-center space-x-4 mt-6 lg:mt-0">
+          <div className="flex justify-center items-center space-x-4 mt-6 lg:mt-0">
+          <Link href="https://www.facebook.com/people/Saynopest/61575434679519/"><RiFacebookBoxLine className="text-black text-3xl" /></Link>
+          <Link href="https://www.instagram.com/saynopest/"><GrInstagram className="text-black text-2xl"/></Link>
+          <Link href="https://www.linkedin.com/company/saynopest/"><TbBrandLinkedin className="text-black text-3xl"/></Link>
           <button className="p-2 border rounded-md bg-primary text-white">Free Quotation</button>
           </div>
         </div>
