@@ -17,7 +17,7 @@ export function Footer() {
                   <div className="flex flex-col items-start mt-5 space-y-2">
                       <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">Home</a>
                       <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">Contact Us</a>
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">About Us</a>
+                      <Link href="https://www.saynopest.com/about"><h6 className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">About Us</h6></Link>
                       <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">Blogs</a>
                   </div>
               </div>
@@ -37,7 +37,7 @@ export function Footer() {
                   <p className="font-semibold text-xl text-white dark:text-white">Useful Links</p>
   
                   <div className="flex flex-col items-start mt-5 space-y-2">
-                  <Link href="https://www.saynopest.com/privacy-policy"><a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">Privacy Policy</a></Link>
+                  <Link href="https://www.saynopest.com/privacy-policy"><h6 className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">Privacy Policy</h6></Link>
                       <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">Terms and conditions</a>
                       <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">Disclaimer</a>
                       <a href="https://saynopest.com/sitemap.xml" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">Sitemap</a>

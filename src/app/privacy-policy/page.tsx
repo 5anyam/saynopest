@@ -98,7 +98,7 @@ export const metadata = {
         </p>
   
         <h2 className="text-2xl font-semibold mt-8 mb-4">Contact Us</h2>
-        <p className="mb-2">Email: <em>…@saynopest.com</em></p>
+        <p className="mb-2">Email: <em>support@saynopest.com</em></p>
         <p className="mb-4">Mailing Address:<br />SayNoPest<br />[Saynopest’s Business Address Here]</p>
   
         <h2 className="text-2xl font-semibold mt-8 mb-4">Changes to This Privacy Policy</h2>
