@@ -37,7 +37,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const posts = await getAllPosts(pageNumber, perPage);
     const batchPostUrls = posts.posts.map((post) => ({
       url: `${process.env.WORDPRESS_URL}/blog/${post.slug}`,
-      lastModified: new Date(post.modified),
+      lastModified: new Date(post.modified), // Ensure modified is properly typed
       changeFrequency: "weekly" as const,
       priority: 0.5,
     }));
@@ -62,7 +62,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     pageUrls.push({
       url: `${process.env.WORDPRESS_URL}/${page.slug}`,
-      lastModified: new Date(page.modified),
+      lastModified: new Date(page.modified), // Ensure modified is properly typed
       changeFrequency: "monthly", // Adjust this based on page content updates
       priority: 0.6, // Adjust priority if needed
     });

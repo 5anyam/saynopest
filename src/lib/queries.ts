@@ -1,8 +1,33 @@
 // lib/queries.ts
+
 const baseUrl = "https://static.saynopest.com";
 import { ExtendedPost, Category, Author } from "@/lib/types";
 
 const revalidateTime: number = 43200; // half day in seconds
+
+// Define the Post interface with slug and modified properties
+interface Post {
+  id: number;
+  slug: string;  // Add slug property
+  modified: string;  // Add modified property (string to handle the date string format)
+  title: string;
+  content: string;
+  // Add other properties specific to your posts
+}
+
+// Define the Page interface with slug and modified properties
+interface Page {
+  id: number;
+  slug: string;  // Add slug property
+  modified: string;  // Add modified property (string to handle the date string format)
+  title: {
+    rendered: string;
+  };
+  content: {
+    rendered: string;
+  };
+  // Add other properties based on the actual data structure
+}
 
 export async function getAllPosts(
   pageNumber: number = 1,
@@ -62,7 +87,7 @@ export async function getCategories(): Promise<Category[]> {
 }
 
 // Get posts by category ID
-export async function getPostsByCategory(categoryId: number, limit: number = 3) {
+export async function getPostsByCategory(categoryId: number, limit: number = 3): Promise<Post[]> {
   const res = await fetch(
     `${baseUrl}/wp-json/wp/v2/posts?categories=${categoryId}&per_page=${limit}&_embed`
   );
@@ -72,18 +97,19 @@ export async function getPostsByCategory(categoryId: number, limit: number = 3) 
     return [];
   }
 
-  return await res.json();
+  const posts: Post[] = await res.json();
+  return posts;
 }
 
-// queries.ts (or wherever you handle data fetching)
-export async function getAllPages() {
+// Get all pages
+export async function getAllPages(): Promise<Page[]> {
   const pageSize = 100; // Number of pages to fetch per request
-  const pages: any[] = [];
+  const pages: Page[] = []; // Use the Page type for the array
   let page = 1;
-  
+
   while (true) {
     const response = await fetch(`${process.env.WORDPRESS_URL}/wp-json/wp/v2/pages?per_page=${pageSize}&page=${page}`);
-    const data = await response.json();
+    const data: Page[] = await response.json(); // Type the data as Page[]
 
     if (data.length === 0) {
       break; // No more pages to fetch
@@ -97,4 +123,3 @@ export async function getAllPages() {
 
   return pages;
 }
-
