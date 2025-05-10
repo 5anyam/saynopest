@@ -74,3 +74,27 @@ export async function getPostsByCategory(categoryId: number, limit: number = 3) 
 
   return await res.json();
 }
+
+// queries.ts (or wherever you handle data fetching)
+export async function getAllPages() {
+  const pageSize = 100; // Number of pages to fetch per request
+  const pages: any[] = [];
+  let page = 1;
+  
+  while (true) {
+    const response = await fetch(`${process.env.WORDPRESS_URL}/wp-json/wp/v2/pages?per_page=${pageSize}&page=${page}`);
+    const data = await response.json();
+
+    if (data.length === 0) {
+      break; // No more pages to fetch
+    }
+
+    pages.push(...data);
+
+    // If there are more pages to fetch, increment the page number and continue
+    page++;
+  }
+
+  return pages;
+}
+
