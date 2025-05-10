@@ -15,19 +15,6 @@ interface Post {
   // Add other properties specific to your posts
 }
 
-// Define the Page interface with slug and modified properties
-interface Page {
-  id: number;
-  slug: string;  // Add slug property
-  modified: string;  // Add modified property (string to handle the date string format)
-  title: {
-    rendered: string;
-  };
-  content: {
-    rendered: string;
-  };
-  // Add other properties based on the actual data structure
-}
 
 export async function getAllPosts(
   pageNumber: number = 1,
@@ -101,25 +88,3 @@ export async function getPostsByCategory(categoryId: number, limit: number = 3):
   return posts;
 }
 
-// Get all pages
-export async function getAllPages(): Promise<Page[]> {
-  const pageSize = 100; // Number of pages to fetch per request
-  const pages: Page[] = []; // Use the Page type for the array
-  let page = 1;
-
-  while (true) {
-    const response = await fetch(`${process.env.WORDPRESS_URL}/wp-json/wp/v2/pages?per_page=${pageSize}&page=${page}`);
-    const data: Page[] = await response.json(); // Type the data as Page[]
-
-    if (data.length === 0) {
-      break; // No more pages to fetch
-    }
-
-    pages.push(...data);
-
-    // If there are more pages to fetch, increment the page number and continue
-    page++;
-  }
-
-  return pages;
-}

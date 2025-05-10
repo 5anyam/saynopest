@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next'
-import { getAllPosts, getAllPages } from '@/lib/queries'
+import { getAllPosts } from '@/lib/queries'
 
 export const revalidate = 3600;
 
@@ -51,23 +51,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     pageNumber++;
   }
 
-  // Dynamically fetch all pages from WordPress
-  const pageUrls: MetadataRoute.Sitemap = [];
-  const pages = await getAllPages(); // Ensure `getAllPages` is implemented in your queries file
-  pages.forEach((page) => {
-    // Exclude static Next.js pages like "home", "about", "contact"
-    if (['home', 'about', 'contact'].includes(page.slug.toLowerCase())) {
-      return;
-    }
-
-    pageUrls.push({
-      url: `${process.env.WORDPRESS_URL}/${page.slug}`,
-      lastModified: new Date(page.modified), // Ensure modified is properly typed
-      changeFrequency: "monthly", // Adjust this based on page content updates
-      priority: 0.6, // Adjust priority if needed
-    });
-  });
 
   // Combine the URLs: static pages + posts + dynamic pages
-  return [...staticPages, ...postUrls, ...pageUrls];
+  return [...staticPages, ...postUrls];
 }
