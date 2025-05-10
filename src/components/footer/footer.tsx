@@ -15,10 +15,10 @@ export function Footer() {
                   <p className="font-semibold text-xl text-white">Quick Link</p>
   
                   <div className="flex flex-col items-start mt-5 space-y-2">
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">Home</a>
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">Contact Us</a>
-                      <Link href="https://www.saynopest.com/about"><h6 className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">About Us</h6></Link>
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">Blogs</a>
+                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Home</a>
+                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Contact Us</a>
+                      <Link href="https://www.saynopest.com/about"><h6 className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">About Us</h6></Link>
+                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Blogs</a>
                   </div>
               </div>
   
@@ -26,10 +26,10 @@ export function Footer() {
                   <p className="font-semibold text-xl text-white">Services</p>
   
                   <div className="flex flex-col items-start mt-5 space-y-2">
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">Termites</a>
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">Mosquitoes</a>
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">Ants</a>
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">Spiders</a>
+                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Termites</a>
+                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Mosquitoes</a>
+                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Ants</a>
+                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Spiders</a>
                   </div>
               </div>
   
@@ -37,10 +37,10 @@ export function Footer() {
                   <p className="font-semibold text-xl text-white dark:text-white">Useful Links</p>
   
                   <div className="flex flex-col items-start mt-5 space-y-2">
-                  <Link href="https://www.saynopest.com/privacy-policy"><h6 className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">Privacy Policy</h6></Link>
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">Terms and conditions</a>
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">Disclaimer</a>
-                      <a href="https://saynopest.com/sitemap.xml" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">Sitemap</a>
+                  <Link href="https://www.saynopest.com/privacy-policy"><h6 className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Privacy Policy</h6></Link>
+                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Terms and conditions</a>
+                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Disclaimer</a>
+                      <a href="https://saynopest.com/sitemap.xml" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Sitemap</a>
                   </div>
               </div>
   
@@ -48,10 +48,10 @@ export function Footer() {
                   <p className="font-semibold text-xl text-white dark:text-white">Contact Us</p>
   
                   <div className="flex flex-col items-start mt-5 space-y-2">
-                  <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">Digimach 10 LLC</a>
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">16192 Coastal Highway, Lewes, Delaware 19958, Country of Sussex, USA.</a>
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">+121-7773-5600</a>
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:text-blue-500">support@saynopest.com</a>
+                  <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Digimach 10 LLC</a>
+                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">16192 Coastal Highway, Lewes, Delaware 19958, Country of Sussex, USA.</a>
+                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">+121-7773-5600</a>
+                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">support@saynopest.com</a>
                      <div className="flex flex-row items-center">
                      <Link href="https://www.facebook.com/people/Saynopest/61575434679519/"><RiFacebookBoxLine className="text-white text-3xl" /></Link>
                     <Link href="https://www.instagram.com/saynopest/"><GrInstagram className="text-white mx-2 text-2xl"/></Link>
