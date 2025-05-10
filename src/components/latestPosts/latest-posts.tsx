@@ -70,7 +70,7 @@ export async function LatestPosts({
               {new Date(post.date).toLocaleDateString("en-US")}
             </p>
             <Link
-              href={`/posts/${post.slug}`}
+              href={`/blog/${post.slug}`}
               className="mt-auto inline-block text-center bg-primary text-white px-4 py-2 rounded hover:bg-primary/90 transition"
             >
               Read Now
@@ -86,7 +86,7 @@ export async function LatestPosts({
       <div className="flex justify-between items-center">
         {currentPage > 1 && (
           <Link
-            href={`/posts?page=${currentPage - 1}${searchTerm ? `&search=${searchTerm}` : ""}${categories ? `&categories=${categories}` : ""}`}
+            href={`/blog?page=${currentPage - 1}${searchTerm ? `&search=${searchTerm}` : ""}${categories ? `&categories=${categories}` : ""}`}
             className="text-blue-600 hover:underline"
           >
             Previous
@@ -107,7 +107,7 @@ export async function LatestPosts({
         )}
       </div>
     ) : (
-      <Link href="/posts" className="text-blue-600 hover:underline">
+      <Link href="/blog" className="text-blue-600 hover:underline">
         View More Posts
       </Link>
     )}
