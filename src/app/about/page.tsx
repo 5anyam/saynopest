@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function AboutPage() {
   return (
-    <main className="max-w-6xl mx-auto px-4 py-12 space-y-12">
+    <main className="max-w-6xl mt-24 lg:mt-0 mx-auto px-4 py-12 space-y-12">
       <section className="text-center">
         <h1 className="text-4xl font-bold mb-4">About Us</h1>
         <p className="text-lg text-gray-600 max-w-3xl mx-auto">

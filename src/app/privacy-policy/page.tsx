@@ -7,11 +7,11 @@ export const metadata = {
   
   export default function PrivacyPolicyPage() {
     return (
-      <main className="max-w-4xl mx-auto px-4 py-12 text-gray-800">
+      <main className="max-w-4xl mt-24 lg:mt-0 mx-auto px-4 py-12 text-gray-800">
         <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
   
         <p className="mb-4">
-          At SayNoPest.com (Website) we take your privacy seriously and our team members work to their utmost potential to protect your personal data. Our Privacy Policy provides you all the information on:
+          At SayNoPest.com we take your privacy seriously and our team members work to their utmost potential to protect your personal data. Our Privacy Policy provides you all the information on:
         </p>
   
         <ul className="list-disc pl-6 mb-4 space-y-1">
@@ -99,7 +99,7 @@ export const metadata = {
   
         <h2 className="text-2xl font-semibold mt-8 mb-4">Contact Us</h2>
         <p className="mb-2">Email: <em>support@saynopest.com</em></p>
-        <p className="mb-4">Mailing Address:<br />SayNoPest<br />[Saynopest’s Business Address Here]</p>
+        <p className="mb-4">Mailing Address:<br />SayNoPest<br />16192 Coastal Highway, Lewes, Delaware 19958, Country of Sussex, USA</p>
   
         <h2 className="text-2xl font-semibold mt-8 mb-4">Changes to This Privacy Policy</h2>
         <p className="mb-4">
