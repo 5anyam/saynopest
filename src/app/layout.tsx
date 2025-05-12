@@ -44,26 +44,26 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-    {/* Google Tag Manager Script */}
-    <Script
-      src="https://www.googletagmanager.com/gtag/js?id=G-8BRKYL2QR2"
-      strategy="afterInteractive"
-    />
-    <Script id="google-analytics" strategy="afterInteractive">
-      {`
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-8BRKYL2QR2');
-      `}
-    </Script>
-  </head>
+     <head>
+  <link rel="canonical" href="https://www.saynopest.com/" />
+  <Script
+    src="https://www.googletagmanager.com/gtag/js?id=G-8BRKYL2QR2"
+    strategy="afterInteractive"
+  />
+  <Script id="google-analytics" strategy="afterInteractive">
+    {`
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8BRKYL2QR2');
+    `}
+  </Script>
+</head>
       <body
         className={`${inter.className}
         antialiased
         overflow-y-scroll
-        w-screen
+        w-full
         overflow-x-hidden
       `}>
         <meta name="google-site-verification" content="SrhB-NOlpPpJPL5wP3FpRwuT1yDTE2e0SdFOtcrkfa0" />

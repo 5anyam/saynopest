@@ -44,38 +44,42 @@ export async function LatestPosts({
           key={post.id}
           className="border rounded-xl overflow-hidden shadow hover:shadow-lg transition bg-white flex flex-col"
         >
-          {imageUrl && (
-            <div className="w-full h-64 bg-white flex items-center justify-center">
-              <Image
-                src={imageUrl}
-                alt={post.title.rendered}
-                width={500}
-                height={300}
-                className="max-h-full w-auto object-contain"
-              />
-            </div>
-          )}
-
-          <div className="p-4 flex flex-col flex-1">
-            {category && (
-              <span className="inline-block mb-2 text-xs px-2 py-1 bg-green-100 text-green-800 rounded-full">
-                {category}
-              </span>
+          <Link href={`/${post.slug}`} className="flex flex-col h-full">
+            {imageUrl && (
+              <div className="w-full h-64 bg-white flex items-center justify-center">
+                <Image
+                  src={imageUrl}
+                  alt={post.title.rendered}
+                  width={500}
+                  height={300}
+                  className="max-h-full w-auto object-cover"
+                />
+              </div>
             )}
-            <h3
-              className="text-lg font-semibold mb-2"
-              dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-            />
-            <p className="text-sm text-gray-500 mb-4">
-              {new Date(post.date).toLocaleDateString("en-US")}
-            </p>
-            <Link
-              href={`/blog/${post.slug}`}
-              className="mt-auto inline-block text-center bg-primary text-white px-4 py-2 rounded hover:bg-primary/90 transition"
-            >
-              Read Now
-            </Link>
-          </div>
+
+            <div className="p-4 flex flex-col flex-1">
+              {category && (
+                <span className="inline-block mb-2 text-xs px-2 py-1 bg-green-100 text-green-800 rounded-full max-w-max">
+                  {category}
+                </span>
+              )}
+              <h3
+                className="text-lg font-semibold mb-2 text-center"
+                dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+              />
+              <p className="text-sm text-gray-500 mb-4 text-center">
+                {new Date(post.date).toLocaleDateString("en-US")}
+              </p>
+              <div className="mt-auto text-center">
+                <Link
+                  href={`/${post.slug}`}
+                  className="inline-block text-center bg-primary text-white px-4 py-2 rounded hover:bg-primary/90 transition"
+                >
+                  Read Now
+                </Link>
+              </div>
+            </div>
+          </Link>
         </div>
       );
     })}
@@ -99,7 +103,7 @@ export async function LatestPosts({
 
         {currentPage < totalPages && (
           <Link
-            href={`/posts?page=${currentPage + 1}${searchTerm ? `&search=${searchTerm}` : ""}${categories ? `&categories=${categories}` : ""}`}
+            href={`/blog?page=${currentPage + 1}${searchTerm ? `&search=${searchTerm}` : ""}${categories ? `&categories=${categories}` : ""}`}
             className="text-blue-600 hover:underline"
           >
             Next

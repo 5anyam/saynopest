@@ -16,7 +16,7 @@ export type Post = {
   excerpt: {
     rendered: string;
   };
-  author: number;
+  author: string;
   categories: number[];
   featured_media: number;
 

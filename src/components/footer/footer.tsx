@@ -7,7 +7,7 @@ import Link from "next/link";
 export function Footer() {
     return (
       <div className="bg-primary rounded-xl text-white">
-      <div className="container px-8 py-6">
+      <div className="px-8 py-6">
           
   
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -63,7 +63,7 @@ export function Footer() {
           
           <hr className="border-gray-200 dark:border-gray-700"/>
           
-          <div className="flex flex-col items-center py-2 w-full rounded-xl mt-5 bg-white justify-between sm:flex-row">
+          <div className="flex flex-col items-center py-2 w-full rounded-xl mt-5 bg-white justify-between px-2 sm:flex-row">
               <a href="#">
                   <img className="ml-2 w-auto h-12" src="SayNoPest-logo.svg" alt="logo"/>
               </a>

@@ -44,6 +44,7 @@ export function Header() {
           <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-6 text-gray-600 mt-4 lg:mt-0">
             <Link href="#" className="mt-2 lg:mt-0 hover:text-gray-900 dark:hover:text-white">Home</Link>
             <Link href="#" className="mt-2 lg:mt-0 hover:text-gray-900 dark:hover:text-white">Pest Library </Link>
+            <Link href="https://www.saynopest.com/blog" className="mt-2 lg:mt-0 hover:text-gray-900 dark:hover:text-white">Blogs</Link>
             <Link href="https://www.saynopest.com/about" className="mt-2 lg:mt-0 hover:text-gray-900 dark:hover:text-white">About</Link>
             <Link href="#" className="mt-2 lg:mt-0 hover:text-gray-900 dark:hover:text-white">Contact</Link>
             {/* Search */}
