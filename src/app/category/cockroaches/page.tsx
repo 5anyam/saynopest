@@ -27,17 +27,31 @@ const cockroachTypes = [
   }
 ];
 
-export default function CockroachPage() {
+export default function CockroachTypesPage() {
   return (
     <div className="min-h-screen mt-20 p-6">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-center text-amber-800 mb-10">
           Types of Cockroaches
         </h1>
-        <p className="text-center text-lg max-w-3xl mx-auto text-gray-700 mb-14">
+        <p className="text-center text-lg max-w-3xl mx-auto text-gray-700 mb-10">
           Cockroaches are one of the most resilient pests in the world. Understanding different types can help in identifying and controlling infestations effectively.
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10">
+
+        <div className="bg-white p-6 rounded-xl shadow mb-14">
+          <h2 className="text-2xl font-semibold text-amber-700 mb-4">Why Cockroaches Are a Serious Threat</h2>
+          <p className="text-gray-700 leading-relaxed">
+            Cockroach are more than a nuisance to create in the peaceful recesses of our homes—they pose actual threats to indoor health. Learn how roaches continue to exist within American households and why they can be such a serious threat to your health and the cleanliness of your residence. Cockroaches are unmatched when it comes to flexibility and persistence in comparison with any other household pest, with many species doing well in home environments. Although German cockroaches may outnumber others, such as the American and Oriental Cockroaches this is a common cockroach across the U.S, with reports usually being made within homes.
+            <br /><br />
+            American roaches are the most prevalent species and can grow up to 1.5-2 inches long and have reddish-brown bodies, on top of which they have a prominent yellowish patch at the end of the head. German cockroaches, for example, are smaller, 0.5–0.6 in length, and have light brown bodies bearing a pair of dark stripes on their backs. These insects are primarily a nocturnal species, seeking refuge in dark, warm, and moist areas like under the kitchen fixtures, behind appliances, within a wall’s crevices; when dormant during broad day.
+            <br /><br />
+            Their omnivorous diet includes food waste, grease, and starch, and even sometimes non-food items such as book bindings, wallpaper glue, and human hair. Their flexibility enables them to survive in areas ranging from crowded city sewers to the more home-like basements of residences, and even in public restaurants.
+            <br /><br />
+            Cockroach problems are very common in the U.S. due to the country’s varied climates, dense urban populations, and abundant food waste. Cockroaches are mostly found in the Southeast across the United States. Homeowners inadvertently risk bringing cockroaches into their homes through store bags, moving, or when introducing cardboard boxes. It is necessary to get rid of the home with cockroaches because they are a danger to human health. Salmonella, E. coli, and dysentery pathogens adhere to food and surfaces. Pieces of cockroach excrement, cast-off skin, and salivary glands cause asthma, especially in children, because an astounding 63% of U.S. homes indeed boast the allergens.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {cockroachTypes.map((type, index) => (
             <div
               key={index}
