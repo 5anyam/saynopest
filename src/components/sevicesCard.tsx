@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export function ServiceCard() {
     const cardData = [
         {
@@ -34,6 +36,7 @@ export function ServiceCard() {
                 "Cockroach are creepy, agreed right? Roaches can survive in harsh environments and they thrive in warm and humid parts of your home.",
             image:
                 "cockroaches.png",
+                category: "cockroaches",
         },
         {
             title: "Bugs",
@@ -74,9 +77,9 @@ export function ServiceCard() {
                             <button className="block mx-1 w-full rounded-lg bg-primary py-3.5 px-3 text-sm font-bold uppercase text-white shadow-md hover:shadow-lg transition-all">
                                 Book Now
                             </button>
-                            <button className="block mx-1 w-full rounded-lg bg-gray-900 py-3.5 px-3 text-sm font-bold uppercase text-white shadow-md hover:shadow-lg transition-all">
-                                Read Now
-                            </button>
+                            <Link href={`https://www.saynopest.com/category/${card.category}`}><button className="block mx-1 w-full rounded-lg bg-gray-900 py-3.5 px-3 text-sm font-bold uppercase text-white shadow-md hover:shadow-lg transition-all">
+                                Know More
+                            </button></Link>
                         </div>
                     </div>
                 </div>

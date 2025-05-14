@@ -42,11 +42,11 @@ export function Header() {
         {/* Nav Links + Search + Socials */}
         <div className={`w-full lg:flex lg:items-center lg:justify-between ${isOpen ? "block" : "hidden"}`}>
           <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-6 text-gray-600 mt-4 lg:mt-0">
-            <Link href="#" className="mt-2 lg:mt-0 hover:text-gray-900 dark:hover:text-white">Home</Link>
+            <Link href="https://www.saynopest.com" className="mt-2 lg:mt-0 hover:text-gray-900 dark:hover:text-white">Home</Link>
             <Link href="#" className="mt-2 lg:mt-0 hover:text-gray-900 dark:hover:text-white">Pest Library </Link>
             <Link href="https://www.saynopest.com/blog" className="mt-2 lg:mt-0 hover:text-gray-900 dark:hover:text-white">Blogs</Link>
             <Link href="https://www.saynopest.com/about" className="mt-2 lg:mt-0 hover:text-gray-900 dark:hover:text-white">About</Link>
-            <Link href="#" className="mt-2 lg:mt-0 hover:text-gray-900 dark:hover:text-white">Contact</Link>
+            <Link href="https://www.saynopest.com/contact" className="mt-2 lg:mt-0 hover:text-gray-900 dark:hover:text-white">Contact</Link>
             {/* Search */}
             <div className="relative mt-4 lg:mt-0">
   <span className="absolute inset-y-0 left-0 flex items-center pl-3">
