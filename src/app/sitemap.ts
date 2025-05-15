@@ -36,7 +36,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   while (true) {
     const posts = await getAllPosts(pageNumber, perPage);
     const batchPostUrls = posts.posts.map((post) => ({
-      url: `${process.env.WORDPRESS_URL}/blog/${post.slug}`,
+      url: `${process.env.WORDPRESS_URL}/${post.slug}`,
       lastModified: new Date(post.modified), // Ensure modified is properly typed
       changeFrequency: "weekly" as const,
       priority: 0.5,
