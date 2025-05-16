@@ -15,7 +15,7 @@ export function Hero() {
             </a> 
         </div>
         <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
-            <img src="home-img.png" alt="home-img"/>
+            <img src="pest-service.jpg" alt="pest-control"/>
         </div>                
     </div>
       <h2 className="text-center text-3xl py-6 text-primary font-black">Get Your Free Quote Now</h2>

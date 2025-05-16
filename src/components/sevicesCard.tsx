@@ -7,35 +7,35 @@ export function ServiceCard() {
             description:
                 "Termites in house can cause serious wood damage problems. These are the small, wood-eating pest that can cause heavy damage to properties.",
             image:
-                "termites.png",
+                "termites.jpg",
         },
         {
             title: "Mosquitoes",
             description:
                 "As mosquito season comes to life, these tiny troublemakers can destroy your peaceful evening.",
             image:
-                "mosquitoes.png",
+                "mosquitoes.jpg",
         },
         {
             title: "Ants",
             description:
                 "Did you know ants lifespan is much longer than you expect. These tiny intruders can live up to years at your house, without you noticing. Remove these unwanted guest effectively and efficiently.",
             image:
-                "ants.png",
+                "ants.jpg",
         },
         {
             title: "Spiders",
             description:
                 "Spiders are dangerous creepy Crawlers  having  their own unique traits and abilities. Remove all the types of spiders whether it is jumping or flying  and discover what makes them so interesting!.",
             image:
-                "spiders.png",
+                "spiders.jpg",
         },
         {
             title: "Cockroaches",
             description:
                 "Cockroach are creepy, agreed right? Roaches can survive in harsh environments and they thrive in warm and humid parts of your home.",
             image:
-                "cockroaches.png",
+                "cockroaches.jpg",
                 category: "cockroaches",
         },
         {
@@ -43,7 +43,7 @@ export function ServiceCard() {
             description:
                 "Bugs can silently invade your home, often going unnoticed until they become a major problem. Ever wondered where do bed bugs come from? These pests usually hitchhike in your luggage when you travel, clothes, or in second hand furniture.",
             image:
-                "bugs.png",
+                "bugs.jpg",
         },
     ];
 
