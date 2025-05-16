@@ -93,7 +93,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                 .filter((p: any) => p.slug !== post.slug)
                 .map((related: any) => (
                   <Link
-                    href={`/posts/${related.slug}`}
+                    href={`/${related.slug}`}
                     key={related.id}
                     className="block p-4 border rounded-md hover:shadow transition bg-white"
                   >
@@ -154,7 +154,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           </div>
 
           {/* Table of Contents */}
-          <div className="border p-6 rounded-md shadow-md bg-white">
+          {/* <div className="border p-6 rounded-md shadow-md bg-white">
             <h4 className="text-lg font-semibold mb-4">Table of Contents</h4>
             <ul className="text-sm list-disc list-inside space-y-2">
               <li><a href="#section-1" className="text-green-700 hover:underline">Introduction</a></li>
@@ -162,7 +162,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               <li><a href="#section-3" className="text-green-700 hover:underline">Treatment Options</a></li>
               <li><a href="#section-4" className="text-green-700 hover:underline">Prevention Tips</a></li>
             </ul>
-          </div>
+          </div> */}
 
         </div>
       </aside>

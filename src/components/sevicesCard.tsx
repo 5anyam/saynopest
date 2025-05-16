@@ -54,7 +54,7 @@ export function ServiceCard() {
                     key={index}
                     className="relative flex w-full max-w-sm flex-col rounded-xl bg-white bg-clip-border text-gray-700 shadow-lg mx-4"
                 >
-                    <div className="relative mx-4 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
+                    <div className="relative mx-4 h-92 w-92 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
                         <img src={card.image} alt={card.title} />
                        
                     </div>
