@@ -45,7 +45,7 @@ export function ServiceCard() {
             image:
                 "bugs.jpg",
         },
-    ];
+    ]
 
     return (
         <div className="flex flex-wrap justify-center gap-6">
