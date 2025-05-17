@@ -8,6 +8,7 @@ export function ServiceCard() {
                 "Termites in house can cause serious wood damage problems. These are the small, wood-eating pest that can cause heavy damage to properties.",
             image:
                 "termites.jpg",
+                category: "termites",
         },
         {
             title: "Mosquitoes",
@@ -15,6 +16,7 @@ export function ServiceCard() {
                 "As mosquito season comes to life, these tiny troublemakers can destroy your peaceful evening.",
             image:
                 "mosquitoes.jpg",
+                category: "mosquitoes",
         },
         {
             title: "Ants",
@@ -22,6 +24,7 @@ export function ServiceCard() {
                 "Did you know ants lifespan is much longer than you expect. These tiny intruders can live up to years at your house, without you noticing. Remove these unwanted guest effectively and efficiently.",
             image:
                 "ants.jpg",
+                category: "ants",
         },
         {
             title: "Spiders",
@@ -29,6 +32,7 @@ export function ServiceCard() {
                 "Spiders are dangerous creepy Crawlers  having  their own unique traits and abilities. Remove all the types of spiders whether it is jumping or flying  and discover what makes them so interesting!.",
             image:
                 "spiders.jpg",
+                category: "spiders",
         },
         {
             title: "Cockroaches",
@@ -44,6 +48,7 @@ export function ServiceCard() {
                 "Bugs can silently invade your home, often going unnoticed until they become a major problem. Ever wondered where do bed bugs come from? These pests usually hitchhike in your luggage when you travel, clothes, or in second hand furniture.",
             image:
                 "bugs.jpg",
+                category: "bed-bugs",
         },
     ]
 
