@@ -80,7 +80,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
         {/* Blog Content */}
         <div
-          className="prose max-w-none prose-p:leading-8 prose-p:my-4 prose-img:mx-auto prose-img:rounded-md"
+          className="prose lg:prose-lg max-w-none prose-headings:font-semibold prose-p:leading-7 prose-img:mx-auto prose-img:rounded-md prose-a:text-green-600 hover:prose-a:underline"
           dangerouslySetInnerHTML={{ __html: post.content.rendered }}
         />
 
@@ -115,7 +115,6 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       {/* Sidebar */}
       <aside className="lg:w-1/3 w-full relative">
         <div className="sticky top-24 space-y-8">
-
           {/* Book Now Form */}
           <div className="border p-6 rounded-md shadow-md bg-white">
             <h3 className="text-xl font-semibold mb-4">Book Now</h3>
@@ -152,18 +151,6 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               </button>
             </form>
           </div>
-
-          {/* Table of Contents */}
-          {/* <div className="border p-6 rounded-md shadow-md bg-white">
-            <h4 className="text-lg font-semibold mb-4">Table of Contents</h4>
-            <ul className="text-sm list-disc list-inside space-y-2">
-              <li><a href="#section-1" className="text-green-700 hover:underline">Introduction</a></li>
-              <li><a href="#section-2" className="text-green-700 hover:underline">Common Pests</a></li>
-              <li><a href="#section-3" className="text-green-700 hover:underline">Treatment Options</a></li>
-              <li><a href="#section-4" className="text-green-700 hover:underline">Prevention Tips</a></li>
-            </ul>
-          </div> */}
-
         </div>
       </aside>
     </div>
