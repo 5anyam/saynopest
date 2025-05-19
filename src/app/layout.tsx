@@ -45,6 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
      <head>
+     <meta name="google-adsense-account" content="ca-pub-7212342270102504"/>
   <link rel="canonical" href="https://www.saynopest.com/" />
   <Script
     src="https://www.googletagmanager.com/gtag/js?id=G-8BRKYL2QR2"
