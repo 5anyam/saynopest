@@ -12,28 +12,28 @@ export function Testimonials() {
                 "I was dealing with ants for weeks and nothing worked. Then I found SayNoPest, and they helped me connect with a professional Pest Control service near me. Within a day, the issue was completely gone. Super easy and stress-free!",
             name: "Jessica M.",
             title: "Austin, TX",
-            image: "https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?auto=format&fit=crop&w=880&q=80",
+            image: "/avatar/girl-1.avif",
         },
         {
             quote:
                 "Saynopest has made it so simple to find a reliable pest control company for me. I was able to book someone the same day, and the professionals was friendly and very thorough. They guide me about the termites and how we can prevent them.  Highly recommend!",
             name: "Brian L.",
             title: "Orlando, FL",
-            image: "https://images.unsplash.com/photo-1499470932971-a90681ce8530?auto=format&fit=crop&w=1470&q=80",
+            image: "/avatar/boy-1.avif",
         },
         {
             quote:
                 "I  had a serious Cockroach problem in our backyard and in our entire property. I came across with SayNoPest while searching online, and they helped me get in touch with a trusted local Pest Control team. My Problem solved quickly and safely!",
             name: "Tina R.",
             title: "Sacramento, CA",
-            image: "https://images.unsplash.com/photo-1502767089025-6572583495b9?auto=format&fit=crop&w=880&q=80",
+            image: "/avatar/girl-2.avif",
         },
         {
             quote:
                 "I’ve tried calling around for pest services before also, and it was always a hassle for me. SayNoPest saved me this time by showing me the best options available for Pest control near me. They provide a complete short guide of many Pest Control service providers and compare their service features and reviews, which helps me to make my decision fast.",
             name: "James P.",
             title: "New York, US",
-            image: "https://images.unsplash.com/photo-1499470932971-a90681ce8530?auto=format&fit=crop&w=1470&q=80",
+            image: "/avatar/boy-2.jpeg",
         },
     ];
 
