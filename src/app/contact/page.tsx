@@ -15,7 +15,7 @@ export default async function Page() {
         </div>
         <div className="w-full md:w-1/3 mb-4">
           <h2 className="text-lg mb-2">Email</h2>
-          <p><a href="mailto:example@example.com">support433@saynopest.com</a></p>
+          <p><a href="mailto:example@example.com">support@saynopest.com</a></p>
         </div>
       </div>
     </div>
