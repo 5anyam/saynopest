@@ -20,16 +20,16 @@ export default function EstimateModal() {
 
   const handleSubmit = async () => {
     const phone = `${formData.phone1}-${formData.phone2}-${formData.phone3}`;
-    const userName = formData.name.trim();
+    const selectedService = formData.service.trim();
 
-    if (!userName) {
+    if (!selectedService) {
       alert('Name is required to submit the form.');
       return;
     }
 
     try {
       // Create a reference to the document: /Bookings/{userName}
-      const userDocRef = doc(db, "Bookings", userName);
+      const userDocRef = doc(db, "Bookings", selectedService);
 
       // Add a new entry under the subcollection: /Bookings/{userName}/submissions
       await addDoc(collection(userDocRef, "submissions"), {
