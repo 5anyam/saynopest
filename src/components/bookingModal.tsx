@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { db } from '../lib/firebase';
-import { collection, addDoc } from 'firebase/firestore';
+import { doc, collection, addDoc } from 'firebase/firestore';
 
 export default function EstimateModal() {
   const [showModal, setShowModal] = useState(false);
@@ -12,21 +12,35 @@ export default function EstimateModal() {
     service: '', comments: '',
   });
 
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleSubmit = async () => {
     const phone = `${formData.phone1}-${formData.phone2}-${formData.phone3}`;
+    const userName = formData.name.trim();
+
+    if (!userName) {
+      alert('Name is required to submit the form.');
+      return;
+    }
+
     try {
-      await addDoc(collection(db, "Bookings"), {
-        name: formData.name,
+      // Create a reference to the document: /Bookings/{userName}
+      const userDocRef = doc(db, "Bookings", userName);
+
+      // Add a new entry under the subcollection: /Bookings/{userName}/submissions
+      await addDoc(collection(userDocRef, "submissions"), {
         email: formData.email,
         zip: formData.zip,
         phone,
         service: formData.service,
         comments: formData.comments,
+        timestamp: new Date()
       });
+
       alert('Submitted successfully!');
       setShowModal(false);
       setFormData({ name: '', email: '', zip: '', phone1: '', phone2: '', phone3: '', service: '', comments: '' });
