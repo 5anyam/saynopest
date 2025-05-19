@@ -46,13 +46,13 @@ export async function LatestPosts({
         >
           <Link href={`/${post.slug}`} className="flex flex-col h-full">
             {imageUrl && (
-              <div className="w-full h-64 bg-white flex items-center justify-center">
+              <div className="w-full h-72 bg-white flex items-center justify-center">
                 <Image
                   src={imageUrl}
                   alt={post.title.rendered}
                   width={500}
                   height={300}
-                  className="max-h-full w-auto object-cover"
+                  className="max-h-full w-full object-cover"
                 />
               </div>
             )}
