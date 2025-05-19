@@ -19,7 +19,7 @@ export default function EstimateModal() {
   const handleSubmit = async () => {
     const phone = `${formData.phone1}-${formData.phone2}-${formData.phone3}`;
     try {
-      await addDoc(collection(db, "free_estimates"), {
+      await addDoc(collection(db, "Bookings"), {
         name: formData.name,
         email: formData.email,
         zip: formData.zip,
