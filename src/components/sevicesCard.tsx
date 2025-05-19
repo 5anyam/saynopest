@@ -1,4 +1,5 @@
 import Link from "next/link";
+import EstimateModal from "./bookingModal";
 
 export function ServiceCard() {
     const cardData = [
@@ -65,7 +66,7 @@ export function ServiceCard() {
                     </div>
                     <div className="p-6">
                         <div className="flex items-center justify-between mb-3">
-                            <h5 className="text-xl font-medium text-blue-gray-900">{card.title}</h5>
+                            <h3 className="text-xl font-medium text-blue-gray-900">{card.title}</h3>
                             <p className="flex items-center gap-1.5 text-base font-normal text-blue-gray-900">
                                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-yellow-700" viewBox="0 0 24 24" fill="currentColor">
                                     <path
@@ -79,9 +80,9 @@ export function ServiceCard() {
                         </div>
                         <p className="text-base font-light text-gray-700">{card.description}</p>
                         <div className="flex flex-row px-3 pt-3">
-                            <button className="block mx-1 w-full rounded-lg bg-primary py-3.5 px-3 text-sm font-bold uppercase text-white shadow-md hover:shadow-lg transition-all">
-                                Book Now
-                            </button>
+                            
+                                <EstimateModal/>
+                    
                             <Link href={`https://www.saynopest.com/category/${card.category}`}><button className="block mx-1 w-full rounded-lg bg-gray-900 py-3.5 px-3 text-sm font-bold uppercase text-white shadow-md hover:shadow-lg transition-all">
                                 Know More
                             </button></Link>

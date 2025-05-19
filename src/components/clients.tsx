@@ -6,7 +6,7 @@ export function Clients(){
         <div className="lg:flex lg:items-center">
             <div className="w-full space-y-12 lg:w-1/2 ">
                 <div>
-                    <h1 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl">explore our <br/> awesome Components</h1>
+                    <h2 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl">explore our <br/> awesome Components</h2>
 
                     <div className="mt-2">
                         <span className="inline-block w-40 h-1 bg-primary rounded-full"></span>
@@ -23,7 +23,7 @@ export function Clients(){
                     </span>
 
                     <div className="mt-4 md:mx-4 md:mt-0">
-                        <h1 className="text-xl font-semibold text-gray-700 capitalize">Educational and Comparison Hub</h1>
+                        <h3 className="text-xl font-semibold text-gray-700 capitalize">Educational and Comparison Hub</h3>
 
                         <p className="mt-3 text-gray-500 ">
                         Your one and only place for comparative rates and services. 
@@ -40,7 +40,7 @@ export function Clients(){
                     </span>
 
                     <div className="mt-4 md:mx-4 md:mt-0">
-                        <h1 className="text-xl font-semibold text-gray-700 capitalize">Opinion Hub</h1>
+                        <h3 className="text-xl font-semibold text-gray-700 capitalize">Opinion Hub</h3>
 
                         <p className="mt-3 text-gray-500 ">
                         SAYNOPEST will provide you with unbiased and well-researched data on the best service-providing companies.
@@ -57,7 +57,7 @@ export function Clients(){
                     </span>
 
                     <div className="mt-4 md:mx-4 md:mt-0">
-                        <h1 className="text-xl font-semibold text-gray-700 capitalize ">Smart Match</h1>
+                        <h3 className="text-xl font-semibold text-gray-700 capitalize ">Smart Match</h3>
 
                         <p className="mt-3 text-gray-500 ">
                         We connect you with the best pest control experts in the area (based on Price, Rating, and availability).
@@ -75,7 +75,7 @@ export function Clients(){
                     </span>
 
                     <div className="mt-4 md:mx-4 md:mt-0">
-                        <h1 className="text-xl font-semibold text-gray-700 capitalize ">Transparency</h1>
+                        <h3 className="text-xl font-semibold text-gray-700 capitalize ">Transparency</h3>
 
                         <p className="mt-3 text-gray-500 dark:text-gray-300">
                         No hidden agendas, just honest comparisons, clear reviews, and real user experiences.
@@ -86,7 +86,7 @@ export function Clients(){
             </div>
 
             <div className="hidden lg:flex lg:items-center lg:w-1/2 lg:justify-center">
-                <img className="object-cover" src="USP.gif" alt=""/>
+                <img className="object-cover" src="USP.gif" alt="USP"/>
             </div>
         </div>
 

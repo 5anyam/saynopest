@@ -18,7 +18,7 @@ export function Footer() {
                       <a href="https://www.saynopest.com/" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Home</a>
                       <a href="https://www.saynopest.com/contact" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Contact Us</a>
                       <Link href="https://www.saynopest.com/about"><h6 className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">About Us</h6></Link>
-                      <a href="https://www.saynopest.com/posts" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Blogs</a>
+                      <a href="https://www.saynopest.com/blog" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Blogs</a>
                   </div>
               </div>
   
@@ -38,8 +38,8 @@ export function Footer() {
   
                   <div className="flex flex-col items-start mt-5 space-y-2">
                   <Link href="https://www.saynopest.com/privacy-policy"><h6 className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Privacy Policy</h6></Link>
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Terms and conditions</a>
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Disclaimer</a>
+                      <a href="https://www.saynopest.com/terms-and-conditions" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Terms and conditions</a>
+                      <a href="https://www.saynopest.com/disclaimer" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Disclaimer</a>
                       <a href="https://saynopest.com/sitemap.xml" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Sitemap</a>
                   </div>
               </div>

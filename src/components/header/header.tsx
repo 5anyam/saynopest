@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { GrInstagram } from "react-icons/gr";
 import { TbBrandLinkedin } from "react-icons/tb";
+import EstimateModal from "../bookingModal";
 
 
 export function Header() {
@@ -77,7 +78,7 @@ export function Header() {
           <Link href="https://www.facebook.com/people/Saynopest/61575434679519/"><RiFacebookBoxLine className="text-black text-3xl" /></Link>
           <Link href="https://www.instagram.com/saynopest/"><GrInstagram className="text-black text-2xl"/></Link>
           <Link href="https://www.linkedin.com/company/saynopest/"><TbBrandLinkedin className="text-black text-3xl"/></Link>
-          <button className="p-2 border rounded-md bg-primary text-white">Free Quotation</button>
+          <EstimateModal/>
           </div>
         </div>
       </div>
