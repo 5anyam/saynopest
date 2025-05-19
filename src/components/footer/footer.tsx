@@ -15,10 +15,10 @@ export function Footer() {
                   <p className="font-semibold text-xl text-white">Quick Link</p>
   
                   <div className="flex flex-col items-start mt-5 space-y-2">
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Home</a>
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Contact Us</a>
+                      <a href="https://www.saynopest.com/" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Home</a>
+                      <a href="https://www.saynopest.com/contact" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Contact Us</a>
                       <Link href="https://www.saynopest.com/about"><h6 className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">About Us</h6></Link>
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Blogs</a>
+                      <a href="https://www.saynopest.com/posts" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Blogs</a>
                   </div>
               </div>
   
@@ -26,10 +26,10 @@ export function Footer() {
                   <p className="font-semibold text-xl text-white">Services</p>
   
                   <div className="flex flex-col items-start mt-5 space-y-2">
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Termites</a>
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Mosquitoes</a>
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Ants</a>
-                      <a href="#" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Spiders</a>
+                      <a href="https://www.saynopest.com/category/termites" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Termites</a>
+                      <a href="https://www.saynopest.com/category/mosquitoes" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Mosquitoes</a>
+                      <a href="https://www.saynopest.com/category/ants" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Ants</a>
+                      <a href="https://www.saynopest.com/category/spiders" className="text-white transition-colors duration-300 dark:hover:text-blue-400 hover:font-bold">Spiders</a>
                   </div>
               </div>
   
