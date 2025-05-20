@@ -1,4 +1,5 @@
 // app/about/page.tsx
+import EstimateModal from '@/components/bookingModal';
 import Image from 'next/image';
 
 export default function AboutPage() {
@@ -13,7 +14,7 @@ export default function AboutPage() {
 
       <section className="grid md:grid-cols-2 gap-8 items-center">
         <div>
-          <Image src="/images/about1.jpg" alt="Pest control" width={600} height={400} className="rounded-2xl shadow-md object-cover" />
+          <Image src="/pest-expert.jpg" alt="Pest control" width={600} height={400} className="rounded-2xl shadow-md object-cover" />
         </div>
         <div>
           <h2 className="text-2xl font-semibold mb-2">Your Trusted Pest Guide</h2>
@@ -41,7 +42,7 @@ export default function AboutPage() {
           </p>
         </div>
         <div>
-          <Image src="/images/about2.jpg" alt="Our Vision" width={600} height={400} className="rounded-2xl shadow-md object-cover" />
+          <Image src="/our-vision.jpg" alt="Our Vision" width={600} height={400} className="rounded-2xl shadow-md object-cover" />
         </div>
       </section>
 
@@ -58,7 +59,7 @@ export default function AboutPage() {
 
       <section className="grid md:grid-cols-2 gap-8 items-center">
         <div>
-          <Image src="/images/about3.jpg" alt="Why Choose Us" width={600} height={400} className="rounded-2xl shadow-md object-cover" />
+          <Image src="/why-choose-us.jpg" alt="Why Choose Us" width={600} height={400} className="rounded-2xl shadow-md object-cover" />
         </div>
         <div>
           <h2 className="text-2xl font-semibold mb-4">Why Choose Us?</h2>
@@ -71,12 +72,7 @@ export default function AboutPage() {
       <section className="text-center bg-green-50 p-8 rounded-2xl shadow-md">
         <h2 className="text-3xl font-bold text-green-700 mb-4">Ready to Say No to All Kinds of Pests?</h2>
         <p className="text-gray-700 mb-6">Let us help you with trusted pest control companies near you. Just tell us what you need and leave the rest to us!</p>
-        <a
-          href="/get-started"
-          className="inline-block bg-green-600 text-white px-6 py-3 rounded-xl text-lg font-semibold hover:bg-green-700 transition"
-        >
-          Get Started Now
-        </a>
+        <EstimateModal/>
       </section>
     </main>
   );
