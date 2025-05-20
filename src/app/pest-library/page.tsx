@@ -36,11 +36,11 @@ const pests = [
 
 export default function PestLibrary() {
   return (
-    <div className="min-h-screen bg-gray-50 py-10 px-4 md:px-12">
-      <h1 className="text-4xl font-bold text-center text-green-700 mb-10">
+    <div className="min-h-screen bg-gray-50 mt-20 py-10 px-4 md:px-12">
+      <h1 className="text-4xl font-bold text-center text-primary mb-10">
         Pest Library
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
         {pests.map((pest, index) => (
           <Link
             key={index}
