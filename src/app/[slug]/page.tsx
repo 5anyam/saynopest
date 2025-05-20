@@ -86,7 +86,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
         {/* Related Posts */}
         {relatedPosts.length > 1 && (
-          <div className="mt-16">
+          <div className="mt-16 mb-10">
             <h2 className="text-2xl font-semibold mb-4">Related Posts</h2>
             <div className="grid md:grid-cols-2 gap-6">
               {relatedPosts
