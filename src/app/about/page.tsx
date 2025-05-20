@@ -11,7 +11,7 @@ export default function AboutPage() {
           At Saynopest, we’re on a mission to help homeowners and businesses across the U.S. find trusted, effective pest control services – no guesswork required.
         </p>
       </section>
-
+      
       <section className="grid md:grid-cols-2 gap-8 items-center">
         <div>
           <Image src="/pest-expert.jpg" alt="Pest control" width={600} height={400} className="rounded-2xl shadow-md object-cover" />

@@ -4,32 +4,32 @@ import Link from "next/link";
 const pests = [
   {
     title: "Ants",
-    image: "/images/ants.jpg",
+    image: "/ants.jpg",
     category: "ants",
   },
   {
     title: "Cockroaches",
-    image: "/images/cockroaches.jpg",
+    image: "/cockroaches.jpg",
     category: "cockroaches",
   },
   {
     title: "Termites",
-    image: "/images/termites.jpg",
+    image: "/termites.jpg",
     category: "termites",
   },
   {
     title: "Bed Bugs",
-    image: "/images/bugs.jpg",
+    image: "/bugs.jpg",
     category: "bed-bugs",
   },
   {
     title: "Spiders",
-    image: "/images/spiders.jpg",
+    image: "/spiders.jpg",
     category: "spiders",
   },
   {
     title: "Mosquitoes",
-    image: "/images/mosquitoes.jpg",
+    image: "/mosquitoes.jpg",
     category: "mosquitoes",
   },
 ];
