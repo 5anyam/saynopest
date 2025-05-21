@@ -28,15 +28,45 @@ const pests = [
     category: "spiders",
   },
   {
+    title: "Earwigs",
+    image: "/types/european-earwig.jpg",
+    category: "earwigs",
+  },
+  {
     title: "Mosquitoes",
     image: "/mosquitoes.jpg",
     category: "mosquitoes",
+  },
+  {
+    title: "Wasps",
+    image: "/types/wasps/yellowjacket.jpg",
+    category: "wasps",
+  },
+  {
+    title: "Silver Fish",
+    image: "/types/urban-silverfish.jpg",
+    category: "silver-fish",
+  },
+  {
+    title: "Centipede",
+    image: "/types/centipede/brown-centipede.jpg",
+    category: "centipede",
+  },
+  {
+    title: "Rodents",
+    image: "/types/rodents/deer-mouse.jpg",
+    category: "rodents",
+  },
+  {
+    title: "Millipede",
+    image: "/types/millipede/greenhouse-millipede.jpg",
+    category: "millipede",
   },
 ];
 
 export default function PestLibrary() {
   return (
-    <div className="min-h-screen bg-gray-50 mt-20 py-10 px-4 md:px-12">
+    <div className="min-h-screen bg-gray-50 mt-16 py-10 px-4 md:px-12">
       <h1 className="text-4xl font-bold text-center text-primary mb-10">
         Pest Library
       </h1>
@@ -47,7 +77,7 @@ export default function PestLibrary() {
             href={`https://www.saynopest.com/category/${pest.category}`}
             className="block bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
           >
-            <div className="relative w-full h-48">
+            <div className="relative w-full h-80">
               <Image
                 src={pest.image}
                 alt={pest.title}
