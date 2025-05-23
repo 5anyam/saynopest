@@ -26,11 +26,9 @@ const termiteTypes = [
 export default function TermiteTypesPage() {
   return (
     <div className="min-h-screen mt-20 p-6">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-primary mb-10">
-          Termites
-        </h1>
-        <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
+<div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
+  <h1 className="text-3xl text-center font-bold text-primary mb-4">Termites</h1>
+
   <p className="text-gray-700 mb-6">
     Termites are silent but destructive pests that can cause serious structural damage to homes. Identifying the type of termite is key to controlling infestations effectively.
   </p>
@@ -45,10 +43,16 @@ export default function TermiteTypesPage() {
     His habitat does not change depending on the types of termites: Subterranean termites construct large colonies in the soil and need a moist environment; they usually enter the house through soil and foundation cracks, dry wood termites reside in dry wood above ground, and Formosan termites can also nest underground or in walls attics if they can find moist environments. In respect of behaviour, termites are social insects that dwell in large colonies and each has a specialised role, and they feed largely on cellulose materials including wood, papers and plant debris but remain hidden and cause damage only after being detected.
   </p>
 
-  <p className="text-gray-700">
+  <p className="text-gray-700 mb-6">
     In the U.S. more than 600,000 homes are damaged annually by termites, and a huge amount is spent on repair and control measures. Responsible for the term “silent destroyers”, these termites can make a quiet meal of wood, paper, and even wallpaper without being noticed until the woodwork is falling apart.
   </p>
+
+  <h2 className="text-3xl text-center font-bold text-primary mb-4">Types of Termites</h2>
+  <p className="text-gray-700">
+    Not all termites are the same—some live underground, others in dry wood or damp places, and knowing the difference helps protect your home better.
+  </p>
 </div>
+
 
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
@@ -74,6 +78,6 @@ export default function TermiteTypesPage() {
           ))}
         </div>
       </div>
-    </div>
+  
   );
 }

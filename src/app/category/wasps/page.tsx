@@ -46,24 +46,39 @@ const waspTypes = [
 export default function WaspTypesPage() {
   return (
     <div className="min-h-screen mt-20 p-6">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-primary mb-10">
-          Types of Wasps
-        </h1>
-        <p className="text-center text-lg max-w-3xl mx-auto text-gray-700 mb-10">
-          Wasps are widespread stinging insects in the United States, easily recognizable by their long, slender bodies, narrow waists, and bold black, yellow, or reddish markings.
-        </p>
+      <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
+  <h1 className="text-3xl text-center font-bold text-primary mb-4">Wasp</h1>
 
-        <div className="bg-white p-6 rounded-xl shadow mb-14">
-          <h2 className="text-2xl font-semibold text-primary mb-4">Why Wasps Are a Serious Concern</h2>
-          <p className="text-gray-700 leading-relaxed">
-            Wasps are known to nest in places like porch ceilings, attic rafters, and sheds, using chewed wood and saliva to create their homes. Adults feed on nectar and sweets, while young wasps are given proteins like insects and spiders. Some wasps, including paper wasps, yellowjackets, and hornets, live in large, social colonies and become extremely aggressive when defending their nests.
-            <br /><br />
-            While wasps play a vital ecological role by pollinating flowers and controlling insect populations, they can become a threat due to their painful stings—especially for those allergic to them. Wasp infestations are common due to the abundance of ideal nesting spots around homes and easy access to sugary drinks, garbage, and insects.
-            <br /><br />
-            During long warm summers, colonies grow larger and wasps become more aggressive as they fight over food and defend nests. Unlike bees, wasps can sting multiple times and are very territorial. Professional wasp pest control services are often necessary to safely remove nests and prevent reinfestation.
-          </p>
-        </div>
+  <p className="text-gray-700 mb-6">
+    Wasps are widespread stinging insects in the United States, easily recognizable by their long, slender bodies, narrow waists, and bold black, yellow, or reddish markings.
+  </p>
+
+  <h2 className="text-xl font-semibold text-gray-800 mb-2">Identification and Nesting Habits of Wasps</h2>
+  <p className="text-gray-700 mb-6">
+    Wasps typically have long, slender bodies with narrow waists and striking coloration—often black or brown with yellow or reddish stripes. Most adult wasps range from 5/8 inch to over an inch in length, depending on the species. Their wings are long and pendulum-like during flight. Wasps construct nests from chewed wood fibers mixed with saliva and often build them in sheltered areas such as:
+  </p>
+  <ul className="list-disc list-inside text-gray-700 mb-6">
+    <li>Porch ceilings</li>
+    <li>Attic rafters</li>
+    <li>Sheds</li>
+  </ul>
+
+  <h2 className="text-xl font-semibold text-gray-800 mb-2">What Do Wasps Eat?</h2>
+  <p className="text-gray-700 mb-6">
+    Adult wasps feed on nectar and sweet substances, while larvae are fed a protein-rich diet consisting of insects and spiders brought by worker wasps. Species like paper wasps, yellowjackets, and hornets are social and may become aggressive when their nests are threatened. While wasps play a role in pest control and pollination, their stings can be painful and dangerous—especially for individuals with allergies.
+  </p>
+
+  <h2 className="text-xl font-semibold text-gray-800 mb-2">Wasp Infestations: Causes, Risks, and the Need for Professional Control</h2>
+  <p className="text-gray-700 mb-6">
+    Wasp infestations are common across the U.S. due to abundant nesting locations around buildings and readily available food sources such as trash, sugary beverages, and insects. Warm summers encourage larger colonies, which increases territorial behavior and aggression. Since wasps can sting multiple times and are highly defensive of their nests, professional pest control is often necessary to ensure safety and prevent future infestations.
+  </p>
+
+  <h2 className="text-3xl text-center font-bold text-primary mb-4">Types of Wasps</h2>
+  <p className="text-gray-700">
+    Various types of wasps are found across the United States, each with its own appearance, behavior, and nesting style. Identifying the type of wasp can help guide effective control strategies.
+  </p>
+</div>
+
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {waspTypes.map((type, index) => (
@@ -88,6 +103,6 @@ export default function WaspTypesPage() {
           ))}
         </div>
       </div>
-    </div>
+    
   );
 }
