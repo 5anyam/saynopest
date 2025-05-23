@@ -32,14 +32,12 @@ export default function CockroachTypesPage() {
     <div className="min-h-screen mt-20 p-6">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-center text-primary mb-10">
-          Types of Cockroaches
+          Cockroaches
         </h1>
-        <p className="text-center text-lg max-w-3xl mx-auto text-gray-700 mb-10">
-          Cockroaches are one of the most resilient pests in the world. Understanding different types can help in identifying and controlling infestations effectively.
-        </p>
+       
 
         <div className="bg-white p-6 rounded-xl shadow mb-14">
-          <h2 className="text-2xl font-semibold text-primary mb-4">Why Cockroaches Are a Serious Threat</h2>
+          
           <p className="text-gray-700 leading-relaxed">
             Cockroach are more than a nuisance to create in the peaceful recesses of our homes—they pose actual threats to indoor health. Learn how roaches continue to exist within American households and why they can be such a serious threat to your health and the cleanliness of your residence. Cockroaches are unmatched when it comes to flexibility and persistence in comparison with any other household pest, with many species doing well in home environments. Although German cockroaches may outnumber others, such as the American and Oriental Cockroaches this is a common cockroach across the U.S, with reports usually being made within homes.
             <br /><br />

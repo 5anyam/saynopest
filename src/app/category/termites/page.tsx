@@ -28,22 +28,28 @@ export default function TermiteTypesPage() {
     <div className="min-h-screen mt-20 p-6">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-center text-primary mb-10">
-          Types of Termites
+          Termites
         </h1>
-        <p className="text-center text-lg max-w-3xl mx-auto text-gray-700 mb-10">
-          Termites are silent but destructive pests that can cause serious structural damage to homes. Identifying the type of termite is key to controlling infestations effectively.
-        </p>
+        <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
+  <p className="text-gray-700 mb-6">
+    Termites are silent but destructive pests that can cause serious structural damage to homes. Identifying the type of termite is key to controlling infestations effectively.
+  </p>
 
-        <div className="bg-white p-6 rounded-xl shadow mb-14">
-          <h2 className="text-2xl font-semibold text-primary mb-4">Why Termites Are a Serious Concern</h2>
-          <p className="text-gray-700 leading-relaxed">
-            Termites are small, soft-bodied insects typically measuring between 1/8 inch to 1 inch depending on species and caste. Their coloring varies from pale cream or white (in worker termites) to darker browns and even black in reproductive swarmers. They have straight, beaded antennae and straight waists, with swarmers displaying two equal pairs of wings.
-            <br /><br />
-            Termite habitats differ based on the type: Subterranean termites live in moist soil and enter structures through foundation gaps, drywood termites nest in dry wood above ground, and Formosan termites can build nests underground or within walls and attics if moisture is available. All termites feed primarily on cellulose-based materials like wood, paper, and plant debris, staying hidden as they cause damage.
-            <br /><br />
-            Known as “silent destroyers,” termites can go undetected for long periods while consuming a home from the inside out. In the U.S. alone, termites are responsible for damaging over 600,000 homes annually, leading to billions in repair and control costs.
-          </p>
-        </div>
+  <h2 className="text-xl font-semibold text-gray-800 mb-2">The silent destroyers: How termites damage homes across U.S</h2>
+  <p className="text-gray-700 mb-6">
+    Termites are relatively small, soft-bodied insects ranging from approximately 1/8 to 1 inch long, depending on caste and species. Their appearance ranges from white or naturally pale cream (particularly worker termites) to off-white, to light brown, dark brown and even black with the reproductive termite swarm. Termites are equipped with straight, beaded antennae, a straight waist (different from the pinched waist of ants) and, in the swarm stage, two equal pairs of wings.
+  </p>
+
+  <h2 className="text-xl font-semibold text-gray-800 mb-2">Termite Habitat & Behavior</h2>
+  <p className="text-gray-700 mb-6">
+    His habitat does not change depending on the types of termites: Subterranean termites construct large colonies in the soil and need a moist environment; they usually enter the house through soil and foundation cracks, dry wood termites reside in dry wood above ground, and Formosan termites can also nest underground or in walls attics if they can find moist environments. In respect of behaviour, termites are social insects that dwell in large colonies and each has a specialised role, and they feed largely on cellulose materials including wood, papers and plant debris but remain hidden and cause damage only after being detected.
+  </p>
+
+  <p className="text-gray-700">
+    In the U.S. more than 600,000 homes are damaged annually by termites, and a huge amount is spent on repair and control measures. Responsible for the term “silent destroyers”, these termites can make a quiet meal of wood, paper, and even wallpaper without being noticed until the woodwork is falling apart.
+  </p>
+</div>
+
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {termiteTypes.map((type, index) => (

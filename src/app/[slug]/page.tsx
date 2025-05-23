@@ -70,9 +70,9 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             <Image
               src={post.yoast_head_json.og_image[0].url}
               alt="Featured"
-              width={900}
-              height={600}
-              className="rounded-md w-full h-auto object-cover"
+              width={600}
+              height={400}
+              className="rounded-xl w-full h-full object-cover"
               priority
             />
           </div>

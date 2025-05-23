@@ -38,24 +38,39 @@ export default function AntTypesPage() {
     <div className="min-h-screen mt-20 p-6">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-center text-primary mb-10">
-          Types of Ants
+          Ants
         </h1>
-        <p className="text-center text-lg max-w-3xl mx-auto text-gray-700 mb-10">
-          From your kitchen counter to your yard, ants can be found just about anywhere. Discover the most common types of ants in the U.S. and the challenges they bring.
-        </p>
+  <p className="text-2xl font-bold text-gray-800 mb-4">From your kitchen counter to your yard, ants can be found just about anywhere.</p>
+  <p className="text-gray-700 mb-6">
+    Discover the most common types of ants in the U.S. and the challenges they bring.
+  </p>
 
-        <div className="bg-white p-6 rounded-xl shadow mb-14">
-          <h2 className="text-2xl font-semibold text-primary mb-4">Understanding Ants</h2>
-          <p className="text-gray-700 leading-relaxed">
-            Ants are small yet incredibly resilient insects that live in highly organized colonies. Attracted to food, water, and shelter, they are experts in infiltration, often forming visible trails as they invade homes.
-            <br /><br />
-            Despite their tiny size, ants are powerful—able to lift up to 50 times their body weight. With over 12,000 known species globally, including several problematic ones in the U.S., they are a force to be reckoned with. A small infestation can escalate quickly, especially when scout ants leave pheromone trails that invite the whole colony.
-            <br /><br />
-            Whether you are dealing with biting fire ants or nuisance pavement ants, early detection and control are key to preventing large infestations.
-          </p>
-        </div>
+  <h2 className="text-xl font-semibold text-gray-800 mb-2">Why Do Ants Keep Coming Back? </h2>
+  <p className="text-gray-700 mb-6">
+    Did you ever go to your bedroom and suddenly see an army of ants in bed marching to a forgotten crumb? You’re not the only one!
+    This invasion of ants is a huge problem of American homeowners. No matter if it’s grub of sugar ants in your pantry, fire ants
+    in your yard, or always the carpenter ants coming from nowhere to sneak into your walls, these annoying creatures are very good
+    at finding a way in.  
+  </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+  <h2 className="text-xl font-semibold text-gray-800 mb-2">How One Ant Leads to Hundreds? </h2>
+  <p className="text-gray-700 mb-6">
+    Ants are very skilled in finding food, water and shelter for themselves. A few crumbs, a leaking faucet, or even the pets
+    dinner bowl can get their interest. And after they have entered the house, the trail that they leave will let the rest of the
+    colony know their way. Before you realize it, a small inconvenience can turn into a huge infestation. 
+  </p>
+
+  <h2 className="text-xl font-semibold text-gray-800 mb-2">Ant Facts You Might Need to Know </h2>
+  <p className="text-gray-700">
+    Although ants are small, but they can be extremely dangerous or even deadly sometimes. There are no fewer than 12,000 known
+    species of ants spread all over the world, and it is said that there could likely be about 22,000 existing species. Ants are
+    the record holders when it comes to strength. They are so tiny yet so mighty that they can lift 10-50 times more than their
+    body weight. They are insects of a social nature appearing as colonies and having very advanced systems of life organization.
+  </p>
+</div>
+
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-16 gap-10">
           {antTypes.map((type, index) => (
             <div
               key={index}
@@ -78,6 +93,6 @@ export default function AntTypesPage() {
           ))}
         </div>
       </div>
-    </div>
+ 
   );
 }

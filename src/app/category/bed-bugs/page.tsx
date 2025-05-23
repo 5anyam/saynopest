@@ -28,22 +28,30 @@ export default function BedBugTypesPage() {
     <div className="min-h-screen mt-20 p-6">
       <div className="max-w-7xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-center text-primary mb-10">
-          Types of Bed Bugs
+          Bed Bugs
         </h1>
-        <p className="text-center text-lg max-w-3xl mx-auto text-gray-700 mb-10">
-          Bed bugs are notorious for their stealth and persistence in human environments. Learning about their types and behaviors helps ensure more effective treatment and prevention.
-        </p>
+        <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
+  <p className="text-gray-700 mb-6">
+    Bed bugs are nasty and persistent insects that are often found in human dwellings. Adult bed bugs are red-brown, and do not have wings and are roughly the size of an apple seed. Their bodies become more elongated and bloated after they have the blood meal. Nymphs are young bed bugs and are way lighter. They are almost transparent in color, except when they have fed, and thus are hard to see. The eggs of bed bugs are minute (about 1mm), and pearly white.
+  </p>
 
-        <div className="bg-white p-6 rounded-xl shadow mb-14">
-          <h2 className="text-2xl font-semibold text-primary mb-4">Understanding Bed Bugs</h2>
-          <p className="text-gray-700 leading-relaxed">
-            Bed bugs are small, reddish-brown insects, approximately the size of an apple seed. Their bodies swell and darken after feeding on blood. Nymphs (young bed bugs) are nearly transparent until they feed, while their eggs are tiny and pearly white.
-            <br /><br />
-            These pests usually stay within 8 feet of sleeping areas, hiding in mattress seams, box springs, bed frames, and crevices. They are most active from midnight to early morning and feed solely on blood, using anesthetic saliva to avoid detection.
-            <br /><br />
-            Increased travel has made bed bugs more common, as they easily hitchhike on luggage and clothing. Although they aren’t known to spread disease, their bites can cause skin irritation, allergic reactions, and anxiety. Professional treatment is often required due to their ability to hide and survive without feeding for long periods.
-          </p>
-        </div>
+  <p className="text-gray-700 mb-6">
+    Most of the time, bed bugs can be found within 8 feet from where people sleep. They tend to live in such places as mattress seams, box springs, bed frames, closets, drawers, where furniture parts join, under wallpaper, and in other places that are hard to access.
+  </p>
+
+  <p className="text-gray-700 mb-6">
+    Bed bugs are most active between 12:00 to 5:00 am and very particularly in the midnight period when you are in your deepest sleep. Bed bugs are fearless in the choice of their only food - blood. They are fond of human blood, and make them their favourite hosts for feeding. They feed for less than 15 minutes and during this time they use their mouthparts to inject saliva into the skin containing an anesthetic and an anticoagulant to avoid humans noticing and stop the feeding.
+  </p>
+
+  <p className="text-gray-700 mb-6">
+    The other reason for this pest issue is that the old methods of getting rid of these pests is no longer effective. Bed bugs certainly can spread quite easily from hotels to residential sites, this is due to the ongoing trend of the global travel industry. As you travel, bed bugs easily hitchhike on the luggage, clothes, and personal belongings, and spread from one place to another.
+  </p>
+
+  <p className="text-gray-700">
+    Although bed bugs have the reputation of being disease carriers, the reality says otherwise. But do not take them seriously, the bites not only lead to skin rashes, but they can also cause allergic reactions and psychological distress. Practically speaking, the affected people can suffer from itchy skin, blisters, and hives caused by the bed bugs' saliva. Since these pests are incredibly hard to find and can live for a long time without food, the quick and successful method of dealing with these universal insects is to use professional help.
+  </p>
+</div>
+
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {bedBugTypes.map((type, index) => (
