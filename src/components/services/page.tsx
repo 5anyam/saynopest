@@ -10,7 +10,7 @@ export function Services() {
                     Pest Control <b className="text-primary">Services</b>
                 </h2>
             </div>
-    <div className="flex flex-row justify-start">
+    <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
            <ServiceCard/>
             </div>
             </div>
