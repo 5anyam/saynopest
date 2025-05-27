@@ -7,7 +7,7 @@ export function Hero() {
     <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-8 lg:grid-cols-12">
         <div className="place-self-center lg:col-span-7">
             <h1 className="max-w-2xl mb-4 text-3xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl">We dig the best. You ditch the pest!</h1>
-            <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">Your go to best pest control companies across US.</p>
+            <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">You can count on SayNoPest- your trusted platform for finding the best pest control companies across the U.S.</p>
             <a className="inline-flex items-center justify-center mr-3 mb-2 text-sm lg:text-base font-medium text-center text-white rounded-lg bg-primary hover:bg-green-800 focus:ring-4 focus:ring-primary-300">
               <EstimateModal/>
             </a>

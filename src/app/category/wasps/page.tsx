@@ -78,8 +78,6 @@ export default function WaspTypesPage() {
     Various types of wasps are found across the United States, each with its own appearance, behavior, and nesting style. Identifying the type of wasp can help guide effective control strategies.
   </p>
 </div>
-
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {waspTypes.map((type, index) => (
             <div
@@ -103,6 +101,5 @@ export default function WaspTypesPage() {
           ))}
         </div>
       </div>
-    
   );
 }
