@@ -38,13 +38,14 @@ export default function Page() {
 
   return (
     <div className="my-20 max-w-6xl mx-auto px-4">
-      <h2 className="text-3xl font-semibold mb-4 text-center">Contact Us</h2>
-      <p className="mb-6 text-center text-gray-600">If you’d like to get in touch, please don’t hesitate to reach out to us using the information below.</p>
+     
 
-      <div className="flex flex-col md:flex-row justify-between mb-6 gap-12">
+      <div className="flex flex-col md:w-full pl-8 pt-4 md:flex-row justify-between mb-6 gap-12">
         {/* Contact Details on the Right Side */}
-        <div className="w-full md:w-1/2 space-y-6">
+        <div className="w-full rounded-xl bg-gray-100 p-4 md:w-1/2 space-y-6">
           <div>
+          <h2 className="text-3xl text-left font-semibold mb-4">Contact Us</h2>
+          <p className="mb-6 text-left text-gray-600">If you’d like to get in touch, please don’t hesitate to reach out to us using the information below.</p>
             <h3 className="text-xl font-medium text-primary mb-2">Address</h3>
             <p className="text-gray-600">16192 Coastal Highway, Lewes, Delaware 19958, Country of Sussex, USA.</p>
           </div>
