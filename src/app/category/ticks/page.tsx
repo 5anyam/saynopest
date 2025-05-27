@@ -31,7 +31,7 @@ const tickTypes = [
 export default function TickTypesPage() {
   return (
     <div className="min-h-screen mt-20 p-6">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-full mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-center text-primary mb-10">
           Types of Ticks
         </h1>
@@ -67,7 +67,7 @@ export default function TickTypesPage() {
                 <h2 className="text-xl font-semibold text-primary mb-2">
                   {type.name}
                 </h2>
-                <p className="text-gray-600 text-sm">{type.description}</p>
+
               </div>
             </div>
           ))}

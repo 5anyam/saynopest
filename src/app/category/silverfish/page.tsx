@@ -16,7 +16,7 @@ const silverfishTypes = [
 export default function SilverfishTypesPage() {
   return (
     <div className="min-h-screen mt-20 p-6">
-      <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
+      <div className="max-w-full mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
   <h1 className="text-3xl text-center font-bold text-primary mb-4">Silverfish</h1>
 
   <p className="text-gray-700 mb-6">
@@ -61,7 +61,7 @@ export default function SilverfishTypesPage() {
                 <h2 className="text-xl font-semibold text-primary mb-2">
                   {type.name}
                 </h2>
-                <p className="text-gray-600 text-sm">{type.description}</p>
+              
               </div>
             </div>
           ))}

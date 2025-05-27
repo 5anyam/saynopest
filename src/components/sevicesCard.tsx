@@ -54,7 +54,7 @@ export function ServiceCard() {
     ]
 
     return (
-        <div className="flex flex-wrap justify-center gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
             {cardData.map((card, index) => (
                 <div
                     key={index}
