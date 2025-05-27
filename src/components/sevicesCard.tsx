@@ -62,7 +62,6 @@ export function ServiceCard() {
                 >
                     <div className="relative mx-4 h-92 w-92 mt-4 overflow-hidden text-white shadow-lg rounded-xl bg-blue-gray-500 bg-clip-border shadow-blue-gray-500/40">
                         <img src={card.image} alt={card.title} />
-                       
                     </div>
                     <div className="p-6">
                         <div className="flex items-center justify-between mb-3">
