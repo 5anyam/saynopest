@@ -7,11 +7,11 @@ export function Hero() {
     <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-8 lg:grid-cols-12">
         <div className="place-self-center lg:col-span-7">
             <h1 className="max-w-2xl mb-4 text-3xl font-bold tracking-tight leading-none md:text-4xl xl:text-5xl">We dig the best. You ditch the pest!</h1>
-            <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl">You can count on SayNoPest- your trusted platform for finding the best pest control companies across the U.S.</p>
+            <p className="max-w-2xl mb-6 font-light text-black lg:mb-8 md:text-lg lg:text-xl">You can count on SayNoPest- your trusted platform for finding the best pest control companies across the U.S.</p>
             <a className="inline-flex items-center justify-center mr-3 mb-2 text-sm lg:text-base font-medium text-center text-white rounded-lg bg-primary hover:bg-green-800 focus:ring-4 focus:ring-primary-300">
               <EstimateModal/>
             </a>
-            <a href="https://www.saynopest.com/contact" className="inline-flex items-center justify-center px-5 py-3 text-sm lg:text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100">
+            <a href="https://www.saynopest.com/contact" className="inline-flex items-center justify-center px-5 py-3 text-sm lg:text-base font-medium text-center text-black border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100">
                 Contact Us
             </a> 
         </div>
@@ -70,8 +70,8 @@ export function Hero() {
         <img className="w-full" src="home-img2.jpg" alt="what-we-do-at-saynopest"/>
         </div>
         <div className="mt-4 md:mt-0">
-            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">What we do at SayNoPest</h2>
-            <p className="mb-6 font-light text-gray-500 md:text-lg dark:text-gray-400">Our goal is simple – we are here to help you connect with good pest control service providers across the United States (both nationwide and locally). At SayNoPest, we compare rates, services, pest products, features, and customer reviews so that you can make the right decision. Our primary concern is to give you the best fit for your household and businesses. You can count on  SayNoPest- your go-to provider of the best pest control companies across the U.S.</p>
+            <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-black">What we do at SayNoPest</h2>
+            <p className="mb-6 font-light text-black md:text-lg dark:text-gray-400">Our goal is simple – we are here to help you connect with good pest control service providers across the United States (both nationwide and locally). At SayNoPest, we compare rates, services, pest products, features, and customer reviews so that you can make the right decision. Our primary concern is to give you the best fit for your household and businesses. You can count on  SayNoPest- your go-to provider of the best pest control companies across the U.S.</p>
             <EstimateModal/>
         </div>
     </div>

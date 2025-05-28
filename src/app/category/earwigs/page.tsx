@@ -31,22 +31,36 @@ export default function EarwigTypesPage() {
   return (
     <div className="min-h-screen mt-20 p-6">
       <div className="max-w-full mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-primary mb-10">
-          Types of Earwigs
-        </h1>
-        <p className="text-center text-lg max-w-3xl mx-auto text-gray-700 mb-10">
-          Recognized by their pincers and nocturnal behavior, earwigs are omnivorous insects that thrive in damp environments. Learn about the common species found in the U.S.
-        </p>
+      <h1 className="text-2xl font-bold text-primary text-center mb-4">Earwigs</h1>
 
-        <div className="bg-white p-6 rounded-xl shadow mb-14">
-          <h2 className="text-2xl font-semibold text-primary mb-4">Understanding Earwigs</h2>
-          <p className="text-gray-700 leading-relaxed">
-            Earwigs are slender, dark-colored insects with distinctive pincers (cerci) at the rear of their abdomen. Despite having wings, they rarely fly and prefer to stay hidden during the day. At night, they emerge to feed on decomposing plant matter, fruits, flowers, and even small insects—making them both scavengers and predators.
-            <br /><br />
-            They are sociable insects, often found in large groups, particularly in moist and warm areas. Inside homes, they frequent bathrooms, basements, and kitchens. Outdoors, they nest under rocks, mulch, and leaf litter. Although not dangerous to humans, large populations can damage gardens and stored foods, and their sudden presence can cause panic.
-            <br /><br />
-            Warm, rainy weather across the U.S. creates ideal breeding conditions, resulting in rising infestation rates. Managing earwig populations through proper moisture control and pest prevention measures is crucial to avoid long-term problems.
-          </p>
+<p className="text-gray-700 mb-6">
+  Recognized by their pincers and nocturnal behavior, earwigs are omnivorous insects that thrive in damp environments. Learn about the common species found in the U.S.
+</p>
+
+<h2 className="text-xl font-semibold text-gray-800 mb-2">Earwigs Uncovered: Identifying the Pincer-Tailed Insect</h2>
+<p className="text-gray-700 mb-6">
+  Earwigs are easily identified by the pincers, or cerci, located at the end of their abdomen. Adults measure about 1.3 to 2.5 cm in length and are typically dark brown or reddish-brown, sometimes with lighter or striped bodies compared to their younger counterparts. Although most earwigs have wings, they rarely use them to fly.
+</p>
+
+<h2 className="text-xl font-semibold text-gray-800 mb-2">Where Earwigs Hide and What They Eat</h2>
+<p className="text-gray-700 mb-6">
+  Being nocturnal, earwigs tend to hide during the day in damp, dark places such as under rocks, mulch, leaf litter, or logs. At night, they become active and feed on a wide variety of materials, including decomposing plant matter, live plants, fruits, flowers, and even other insects. This makes them both scavengers and occasional predators.
+</p>
+
+<h2 className="text-xl font-semibold text-gray-800 mb-2">When Earwigs Invade Your Home: Habitat & Danger</h2>
+<p className="text-gray-700 mb-6">
+  Earwigs often travel in small groups and are usually found near moist areas inside homes, such as bathrooms, damp basements, and overly wet kitchens. Their thigmotactic behavior—seeking out close contact with surfaces—draws them to these environments. While earwigs are not dangerous to humans, their presence can cause discomfort, and in large numbers, they may damage garden plants and spoil stored food.
+</p>
+
+<h2 className="text-xl font-semibold text-gray-800 mb-2">Earwig Invasion in the USA</h2>
+<p className="text-gray-700 mb-6">
+  Earwig infestations are becoming more common across the U.S. due to ideal conditions created by warm, wet climates. Frequent rainfall and high humidity promote breeding and survival, contributing to rising populations. Without proper control, large infestations can lead to food contamination, soil disruption, and environmental imbalance.
+</p>
+
+<h2 className="text-xl font-semibold text-primary text-center mb-2">Types of Earwigs</h2>
+<p className="text-gray-700">
+  Discover the most common types of earwigs found in the U.S. and learn what makes each type unique in their natural and indoor habitats.
+</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -72,6 +86,6 @@ export default function EarwigTypesPage() {
           ))}
         </div>
       </div>
-    </div>
+   
   );
 }

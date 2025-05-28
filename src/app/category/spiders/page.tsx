@@ -55,22 +55,32 @@ export default function SpiderTypesPage() {
   return (
     <div className="min-h-screen mt-20 p-6">
       <div className="max-w-full mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-primary mb-10">
-          Types of Spiders
-        </h1>
-        <p className="text-center text-lg max-w-3xl mx-auto text-gray-700 mb-10">
-          Spiders are commonly found in American homes. Although most are harmless and help control insect populations, certain species like the black widow and brown recluse require caution due to their venomous bites.
-        </p>
+  <h1 className="text-2xl font-bold text-primary text-center mb-4">Spiders</h1>
 
-        <div className="bg-white p-6 rounded-xl shadow mb-14">
-          <h2 className="text-2xl font-semibold text-primary mb-4">Understanding Spiders</h2>
-          <p className="text-gray-700 leading-relaxed">
-            Spiders are eight-legged arachnids known for their ability to spin silk. They come in a variety of shapes and colors depending on their species. Some spin webs to trap prey while others, like wolf and jumping spiders, actively hunt.
-            <br /><br />
-            They feed on insects like flies, mosquitoes, and ants—helping reduce pest populations in and around homes. While most spiders are solitary and shy, a few can bite when threatened. The black widow and brown recluse are the most medically significant spiders in the U.S.
-            <br /><br />
-            Spider infestations are common due to favorable indoor environments, easy prey access, and ample hiding spaces. Controlling their population not only reduces potential health risks but also creates a more comfortable living space.
-          </p>
+  <p className="text-gray-700 mb-6">
+    Many American homes include spiders. Although most spiders aren’t dangerous, black widows and brown recluses should be handled carefully, as their bites are poisonous.
+  </p>
+
+  <h2 className="text-xl font-semibold text-gray-800 mb-2">Meet the Eight-Legged Intruders: Common House Spiders in the U.S.</h2>
+  <p className="text-gray-700 mb-6">
+    Spiders are among the most common household pests in the U.S. They have eight legs, two body sections, and can spin silk. Appearance varies widely: black widows are shiny black with a red hourglass on their underside; brown recluses are light to dark brown with a violin-shaped mark on their backs. Wolf spiders are large, hairy, and usually gray or brown. Jumping spiders are small, colorful, and have large eyes. House spiders are yellowish-brown with an elongated abdomen, while yellow sac spiders are pale yellow or beige and less than half an inch long. From fields to homes, spiders are found nearly everywhere.
+  </p>
+
+  <h2 className="text-xl font-semibold text-gray-800 mb-2">Spiders: The Silent Bug Hunters</h2>
+  <p className="text-gray-700 mb-6">
+    Spiders are nature’s pest controllers. They feed on insects such as flies, mosquitoes, ants, and beetles—many of which are common in homes. While some spin webs to trap their prey, others like wolf and jumping spiders actively hunt. Most spiders are solitary and non-aggressive, preferring to avoid humans. Bites from spiders like the black widow and brown recluse typically occur only in self-defense.
+  </p>
+
+  <h2 className="text-xl font-semibold text-gray-800 mb-2">Why Spiders Love Your Home: The Hidden Invitation</h2>
+  <p className="text-gray-700 mb-6">
+    Spider infestations are common in the U.S. due to accessible prey, favorable climates, and numerous hiding spots inside and around homes. These conditions make it easy for spiders to settle and thrive. While many are harmless, the presence of spiders can cause discomfort and fear. Its essential to address infestations early to prevent potential bites and create a more comfortable living environment.
+  </p>
+
+  <h2 className="text-xl font-semibold text-primary text-center mb-2">Types of Spiders</h2>
+  <p className="text-gray-700">
+    Discover the most common types of spiders found in the United States and learn how to identify each one.
+  </p>
+
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -95,6 +105,5 @@ export default function SpiderTypesPage() {
           ))}
         </div>
       </div>
-    </div>
   );
 }

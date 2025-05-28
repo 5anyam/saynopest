@@ -25,22 +25,53 @@ export default function MosquitoTypesPage() {
   return (
     <div className="min-h-screen mt-20 p-6">
       <div className="max-w-full mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-primary mb-10">
-          Types of Mosquitoes
-        </h1>
-        <p className="text-center text-lg max-w-3xl mx-auto text-gray-700 mb-10">
-          Mosquitoes are common pests in the U.S. known for their buzzing presence and itchy bites. While both male and female mosquitoes feed on nectar, only females bite to obtain protein for egg development.
-        </p>
+      <h1 className="text-2xl text-center font-bold text-primary mb-4">Mosquitoes</h1>
 
-        <div className="bg-white p-6 rounded-xl shadow mb-14">
-          <h2 className="text-2xl font-semibold text-primary mb-4">Understanding Mosquitoes</h2>
-          <p className="text-gray-700 leading-relaxed">
-            Mosquitoes have long lower bodies, narrow upper bodies, and a single pair of wings. Female mosquitoes have specialized mouthparts to extract blood from humans and animals. These insects breed in warm, damp environments like clogged drains, stagnant ponds, and forgotten containers.
-            <br /><br />
-            They are most active in the mornings and evenings, although some species bite during the day. Attracted by body warmth, carbon dioxide, and sweat, mosquitoes find humans an easy target.
-            <br /><br />
-            Climate change, dirty surroundings, and the abundance of breeding grounds have led to an increase in mosquito infestations—and with it, the risk of disease transmission, including Zika, West Nile, dengue, and chikungunya.
-          </p>
+<p className="text-gray-700 mb-6">
+  Mosquitoes are small insects that can fly. They bite to suck animal blood, and their bites can be itchy and sometimes spread serious diseases like dengue or malaria. It is important to take precautions to keep them away.
+</p>
+
+<h2 className="text-xl font-semibold text-gray-800 mb-2">Physical Appearance</h2>
+<p className="text-gray-700 mb-6">
+  Mosquitoes have a distinct body shape with a large lower abdomen, narrow upper body, and one pair of wings. Female mosquitoes have a specialized mouthpart that allows them to pierce skin and feed on the blood of humans and animals.
+</p>
+
+<h2 className="text-xl font-semibold text-gray-800 mb-2">Habitat</h2>
+<p className="text-gray-700 mb-6">
+  Mosquitoes prefer warm, damp areas and often breed in standing water such as birdbaths, clogged drains, gutters, ponds, and even water-filled containers. These environments provide the ideal conditions for laying eggs and growing larvae.
+</p>
+
+<h2 className="text-xl font-semibold text-gray-800 mb-2">Feeding Behavior</h2>
+<p className="text-gray-700 mb-6">
+  Both male and female mosquitoes feed on plant nectar, but only females bite to extract blood. This blood provides essential proteins needed for egg development. Mosquitoes are generally active during the early morning and evening, though some species may also bite during the day.
+</p>
+
+<p className="text-gray-700 mb-6">
+  Mosquitoes are drawn to carbon dioxide, body heat, and sweat, which is why they often target humans. Increasing mosquito populations and mosquito-borne diseases are a growing concern globally and in the U.S., mainly due to:
+</p>
+<ul className="list-disc list-inside text-gray-700 mb-6">
+  <li>Abundant breeding sites</li>
+  <li>Climatic changes</li>
+  <li>Unclean surroundings</li>
+</ul>
+
+<p className="text-gray-700 mb-6">
+  These factors contribute to the spread of diseases like West Nile virus, Zika, dengue, and chikungunya.
+</p>
+
+<h2 className="text-xl font-semibold text-gray-800 mb-2">Common Mosquito Species in America</h2>
+<ul className="list-disc list-inside text-gray-700 mb-6">
+  <li>Yellow Fever Mosquito</li>
+  <li>Asian Tiger Mosquito</li>
+  <li>Northern House Mosquito</li>
+  <li>Southern House Mosquito</li>
+  <li>Common Malaria Mosquito</li>
+</ul>
+
+<h2 className="text-xl font-semibold text-primary text-center mb-2">Types of Mosquitoes</h2>
+<p className="text-gray-700">
+  From silent biters to buzzing nuisances, explore the top mosquito species in the U.S. and how their appearances and behaviors differ.
+</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -66,6 +97,5 @@ export default function MosquitoTypesPage() {
           ))}
         </div>
       </div>
-    </div>
   );
 }

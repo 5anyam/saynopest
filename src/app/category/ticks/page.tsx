@@ -31,23 +31,29 @@ const tickTypes = [
 export default function TickTypesPage() {
   return (
     <div className="min-h-screen mt-20 p-6">
-      <div className="max-w-full mx-auto">
-        <h1 className="text-4xl md:text-5xl font-bold text-center text-primary mb-10">
-          Types of Ticks
-        </h1>
-        <p className="text-center text-lg max-w-3xl mx-auto text-gray-700 mb-10">
-          Ticks are dangerous blood-feeding arachnids that can transmit serious diseases like Lyme disease and Rocky Mountain spotted fever. Learn about the most common tick types found in the U.S.
-        </p>
+      <div className="max-w-full mx-auto mb-8">
+  <h1 className="text-2xl font-bold text-primary mb-4 text-center">Ticks</h1>
 
-        <div className="bg-white p-6 rounded-xl shadow mb-14">
-          <h2 className="text-2xl font-semibold text-primary mb-4">Understanding Ticks</h2>
-          <p className="text-gray-700 leading-relaxed">
-            Ticks are small, oval-shaped arachnids ranging in size from a sesame seed to an apple seed. With eight legs and piercing mouthparts, they latch onto hosts — humans, pets, or wildlife — to feed on blood.
-            <br /><br />
-            Ticks are often found in wooded areas, tall grass, and shrubs, lying in wait for a passing host. They require high humidity to survive and can go for months without a meal by hibernating in shaded environments.
-            <br /><br />
-            With warming climates and changing habitats, ticks have spread to new regions, increasing the risk of tick-borne illnesses like Lyme disease, anaplasmosis, and spotted fevers. Quick removal after bites and targeted pest control can reduce these threats effectively.
-          </p>
+  <p className="text-gray-700 mb-6">
+    Ticks live in grass and wooded areas and feed on blood—from your pets or even yourself. Though small, their bites can transmit serious diseases. That’s why its crucial to check for ticks after spending time outdoors.
+  </p>
+
+  <h2 className="text-xl font-semibold text-gray-800 mb-2">Physical Appearance and Behavior of Ticks</h2>
+  <p className="text-gray-700 mb-6">
+    Ticks are parasitic arachnids and among the most dangerous blood-feeding pests in the U.S. Adult ticks range in size from 1/8 inch (like a sesame seed) to 1/4 inch (like an apple seed), depending on species and life stage. Their bodies are oval and flattened, equipped with eight legs and a specialized head for piercing skin and feeding on blood.
+    <br /><br />
+    Commonly found in wooded areas, tall grass, and shrubs, ticks perch on vegetation waiting for a host—human, pet, or wildlife—to pass by. They feed solely on blood and require it to grow through their life stages: larva, nymph, and adult. Ticks can survive for months without feeding by staying in humid, shaded environments.
+  </p>
+
+  <h2 className="text-xl font-semibold text-gray-800 mb-2">Health Risks</h2>
+  <p className="text-gray-700 mb-6">
+    Ticks pose a significant public health risk in the U.S. States with suitable climates for ticks report high cases of diseases like Lyme disease, Rocky Mountain spotted fever, and anaplasmosis. Ticks can transmit harmful pathogens within just 24–48 hours of attaching to a host.
+  </p>
+
+  <h2 className="text-2xl font-semibold text-primary text-center mb-2">Types of Ticks</h2>
+  <p className="text-gray-700">
+    Despite their small size, ticks come in various species, each with unique traits, dangers, and survival tactics. Identifying the specific type of tick can help guide appropriate prevention and treatment efforts.
+  </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -73,6 +79,5 @@ export default function TickTypesPage() {
           ))}
         </div>
       </div>
-    </div>
   );
 }
