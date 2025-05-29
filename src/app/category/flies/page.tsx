@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-const mosquitoTypes = [
+const fliesTypes = [
   {
     name: "Aedes Mosquitoes",
     image: "/types/mosquitoes/aedes-mosquitoes.jpg",
@@ -54,9 +54,8 @@ export default function FliesTypesPage() {
   From everyday household nuisances to agricultural pests, different fly species have varying impacts on ecosystems and human health. Understanding them is key to effective prevention and control.
 </p>
         </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-          {mosquitoTypes.map((type, index) => (
+          {fliesTypes.map((type, index) => (
             <div
               key={index}
               className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
