@@ -2,23 +2,23 @@ import Image from "next/image";
 
 const miceTypes = [
   {
-    name: "Subterranean Termites",
-    image: "/types/subterranean-termites.jpg",
+    name: "Deer Mouse",
+    image: "/types/rodents/deer-mouse.jpg",
     description: "These termites build large underground colonies and require moist environments. They commonly enter homes through soil contact or foundation cracks."
   },
   {
-    name: "Formosan Termites",
-    image: "/types/formosan-termites.jpg",
+    name: "Field Mouse",
+    image: "/types/rodents/field-mouse.jpg",
     description: "Highly aggressive and destructive, Formosan termites can build nests underground or in walls and attics if moisture is available."
   },
   {
-    name: "Drywood Termites",
-    image: "/types/drywood-termites.jpg",
+    name: "House Mouse",
+    image: "/types/rodents/house-mouse.jpg",
     description: "These termites live in dry wood and don't require contact with soil. They infest wooden furniture, walls, and framing above ground."
   },
   {
-    name: "Dampwood Termites",
-    image: "/types/dampwood-termites.jpg",
+    name: "White Footed",
+    image: "/types/rodents/white-footed-mouse.jpg",
     description: "Larger in size, dampwood termites prefer moist, decaying wood and are commonly found in areas with high humidity or water damage."
   }
 ];
@@ -27,7 +27,7 @@ export default function MiceTypesPage() {
   return (
     <div className="min-h-screen mt-20 p-6">
 <div className="max-w-full mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
-  <h1 className="text-2xl font-bold text-gray-800 mb-4">Mice</h1>
+  <h1 className="text-2xl text-center font-bold text-primary mb-4">Mice</h1>
 
   <p className="text-gray-700 mb-6">
     Mice reproduce rapidly, with a single female capable of producing up to 120 offspring per year, leading to fast infestations.
@@ -53,7 +53,7 @@ export default function MiceTypesPage() {
     Approximately 11.6% of U.S. households report rodent issues yearly, impacting over 16 million homes. Infestations are more common in colder regions like the Midwest and Northeast as mice seek indoor warmth. States like Vermont, South Dakota, and Pennsylvania report higher occurrences due to factors such as aging housing and extreme weather. Mice pose serious health risks including hantavirus, salmonella, and Lyme disease transmitted through droppings, urine, and parasites. Their presence can also exacerbate allergies and asthma, especially in children.
   </p>
 
-  <h2 className="text-xl font-semibold text-gray-800 mb-2">Types of Mice</h2>
+  <h2 className="text-2xl font-semibold text-primary text-center mb-2">Types of Mice</h2>
   <p className="text-gray-700">
     The United States is home to various types of mice, each differing in appearance and behavior. Understanding the type of mouse helps in choosing the appropriate control method.
   </p>

@@ -2,20 +2,49 @@ import Image from "next/image";
 
 const fliesTypes = [
   {
-    name: "Aedes Mosquitoes",
-    image: "/types/mosquitoes/aedes-mosquitoes.jpg",
+    name: "Black Fly",
+    image: "/types/flies/black-fly.jpg",
     description:
       "Recognized by white markings on its legs and a marking in the form of a lyre on the upper thorax. It spreads diseases like Zika, dengue, and yellow fever. Mostly active during the daytime."
   },
   {
-    name: "Anopheles Mosquito",
-    image: "/types/mosquitoes/anopheles-mosquito.jpg",
+    name: "Blow Fly",
+    image: "/types/flies/blow-fly.jpg",
     description:
       "Black with distinct white stripes on the legs and a white stripe down the center of its back. Known for aggressive daytime biting and spreading viruses like chikungunya, dengue, and Zika."
   },
   {
-    name: "Culex Mosquitoes",
-    image: "/types/mosquitoes/culex-mosquitoes.jpg",
+    name: "Bottle Fly",
+    image: "/types/flies/bottle-fly.jpg",
+    description:
+      "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains."
+  },
+  {
+    name: "Cluster Fly",
+    image: "/types/flies/cluster-fly.jpg",
+    description:
+      "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains."
+  },{
+    name: "Crane Fly",
+    image: "/types/flies/crane-fly.jpg",
+    description:
+      "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains."
+  },
+  {
+    name: "Deer Fly",
+    image: "/types/flies/deer-fly.jpg",
+    description:
+      "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains."
+  },
+  {
+    name: "Gnat Fly",
+    image: "/types/flies/gnat.jpg",
+    description:
+      "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains."
+  },
+  {
+    name: "Horn Fly",
+    image: "/types/flies/horn-fly.jpg",
     description:
       "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains."
   }
@@ -24,7 +53,7 @@ const fliesTypes = [
 export default function FliesTypesPage() {
   return (
     <div className="min-h-screen mt-20 p-6">
-      <div className="max-w-full mx-auto">
+      <div className="max-w-full mx-auto mb-14">
       <h1 className="text-2xl font-bold text-primary text-center mb-4">Flies</h1>
 
 <p className="text-gray-700 mb-6">
@@ -54,7 +83,7 @@ export default function FliesTypesPage() {
   From everyday household nuisances to agricultural pests, different fly species have varying impacts on ecosystems and human health. Understanding them is key to effective prevention and control.
 </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {fliesTypes.map((type, index) => (
             <div
               key={index}

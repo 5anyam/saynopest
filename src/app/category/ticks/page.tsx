@@ -3,28 +3,23 @@ import Image from "next/image";
 const tickTypes = [
   {
     name: "Blacklegged Tick (Deer Tick)",
-    image: "/types/blacklegged-tick.jpg",
+    image: "/blacklegged-tick.jpg",
     description: "Commonly found in the Northeast and Upper Midwest, these ticks are the primary vectors of Lyme disease. They are small, dark-colored, and feed on both animals and humans."
   },
   {
     name: "Lone Star Tick",
-    image: "/types/lone-star-tick.jpg",
+    image: "/lone-star-tick.jpg",
     description: "Easily recognized by the single white dot on the female's back, this tick is aggressive and known to transmit ehrlichiosis and Southern tick-associated rash illness (STARI)."
   },
   {
-    name: "American Dog Tick",
-    image: "/types/american-dog-tick.jpg",
+    name: "Rocky Mountain Wood",
+    image: "/rocky-mountain-wood-tick.jpg",
     description: "Widespread across the U.S., this tick prefers dogs and humans as hosts. It can transmit Rocky Mountain spotted fever and tularemia."
   },
   {
     name: "Brown Dog Tick",
-    image: "/types/brown-dog-tick.jpg",
+    image: "/brown-dog-tick.jpg",
     description: "Often found indoors, especially in kennels, this tick prefers dogs but can bite humans. It transmits canine ehrlichiosis and babesiosis."
-  },
-  {
-    name: "Gulf Coast Tick",
-    image: "/types/gulf-coast-tick.jpg",
-    description: "Found along the southeastern and Gulf coasts, this tick transmits Rickettsia parkeri rickettsiosis, a form of spotted fever."
   }
 ];
 
@@ -56,7 +51,7 @@ export default function TickTypesPage() {
   </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {tickTypes.map((type, index) => (
             <div
               key={index}

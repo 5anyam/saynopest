@@ -30,7 +30,7 @@ const earwigTypes = [
 export default function EarwigTypesPage() {
   return (
     <div className="min-h-screen mt-20 p-6">
-      <div className="max-w-full mx-auto">
+      <div className="max-w-full mx-auto mb-16">
       <h1 className="text-2xl font-bold text-primary text-center mb-4">Earwigs</h1>
 
 <p className="text-gray-700 mb-6">
@@ -57,13 +57,13 @@ export default function EarwigTypesPage() {
   Earwig infestations are becoming more common across the U.S. due to ideal conditions created by warm, wet climates. Frequent rainfall and high humidity promote breeding and survival, contributing to rising populations. Without proper control, large infestations can lead to food contamination, soil disruption, and environmental imbalance.
 </p>
 
-<h2 className="text-xl font-semibold text-primary text-center mb-2">Types of Earwigs</h2>
+<h2 className="text-2xl font-semibold text-primary text-center mb-2">Types of Earwigs</h2>
 <p className="text-gray-700">
   Discover the most common types of earwigs found in the U.S. and learn what makes each type unique in their natural and indoor habitats.
 </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {earwigTypes.map((type, index) => (
             <div
               key={index}

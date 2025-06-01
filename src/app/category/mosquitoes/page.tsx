@@ -24,7 +24,7 @@ const mosquitoTypes = [
 export default function MosquitoTypesPage() {
   return (
     <div className="min-h-screen mt-20 p-6">
-      <div className="max-w-full mx-auto">
+      <div className="max-w-full mx-auto mb-16">
       <h1 className="text-2xl text-center font-bold text-primary mb-4">Mosquitoes</h1>
 
 <p className="text-gray-700 mb-6">

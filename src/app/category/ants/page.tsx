@@ -2,20 +2,14 @@ import Image from "next/image";
 
 const antTypes = [
   {
-    name: "Fire Ant",
-    image: "/types/aitronella-ant.jpg",
-    description:
-      "Known for their aggressive nature and painful stings, fire ants build large mound nests outdoors and can swarm when disturbed. They're common in the southern U.S."
-  },
-  {
-    name: "Twig Ant",
-    image: "/types/grease-ant.jpg",
+    name: "Grease Ant",
+    image: "/types/grease-ants.jpg",
     description:
       "Twig ants are often found nesting in dead branches and twigs. While not typically aggressive, they can invade homes near wooded areas or gardens."
   },
   {
-    name: "Acrobat Ant",
-    image: "/types/argentine-ant.jpg",
+    name: "Argentine Ant",
+    image: "/types/argentine-ants.jpg",
     description:
       "Named for their unique habit of raising their abdomen over their head when threatened, acrobat ants nest in decaying wood and sometimes inside walls."
   },
@@ -26,7 +20,7 @@ const antTypes = [
       "Army ants are nomadic and known for their massive swarms. While less common in the U.S., they pose a risk due to their aggressive foraging behavior."
   },
   {
-    name: "Pavement Ant",
+    name: "Carpenter Ant",
     image: "/types/carpenter-ant.jpg",
     description:
       "Often seen around sidewalks and driveways, pavement ants can enter buildings in search of food, especially sugary substances and grease."
@@ -70,7 +64,7 @@ export default function AntTypesPage() {
 </div>
 
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-16 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-16 gap-10">
           {antTypes.map((type, index) => (
             <div
               key={index}

@@ -27,7 +27,7 @@ const millipedeTypes = [
 export default function MillipedeTypesPage() {
   return (
     <div className="min-h-screen mt-20 p-6">
-      <div className="max-w-full mx-auto">
+      <div className="max-w-full mx-auto mb-16">
       <h1 className="text-2xl font-bold text-primary text-center mb-4">Millipedes</h1>
 
 <p className="text-gray-700 mb-6">
@@ -59,7 +59,7 @@ export default function MillipedeTypesPage() {
   While millipedes are generally harmless, several species in the U.S. may occasionally become household nuisances when environmental conditions push them indoors.
 </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {millipedeTypes.map((type, index) => (
             <div
               key={index}

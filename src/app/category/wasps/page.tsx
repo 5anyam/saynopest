@@ -3,42 +3,42 @@ import Image from "next/image";
 const waspTypes = [
   {
     name: "Yellowjackets",
-    image: "/types/yellowjacket.jpg",
+    image: "/types/wasps/yellowjacket.jpg",
     description: "Aggressive social wasps that live in colonies and are known for their painful stings. They often build nests underground or in wall cavities."
   },
   {
     name: "Paper Wasps",
-    image: "/types/paper-wasp.jpg",
+    image: "/types/wasps/paper-wasp.jpg",
     description: "Slender with long legs and brownish bodies with yellow markings. They build open, umbrella-shaped nests under eaves and ledges."
   },
   {
     name: "Bald-faced Hornet",
-    image: "/types/bald-faced-hornet.jpg",
+    image: "/types/wasps/bald-faced-hornet.jpg",
     description: "A large black and white wasp that builds large paper nests in trees and on buildings. Known for being extremely aggressive near their nests."
   },
   {
     name: "European Hornet",
-    image: "/types/european-hornet.jpg",
+    image: "/types/wasps/european-hornet.jpg",
     description: "Larger than most wasps, with brown and yellow markings. They can sting repeatedly and typically build nests in hollow trees or walls."
   },
   {
     name: "Mud Daubers",
-    image: "/types/mud-dauber.jpg",
+    image: "/types/wasps/mud-dauber.jpg",
     description: "Solitary wasps that build tube-like nests from mud. They are generally non-aggressive and help control spider populations."
   },
   {
     name: "Digger Wasps",
-    image: "/types/digger-wasp.jpg",
+    image: "/types/wasps/digger-wasp.jpg",
     description: "Ground-nesting wasps that dig burrows in sandy soil. They are solitary and prey on insects to feed their larvae."
   },
   {
     name: "Cicada Killer Wasps",
-    image: "/types/cicada-killer.jpg",
+    image: "/types/wasps/cicada-killer.jpg",
     description: "Large wasps that paralyze cicadas and bury them as food for their young. They are not typically aggressive toward humans."
   },
   {
     name: "Blue-winged Wasp",
-    image: "/types/blue-winged-wasp.jpg",
+    image: "/types/wasps/blue-winged-wasp.jpg",
     description: "Recognizable by their metallic blue wings and reddish-orange body. They help control beetle larvae populations."
   }
 ];
