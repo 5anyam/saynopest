@@ -1,3 +1,5 @@
+import type { Metadata } from 'next';
+
 import { SearchBar } from "@/components/searcBar/searchBar";
 import { getAllPosts, getCategoryBySlug } from "@/lib/queries";
 import Image from "next/image";
@@ -5,9 +7,19 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 type Props = {
-  params: { slug: string };
-  searchParams?: { [key: string]: string | string[] };
-};
+    params: { slug: string };
+    searchParams?: { [key: string]: string | string[] | undefined };
+  };
+
+  export async function generateMetadata(
+    { params }: Props
+  ): Promise<Metadata> {
+    const { slug } = params;
+    // fetch post/category and return metadata
+    return {
+      title: `Category: ${slug}`,
+    };
+  }
 
 export default async function CategoryPage({ params, searchParams }: Props) {
   const { slug } = params;
