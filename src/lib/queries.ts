@@ -67,6 +67,12 @@ export async function getCategoriesByIds(ids: number[]): Promise<Category[]> {
   return categories;
 }
 
+export async function getCategoryBySlug(slug: string) {
+  const res = await fetch(`${baseUrl}/wp-json/wp/v2/categories?slug=${slug}`);
+  const data = await res.json();
+  return data[0] || null;
+}
+
 export async function getCategories(): Promise<Category[]> {
   const response = await fetch(`${baseUrl}/wp-json/wp/v2/categories`);
   const data = await response.json();
@@ -88,3 +94,8 @@ export async function getPostsByCategory(categoryId: number, limit: number = 3):
   return posts;
 }
 
+export async function getAllCategories() {
+  const res = await fetch(`${baseUrl}/wp-json/wp/v2/categories?per_page=100`);
+  if (!res.ok) throw new Error("Failed to fetch categories");
+  return res.json();
+}

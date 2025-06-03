@@ -1,13 +1,17 @@
-"use client"
+'use client'
+
 import { useRouter } from "next/navigation"
 
-export function SearchBar() {
+export function SearchBar({ slug }: { slug: string }) {
   const router = useRouter();
 
   function handleSearch(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const searchInput = event.currentTarget.elements.namedItem("search") as HTMLInputElement;
-    router.push(`/posts?search=${searchInput.value}`);
+    const query = searchInput.value.trim();
+    if (query) {
+      router.push(`/category/${slug}?search=${encodeURIComponent(query)}`);
+    }
   }
 
   return (
@@ -18,12 +22,6 @@ export function SearchBar() {
         className="border rounded-md py-1 px-2 text-sm"
         name="search"
       />
-      {/* <button
-          type="submit"
-          className="border rounded-md py-1 px-2 text-sm"
-        >
-          Search
-        </button> */}
     </form>
-  )
+  );
 }

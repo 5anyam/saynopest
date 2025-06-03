@@ -1,5 +1,11 @@
 import type { Metadata, ResolvingMetadata } from 'next';
-import { getPostBySlug, getAuthorById, getCategoriesByIds, getPostsByCategory } from "@/lib/queries";
+import {
+  getPostBySlug,
+  getAuthorById,
+  getCategoriesByIds,
+  getPostsByCategory,
+  getAllCategories,
+} from "@/lib/queries";
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -8,7 +14,10 @@ type Props = {
   params: Promise<{ slug: string }>;
 };
 
-export async function generateMetadata({ params }: Props, parent: ResolvingMetadata): Promise<Metadata> {
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
   const post = await getPostBySlug((await params).slug);
   const previousImages = (await parent).openGraph?.images || [];
 
@@ -21,7 +30,8 @@ export async function generateMetadata({ params }: Props, parent: ResolvingMetad
 }
 
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
-  const post = await getPostBySlug((await params).slug);
+  const slugData = await params;
+  const post = await getPostBySlug(slugData.slug);
   if (!post) return <div>Post not found</div>;
 
   const author = await getAuthorById(post.author);
@@ -29,6 +39,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const relatedPosts = post.categories.length > 0
     ? await getPostsByCategory(post.categories[0], 3)
     : [];
+  const allCategories = await getAllCategories(); // ✅ properly fetched
 
   const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
     year: 'numeric',
@@ -40,13 +51,11 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     <div className="container mx-auto px-4 mt-24 flex flex-col lg:flex-row gap-12">
       {/* Main Content */}
       <div className="lg:w-2/3 w-full">
-        {/* Title */}
         <h1
           className="font-bold text-4xl mb-6 leading-tight"
           dangerouslySetInnerHTML={{ __html: post.title.rendered }}
         />
 
-        {/* Metadata */}
         <div className="flex justify-between text-sm text-gray-700 mb-6 flex-wrap gap-2">
           <div>
             Published on <b>{formattedDate}</b> by <b>{author?.name}</b>
@@ -56,7 +65,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
               <Link
                 key={category.id}
                 className="bg-green-100 text-green-700 px-2 py-1 rounded-md"
-                href={`/posts?categories=${category.id}`}
+                href={`/category/${category.slug}`}
               >
                 {category.name}
               </Link>
@@ -64,7 +73,6 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           </div>
         </div>
 
-        {/* Featured Image */}
         {post.yoast_head_json?.og_image?.[0]?.url && (
           <div className="mb-8">
             <Image
@@ -78,13 +86,11 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
           </div>
         )}
 
-        {/* Blog Content */}
         <div
           className="prose lg:prose-lg max-w-none prose-headings:font-semibold prose-p:leading-7 prose-img:mx-auto prose-img:rounded-md prose-a:text-green-600 hover:prose-a:underline"
           dangerouslySetInnerHTML={{ __html: post.content.rendered }}
         />
 
-        {/* Related Posts */}
         {relatedPosts.length > 1 && (
           <div className="mt-16 mb-10">
             <h2 className="text-2xl font-semibold mb-4">Related Posts</h2>
@@ -151,7 +157,6 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                   <option>Wasps Control</option>
                   <option>Moths Control</option>
                   <option>Ticks Control</option>
-
                 </select>
               </div>
               <button
@@ -161,6 +166,25 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                 Submit
               </button>
             </form>
+          </div>
+
+          {/* Categories */}
+          <div className="border p-6 rounded-md shadow-md bg-white">
+            <h3 className="text-xl font-semibold mb-4">Categories</h3>
+            <ul className="space-y-2">
+              {allCategories
+                .filter((cat) => cat.count > 0)
+                .map((cat) => (
+                  <li key={cat.id}>
+                    <Link
+                      href={`/category/${cat.slug}`}
+                      className="text-green-700 hover:underline block"
+                    >
+                      {cat.name} ({cat.count})
+                    </Link>
+                  </li>
+                ))}
+            </ul>
           </div>
         </div>
       </aside>
