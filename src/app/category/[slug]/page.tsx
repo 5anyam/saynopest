@@ -12,12 +12,10 @@ type Props = {
   };
 
   export async function generateMetadata(
-    { params }: Props
+    { params }: { params: { slug: string } }
   ): Promise<Metadata> {
-    const { slug } = params;
-    // fetch post/category and return metadata
     return {
-      title: `Category: ${slug}`,
+      title: `Category: ${params.slug}`,
     };
   }
 
