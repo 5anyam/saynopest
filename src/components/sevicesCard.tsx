@@ -1,5 +1,4 @@
 import Link from "next/link";
-import EstimateModal from "./bookingModal";
 
 export function ServiceCard() {
     const cardData = [

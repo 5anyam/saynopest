@@ -35,7 +35,7 @@ export default function BedBugTypesPage() {
 
   <h2 className="text-xl font-semibold text-gray-800 mb-2">What do bed bugs look like?</h2>
   <p className="text-gray-700 mb-6">
-    Bed bugs are nasty and persistent insects that are often found in human dwellings. Adult bed bugs are red-brown, and do not have wings and are roughly the size of an apple seed. Their bodies become more elongated and bloated after they have the blood meal. Nymphs are the younger bed bugs that are way lighter. They are almost transparent in color, except when they have fed, and thus are hard to see. The eggs of bed bugs are minute (about 1mm), and pearly white.
+    Bed bugs are nasty and persistent insects that are often found in human dwellings. <b>Adult bed bugs</b> are red-brown, and do not have wings and are roughly the size of an apple seed. Their bodies become more elongated and bloated after they have the blood meal. <b>Nymphs</b> are the younger bed bugs that are way lighter. They are almost transparent in color, except when they have fed, and thus are hard to see. The eggs of bed bugs are minute (about 1mm), and pearly white.
   </p>
 
   <p className="text-gray-700 mb-6">
