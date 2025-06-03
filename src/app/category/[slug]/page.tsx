@@ -1,34 +1,39 @@
-import type { Metadata } from 'next';
+import type { Metadata, ResolvingMetadata } from 'next';
 
-import { SearchBar } from "@/components/searcBar/searchBar";
 import { getAllPosts, getCategoryBySlug } from "@/lib/queries";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-type Props = {
-    params: { slug: string };
-    searchParams?: { [key: string]: string | string[] | undefined };
-  };
 
+type Props = {
+    params: Promise<{ slug: string }>;
+  };
+  
   export async function generateMetadata(
-    { params }: { params: { slug: string } }
+    { params }: Props,
+    parent: ResolvingMetadata
   ): Promise<Metadata> {
+    const { slug } = await params;
+    const previousImages = (await parent).openGraph?.images || [];
+  
     return {
-      title: `Category: ${params.slug}`,
+      title: `Category: ${slug}`,
+      openGraph: {
+        images: ['/open-graph.jpg', ...previousImages],
+      },
     };
   }
 
-export default async function CategoryPage({ params, searchParams }: Props) {
-  const { slug } = params;
-  const currentPage = searchParams?.page ? parseInt(searchParams.page as string, 10) : 1;
-  const searchTerm = typeof searchParams?.search === "string" ? searchParams.search : "";
-
-  const category = await getCategoryBySlug(slug);
-  if (!category) notFound();
-
-  const categoryId = category.id;
-  const { posts, totalPages } = await getAllPosts(currentPage, 10, searchTerm, categoryId);
+  export default async function CategoryPage({ params, searchParams }: PageProps) {
+    const currentPage = searchParams.page ? parseInt(searchParams.page as string, 10) : 1;
+    const searchTerm = typeof searchParams.search === "string" ? searchParams.search : "";
+  
+    const category = await getCategoryBySlug(params.slug);
+    if (!category) notFound();
+  
+    const categoryId = category.id;
+    const { posts, totalPages } = await getAllPosts(currentPage, 10, searchTerm, categoryId);
 
   if (!posts || posts.length === 0) {
     return (
@@ -45,7 +50,6 @@ export default async function CategoryPage({ params, searchParams }: Props) {
         {category.name}
       </h1>
       <div className="mb-10 flex justify-center">
-  <SearchBar slug={slug} />
 </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
