@@ -55,7 +55,7 @@ const pests = [
   {
     title: "Rodents",
     image: "/types/rodents/deer-mouse.jpg",
-    category: "rodents",
+    category: "rodent",
   },
   {
     title: "Millipede",

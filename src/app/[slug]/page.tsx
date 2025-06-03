@@ -141,6 +141,17 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                   <option>Termite Control</option>
                   <option>Rodent Removal</option>
                   <option>General Pest Control</option>
+                  <option>Ants Control</option>
+                  <option>Bed Bugs Control</option>
+                  <option>Earwigs Control</option>
+                  <option>Silver Fish Control</option>
+                  <option>Flies Control</option>
+                  <option>Flea Control</option>
+                  <option>Mosquitoes Control</option>
+                  <option>Wasps Control</option>
+                  <option>Moths Control</option>
+                  <option>Ticks Control</option>
+
                 </select>
               </div>
               <button

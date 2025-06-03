@@ -81,8 +81,16 @@ export default function EstimateModal() {
               <select name="service" required onChange={handleChange} value={formData.service} className="border text-gray-400 p-2 w-full col-span-full">
                 <option value="">What Can We Help You With? *</option>
                 <option value="Pest Control">Pest Control</option>
-                <option value="Rodent Removal">Rodent Removal</option>
-                <option value="Inspection">Inspection</option>
+                <option value="Ants Control">Ants Control</option>
+                  <option value="Bed Bugs Control">Bed Bugs Control</option>
+                  <option value="Earwigs Control">Earwigs Control</option>
+                  <option value="Silver Fish Control">Silver Fish Control</option>
+                  <option value="Flies Control">Flies Control</option>
+                  <option value="Flea Control">Flea Control</option>
+                  <option value="Mosquitoes Control">Mosquitoes Control</option>
+                  <option value="Wasps Control">Wasps Control</option>
+                  <option value="Moths Control">Moths Control</option>
+                  <option value="Ticks Control">Ticks Control</option>
               </select>
 
               <textarea name="comments" onChange={handleChange} value={formData.comments} placeholder="Questions or Comments" className="border p-2 w-full col-span-full" />

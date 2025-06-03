@@ -1,4 +1,9 @@
 // lib/types.ts
+type YoastHeadJson = {
+  meta_description?: string;
+  meta_keywords?: string;
+  og_image?: { url: string }[];
+};
 
 export type Post = {
   id: number;
@@ -19,6 +24,7 @@ export type Post = {
   author: number;
   categories: number[];
   featured_media: number;
+  yoast_head_json?: YoastHeadJson;
 
   // Optional embed support for featured media and categories
   _embedded?: {
