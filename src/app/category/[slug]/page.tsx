@@ -1,40 +1,40 @@
 import type { Metadata, ResolvingMetadata } from 'next';
-
 import { getAllPosts, getCategoryBySlug } from "@/lib/queries";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-
 type PageProps = {
-    params: { slug: string };
-    searchParams: { [key: string]: string | string[] | undefined };
-  };
-  
-  export async function generateMetadata(
-    { params }: PageProps,
-    parent: ResolvingMetadata
-  ): Promise<Metadata> {
-    const { slug } = await params;
-    const previousImages = (await parent).openGraph?.images || [];
-  
-    return {
-      title: `Category: ${slug}`,
-      openGraph: {
-        images: ['/open-graph.jpg', ...previousImages],
-      },
-    };
-  }
+  params: { slug: string };
+  searchParams: { [key: string]: string | string[] | undefined };
+};
 
-  export default async function CategoryPage({ params, searchParams }: PageProps) {
-    const currentPage = searchParams.page ? parseInt(searchParams.page as string, 10) : 1;
-    const searchTerm = typeof searchParams.search === "string" ? searchParams.search : "";
-  
-    const category = await getCategoryBySlug(params.slug);
-    if (!category) notFound();
-  
-    const categoryId = category.id;
-    const { posts, totalPages } = await getAllPosts(currentPage, 10, searchTerm, categoryId);
+// ✅ Metadata function
+export async function generateMetadata(
+  { params }: PageProps,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+  const slug = params.slug;
+  const previousImages = (await parent).openGraph?.images || [];
+
+  return {
+    title: `Category: ${slug}`,
+    openGraph: {
+      images: ['/open-graph.jpg', ...previousImages],
+    },
+  };
+}
+
+// ✅ Main Page Component
+export default async function CategoryPage({ params, searchParams }: PageProps) {
+  const currentPage = searchParams.page ? parseInt(searchParams.page as string, 10) : 1;
+  const searchTerm = typeof searchParams.search === "string" ? searchParams.search : "";
+
+  const category = await getCategoryBySlug(params.slug);
+  if (!category) notFound();
+
+  const categoryId = category.id;
+  const { posts, totalPages } = await getAllPosts(currentPage, 10, searchTerm, categoryId);
 
   if (!posts || posts.length === 0) {
     return (
@@ -50,8 +50,6 @@ type PageProps = {
       <h1 className="text-4xl font-bold text-center text-primary mb-12">
         {category.name}
       </h1>
-      <div className="mb-10 flex justify-center">
-</div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {posts.map((post) => {
@@ -104,13 +102,13 @@ type PageProps = {
         })}
       </div>
 
-      {/* Pagination */}
+      {/* ✅ Pagination */}
       <div className="text-center mt-10">
         {totalPages > 1 && (
           <div className="flex justify-center items-center gap-8">
             {currentPage > 1 && (
               <Link
-                href={`/category/${slug}?page=${currentPage - 1}`}
+                href={`/category/${params.slug}?page=${currentPage - 1}`}
                 className="text-blue-600 hover:underline"
               >
                 ← Previous
@@ -123,7 +121,7 @@ type PageProps = {
 
             {currentPage < totalPages && (
               <Link
-                href={`/category/${slug}?page=${currentPage + 1}`}
+                href={`/category/${params.slug}?page=${currentPage + 1}`}
                 className="text-blue-600 hover:underline"
               >
                 Next →
