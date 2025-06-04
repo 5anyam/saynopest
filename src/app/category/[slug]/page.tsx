@@ -6,12 +6,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 
-type Props = {
-    params: Promise<{ slug: string }>;
+type PageProps = {
+    params: { slug: string };
+    searchParams: { [key: string]: string | string[] | undefined };
   };
   
   export async function generateMetadata(
-    { params }: Props,
+    { params }: PageProps,
     parent: ResolvingMetadata
   ): Promise<Metadata> {
     const { slug } = await params;

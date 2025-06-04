@@ -17,13 +17,13 @@ type Category = {
   count: number;
 };
 
-type PageProps = {
-  params: { slug: string };
-  searchParams: { [key: string]: string | string[] | undefined };
+type Props = {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+  params: Promise<{ slug: string }>;
 };
 
 export async function generateMetadata(
-  { params }: PageProps,
+  { params }: Props,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   const post = await getPostBySlug((await params).slug);
