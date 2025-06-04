@@ -9,6 +9,14 @@ import {
 import Link from 'next/link';
 import Image from 'next/image';
 
+// 👇 Category type define karo yahi (ya types.ts mein export karo)
+type Category = {
+  id: number;
+  name: string;
+  slug: string;
+  count: number;
+};
+
 type Props = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
   params: Promise<{ slug: string }>;
@@ -39,7 +47,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const relatedPosts = post.categories.length > 0
     ? await getPostsByCategory(post.categories[0], 3)
     : [];
-  const allCategories = await getAllCategories(); // ✅ properly fetched
+  const allCategories = await getAllCategories();
 
   const formattedDate = new Date(post.date).toLocaleDateString('en-US', {
     year: 'numeric',
@@ -168,13 +176,13 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             </form>
           </div>
 
-          {/* Categories */}
+          {/* Categories Sidebar */}
           <div className="border p-6 rounded-md shadow-md bg-white">
             <h3 className="text-xl font-semibold mb-4">Categories</h3>
             <ul className="space-y-2">
               {allCategories
-                .filter((cat) => cat.count > 0)
-                .map((cat) => (
+                .filter((cat: Category) => cat.count > 0)
+                .map((cat: Category) => (
                   <li key={cat.id}>
                     <Link
                       href={`/category/${cat.slug}`}
