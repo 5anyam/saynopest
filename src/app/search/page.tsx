@@ -1,11 +1,13 @@
+"use client"
+
 import { getAllPosts, getAllCategories } from "@/lib/queries";
 
-interface PageProps {
-  searchParams: { q?: string };
-}
-
-export default async function SearchPage({ searchParams }: PageProps) {
-  const query = (searchParams.q || "").toLowerCase();
+export default async function SearchPage({
+  searchParams,
+}: {
+  searchParams?: { q?: string };
+}) {
+  const query = (searchParams?.q || "").toLowerCase();
 
   const postsResponse = await getAllPosts();
   const categoriesResponse = await getAllCategories();
