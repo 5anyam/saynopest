@@ -6,10 +6,13 @@ type LayoutProps = {
   params: { slug: string };
 };
 
+// ✅ DO NOT access params.slug directly outside of an async function
 export async function generateMetadata(
-  { params }: { params: { slug: string } }
+  props: LayoutProps
 ): Promise<Metadata> {
+  const { params } = props;
   const slug = params.slug;
+
   const category = await getCategoryBySlug(slug);
 
   return {
