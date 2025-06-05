@@ -2,7 +2,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Post } from "@/lib/types";
-import { SearchBar } from "@/components/searcBar/searchBar";
 
 type LatestPostsProps = {
   posts: Post[];
@@ -31,7 +30,6 @@ export async function LatestPosts({
     <h2 className="text-2xl text-primary text-center font-bold mb-4 sm:mb-0">
       {title || searchTerm ? "Search Results" : "Latest Posts"}
     </h2>
-    <SearchBar />
   </div>
 
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
