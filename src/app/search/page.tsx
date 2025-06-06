@@ -1,63 +1,77 @@
-"use client"
-
 import { getAllPosts, getAllCategories } from "@/lib/queries";
 
-export default async function SearchPage({
-  searchParams,
-}: {
-  searchParams?: { q?: string };
-}) {
-  const query = (searchParams?.q || "").toLowerCase();
+type SearchPageProps = {
+  searchParams?: {
+    q?: string;
+  };
+};
 
-  const postsResponse = await getAllPosts();
-  const categoriesResponse = await getAllCategories();
+export default async function SearchPage({ searchParams }: SearchPageProps) {
+  const query = searchParams?.q?.toLowerCase() || "";
 
-  const posts = Array.isArray(postsResponse) ? postsResponse : [];
-  const categories = Array.isArray(categoriesResponse) ? categoriesResponse : [];
+  const [postsResponse, categoriesResponse] = await Promise.all([
+    getAllPosts(),
+    getAllCategories(),
+  ]);
 
-  const filteredPosts = posts.filter((post) =>
-    post.title?.rendered?.toLowerCase().includes(query)
+  const allPosts = Array.isArray(postsResponse) ? postsResponse : postsResponse?.posts || [];
+  const allCategories = Array.isArray(categoriesResponse) ? categoriesResponse : categoriesResponse?.categories || [];
+
+  const filteredPosts = allPosts.filter((post: any) =>
+    post?.title?.rendered?.toLowerCase().includes(query)
   );
 
-  const filteredCategories = categories.filter((cat) =>
-    cat.name?.toLowerCase().includes(query)
+  const filteredCategories = allCategories.filter((cat: any) =>
+    cat?.name?.toLowerCase().includes(query)
   );
 
   return (
-    <div className="p-6 max-w-4xl mx-auto">
-      <h1 className="text-2xl font-bold mb-4">Search Results for "{query}"</h1>
+    <div className="max-w-4xl mt-10 mx-auto px-4 py-10">
+      <h1 className="text-2xl font-bold mb-6">
+        Search results for "<span className="text-primary">{query}</span>"
+      </h1>
 
-      {filteredCategories.length > 0 && (
-        <div className="mb-8">
-          <h2 className="text-xl font-semibold mb-2">Matching Categories</h2>
-          <ul className="list-disc ml-6">
-            {filteredCategories.map((cat) => (
-              <li key={cat.id}>
-                <a href={`/category/${cat.slug}`} className="text-blue-600 hover:underline">
-                  {cat.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {filteredPosts.length > 0 ? (
-        <div>
-          <h2 className="text-xl font-semibold mb-2">Matching Blog Posts</h2>
-          <ul className="list-disc ml-6">
-            {filteredPosts.map((post) => (
+      {/* Blog Posts */}
+      <div className="mb-10">
+        <h2 className="text-xl font-semibold mb-4">Blog Posts</h2>
+        {filteredPosts.length > 0 ? (
+          <ul className="space-y-2">
+            {filteredPosts.map((post: any) => (
               <li key={post.id}>
-                <a href={`/posts/${post.slug}`} className="text-blue-600 hover:underline">
+                <a
+                  href={`/${post.slug}`}
+                  className="text-primary hover:underline"
+                >
                   {post.title.rendered}
                 </a>
               </li>
             ))}
           </ul>
-        </div>
-      ) : (
-        <p>No matching posts found.</p>
-      )}
+        ) : (
+          <p className="text-gray-500">No matching blog posts found.</p>
+        )}
+      </div>
+
+      {/* Categories */}
+      <div>
+        <h2 className="text-xl font-semibold mb-4">Categories</h2>
+        {filteredCategories.length > 0 ? (
+          <ul className="space-y-2">
+            {filteredCategories.map((cat: any) => (
+              <li key={cat.id}>
+                <a
+                  href={`/category/${cat.slug}`}
+                  className="text-green-700 hover:underline"
+                >
+                  {cat.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        ) : (
+          <p className="text-gray-500">No matching categories found.</p>
+        )}
+      </div>
     </div>
   );
 }
