@@ -78,7 +78,7 @@ export function ServiceCard() {
                         </div>
                         <p className="text-base font-light text-gray-700">{card.description}</p>
                         <div className="flex flex-row justify-center p-3">
-                            <Link href={`https://www.saynopest.com/types/${card.category}`}><button className="block mx-1 w-full px-20 rounded-lg bg-gray-900 py-3.5 text-sm font-bold uppercase text-white shadow-md hover:shadow-lg transition-all">
+                            <Link href={`https://www.saynopest.com/services/${card.category}`}><button className="block mx-1 w-full px-20 rounded-lg bg-gray-900 py-3.5 text-sm font-bold uppercase text-white shadow-md hover:shadow-lg transition-all">
                                 Know More
                             </button></Link>
                         </div>
