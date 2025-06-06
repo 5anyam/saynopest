@@ -1,53 +1,62 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const spiderTypes = [
   {
     name: "Black Widow Spider",
     image: "/types/spiders/black-widow-spider.jpg",
     description:
-      "Easily recognized by its shiny black body and red hourglass marking on its abdomen. Found in dark, undisturbed areas like basements and garages. Its venomous bite can cause severe pain and muscle cramps."
+      "Easily recognized by its shiny black body and red hourglass marking on its abdomen. Found in dark, undisturbed areas like basements and garages. Its venomous bite can cause severe pain and muscle cramps.",
+      link: "https://www.saynopest.com/black-widow-spider-identification-bite-symptoms-webs/"
   },
   {
     name: "Brown Recluse Spider",
     image: "/types/spiders/brown-recluse-spider.jpg",
     description:
-      "Light to dark brown with a distinctive violin-shaped mark on its back. Prefers dry, undisturbed places like closets or attics. Its bite can cause serious skin damage in rare cases."
+      "Light to dark brown with a distinctive violin-shaped mark on its back. Prefers dry, undisturbed places like closets or attics. Its bite can cause serious skin damage in rare cases.",
+      link: "https://www.saynopest.com/black-widow-spider-identification-bite-symptoms-webs/"
   },
   {
     name: "Wolf Spider",
     image: "/types/spiders/wolf-spider.jpg",
     description:
-      "Large, hairy, and fast-moving. Often mistaken for tarantulas. They don't spin webs but hunt their prey and are usually found near the ground, inside or outside."
+      "Large, hairy, and fast-moving. Often mistaken for tarantulas. They don't spin webs but hunt their prey and are usually found near the ground, inside or outside.",
+      link: "https://www.saynopest.com/black-widow-spider-identification-bite-symptoms-webs/"
   },
   {
     name: "Jumping Spider",
     image: "/types/spiders/jumping-spider.jpg",
     description:
-      "Small and compact with vivid colors and large forward-facing eyes. Known for their agility and curious behavior. Harmless to humans and very active hunters."
+      "Small and compact with vivid colors and large forward-facing eyes. Known for their agility and curious behavior. Harmless to humans and very active hunters.",
+      link: "https://www.saynopest.com/jumping-spiders-meet-the-fascinating-world-of-crawlers/"
   },
   {
     name: "House Spider",
     image: "/types/spiders/house-spider.jpg",
     description:
-      "Yellowish-brown with an elongated abdomen. Includes species like the American House Spider. Common in corners, ceilings, and basements where they build messy webs."
+      "Yellowish-brown with an elongated abdomen. Includes species like the American House Spider. Common in corners, ceilings, and basements where they build messy webs.",
+      link: "https://www.saynopest.com/most-common-house-spiders-in-the-united-states/"
   },
   {
     name: "Yellow Sac Spider",
     image: "/types/spiders/yellow-sac-spider.jpg",
     description:
-      "Pale yellow or beige spider, under half an inch long. Active at night and known for wandering instead of webbing. Its bite is mildly venomous and can cause skin irritation."
+      "Pale yellow or beige spider, under half an inch long. Active at night and known for wandering instead of webbing. Its bite is mildly venomous and can cause skin irritation.",
+      link: "https://www.saynopest.com/black-widow-spider-identification-bite-symptoms-webs/"
   },
   {
     name: "Southern House Spider",
     image: "/types/spiders/southern-house-spider.jpg",
     description:
-      "Brown to gray, commonly found in southern states. Males often resemble brown recluses but are harmless. Females build funnel webs in cracks and corners."
+      "Brown to gray, commonly found in southern states. Males often resemble brown recluses but are harmless. Females build funnel webs in cracks and corners.",
+      link: "https://www.saynopest.com/black-widow-spider-identification-bite-symptoms-webs/"
   },
   {
     name: "Hobo Spider",
     image: "/types/spiders/hobo-spider.jpg",
     description:
-      "Found mainly in the Pacific Northwest. Brown with chevron markings on the abdomen. Builds funnel-shaped webs and can occasionally bite, though it is not considered highly dangerous."
+      "Found mainly in the Pacific Northwest. Brown with chevron markings on the abdomen. Builds funnel-shaped webs and can occasionally bite, though it is not considered highly dangerous.",
+      link: "https://www.saynopest.com/black-widow-spider-identification-bite-symptoms-webs/"
   }
 ];
 
@@ -85,25 +94,25 @@ export default function SpiderTypesPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {spiderTypes.map((type, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-            >
-              <Image
-                src={type.image}
-                alt={type.name}
-                width={600}
-                height={400}
-                className="w-full h-60 object-cover"
-              />
-              <div className="p-4 text-center">
-                <h2 className="text-xl font-semibold text-primary mb-2">
-                  {type.name}
-                </h2>
-              </div>
-            </div>
-          ))}
-        </div>
+              <Link href={type.link} key={index}>
+                <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                  <Image
+                    src={type.image}
+                    alt={type.name}
+                    width={600}
+                    height={400}
+                    className="w-full h-60 object-cover"
+                  />
+                  <div className="p-2 text-center">
+                    <h2 className="text-xl font-semibold text-primary mb-2">
+                      {type.name}
+                    </h2>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
+          
       </div>
   );
 }

@@ -1,29 +1,34 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const cockroachTypes = [
   {
     name: "American Cockroach",
     image: "/types/american-cockroach.jpg",
     description:
-      "The American cockroach is one of the largest species commonly found in homes. It has a reddish-brown color and can grow up to 2 inches in length."
+      "The American cockroach is one of the largest species commonly found in homes. It has a reddish-brown color and can grow up to 2 inches in length.",
+      link: "https://www.saynopest.com/american-cockroaches-life-cycle-nymphs-babies/"
   },
   {
     name: "German Cockroach",
     image: "/types/german-cockroach.jpg",
     description:
-      "German cockroaches are small, tan to light brown insects with two dark stripes on their back. They reproduce rapidly and are commonly found in kitchens."
+      "German cockroaches are small, tan to light brown insects with two dark stripes on their back. They reproduce rapidly and are commonly found in kitchens.",
+      link: "https://www.saynopest.com/german-cockroaches-the-unwanted-guests-in-american-homes/"
   },
   {
     name: "Oriental Cockroach",
     image: "/types/oriental-cockroach.jpg",
     description:
-      "Oriental cockroaches are large, dark-colored, and often found in damp environments like basements. They are slower than other types."
+      "Oriental cockroaches are large, dark-colored, and often found in damp environments like basements. They are slower than other types.",
+      link: "https://www.saynopest.com/oriental-cockroach-identification-life-cycle-bites-control/"
   },
   {
     name: "Brown-banded Cockroach",
     image: "/types/brown-banded-cockroach.jpg",
     description:
-      "These cockroaches are smaller and lighter in color, with distinct brown bands across their wings. They prefer warm, dry places."
+      "These cockroaches are smaller and lighter in color, with distinct brown bands across their wings. They prefer warm, dry places.",
+      link: "https://www.saynopest.com/subterranean-termites-the-hidden-threat-beneath-your-home/"
   }
 ];
 
@@ -70,27 +75,27 @@ export default function CockroachTypesPage() {
 </div>
 
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {cockroachTypes.map((type, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-            >
-              <Image
-                src={type.image}
-                alt={type.name}
-                width={600}
-                height={400}
-                className="w-full h-60 object-cover"
-              />
-              <div className="p-2 text-center">
-                <h2 className="text-xl font-semibold text-primary mb-2">
-                  {type.name}
-                </h2>
-              </div>
-            </div>
-          ))}
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+  {cockroachTypes.map((type, index) => (
+    <Link href={type.link} key={index}>
+      <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+        <Image
+          src={type.image}
+          alt={type.name}
+          width={600}
+          height={400}
+          className="w-full h-60 object-cover"
+        />
+        <div className="p-2 text-center">
+          <h2 className="text-xl font-semibold text-primary mb-2">
+            {type.name}
+          </h2>
         </div>
+      </div>
+    </Link>
+  ))}
+</div>
+
       </div>
 
   );

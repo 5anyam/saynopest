@@ -97,7 +97,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
               alt={post.title.rendered}
               width={400}
               height={240}
-              className="w-full h-48 object-cover sm:w-[160px] sm:h-[120px] flex-shrink-0"
+              className="w-full h-48 object-contain sm:w-[220px] sm:h-[180px] flex-shrink-0"
               // w-full and h-48 for mobile, fixed size on sm and up
             />
           )}

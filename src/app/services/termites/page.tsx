@@ -1,25 +1,30 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const termiteTypes = [
   {
     name: "Subterranean Termites",
     image: "/types/subterranean-termites.jpg",
-    description: "These termites build large underground colonies and require moist environments. They commonly enter homes through soil contact or foundation cracks."
+    description: "These termites build large underground colonies and require moist environments. They commonly enter homes through soil contact or foundation cracks.",
+    link: "https://www.saynopest.com/subterranean-termites-the-hidden-threat-beneath-your-home/"
   },
   {
     name: "Formosan Termites",
     image: "/types/formosan-termites.jpg",
-    description: "Highly aggressive and destructive, Formosan termites can build nests underground or in walls and attics if moisture is available."
+    description: "Highly aggressive and destructive, Formosan termites can build nests underground or in walls and attics if moisture is available.",
+    link: "https://www.saynopest.com/subterranean-termites-the-hidden-threat-beneath-your-home/"
   },
   {
     name: "Drywood Termites",
     image: "/types/drywood-termites.jpg",
-    description: "These termites live in dry wood and don't require contact with soil. They infest wooden furniture, walls, and framing above ground."
+    description: "These termites live in dry wood and don't require contact with soil. They infest wooden furniture, walls, and framing above ground.",
+    link: "https://www.saynopest.com/drywood-termites-identification-eggs-elimination/"
   },
   {
     name: "Dampwood Termites",
     image: "/types/dampwood-termites.jpg",
-    description: "Larger in size, dampwood termites prefer moist, decaying wood and are commonly found in areas with high humidity or water damage."
+    description: "Larger in size, dampwood termites prefer moist, decaying wood and are commonly found in areas with high humidity or water damage.",
+    link: "https://www.saynopest.com/subterranean-termites-the-hidden-threat-beneath-your-home/"
   }
 ];
 
@@ -55,27 +60,26 @@ export default function TermiteTypesPage() {
 
 
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {termiteTypes.map((type, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-            >
-              <Image
-                src={type.image}
-                alt={type.name}
-                width={600}
-                height={400}
-                className="w-full h-60 object-cover"
-              />
-              <div className="p-2 text-center">
-                <h2 className="text-xl font-semibold text-primary mb-2">
-                  {type.name}
-                </h2>
-              </div>
-            </div>
-          ))}
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+  {termiteTypes.map((type, index) => (
+    <Link href={type.link} key={index}>
+      <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+        <Image
+          src={type.image}
+          alt={type.name}
+          width={600}
+          height={400}
+          className="w-full h-60 object-cover"
+        />
+        <div className="p-2 text-center">
+          <h2 className="text-xl font-semibold text-primary mb-2">
+            {type.name}
+          </h2>
         </div>
+      </div>
+    </Link>
+  ))}
+</div>
       </div>
   
   );
