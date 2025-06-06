@@ -1,28 +1,27 @@
 import { getAllPosts, getAllCategories } from "@/lib/queries";
 
-type SearchPageProps = {
-  searchParams?: {
-    q?: string;
-  };
+type Props = {
+  searchParams: Promise<{ q?: string }>;
 };
 
-export default async function SearchPage({ searchParams }: SearchPageProps) {
-  const query = searchParams?.q?.toLowerCase() || "";
+export default async function SearchPage({ searchParams }: Props) {
+  const { q = "" } = await searchParams;
+  const query = q.toLowerCase();
 
-  const [postsResponse, categoriesResponse] = await Promise.all([
-    getAllPosts(),
+  const [postResult, categoryResult] = await Promise.all([
+    getAllPosts(), // returns { posts: ExtendedPost[], totalPages }
     getAllCategories(),
   ]);
 
-  const allPosts = Array.isArray(postsResponse) ? postsResponse : postsResponse?.posts || [];
-  const allCategories = Array.isArray(categoriesResponse) ? categoriesResponse : categoriesResponse?.categories || [];
+  const posts = Array.isArray(postResult) ? postResult : postResult?.posts || [];
+  const categories = Array.isArray(categoryResult) ? categoryResult : categoryResult?.categories || [];
 
-  const filteredPosts = allPosts.filter((post: any) =>
+  const filteredPosts = posts.filter(post =>
     post?.title?.rendered?.toLowerCase().includes(query)
   );
 
-  const filteredCategories = allCategories.filter((cat: any) =>
-    cat?.name?.toLowerCase().includes(query)
+  const filteredCategories = categories.filter(category =>
+    category?.name?.toLowerCase().includes(query)
   );
 
   return (
@@ -36,7 +35,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
         <h2 className="text-xl font-semibold mb-4">Blog Posts</h2>
         {filteredPosts.length > 0 ? (
           <ul className="space-y-2">
-            {filteredPosts.map((post: any) => (
+            {filteredPosts.map((post) => (
               <li key={post.id}>
                 <a
                   href={`/${post.slug}`}
@@ -57,7 +56,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
         <h2 className="text-xl font-semibold mb-4">Categories</h2>
         {filteredCategories.length > 0 ? (
           <ul className="space-y-2">
-            {filteredCategories.map((cat: any) => (
+            {filteredCategories.map((cat) => (
               <li key={cat.id}>
                 <a
                   href={`/category/${cat.slug}`}
