@@ -1,27 +1,48 @@
 import { getAllPosts, getAllCategories } from "@/lib/queries";
 
-type Props = {
+// Define types
+type Category = {
+  id: number;
+  name: string;
+  slug: string;
+  count?: number;
+};
+
+type ExtendedPost = {
+  id: number;
+  slug: string;
+  title: {
+    rendered: string;
+  };
+};
+
+type SearchPageProps = {
   searchParams: Promise<{ q?: string }>;
 };
 
-export default async function SearchPage({ searchParams }: Props) {
-  const { q = "" } = await searchParams;
-  const query = q.toLowerCase();
+export default async function SearchPage({ searchParams }: SearchPageProps) {
+  const params = await searchParams;
+  const query = params?.q?.toLowerCase() || "";
 
-  const [postResult, categoryResult] = await Promise.all([
-    getAllPosts(), // returns { posts: ExtendedPost[], totalPages }
+  const [postsResponse, categoriesResponse] = await Promise.all([
+    getAllPosts(),
     getAllCategories(),
   ]);
 
-  const posts = Array.isArray(postResult) ? postResult : postResult?.posts || [];
-  const categories = Array.isArray(categoryResult) ? categoryResult : categoryResult?.categories || [];
+  const allPosts: ExtendedPost[] = Array.isArray(postsResponse)
+    ? postsResponse
+    : postsResponse?.posts || [];
 
-  const filteredPosts = posts.filter(post =>
+  const allCategories: Category[] = Array.isArray(categoriesResponse)
+    ? categoriesResponse
+    : categoriesResponse?.categories || [];
+
+  const filteredPosts = allPosts.filter((post) =>
     post?.title?.rendered?.toLowerCase().includes(query)
   );
 
-  const filteredCategories = categories.filter(category =>
-    category?.name?.toLowerCase().includes(query)
+  const filteredCategories = allCategories.filter((category) =>
+    category.name.toLowerCase().includes(query)
   );
 
   return (
