@@ -22,7 +22,7 @@ export function Header() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-40 bg-white shadow">
+    <nav className="fixed top-0 left-0 w-full z-40 mb-96 bg-white shadow">
       <div className="container mx-auto px-6 py-4 flex flex-col lg:flex-row items-center justify-between">
         {/* Logo and Hamburger */}
         <div className="w-full flex items-center justify-between lg:justify-start lg:w-auto">
