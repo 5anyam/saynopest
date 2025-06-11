@@ -123,13 +123,7 @@ export function Header() {
       >
         Wasps
       </Link>
-      <Link
-        href="https://www.saynopest.com/services/bites"
-        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-        onClick={() => setIsServicesOpen(false)}
-      >
-        Bites
-      </Link>
+
       <Link
         href="https://www.saynopest.com/services/flies"
         className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
@@ -159,11 +153,11 @@ export function Header() {
         Millipede
       </Link>
       <Link
-        href="https://www.saynopest.com/services/rodents"
+        href="https://www.saynopest.com/services/rodent"
         className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
         onClick={() => setIsServicesOpen(false)}
       >
-        Rodents
+        Rodent
       </Link>
       <Link
         href="https://www.saynopest.com/services/silver-fish"
