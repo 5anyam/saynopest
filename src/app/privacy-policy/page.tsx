@@ -24,7 +24,7 @@ export const metadata = {
   
         <h2 className="text-2xl font-semibold mt-8 mb-4">Children&apos;s Privacy</h2>
         <p className="mb-4">
-          Under our children’s policy, children under the age of fifteen should not use saynopest. We do not intentionally collect any personal information from persons under the age of 15 years. Please get in touch with us at www.saynopest.com if you are a parent or guardian and think that your child has given us any personal information by mistake.
+          Under our children’s policy, children under the age of thirteen should not use saynopest. We do not intentionally collect any personal information from persons under the age of 15 years. Please get in touch with us at www.saynopest.com if you are a parent or guardian and think that your child has given us any personal information by mistake.
         </p>
   
         <h2 className="text-2xl font-semibold mt-8 mb-4">What Personal Information We Collect</h2>
