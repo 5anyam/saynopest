@@ -45,6 +45,7 @@ export default function RootLayout({
   return (
     <html lang="en">
      <head>
+     <Script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/5f6936e797dbab1bcbc19be4/script.js"></Script>
      <meta name="google-adsense-account" content="ca-pub-7212342270102504"/>
   <link rel="canonical" href="https://www.saynopest.com/" />
   <Script
