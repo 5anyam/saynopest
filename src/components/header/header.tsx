@@ -13,6 +13,7 @@ export function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
   const router = useRouter();
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -22,8 +23,8 @@ export function Header() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-40 mb-96 bg-white shadow">
-      <div className="container mx-auto px-6 py-4 flex flex-col lg:flex-row items-center justify-between">
+    <nav className="fixed top-0 left-0 w-full z-40 bg-white shadow">
+      <div className="container mx-auto px-2 py-4 flex flex-col lg:flex-row items-center justify-between">
         {/* Logo and Hamburger */}
         <div className="w-full flex items-center justify-between lg:justify-start lg:w-auto">
           <Link href="/">
@@ -65,6 +66,122 @@ export function Header() {
           <div className="flex flex-col lg:flex-row lg:items-center lg:space-x-6 text-gray-600 mt-4 lg:mt-0">
             <Link href="/" className="mt-2 lg:mt-0 hover:text-gray-900">Home</Link>
             <Link href="/pest-library" className="mt-2 lg:mt-0 hover:text-gray-900">Pest Library</Link>
+            <div className="relative mt-2 lg:mt-0">
+  <button
+    onClick={() => setIsServicesOpen(!isServicesOpen)}
+    className="hover:text-gray-900 flex items-center focus:outline-none"
+  >
+    Services
+    <svg className="ml-1 w-4 h-4 fill-current" viewBox="0 0 20 20">
+      <path d="M5.5 7l4.5 4.5L14.5 7H5.5z" />
+    </svg>
+  </button>
+  {isServicesOpen && (
+    <div
+      onMouseLeave={() => setIsServicesOpen(false)}
+      className="absolute z-50 bg-white shadow-lg rounded-xl mt-2 w-44"
+    >
+      <Link
+        href="https://www.saynopest.com/services/termites"
+        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+        onClick={() => setIsServicesOpen(false)}
+      >
+        Termites
+      </Link>
+      <Link
+        href="https://www.saynopest.com/services/ants"
+        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+        onClick={() => setIsServicesOpen(false)}
+      >
+        Ants
+      </Link>
+      <Link
+        href="https://www.saynopest.com/services/spiders"
+        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+        onClick={() => setIsServicesOpen(false)}
+      >
+        Spiders
+      </Link>
+      <Link
+        href="https://www.saynopest.com/services/cockroaches"
+        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+        onClick={() => setIsServicesOpen(false)}
+      >
+        Cockroaches
+      </Link>
+      <Link
+        href="https://www.saynopest.com/services/bed-bugs"
+        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+        onClick={() => setIsServicesOpen(false)}
+      >
+        Bed Bugs
+      </Link>
+      <Link
+        href="https://www.saynopest.com/services/wasps"
+        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+        onClick={() => setIsServicesOpen(false)}
+      >
+        Wasps
+      </Link>
+      <Link
+        href="https://www.saynopest.com/services/bites"
+        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+        onClick={() => setIsServicesOpen(false)}
+      >
+        Bites
+      </Link>
+      <Link
+        href="https://www.saynopest.com/services/flies"
+        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+        onClick={() => setIsServicesOpen(false)}
+      >
+        Flies
+      </Link>
+      <Link
+        href="https://www.saynopest.com/services/flea"
+        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+        onClick={() => setIsServicesOpen(false)}
+      >
+        Flea
+      </Link>
+      <Link
+        href="https://www.saynopest.com/services/centipede"
+        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+        onClick={() => setIsServicesOpen(false)}
+      >
+        Centipede
+      </Link>
+      <Link
+        href="https://www.saynopest.com/services/millipede"
+        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+        onClick={() => setIsServicesOpen(false)}
+      >
+        Millipede
+      </Link>
+      <Link
+        href="https://www.saynopest.com/services/rodents"
+        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+        onClick={() => setIsServicesOpen(false)}
+      >
+        Rodents
+      </Link>
+      <Link
+        href="https://www.saynopest.com/services/silver-fish"
+        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+        onClick={() => setIsServicesOpen(false)}
+      >
+        Silver Fish
+      </Link>
+      <Link
+        href="https://www.saynopest.com/services/earwigs"
+        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+        onClick={() => setIsServicesOpen(false)}
+      >
+        Earwigs
+      </Link>
+    </div>
+  )}
+</div>
             <Link href="/blog" className="mt-2 lg:mt-0 hover:text-gray-900">Blogs</Link>
             <Link href="/about" className="mt-2 lg:mt-0 hover:text-gray-900">About Us</Link>
             <Link href="/contact" className="mt-2 lg:mt-0 hover:text-gray-900">Contact Us</Link>
@@ -100,7 +217,7 @@ export function Header() {
           </div>
 
           {/* Social Icons and CTA */}
-          <div className="flex justify-center items-center space-x-4 mt-6 lg:mt-0">
+          <div className="flex justify-center items-center space-x-2 mt-6 lg:mt-0">
             <Link href="https://www.facebook.com/people/Saynopest/61575434679519/">
               <RiFacebookBoxLine className="text-black text-3xl" />
             </Link>
