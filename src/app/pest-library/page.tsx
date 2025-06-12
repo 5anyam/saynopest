@@ -50,12 +50,12 @@ const pests = [
   {
     title: "Centipede",
     image: "/types/centipede/brown-centipede.jpg",
-    category: "centipede",
+    category: "centipedes",
   },
   {
     title: "Rodents",
     image: "/types/rodents/deer-mouse.jpg",
-    category: "rodent",
+    category: "rodents",
   },
   {
     title: "Millipede",
