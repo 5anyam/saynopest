@@ -1,6 +1,7 @@
 import { getAllPosts, getAllCategories } from "@/lib/queries";
 import Image from "next/image";
 import Link from "next/link";
+import { decode } from "html-entities"; // 
 
 type Category = {
   id: number;
@@ -46,9 +47,11 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
     ? categoriesResponse
     : categoriesResponse?.categories || [];
 
-  const filteredPosts = allPosts.filter((post) =>
-    post?.title?.rendered?.toLowerCase().includes(query)
-  );
+  // 👇 Fix here: decode HTML and then check includes
+  const filteredPosts = allPosts.filter((post) => {
+    const decodedTitle = decode(post?.title?.rendered || "").toLowerCase();
+    return decodedTitle.includes(query);
+  });
 
   const filteredCategories = allCategories.filter((category) =>
     category.name.toLowerCase().includes(query)
@@ -82,44 +85,43 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
 
       {/* Blog Post Cards in vertical layout */}
       <div>
-  <h2 className="text-2xl font-semibold mb-6">Blog Posts</h2>
-  {filteredPosts.length > 0 ? (
-    <div className="flex flex-col gap-6">
-      {filteredPosts.map((post) => (
-        <Link
-          href={`/${post.slug}`}
-          key={post.id}
-          className="bg-white border rounded-lg shadow hover:shadow-md transition overflow-hidden flex flex-col sm:flex-row"
-        >
-          {post?.yoast_head_json?.og_image?.[0]?.url && (
-            <Image
-              src={post.yoast_head_json.og_image[0].url}
-              alt={post.title.rendered}
-              width={400}
-              height={240}
-              className="w-full h-48 object-contain sm:w-[220px] sm:h-[180px] flex-shrink-0"
-              // w-full and h-48 for mobile, fixed size on sm and up
-            />
-          )}
-          <div className="p-4 flex flex-col justify-center flex-1">
-            <h3
-              className="text-lg font-bold line-clamp-2"
-              dangerouslySetInnerHTML={{ __html: post.title.rendered }}
-            />
-            {post.excerpt?.rendered && (
-              <p
-                className="text-gray-600 text-sm line-clamp-3 mt-2"
-                dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
-              />
-            )}
+        <h2 className="text-2xl font-semibold mb-6">Blog Posts</h2>
+        {filteredPosts.length > 0 ? (
+          <div className="flex flex-col gap-6">
+            {filteredPosts.map((post) => (
+              <Link
+                href={`/${post.slug}`}
+                key={post.id}
+                className="bg-white border rounded-lg shadow hover:shadow-md transition overflow-hidden flex flex-col sm:flex-row"
+              >
+                {post?.yoast_head_json?.og_image?.[0]?.url && (
+                  <Image
+                    src={post.yoast_head_json.og_image[0].url}
+                    alt={post.title.rendered}
+                    width={400}
+                    height={240}
+                    className="w-full h-48 object-contain sm:w-[220px] sm:h-[180px] flex-shrink-0"
+                  />
+                )}
+                <div className="p-4 flex flex-col justify-center flex-1">
+                  <h3
+                    className="text-lg font-bold line-clamp-2"
+                    dangerouslySetInnerHTML={{ __html: post.title.rendered }}
+                  />
+                  {post.excerpt?.rendered && (
+                    <p
+                      className="text-gray-600 text-sm line-clamp-3 mt-2"
+                      dangerouslySetInnerHTML={{ __html: post.excerpt.rendered }}
+                    />
+                  )}
+                </div>
+              </Link>
+            ))}
           </div>
-        </Link>
-      ))}
-    </div>
-  ) : (
-    <p className="text-gray-500">No matching blog posts found.</p>
-  )}
-</div>
+        ) : (
+          <p className="text-gray-500">No matching blog posts found.</p>
+        )}
+      </div>
     </div>
   );
 }

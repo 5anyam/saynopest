@@ -18,7 +18,7 @@ interface Post {
 
 export async function getAllPosts(
   pageNumber: number = 1,
-  perPage: number = 10,
+  perPage: number = 100,
   searchTerm: string = '',
   categories: number = 0
 ): Promise<{ posts: ExtendedPost[]; totalPages: number }> {
