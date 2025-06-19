@@ -28,7 +28,7 @@ const cockroachTypes = [
     image: "/types/brown-banded-cockroach.jpg",
     description:
       "These cockroaches are smaller and lighter in color, with distinct brown bands across their wings. They prefer warm, dry places.",
-      link: "https://www.saynopest.com/subterranean-termites-the-hidden-threat-beneath-your-home/"
+      link: "https://www.saynopest.com/brown-banded-cockroach-in-house/"
   }
 ];
 

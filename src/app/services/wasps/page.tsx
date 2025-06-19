@@ -1,45 +1,48 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const waspTypes = [
   {
     name: "Yellowjackets",
     image: "/types/wasps/yellowjacket.jpg",
-    description: "Aggressive social wasps that live in colonies and are known for their painful stings. They often build nests underground or in wall cavities."
+    description: "Aggressive social wasps that live in colonies and are known for their painful stings. They often build nests underground or in wall cavities.",
+    link: "https://www.saynopest.com/yellow-jacket-wasp-lifecycle-and-control/",
   },
   {
     name: "Paper Wasps",
     image: "/types/wasps/paper-wasp.jpg",
-    description: "Slender with long legs and brownish bodies with yellow markings. They build open, umbrella-shaped nests under eaves and ledges."
+    description: "Slender with long legs and brownish bodies with yellow markings. They build open, umbrella-shaped nests under eaves and ledges.",
+    link: "https://www.saynopest.com/paper-wasp",
   },
   {
     name: "Bald-faced Hornet",
     image: "/types/wasps/bald-faced-hornet.jpg",
-    description: "A large black and white wasp that builds large paper nests in trees and on buildings. Known for being extremely aggressive near their nests."
-  },
-  {
-    name: "European Hornet",
-    image: "/types/wasps/european-hornet.jpg",
-    description: "Larger than most wasps, with brown and yellow markings. They can sting repeatedly and typically build nests in hollow trees or walls."
+    description: "A large black and white wasp that builds large paper nests in trees and on buildings. Known for being extremely aggressive near their nests.",
+    link: "https://static.saynopest.com/bald-face-hornet/",
   },
   {
     name: "Mud Daubers",
     image: "/types/wasps/mud-dauber.jpg",
-    description: "Solitary wasps that build tube-like nests from mud. They are generally non-aggressive and help control spider populations."
+    description: "Solitary wasps that build tube-like nests from mud. They are generally non-aggressive and help control spider populations.",
+    link: "https://www.saynopest.com/mud-dauber-wasp-identification-nests-and-control-methods/",
   },
   {
     name: "Digger Wasps",
     image: "/types/wasps/digger-wasp.jpg",
-    description: "Ground-nesting wasps that dig burrows in sandy soil. They are solitary and prey on insects to feed their larvae."
+    description: "Ground-nesting wasps that dig burrows in sandy soil. They are solitary and prey on insects to feed their larvae.",
+    link: "https://www.saynopest.com/digger-wasp/",
   },
   {
     name: "Cicada Killer Wasps",
     image: "/types/wasps/cicada-killer.jpg",
-    description: "Large wasps that paralyze cicadas and bury them as food for their young. They are not typically aggressive toward humans."
+    description: "Large wasps that paralyze cicadas and bury them as food for their young. They are not typically aggressive toward humans.",
+    link: "https://www.saynopest.com/cicada-killer-wasp/",
   },
   {
     name: "Blue-winged Wasp",
     image: "/types/wasps/blue-winged-wasp.jpg",
-    description: "Recognizable by their metallic blue wings and reddish-orange body. They help control beetle larvae populations."
+    description: "Recognizable by their metallic blue wings and reddish-orange body. They help control beetle larvae populations.",
+    link: "https://www.saynopest.com/blue-winged-wasp",
   }
 ];
 
@@ -80,24 +83,22 @@ export default function WaspTypesPage() {
 </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {waspTypes.map((type, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-            >
-              <Image
-                src={type.image}
-                alt={type.name}
-                width={600}
-                height={400}
-                className="w-full h-60 object-cover"
-              />
-              <div className="p-2 text-center">
-                <h2 className="text-xl font-semibold text-primary mb-2">
-                  {type.name}
-                </h2>
-                
-              </div>
-            </div>
+             <Link href={type.link} key={index}>
+             <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+               <Image
+                 src={type.image}
+                 alt={type.name}
+                 width={600}
+                 height={400}
+                 className="w-full h-60 object-cover"
+               />
+               <div className="p-2 text-center">
+                 <h2 className="text-xl font-semibold text-primary mb-2">
+                   {type.name}
+                 </h2>
+               </div>
+             </div>
+           </Link>
           ))}
         </div>
       </div>

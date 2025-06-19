@@ -12,7 +12,7 @@ const termiteTypes = [
     name: "Formosan Termites",
     image: "/types/formosan-termites.jpg",
     description: "Highly aggressive and destructive, Formosan termites can build nests underground or in walls and attics if moisture is available.",
-    link: "https://www.saynopest.com/subterranean-termites-the-hidden-threat-beneath-your-home/"
+    link: "https://www.saynopest.com/formosan-termites"
   },
   {
     name: "Drywood Termites",
@@ -24,7 +24,7 @@ const termiteTypes = [
     name: "Dampwood Termites",
     image: "/types/dampwood-termites.jpg",
     description: "Larger in size, dampwood termites prefer moist, decaying wood and are commonly found in areas with high humidity or water damage.",
-    link: "https://www.saynopest.com/subterranean-termites-the-hidden-threat-beneath-your-home/"
+    link: "https://www.saynopest.com/dampwood-termite"
   }
 ];
 

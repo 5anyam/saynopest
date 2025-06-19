@@ -14,14 +14,14 @@ const spiderTypes = [
     image: "/types/spiders/brown-recluse-spider.jpg",
     description:
       "Light to dark brown with a distinctive violin-shaped mark on its back. Prefers dry, undisturbed places like closets or attics. Its bite can cause serious skin damage in rare cases.",
-      link: "https://www.saynopest.com/black-widow-spider-identification-bite-symptoms-webs/"
+      link: "https://www.saynopest.com/brown-recluse-spider-what-every-american-homeowner-know/"
   },
   {
     name: "Wolf Spider",
     image: "/types/spiders/wolf-spider.jpg",
     description:
       "Large, hairy, and fast-moving. Often mistaken for tarantulas. They don't spin webs but hunt their prey and are usually found near the ground, inside or outside.",
-      link: "https://www.saynopest.com/black-widow-spider-identification-bite-symptoms-webs/"
+      link: "https://www.saynopest.com/wolf-spider-natures-agile-hunter-in-american-homes/"
   },
   {
     name: "Jumping Spider",
@@ -42,21 +42,21 @@ const spiderTypes = [
     image: "/types/spiders/yellow-sac-spider.jpg",
     description:
       "Pale yellow or beige spider, under half an inch long. Active at night and known for wandering instead of webbing. Its bite is mildly venomous and can cause skin irritation.",
-      link: "https://www.saynopest.com/black-widow-spider-identification-bite-symptoms-webs/"
+      link: "https://www.saynopest.com/yellow-sac-spider"
   },
   {
     name: "Southern House Spider",
     image: "/types/spiders/southern-house-spider.jpg",
     description:
       "Brown to gray, commonly found in southern states. Males often resemble brown recluses but are harmless. Females build funnel webs in cracks and corners.",
-      link: "https://www.saynopest.com/black-widow-spider-identification-bite-symptoms-webs/"
+      link: "https://www.saynopest.com/southern-house-spider"
   },
   {
     name: "Hobo Spider",
     image: "/types/spiders/hobo-spider.jpg",
     description:
       "Found mainly in the Pacific Northwest. Brown with chevron markings on the abdomen. Builds funnel-shaped webs and can occasionally bite, though it is not considered highly dangerous.",
-      link: "https://www.saynopest.com/black-widow-spider-identification-bite-symptoms-webs/"
+      link: "https://www.saynopest.com/hobo-spiders"
   }
 ];
 

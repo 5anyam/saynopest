@@ -1,15 +1,18 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const silverfishTypes = [
   {
     name: "Common Silverfish",
     image: "/types/common-silverfish.jpg",
-    description: "Recognized by their silvery, carrot-shaped bodies and fast movements. They are frequently found in damp and dark household areas."
+    description: "Recognized by their silvery, carrot-shaped bodies and fast movements. They are frequently found in damp and dark household areas.",
+    link: "https://www.saynopest.com/common-silverfish-saynopest",
   },
   {
     name: "Urban Silverfish",
     image: "/types/urban-silverfish.jpg",
-    description: "Adapted to city environments and can survive in lower humidity areas compared to other species. Often found in apartments and offices."
+    description: "Adapted to city environments and can survive in lower humidity areas compared to other species. Often found in apartments and offices.",
+    link: "#",
   },
 ];
 
@@ -46,10 +49,8 @@ export default function SilverfishTypesPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {silverfishTypes.map((type, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-            >
+            <Link href={type.link} key={index}>
+            <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
               <Image
                 src={type.image}
                 alt={type.name}
@@ -61,9 +62,9 @@ export default function SilverfishTypesPage() {
                 <h2 className="text-xl font-semibold text-primary mb-2">
                   {type.name}
                 </h2>
-              
               </div>
             </div>
+          </Link>
           ))}
         </div>
       </div>

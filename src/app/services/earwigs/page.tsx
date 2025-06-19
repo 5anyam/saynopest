@@ -1,29 +1,34 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const earwigTypes = [
   {
     name: "European Earwig (Forficula auricularia)",
     image: "/types/european-earwig.jpg",
     description:
-      "The most common species in the U.S., known for their prominent pincers. They are nocturnal, thrive in damp areas, and often enter homes in search of moisture and food."
+      "The most common species in the U.S., known for their prominent pincers. They are nocturnal, thrive in damp areas, and often enter homes in search of moisture and food.",
+      link : "https://www.saynopest.com/european-earwig",
   },
   {
     name: "Ring-legged Earwig (Euborellia annulipes)",
     image: "/types/ring-legged-earwig.jpg",
     description:
-      "This dark-colored, wingless earwig species is recognizable by the pale rings on its legs. It’s found mostly in southern regions and prefers moist indoor areas."
+      "This dark-colored, wingless earwig species is recognizable by the pale rings on its legs. It’s found mostly in southern regions and prefers moist indoor areas.",
+      link : "#",
   },
   {
     name: "Striped or Riparian Earwig (Labidura riparia)",
     image: "/types/striped-earwig.jpg",
     description:
-      "Often found near rivers and streams, this earwig has a striped appearance and stronger predatory behavior. It feeds on other insects and plant debris."
+      "Often found near rivers and streams, this earwig has a striped appearance and stronger predatory behavior. It feeds on other insects and plant debris.",
+      link : "#",
   },
   {
     name: "Maritime Earwig (Anisolabis maritima)",
     image: "/types/maritime-earwig.jpg",
     description:
-      "Typically found along coastal areas, this large, dark-colored earwig prefers moist, sandy environments. It lacks wings and is a strong scavenger and predator."
+      "Typically found along coastal areas, this large, dark-colored earwig prefers moist, sandy environments. It lacks wings and is a strong scavenger and predator.",
+      link : "#",
   }
 ];
 
@@ -65,24 +70,22 @@ export default function EarwigTypesPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {earwigTypes.map((type, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-            >
-              <Image
-                src={type.image}
-                alt={type.name}
-                width={600}
-                height={400}
-                className="w-full h-60 object-cover"
-              />
-              <div className="p-4 text-center">
-                <h2 className="text-xl font-semibold text-primary mb-2">
-                  {type.name}
-                </h2>
-                
-              </div>
-            </div>
+             <Link href={type.link} key={index}>
+             <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+               <Image
+                 src={type.image}
+                 alt={type.name}
+                 width={600}
+                 height={400}
+                 className="w-full h-60 object-cover"
+               />
+               <div className="p-2 text-center">
+                 <h2 className="text-xl font-semibold text-primary mb-2">
+                   {type.name}
+                 </h2>
+               </div>
+             </div>
+           </Link>
           ))}
         </div>
       </div>

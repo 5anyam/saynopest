@@ -1,47 +1,55 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const centipedeTypes = [
   {
     name: "House Centipede",
     image: "/types/centipede/house-centipede.jpg",
     description:
-      "Easily recognized by its long legs and fast movement, this species is commonly found in basements and bathrooms. It preys on insects and is generally harmless to humans."
+      "Easily recognized by its long legs and fast movement, this species is commonly found in basements and bathrooms. It preys on insects and is generally harmless to humans.",
+      link: "https://static.saynopest.com/house-centipedes/",
   },
   {
     name: "Giant Desert Centipede",
     image: "/types/centipede/giant-desert-centipede.jpg",
     description:
-      "One of the largest centipedes in the U.S., growing up to 8 inches. Found in the Southwest, it can deliver a painful bite but is not deadly."
+      "One of the largest centipedes in the U.S., growing up to 8 inches. Found in the Southwest, it can deliver a painful bite but is not deadly.",
+      link: "https://www.saynopest.com/the-giant-desert-centipede-a-closer-look/",
   },
   {
     name: "Eastern Bark Centipede",
     image: "/types/centipede/eastern-bark-centipede.jpg",
     description:
-      "Often found under tree bark and in moist logs. These reddish-brown centipedes are fast, aggressive hunters and common in wooded regions."
+      "Often found under tree bark and in moist logs. These reddish-brown centipedes are fast, aggressive hunters and common in wooded regions.",
+      link: "#",
   },
   {
     name: "Eastern Red Centipede",
     image: "/types/centipede/eastern-red-centipede.jpg",
     description:
-      "A medium-sized reddish centipede often found in gardens and moist indoor spaces. It feeds on insects and is usually harmless to humans."
+      "A medium-sized reddish centipede often found in gardens and moist indoor spaces. It feeds on insects and is usually harmless to humans.",
+      link: "#",
   },
   {
     name: "Diamondback Soil Centipede",
     image: "/types/centipede/diamondback-soil-centipede.jpg",
     description:
-      "A soil-dwelling centipede with a patterned back. It’s blind and slow-moving, preying on small invertebrates in damp environments."
+      "A soil-dwelling centipede with a patterned back. It’s blind and slow-moving, preying on small invertebrates in damp environments.",
+      link: "#",
   },
   {
     name: "Brown Centipede",
     image: "/types/centipede/brown-centipede.jpg",
     description:
-      "Small and dark brown, this species is often found indoors in moist areas. It avoids light and is harmless but may cause concern due to its appearance."
+      "Small and dark brown, this species is often found indoors in moist areas. It avoids light and is harmless but may cause concern due to its appearance.",
+      link: "#",
   },
   {
     name: "Common Cryptops",
     image: "/types/centipede/common-cryptops.jpg",
     description:
-      "This small centipede lacks eyes and prefers dark, damp places. Its bite can cause mild irritation but poses no serious threat to humans."
+      "This small centipede lacks eyes and prefers dark, damp places. Its bite can cause mild irritation but poses no serious threat to humans.",
+      link: "#",
   }
 ];
 
@@ -85,24 +93,22 @@ export default function CentipedeTypesPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {centipedeTypes.map((type, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-            >
-              <Image
-                src={type.image}
-                alt={type.name}
-                width={600}
-                height={400}
-                className="w-full h-60 object-cover"
-              />
-              <div className="p-4 text-center">
-                <h2 className="text-xl font-semibold text-primary mb-2">
-                  {type.name}
-                </h2>
-                
-              </div>
-            </div>
+           <Link href={type.link} key={index}>
+           <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+             <Image
+               src={type.image}
+               alt={type.name}
+               width={600}
+               height={400}
+               className="w-full h-60 object-cover"
+             />
+             <div className="p-2 text-center">
+               <h2 className="text-xl font-semibold text-primary mb-2">
+                 {type.name}
+               </h2>
+             </div>
+           </div>
+         </Link>
           ))}
         </div>
       </div>
