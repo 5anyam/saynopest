@@ -7,7 +7,7 @@ import { doc, collection, addDoc } from 'firebase/firestore';
 export default function EstimateModal() {
   const [showModal, setShowModal] = useState(false);
   const [formData, setFormData] = useState({
-    name: '', email: '', zip: '',
+    name: '', email: '', zip: '', address: '',
     phone1: '', phone2: '', phone3: '',
     service: '', comments: '',
   });
@@ -35,6 +35,7 @@ export default function EstimateModal() {
       await addDoc(collection(userDocRef, "submissions"), {
         email: formData.email,
         zip: formData.zip,
+        address: formData.address,
         phone,
         service: formData.service,
         comments: formData.comments,
@@ -43,7 +44,7 @@ export default function EstimateModal() {
 
       alert('Submitted successfully!');
       setShowModal(false);
-      setFormData({ name: '', email: '', zip: '', phone1: '', phone2: '', phone3: '', service: '', comments: '' });
+      setFormData({ name: '', email: '', zip: '', address: '', phone1: '', phone2: '', phone3: '', service: '', comments: '' });
     } catch (err) {
       console.error("Error:", err);
       alert("Failed to submit.");
@@ -71,7 +72,7 @@ export default function EstimateModal() {
               <input name="name" required onChange={handleChange} value={formData.name} placeholder="Name *" className="text-gray-400 border p-2 w-full" />
               <input name="email" required onChange={handleChange} value={formData.email} placeholder="Email *" className="text-gray-400 border p-2 w-full" />
               <input name="zip" required onChange={handleChange} value={formData.zip} placeholder="Zip Code *" className="text-gray-400 border p-2 w-full" />
-
+              <input name="address" required onChange={handleChange} value={formData.address} placeholder="Address *" className="text-gray-400 border p-2 w-full" />
               <div className="flex gap-2">
                 <input name="phone1" onChange={handleChange} value={formData.phone1} placeholder="###" className="border p-2 w-1/3" />
                 <input name="phone2" onChange={handleChange} value={formData.phone2} placeholder="###" className="border p-2 w-1/3" />
