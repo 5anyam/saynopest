@@ -7,7 +7,7 @@ const centipedeTypes = [
     image: "/types/centipede/house-centipede.jpg",
     description:
       "Easily recognized by its long legs and fast movement, this species is commonly found in basements and bathrooms. It preys on insects and is generally harmless to humans.",
-      link: "https://static.saynopest.com/house-centipedes/",
+      link: "https://www.saynopest.com/house-centipedes/",
   },
   {
     name: "Giant Desert Centipede",
