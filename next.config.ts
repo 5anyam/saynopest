@@ -5,7 +5,16 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    domains: ['static.saynopest.com','remotePatterns'],
+    domains: ['static.saynopest.com', 'remotePatterns'],
+  },
+  async redirects() {
+    return [
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true, // 301 redirect; use false for 302
+      },
+    ];
   },
 };
 
