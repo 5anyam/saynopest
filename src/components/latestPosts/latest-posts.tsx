@@ -16,7 +16,7 @@ export async function LatestPosts({
   title,
   posts,
   currentPage = 1,
-  totalPages = 1,
+  totalPages = 5,
   searchTerm,
   categories,
 }: LatestPostsProps) {
