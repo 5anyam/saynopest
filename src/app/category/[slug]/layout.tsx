@@ -10,7 +10,7 @@ interface CategoryLayoutProps {
 
 export default async function CategoryLayout({ children, params }: CategoryLayoutProps) {
   const resolvedParams = await params;
-  const canonicalUrl = `https://www.saynopest.com/${resolvedParams.slug}`;
+  const canonicalUrl = `https://www.saynopest.com/category/${resolvedParams.slug}`;
 
   return (
     <html>

@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -62,6 +63,10 @@ const spiderTypes = [
 
 export default function SpiderTypesPage() {
   return (
+    <>
+    <Head>
+    <link rel="canonical" href="https://www.saynopest.com/services/spiders" />
+    </Head>
     <div className="min-h-screen mt-20 p-6">
       <div className="max-w-full mx-auto mb-16">
   <h1 className="text-2xl font-bold text-primary text-center mb-4">Spiders</h1>
@@ -114,5 +119,6 @@ export default function SpiderTypesPage() {
           </div>
           
       </div>
+      </>
   );
 }

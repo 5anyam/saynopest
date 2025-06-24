@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 
 const mosquitoTypes = [
@@ -23,6 +24,10 @@ const mosquitoTypes = [
 
 export default function MosquitoTypesPage() {
   return (
+    <>
+    <Head>
+    <link rel="canonical" href="https://www.saynopest.com/services/ants" />
+    </Head>
     <div className="min-h-screen mt-20 p-6">
       <div className="max-w-full mx-auto mb-16">
       <h1 className="text-2xl text-center font-bold text-primary mb-4">Mosquitoes</h1>
@@ -97,5 +102,6 @@ export default function MosquitoTypesPage() {
           ))}
         </div>
       </div>
+      </>
   );
 }

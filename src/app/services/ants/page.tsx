@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 
 const antTypes = [
@@ -29,6 +30,10 @@ const antTypes = [
 
 export default function AntTypesPage() {
   return (
+    <>
+    <Head>
+    <link rel="canonical" href="https://www.saynopest.com/services/ants" />
+    </Head>
     <div className="min-h-screen mt-20 p-6">
       <div className="max-w-full mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold text-center text-primary mb-10">
@@ -86,6 +91,6 @@ export default function AntTypesPage() {
           ))}
         </div>
       </div>
- 
+      </>
   );
 }

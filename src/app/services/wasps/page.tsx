@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -48,6 +49,10 @@ const waspTypes = [
 
 export default function WaspTypesPage() {
   return (
+    <>
+    <Head>
+    <link rel="canonical" href="https://www.saynopest.com/services/wasps" />
+    </Head>
     <div className="min-h-screen mt-20 p-6">
       <div className="max-w-full mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
   <h1 className="text-3xl text-center font-bold text-primary mb-4">Wasp</h1>
@@ -102,5 +107,6 @@ export default function WaspTypesPage() {
           ))}
         </div>
       </div>
+      </>
   );
 }

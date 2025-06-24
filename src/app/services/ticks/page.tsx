@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 
 const tickTypes = [
@@ -25,6 +26,10 @@ const tickTypes = [
 
 export default function TickTypesPage() {
   return (
+    <>
+    <Head>
+    <link rel="canonical" href="https://www.saynopest.com/services/ticks" />
+    </Head>
     <div className="min-h-screen mt-20 p-6">
       <div className="max-w-full mx-auto mb-8">
   <h1 className="text-2xl font-bold text-primary mb-4 text-center">Ticks</h1>
@@ -74,5 +79,6 @@ export default function TickTypesPage() {
           ))}
         </div>
       </div>
+      </>
   );
 }

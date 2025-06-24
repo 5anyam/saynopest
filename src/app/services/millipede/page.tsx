@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 
 const millipedeTypes = [
@@ -26,6 +27,10 @@ const millipedeTypes = [
 
 export default function MillipedeTypesPage() {
   return (
+    <>
+    <Head>
+    <link rel="canonical" href="https://www.saynopest.com/services/millipede" />
+    </Head>
     <div className="min-h-screen mt-20 p-6">
       <div className="max-w-full mx-auto mb-16">
       <h1 className="text-2xl font-bold text-primary text-center mb-4">Millipedes</h1>
@@ -82,5 +87,6 @@ export default function MillipedeTypesPage() {
           ))}
         </div>
       </div>
+      </>
   );
 }

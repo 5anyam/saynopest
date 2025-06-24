@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 
 const miceTypes = [
@@ -25,6 +26,10 @@ const miceTypes = [
 
 export default function MiceTypesPage() {
   return (
+    <>
+    <Head>
+    <link rel="canonical" href="https://www.saynopest.com/services/rodent" />
+    </Head>
     <div className="min-h-screen mt-20 p-6">
 <div className="max-w-full mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
   <h1 className="text-2xl text-center font-bold text-primary mb-4">Mice</h1>
@@ -84,6 +89,6 @@ export default function MiceTypesPage() {
           ))}
         </div>
       </div>
-  
+  </>
   );
 }

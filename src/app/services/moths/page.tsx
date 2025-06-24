@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 
 const cockroachTypes = [
@@ -29,6 +30,10 @@ const cockroachTypes = [
 
 export default function MothsTypesPage() {
   return (
+    <>
+    <Head>
+    <link rel="canonical" href="https://www.saynopest.com/services/moths" />
+    </Head>
     <div className="min-h-screen mt-20 p-6">
       <div className="max-w-full mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
       <h1 className="text-2xl font-bold text-primary text-center mb-4">Moths</h1>
@@ -81,6 +86,6 @@ export default function MothsTypesPage() {
           ))}
         </div>
       </div>
-
+</>
   );
 }

@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Image from "next/image";
 
 const bedBugTypes = [
@@ -25,6 +26,10 @@ const bedBugTypes = [
 
 export default function BedBugTypesPage() {
   return (
+    <>
+    <Head>
+    <link rel="canonical" href="https://www.saynopest.com/services/bed-bugs" />
+    </Head>
     <div className="min-h-screen mt-20 p-6">
     <div className="max-w-full mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
   <h1 className="text-3xl text-center font-bold text-primary mb-4">Bed Bugs</h1>
@@ -87,6 +92,6 @@ export default function BedBugTypesPage() {
           ))}
         </div>
       </div>
-    
+    </>
   );
 }
