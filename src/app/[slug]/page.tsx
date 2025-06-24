@@ -1,5 +1,4 @@
 import type { Metadata, ResolvingMetadata } from 'next';
-import Head from 'next/head';
 import {
   getPostBySlug,
   getAuthorById,
@@ -41,7 +40,6 @@ export async function generateMetadata(
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const slugData = await params;
   const post = await getPostBySlug(slugData.slug);
-  const canonicalUrl = `https://www.saynopest.com/${slugData.slug}`;
   if (!post) return <div>Post not found</div>;
 
   const author = await getAuthorById(post.author);
@@ -59,9 +57,6 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
 
   return (
     <>
-    <Head>
-        <link rel="canonical" href={canonicalUrl} />
-      </Head>
     <div className="container mx-auto px-4 mt-24 flex flex-col lg:flex-row gap-12">
       {/* Main Content */}
       <div className="lg:w-2/3 w-full">
