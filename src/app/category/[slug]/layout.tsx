@@ -1,3 +1,5 @@
+import { Footer } from '@/components/footer/footer';
+import { Header } from '@/components/header/header';
 import PreloaderWrapper from '@/components/PreloaderWrapper';
 import React from 'react';
 
@@ -15,7 +17,7 @@ export default async function CategoryLayout({ children, params }: CategoryLayou
       <head>
         <link rel="canonical" href={canonicalUrl} />
       </head>
-      <body><PreloaderWrapper>{children}</PreloaderWrapper></body>
+      <body><PreloaderWrapper><Header/>{children}<Footer/></PreloaderWrapper></body>
     </html>
   );
 }
