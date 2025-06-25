@@ -3,7 +3,6 @@ import { getAllPosts, getCategoryBySlug } from '@/lib/queries';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import Head from 'next/head';
 
 type Props = {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
@@ -34,7 +33,7 @@ export default async function CategoryPage({
 }) {
   const { slug } = await params;
   const query = await searchParams;
-  const canonicalUrl = `https://www.saynopest.com/category/${slug}`;
+
 
   const currentPage = query.page ? parseInt(query.page as string, 10) : 1;
   const searchTerm = typeof query.search === 'string' ? query.search : '';
@@ -55,10 +54,7 @@ export default async function CategoryPage({
   }
 
   return (
-    <>
-    <Head>
-    <link rel="canonical" href={canonicalUrl} />
-    </Head>
+  
     <div className="mt-20 px-4 max-w-7xl mx-auto">
       <h1 className="text-4xl font-bold text-center text-primary mb-12">
         {category.name}
@@ -144,6 +140,6 @@ export default async function CategoryPage({
         )}
       </div>
     </div>
-    </>
+    
   );
 }
