@@ -1,48 +1,58 @@
-// lib/queries.ts
-
 const baseUrl = "https://static.saynopest.com";
 import { ExtendedPost, Category, Author } from "@/lib/types";
 
 const revalidateTime: number = 43200; // half day in seconds
 
-// Define the Post interface with slug and modified properties
+// Define the Post interface
 interface Post {
   id: number;
-  slug: string;  // Add slug property
-  modified: string;  // Add modified property (string to handle the date string format)
+  slug: string;
+  modified: string;
   title: string;
   content: string;
-  // Add other properties specific to your posts
 }
 
-
 export async function getAllPosts(
-  pageNumber: number = 1,
-  perPage: number = 200,
-  searchTerm: string = '',
+  perPage: number = 100,
+  searchTerm: string = "",
   categories: number = 0
-): Promise<{ posts: ExtendedPost[]; totalPages: number }> {
-  const params = new URLSearchParams({
-    per_page: perPage.toString(),
-    page: pageNumber.toString(),
-    search: searchTerm,
-    _embed: 'true',
-  });
+): Promise<ExtendedPost[]> {
+  let pageNumber = 1;
+  let allPosts: ExtendedPost[] = [];
+  let totalPages = 1;
 
-  if (categories !== 0) {
-    params.set("categories", categories.toString());
-  }
+  do {
+    const params = new URLSearchParams({
+      per_page: perPage.toString(),
+      page: pageNumber.toString(),
+      search: searchTerm,
+      _embed: "true",
+    });
+    if (categories !== 0) {
+      params.set("categories", categories.toString());
+    }
 
-  const response = await fetch(`${baseUrl}/wp-json/wp/v2/posts?${params.toString()}`, {
-    next: {
-      revalidate: revalidateTime,
-    },
-  });
+    const response = await fetch(`${baseUrl}/wp-json/wp/v2/posts?${params.toString()}`, {
+      next: {
+        revalidate: revalidateTime,
+      },
+    });
 
-  const posts = await response.json();
-  const totalPages = parseInt(response.headers.get("X-WP-TotalPages") ?? "1");
+    if (!response.ok) {
+      console.error(`Error fetching page ${pageNumber}: ${response.status}`);
+      break;
+    }
 
-  return { posts, totalPages };
+    const posts = await response.json();
+    const pageTotal = parseInt(response.headers.get("X-WP-TotalPages") ?? "1");
+
+    allPosts = [...allPosts, ...posts];
+    totalPages = pageTotal;
+
+    pageNumber++;
+  } while (pageNumber <= totalPages);
+
+  return allPosts;
 }
 
 export async function getPostBySlug(slug: string): Promise<ExtendedPost | null> {
@@ -79,12 +89,10 @@ export async function getCategories(): Promise<Category[]> {
   return data;
 }
 
-// Get posts by category ID
 export async function getPostsByCategory(categoryId: number, limit: number = 10): Promise<Post[]> {
   const res = await fetch(
     `${baseUrl}/wp-json/wp/v2/posts?categories=${categoryId}&per_page=${limit}&_embed`
   );
-
   if (!res.ok) {
     console.error("Failed to fetch posts by category", await res.text());
     return [];
@@ -96,6 +104,8 @@ export async function getPostsByCategory(categoryId: number, limit: number = 10)
 
 export async function getAllCategories() {
   const res = await fetch(`${baseUrl}/wp-json/wp/v2/categories?per_page=100`);
-  if (!res.ok) throw new Error("Failed to fetch categories");
+  if (!res.ok) {
+    throw new Error("Failed to fetch categories");
+  }
   return res.json();
 }
