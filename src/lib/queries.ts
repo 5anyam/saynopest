@@ -18,7 +18,7 @@ interface Post {
 
 export async function getAllPosts(
   pageNumber: number = 1,
-  perPage: number = 100,
+  perPage: number = 200,
   searchTerm: string = '',
   categories: number = 0
 ): Promise<{ posts: ExtendedPost[]; totalPages: number }> {
@@ -80,7 +80,7 @@ export async function getCategories(): Promise<Category[]> {
 }
 
 // Get posts by category ID
-export async function getPostsByCategory(categoryId: number, limit: number = 3): Promise<Post[]> {
+export async function getPostsByCategory(categoryId: number, limit: number = 10): Promise<Post[]> {
   const res = await fetch(
     `${baseUrl}/wp-json/wp/v2/posts?categories=${categoryId}&per_page=${limit}&_embed`
   );
