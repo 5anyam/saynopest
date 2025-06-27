@@ -69,7 +69,7 @@ export default function RootLayout({
         overflow-x-hidden
       `}>
         <meta name="google-site-verification" content="SrhB-NOlpPpJPL5wP3FpRwuT1yDTE2e0SdFOtcrkfa0" />
-        <div className="w-screen p-4 md:p-10 mx-auto bg-white min-h-screen">
+        <div className="w-screen p-4 md:p-10 mx-auto bg-white">
           <Header/>
           {children}
           <Footer/>
