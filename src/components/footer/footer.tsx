@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import { GrInstagram } from "react-icons/gr";
 import { TbBrandLinkedin } from "react-icons/tb";
 import { RiFacebookBoxLine } from "react-icons/ri";
