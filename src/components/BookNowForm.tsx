@@ -91,7 +91,7 @@ export default function BookNowForm() {
 
       {/* Service (scrollable 5 items) */}
       <div>
-        <label className="block text-sm font-medium">Service</label>
+        <label className="block text-sm font-medium">Select Service</label>
         <select
           name="service"
           value={form.service}
