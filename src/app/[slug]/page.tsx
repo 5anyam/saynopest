@@ -8,6 +8,7 @@ import {
 } from "@/lib/queries";
 import Link from 'next/link';
 import Image from 'next/image';
+import BookNowForm from '@/components/BookNowForm';
 
 // 👇 Category type define karo yahi (ya types.ts mein export karo)
 type Category = {
@@ -131,51 +132,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <aside className="lg:w-1/3 w-full relative">
         <div className="sticky top-24 space-y-8">
           {/* Book Now Form */}
-          <div className="border p-6 rounded-md shadow-md bg-white">
-            <h3 className="text-xl font-semibold mb-4">Book Now</h3>
-            <form className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium">Name</label>
-                <input
-                  type="text"
-                  className="mt-1 w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
-                  placeholder="Your name"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium">Phone</label>
-                <input
-                  type="tel"
-                  className="mt-1 w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
-                  placeholder="Your phone number"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium">Service</label>
-                <select className="mt-1 w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-green-400">
-                  <option>Termite Control</option>
-                  <option>Rodent Removal</option>
-                  <option>General Pest Control</option>
-                  <option>Ants Control</option>
-                  <option>Bed Bugs Control</option>
-                  <option>Earwigs Control</option>
-                  <option>Silver Fish Control</option>
-                  <option>Flies Control</option>
-                  <option>Flea Control</option>
-                  <option>Mosquitoes Control</option>
-                  <option>Wasps Control</option>
-                  <option>Moths Control</option>
-                  <option>Ticks Control</option>
-                </select>
-              </div>
-              <button
-                type="submit"
-                className="w-full bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700"
-              >
-                Submit
-              </button>
-            </form>
-          </div>
+          <BookNowForm/>
 
           {/* Categories Sidebar */}
           <div className="border p-6 rounded-md shadow-md bg-white">
