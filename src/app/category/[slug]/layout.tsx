@@ -1,22 +1,15 @@
-
 import PreloaderWrapper from '@/components/PreloaderWrapper';
 import React from 'react';
 
-interface CategoryLayoutProps {
-  children: React.ReactNode;
-  params: Promise<{ slug: string }>;
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const canonicalUrl = `https://www.saynopest.com/category/${params.slug}`;
+  return {
+    alternates: {
+      canonical: canonicalUrl,
+    },
+  };
 }
 
-export default async function CategoryLayout({ children, params }: CategoryLayoutProps) {
-  const resolvedParams = await params;
-  const canonicalUrl = `https://www.saynopest.com/category/${resolvedParams.slug}`;
-
-  return (
-    <html>
-      <head>
-        <link rel="canonical" href={canonicalUrl} />
-      </head>
-      <body><PreloaderWrapper>{children}</PreloaderWrapper></body>
-    </html>
-  );
+export default function CategoryLayout({ children }: { children: React.ReactNode }) {
+  return <PreloaderWrapper>{children}</PreloaderWrapper>;
 }
