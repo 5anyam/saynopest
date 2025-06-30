@@ -1,25 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { initializeApp, getApps } from 'firebase/app';
-import {
-  getFirestore,
-  collection,
-  addDoc,
-  Timestamp
-} from 'firebase/firestore';
+import { collection, addDoc, Timestamp } from 'firebase/firestore';
+import { db } from '@/lib/firebase'; // ✅ import from your initialized Firebase
 
-// initialize Firebase (only once)
-const firebaseConfig = {
-  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-  // ...etc
-};
-if (!getApps().length) {
-  initializeApp(firebaseConfig);
-}
-const db = getFirestore();
 
 export default function BookNowForm() {
   const [form, setForm] = useState({
