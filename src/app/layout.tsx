@@ -9,14 +9,6 @@ import { Footer } from "@/components/footer/footer";
 
 const inter = Inter({ subsets: ['latin'] })
 
-const breadcrumbSchema = {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    // ...
-  ]
-};
-
 
 
 
@@ -70,7 +62,7 @@ export default function RootLayout({
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://www.saynopest.com"
+          "item": "https://www.saynopest.com/"
         },
         {
           "@type": "ListItem",
@@ -100,13 +92,6 @@ export default function RootLayout({
     })
   }}
 />
-
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify(breadcrumbSchema)
-    }}
-  />
   <Script
     src="https://www.googletagmanager.com/gtag/js?id=G-8BRKYL2QR2"
     strategy="afterInteractive"
