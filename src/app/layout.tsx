@@ -9,39 +9,16 @@ import { Footer } from "@/components/footer/footer";
 
 const inter = Inter({ subsets: ['latin'] })
 
-const homepageSchema = {
+const breadcrumbSchema = {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Say No Pest - Home",
-  "url": "https://www.saynopest.com",
-  "description": "Say No Pest offers expert pest control services. Explore pest library, read blogs, and contact us for effective solutions.",
-  "mainEntity": [
-    {
-      "@type": "CollectionPage",
-      "name": "Pest Library",
-      "url": "https://www.saynopest.com/pest-library",
-      "description": "Explore our pest library to learn more about common household pests and how to deal with them."
-    },
-    {
-      "@type": "Service",
-      "serviceType": "Pest Control Services",
-      "url": "https://www.saynopest.com/services",
-      "description": "We offer expert services like termite control, rodent removal, bed bug treatment, and more."
-    },
-    {
-      "@type": "Blog",
-      "name": "Say No Pest Blog",
-      "url": "https://www.saynopest.com/blogs",
-      "description": "Get pest control tips, prevention guides, and the latest updates from Say No Pest."
-    },
-    {
-      "@type": "ContactPage",
-      "name": "Contact Us",
-      "url": "https://www.saynopest.com/contact",
-      "description": "Reach out for expert pest control services, quotes, and appointments."
-    }
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    // ...
   ]
 };
+
+
+
 
 export const metadata: Metadata = {
   title: "Say No Pest",
@@ -83,9 +60,53 @@ export default function RootLayout({
      <meta name="google-adsense-account" content="ca-pub-7212342270102504"/>
   <link rel="canonical" href="https://www.saynopest.com/" />
   <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSchema) }}
-        />
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.saynopest.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Pest Library",
+          "item": "https://www.saynopest.com/pest-library"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Services",
+          "item": "https://www.saynopest.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Blogs",
+          "item": "https://www.saynopest.com/blogs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Contact Us",
+          "item": "https://www.saynopest.com/contact"
+        }
+      ]
+    })
+  }}
+/>
+
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(breadcrumbSchema)
+    }}
+  />
   <Script
     src="https://www.googletagmanager.com/gtag/js?id=G-8BRKYL2QR2"
     strategy="afterInteractive"
