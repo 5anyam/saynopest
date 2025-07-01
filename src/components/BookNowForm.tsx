@@ -120,6 +120,7 @@ export default function BookNowForm() {
             </option>
           ))}
         </select>
+        
       </div>
 
       {/* Submit */}
