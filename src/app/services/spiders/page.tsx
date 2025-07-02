@@ -75,7 +75,7 @@ export default function SpiderTypesPage() {
     Many American homes include spiders. Although most spiders aren’t dangerous, black widows and brown recluses should be handled carefully, as their bites are poisonous.
   </p>
 
-  <h2 className="text-xl font-semibold text-gray-800 mb-2">Meet the Eight-Legged Intruders: <b>Common House Spiders</b> in the U.S.</h2>
+  <h2 className="text-xl font-semibold text-gray-800 mb-2">Meet the Eight-Legged Intruders: <b><Link href="https://www.saynopest.com/most-common-house-spiders-in-the-united-states">Common House Spiders</Link></b> in the U.S.</h2>
   <p className="text-gray-700 mb-6">
     Spiders are among the most common household pests in the U.S. They have eight legs, two body sections, and can spin silk. Appearance varies widely: black widows are shiny black with a red hourglass on their underside; brown recluses are light to dark brown with a violin-shaped mark on their backs. Wolf spiders are large, hairy, and usually gray or brown. Jumping spiders are small, colorful, and have large eyes. House spiders are yellowish-brown with an elongated abdomen, while yellow sac spiders are pale yellow or beige and less than half an inch long. From fields to homes, spiders are found nearly everywhere.
   </p>

@@ -10,27 +10,6 @@ const earwigTypes = [
       "The most common species in the U.S., known for their prominent pincers. They are nocturnal, thrive in damp areas, and often enter homes in search of moisture and food.",
       link : "https://www.saynopest.com/european-earwig",
   },
-  {
-    name: "Ring-legged Earwig (Euborellia annulipes)",
-    image: "/types/ring-legged-earwig.jpg",
-    description:
-      "This dark-colored, wingless earwig species is recognizable by the pale rings on its legs. It’s found mostly in southern regions and prefers moist indoor areas.",
-      link : "#",
-  },
-  {
-    name: "Striped or Riparian Earwig (Labidura riparia)",
-    image: "/types/striped-earwig.jpg",
-    description:
-      "Often found near rivers and streams, this earwig has a striped appearance and stronger predatory behavior. It feeds on other insects and plant debris.",
-      link : "#",
-  },
-  {
-    name: "Maritime Earwig (Anisolabis maritima)",
-    image: "/types/maritime-earwig.jpg",
-    description:
-      "Typically found along coastal areas, this large, dark-colored earwig prefers moist, sandy environments. It lacks wings and is a strong scavenger and predator.",
-      link : "#",
-  }
 ];
 
 export default function EarwigTypesPage() {

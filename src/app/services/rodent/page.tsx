@@ -24,48 +24,57 @@ const miceTypes = [
   }
 ];
 
-export default function MiceTypesPage() {
+export default function RodentsPage() {
   return (
     <>
-    <Head>
-    <link rel="canonical" href="https://www.saynopest.com/services/rodent" />
-    </Head>
-    <div className="min-h-screen mt-20 p-6">
-<div className="max-w-full mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
-  <h1 className="text-2xl text-center font-bold text-primary mb-4">Mice</h1>
+      <Head>
+        <link rel="canonical" href="https://www.saynopest.com/services/rodent" />
+      </Head>
+      <div className="min-h-screen mt-20 p-6">
+        <div className="max-w-full mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
+          <h1 className="text-2xl text-center font-bold text-primary mb-4">Rodents</h1>
 
-  <p className="text-gray-700 mb-6">
-    Mice reproduce rapidly, with a single female capable of producing up to 120 offspring per year, leading to fast infestations.
-  </p>
+          <h2 className="text-xl font-semibold text-gray-800 mb-2">Appearance</h2>
+          <p className="text-gray-700 mb-6">
+            Rodents are small to medium-sized mammals, and their most noticeable feature is their
+            continuously growing, very sharp incisors. They use their teeth for gnawing food,
+            digging burrows, and self-defense. In the U.S., rodents come in different sizes and
+            colors, typically having compact bodies, short legs, and bushy or bare tails. Fur colors
+            vary from brown, gray, and black to lighter shades depending on the species. Rodents are
+            commonly found in urban areas, rural fields, forests, and wetlands.
+          </p>
 
-  <h2 className="text-xl font-semibold text-gray-800 mb-2">Physical Appearance</h2>
-  <p className="text-gray-700 mb-6">
-    Mice have small, compact bodies, large ears, and long, slender tails. Their body length ranges from 2.5 to 4 inches, with tails that can be equal to or longer than the body. Fur color typically ranges from gray-brown to red-brown, with lighter-colored bellies. Their sharp-clawed feet make them excellent climbers and diggers.
-  </p>
+          <h2 className="text-xl font-semibold text-gray-800 mb-2">Rodent Behavior</h2>
+          <p className="text-gray-700 mb-6">
+            Rodents are nocturnal, sleeping during the day and becoming active at night. Their diet
+            includes seeds, plants, insects, and leftover food from kitchens. They breed rapidly,
+            which contributes to fast population growth. Their exceptional scavenging abilities help
+            them survive in a variety of environments without running out of food.
+          </p>
 
-  <h2 className="text-xl font-semibold text-gray-800 mb-2">Reproduction Rate</h2>
-  <p className="text-gray-700 mb-6">
-    Mice breed quickly and prolifically. A single female can produce 5–10 litters annually, each containing 6–12 offspring, contributing to rapid infestation if left unchecked.
-  </p>
+          <h2 className="text-xl font-semibold text-gray-800 mb-2">Types of Rodent Infestation</h2>
+          <p className="text-gray-700 mb-6">
+            Various types of rodents can invade homes easily, making them a major concern. Rodent
+            problems affect over 16 million homes and around 38 million people across the U.S.
+            Infestations are especially common in rural areas, colder regions, and older or darker
+            homes.
+          </p>
 
-  <h2 className="text-xl font-semibold text-gray-800 mb-2">What Do Mice Eat?</h2>
-  <p className="text-gray-700 mb-6">
-    Mice are omnivores, primarily feeding on grains, seeds, and fruits. In human environments, they readily consume food scraps, pantry items, and pet food. Their scavenging habits often lead to contamination of food supplies.
-  </p>
+          <h2 className="text-xl font-semibold text-gray-800 mb-2">Need for Rodent Control</h2>
+          <p className="text-gray-700 mb-6">
+            Rodents can carry and spread harmful diseases such as Hantavirus, Leptospirosis, and
+            Salmonella. Their constant gnawing on wires can damage structures and even cause fire
+            hazards due to exposed electrical wiring. Effective rodent control is essential to
+            maintain a safe, clean, and healthy living environment in the U.S.
+          </p>
 
-  <h2 className="text-xl font-semibold text-gray-800 mb-2">Health Risks Caused Due to Mice Presence in Homes</h2>
-  <p className="text-gray-700 mb-6">
-    Approximately 11.6% of U.S. households report rodent issues yearly, impacting over 16 million homes. Infestations are more common in colder regions like the Midwest and Northeast as mice seek indoor warmth. States like Vermont, South Dakota, and Pennsylvania report higher occurrences due to factors such as aging housing and extreme weather. Mice pose serious health risks including hantavirus, salmonella, and Lyme disease transmitted through droppings, urine, and parasites. Their presence can also exacerbate allergies and asthma, especially in children.
-  </p>
-
-  <h2 className="text-2xl font-semibold text-primary text-center mb-2">Types of Mice</h2>
-  <p className="text-gray-700">
-    The United States is home to various types of mice, each differing in appearance and behavior. Understanding the type of mouse helps in choosing the appropriate control method.
-  </p>
-</div>
-
-
-
+          <h2 className="text-2xl font-semibold text-primary text-center mb-2">Types of Rodents</h2>
+          <p className="text-gray-700">
+            There are several types of rodents found across the United States. Recognizing them is
+            the first step in determining the best way to eliminate them and prevent future
+            infestations.
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {miceTypes.map((type, index) => (
@@ -89,6 +98,7 @@ export default function MiceTypesPage() {
           ))}
         </div>
       </div>
-  </>
+    </>
   );
 }
+

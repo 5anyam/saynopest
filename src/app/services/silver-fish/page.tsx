@@ -9,12 +9,6 @@ const silverfishTypes = [
     description: "Recognized by their silvery, carrot-shaped bodies and fast movements. They are frequently found in damp and dark household areas.",
     link: "https://www.saynopest.com/common-silverfish-saynopest",
   },
-  {
-    name: "Urban Silverfish",
-    image: "/types/urban-silverfish.jpg",
-    description: "Adapted to city environments and can survive in lower humidity areas compared to other species. Often found in apartments and offices.",
-    link: "#",
-  },
 ];
 
 export default function SilverfishTypesPage() {

@@ -1,26 +1,26 @@
 import Head from "next/head";
-import Image from "next/image";
+//ximport Image from "next/image";
 
-const fleaTypes = [
-  {
-    name: "Aedes Mosquitoes",
-    image: "/types/mosquitoes/aedes-mosquitoes.jpg",
-    description:
-      "Recognized by white markings on its legs and a marking in the form of a lyre on the upper thorax. It spreads diseases like Zika, dengue, and yellow fever. Mostly active during the daytime."
-  },
-  {
-    name: "Anopheles Mosquito",
-    image: "/types/mosquitoes/anopheles-mosquito.jpg",
-    description:
-      "Black with distinct white stripes on the legs and a white stripe down the center of its back. Known for aggressive daytime biting and spreading viruses like chikungunya, dengue, and Zika."
-  },
-  {
-    name: "Culex Mosquitoes",
-    image: "/types/mosquitoes/culex-mosquitoes.jpg",
-    description:
-      "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains."
-  }
-];
+// const fleaTypes = [
+//   {
+//     name: "Aedes Mosquitoes",
+//     image: "/types/mosquitoes/aedes-mosquitoes.jpg",
+//     description:
+//       "Recognized by white markings on its legs and a marking in the form of a lyre on the upper thorax. It spreads diseases like Zika, dengue, and yellow fever. Mostly active during the daytime."
+//   },
+//   {
+//     name: "Anopheles Mosquito",
+//     image: "/types/mosquitoes/anopheles-mosquito.jpg",
+//     description:
+//       "Black with distinct white stripes on the legs and a white stripe down the center of its back. Known for aggressive daytime biting and spreading viruses like chikungunya, dengue, and Zika."
+//   },
+//   {
+//     name: "Culex Mosquitoes",
+//     image: "/types/mosquitoes/culex-mosquitoes.jpg",
+//     description:
+//       "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains."
+//   }
+// ];
 
 export default function FleaTypesPage() {
   return (
@@ -57,7 +57,7 @@ export default function FleaTypesPage() {
 </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {fleaTypes.map((type, index) => (
             <div
               key={index}
@@ -78,7 +78,7 @@ export default function FleaTypesPage() {
               </div>
             </div>
           ))}
-        </div>
+        </div> */}
       </div>
       </>
   );

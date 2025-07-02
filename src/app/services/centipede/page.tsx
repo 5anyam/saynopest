@@ -17,41 +17,6 @@ const centipedeTypes = [
       "One of the largest centipedes in the U.S., growing up to 8 inches. Found in the Southwest, it can deliver a painful bite but is not deadly.",
       link: "https://www.saynopest.com/the-giant-desert-centipede-a-closer-look/",
   },
-  {
-    name: "Eastern Bark Centipede",
-    image: "/types/centipede/eastern-bark-centipede.jpg",
-    description:
-      "Often found under tree bark and in moist logs. These reddish-brown centipedes are fast, aggressive hunters and common in wooded regions.",
-      link: "#",
-  },
-  {
-    name: "Eastern Red Centipede",
-    image: "/types/centipede/eastern-red-centipede.jpg",
-    description:
-      "A medium-sized reddish centipede often found in gardens and moist indoor spaces. It feeds on insects and is usually harmless to humans.",
-      link: "#",
-  },
-  {
-    name: "Diamondback Soil Centipede",
-    image: "/types/centipede/diamondback-soil-centipede.jpg",
-    description:
-      "A soil-dwelling centipede with a patterned back. It’s blind and slow-moving, preying on small invertebrates in damp environments.",
-      link: "#",
-  },
-  {
-    name: "Brown Centipede",
-    image: "/types/centipede/brown-centipede.jpg",
-    description:
-      "Small and dark brown, this species is often found indoors in moist areas. It avoids light and is harmless but may cause concern due to its appearance.",
-      link: "#",
-  },
-  {
-    name: "Common Cryptops",
-    image: "/types/centipede/common-cryptops.jpg",
-    description:
-      "This small centipede lacks eyes and prefers dark, damp places. Its bite can cause mild irritation but poses no serious threat to humans.",
-      link: "#",
-  }
 ];
 
 export default function CentipedeTypesPage() {

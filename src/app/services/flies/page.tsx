@@ -9,43 +9,25 @@ const fliesTypes = [
       "Recognized by white markings on its legs and a marking in the form of a lyre on the upper thorax. It spreads diseases like Zika, dengue, and yellow fever. Mostly active during the daytime."
   },
   {
-    name: "Blow Fly",
+    name: "Horse Fly",
     image: "/types/flies/blow-fly.jpg",
     description:
       "Black with distinct white stripes on the legs and a white stripe down the center of its back. Known for aggressive daytime biting and spreading viruses like chikungunya, dengue, and Zika."
   },
   {
-    name: "Bottle Fly",
+    name: "Cluster Fly",
     image: "/types/flies/bottle-fly.jpg",
     description:
       "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains."
   },
   {
-    name: "Cluster Fly",
+    name: "House Fly",
     image: "/types/flies/cluster-fly.jpg",
     description:
       "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains."
   },{
-    name: "Crane Fly",
+    name: "Drain Fly",
     image: "/types/flies/crane-fly.jpg",
-    description:
-      "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains."
-  },
-  {
-    name: "Deer Fly",
-    image: "/types/flies/deer-fly.jpg",
-    description:
-      "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains."
-  },
-  {
-    name: "Gnat Fly",
-    image: "/types/flies/gnat.jpg",
-    description:
-      "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains."
-  },
-  {
-    name: "Horn Fly",
-    image: "/types/flies/horn-fly.jpg",
     description:
       "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains."
   }

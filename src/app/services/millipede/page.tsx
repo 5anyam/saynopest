@@ -3,26 +3,14 @@ import Image from "next/image";
 
 const millipedeTypes = [
   {
-    name: "Green House",
-    image: "/types/millipede/greenhouse-millipede.jpg",
-    description:
-      "Recognized by white markings on its legs and a marking in the form of a lyre on the upper thorax. It spreads diseases like Zika, dengue, and yellow fever. Mostly active during the daytime."
-  },
-  {
-    name: "Apheloria Virginiensis",
-    image: "/types/millipede/apheloria-virginiensis-millipede.jpg",
-    description:
-      "Black with distinct white stripes on the legs and a white stripe down the center of its back. Known for aggressive daytime biting and spreading viruses like chikungunya, dengue, and Zika."
-  },
-  {
-    name: "North American",
-    image: "/types/millipede/north-american-millipede.jpg",
-    description:
-      "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains."
-  },{
     name: "Pink Dragon",
     image: "/types/millipede/pink-dragon-millipede.jpg",
+  },
+  {
+    name: "American Jaint Millipede",
+    image: "/types/millipede/pink-dragon-millipede.jpg",
   }
+
 ];
 
 export default function MillipedeTypesPage() {

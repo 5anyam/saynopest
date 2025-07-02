@@ -13,14 +13,10 @@ const tickTypes = [
     description: "Easily recognized by the single white dot on the female's back, this tick is aggressive and known to transmit ehrlichiosis and Southern tick-associated rash illness (STARI)."
   },
   {
-    name: "Rocky Mountain Wood",
-    image: "/rocky-mountain-wood-tick.jpg",
-    description: "Widespread across the U.S., this tick prefers dogs and humans as hosts. It can transmit Rocky Mountain spotted fever and tularemia."
-  },
-  {
-    name: "Brown Dog Tick",
-    image: "/brown-dog-tick.jpg",
-    description: "Often found indoors, especially in kennels, this tick prefers dogs but can bite humans. It transmits canine ehrlichiosis and babesiosis."
+    name: "American Dog Tick",
+    image: "/american-dog-tick.jpg",
+    description:
+      "Often seen around sidewalks and driveways, pavement ants can enter buildings in search of food, especially sugary substances and grease."
   }
 ];
 
