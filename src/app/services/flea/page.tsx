@@ -51,10 +51,10 @@ export default function FleaTypesPage() {
   Flea bites can cause discomfort, allergic reactions, and transmit diseases such as murine typhus, plague, and cat scratch disease. They can also carry tapeworms that pose health risks to both pets and humans. Regular flea treatment for pets, maintaining cleanliness, and controlling humidity indoors are essential steps to prevent infestations and protect family members.
 </p>
 
-<h2 className="text-xl font-semibold text-primary text-center mb-2">Types of Fleas</h2>
+{/* <h2 className="text-xl font-semibold text-primary text-center mb-2">Types of Fleas</h2>
 <p className="text-gray-700">
   Despite their size, fleas are a diverse group of parasites, each adapted with impressive survival tactics for living on different hosts and in varying environments.
-</p>
+</p> */}
         </div>
 
         {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
