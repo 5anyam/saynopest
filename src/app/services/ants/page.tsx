@@ -1,5 +1,6 @@
 //import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 const antTypes = [
   {
@@ -55,8 +56,16 @@ export default function AntTypesPage() {
   <h2 className="text-xl font-semibold text-gray-800 mb-2">Why Do Ants Keep Coming Back? </h2>
   <p className="text-gray-700 mb-6">
     Did you ever go to your bedroom and suddenly see an army of ants in bed marching to a forgotten crumb? You’re not the only one!
-    This invasion of ants is a huge problem of American homeowners. No matter if it’s grub of sugar ants in your pantry, fire ants
-    in your yard, or always the carpenter ants coming from nowhere to sneak into your walls, these annoying creatures are very good
+    This invasion of ants is a huge problem of American homeowners. No matter if it’s grub of sugar ants in your pantry, <b className="text-green-500">
+    <Link href="https://www.saynopest.com/ants-out-ways-on-how-to-get-rid-of-fire-ants-saynopest">
+      fire ants
+    </Link>
+  </b>
+    in your yard, or always the <b className="text-green-500">
+    <Link href="https://www.saynopest.com/do-carpenter-ants-eat-wood-like-termites-saynopest">
+      carpenter ants
+    </Link>
+  </b> coming from nowhere to sneak into your walls, these annoying creatures are very good
     at finding a way in.  
   </p>
 
