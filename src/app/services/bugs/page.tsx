@@ -1,28 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
-
-const bedBugTypes = [
-  {
-    name: "Common Bed Bug (Cimex lectularius)",
-    image: "/types/common-bed-bug.jpg",
-    description: "The most widespread species in the U.S., these bed bugs thrive in human dwellings and are difficult to eliminate due to their resistance to many treatments."
-  },
-  {
-    name: "Tropical Bed Bug (Cimex hemipterus)",
-    image: "/types/tropical-bed-bug.jpg",
-    description: "More prevalent in tropical and subtropical regions, they are similar to common bed bugs but prefer warmer climates and are increasingly found in southern U.S. states."
-  },
-  {
-    name: "Bat Bug (Cimex adjunctus)",
-    image: "/types/bat-bug.jpg",
-    description: "These bugs primarily feed on bats but may move into homes, especially attics, if bat populations are nearby. They closely resemble bed bugs but prefer bat blood."
-  },
-  {
-    name: "Barn Swallow Bug",
-    image: "/types/water-bug.jpg",
-    description: "Typically found in bird nests, especially barn swallows, these bugs may enter homes when birds migrate, posing a nuisance if their hosts disappear."
-  }
-];
 
 export default function BedBugTypesPage() {
   return (
@@ -67,30 +43,6 @@ export default function BedBugTypesPage() {
     From homes to hotels, these bed bug species are the most encountered across the country. Here are the primary types of bed bugs found in the United States, each with distinct habitats and characteristics.
   </p>
 </div>
-
-
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {bedBugTypes.map((type, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-            >
-              <Image
-                src={type.image}
-                alt={type.name}
-                width={600}
-                height={400}
-                className="w-full h-60 object-cover"
-              />
-              <div className="p-4 text-center">
-                <h2 className="text-xl font-semibold text-primary mb-2">
-                  {type.name}
-                </h2>
-              </div>
-            </div>
-          ))}
-        </div>
       </div>
     </>
   );

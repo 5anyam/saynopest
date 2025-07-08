@@ -10,6 +10,12 @@ const antTypes = [
       "Twig ants are often found nesting in dead branches and twigs. While not typically aggressive, they can invade homes near wooded areas or gardens."
   },
   {
+    name: "Twig Ant",
+    image: "/types/twig-ant.jpg",
+    description:
+      "Twig ants are often found nesting in dead branches and twigs. While not typically aggressive, they can invade homes near wooded areas or gardens."
+  },
+  {
     name: "Argentine Ant",
     image: "/types/Argentine-ants.jpg",
     description:
@@ -80,7 +86,7 @@ export default function AntTypesPage() {
 </div>
 
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-16 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-16 gap-10">
           {antTypes.map((type, index) => (
             <div
               key={index}
