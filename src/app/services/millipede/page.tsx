@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const millipedeTypes = [
   {
-    name: "American Jaint Millipede",
+    name: "American Gaint Millipede",
     image: "/types/millipede/american-jaint-millipede.jpg",
   },
   {
