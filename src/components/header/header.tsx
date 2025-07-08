@@ -95,6 +95,13 @@ export function Header() {
         Ants
       </Link>
       <Link
+        href="https://www.saynopest.com/services/beetle"
+        className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
+        onClick={() => setIsServicesOpen(false)}
+      >
+        Beetle
+      </Link>
+      <Link
         href="https://www.saynopest.com/services/spiders"
         className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
         onClick={() => setIsServicesOpen(false)}
@@ -109,7 +116,7 @@ export function Header() {
         Cockroaches
       </Link>
       <Link
-        href="https://www.saynopest.com/services/bed-bugs"
+        href="https://www.saynopest.com/services/bugs"
         className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
         onClick={() => setIsServicesOpen(false)}
       >
