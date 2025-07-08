@@ -7,19 +7,22 @@ const mosquitoTypes = [
     name: "Aedes Mosquitoes",
     image: "/types/mosquitoes/aedes-mosquitoes.jpg",
     description:
-      "Recognized by white markings on its legs and a marking in the form of a lyre on the upper thorax. It spreads diseases like Zika, dengue, and yellow fever. Mostly active during the daytime."
+      "Recognized by white markings on its legs and a marking in the form of a lyre on the upper thorax. It spreads diseases like Zika, dengue, and yellow fever. Mostly active during the daytime.",
+      link:"https://www.saynopest.com/aedes-mosquitoes-saynopest/"
   },
   {
     name: "Anopheles Mosquito",
     image: "/types/mosquitoes/anopheles-mosquito.jpg",
     description:
-      "Black with distinct white stripes on the legs and a white stripe down the center of its back. Known for aggressive daytime biting and spreading viruses like chikungunya, dengue, and Zika."
+      "Black with distinct white stripes on the legs and a white stripe down the center of its back. Known for aggressive daytime biting and spreading viruses like chikungunya, dengue, and Zika.",
+      link:"https://www.saynopest.com/anopheles-mosquitoes-saynopest/"
   },
   {
     name: "Culex Mosquitoes",
     image: "/types/mosquitoes/culex-mosquitoes.jpg",
     description:
-      "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains."
+      "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains.",
+      link:"https://www.saynopest.com/culex-mosquito-top-diseases-they-transmit-and-how-to-stay-safe/"
   }
 ];
 
@@ -88,10 +91,8 @@ export default function MosquitoTypesPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {mosquitoTypes.map((type, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-            >
+            <Link href={type.link} key={index}>
+            <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <Image
                 src={type.image}
                 alt={type.name}
@@ -99,13 +100,11 @@ export default function MosquitoTypesPage() {
                 height={400}
                 className="w-full h-60 object-cover"
               />
-              <div className="p-4 text-center">
-                <h2 className="text-xl font-semibold text-primary mb-2">
-                  {type.name}
-                </h2>
-                <p className="text-gray-700 text-sm">{type.description}</p>
+              <div className="p-2 text-center">
+                <h2 className="text-xl font-semibold text-primary mb-2">{type.name}</h2>
               </div>
             </div>
+          </Link>
           ))}
         </div>
       </div>

@@ -7,37 +7,43 @@ const antTypes = [
     name: "Fire Ant",
     image: "/types/grease-ants.jpg",
     description:
-      "Twig ants are often found nesting in dead branches and twigs. While not typically aggressive, they can invade homes near wooded areas or gardens."
+      "Twig ants are often found nesting in dead branches and twigs. While not typically aggressive, they can invade homes near wooded areas or gardens.",
+      link:"https://www.saynopest.com/fire-ants-vs-red-ants-saynopest/"
   },
   {
     name: "Twig Ant",
     image: "/types/twig-ant.jpg",
     description:
-      "Twig ants are often found nesting in dead branches and twigs. While not typically aggressive, they can invade homes near wooded areas or gardens."
+      "Twig ants are often found nesting in dead branches and twigs. While not typically aggressive, they can invade homes near wooded areas or gardens.",
+      link:"https://www.saynopest.com/elongated-twig-ants-saynopest/"
   },
   {
     name: "Argentine Ant",
     image: "/types/Argentine-ants.jpg",
     description:
-      "Army ants are nomadic and known for their massive swarms. While less common in the U.S., they pose a risk due to their aggressive foraging behavior."
+      "Army ants are nomadic and known for their massive swarms. While less common in the U.S., they pose a risk due to their aggressive foraging behavior.",
+      link:"https://www.saynopest.com/california-argentine-ants-saynopest/"
   },
   {
     name: "Carpenter Ant",
     image: "/types/carpenter-ant.jpg",
     description:
-      "Often seen around sidewalks and driveways, pavement ants can enter buildings in search of food, especially sugary substances and grease."
+      "Often seen around sidewalks and driveways, pavement ants can enter buildings in search of food, especially sugary substances and grease.",
+      link:"https://www.saynopest.com/carpenter-ants-vs-black-ants-saynopest/"
   },
   {
     name: "Pavement Ant",
     image: "/types/pavement-ant.jpg",
     description:
-      "Often seen around sidewalks and driveways, pavement ants can enter buildings in search of food, especially sugary substances and grease."
+      "Often seen around sidewalks and driveways, pavement ants can enter buildings in search of food, especially sugary substances and grease.",
+      link:"https://www.saynopest.com/how-to-get-rid-of-pavement-ants-permanently-saynopest"
   },
   {
     name: "Army Ant",
     image: "/types/army-ant.jpg",
     description:
-      "Often seen around sidewalks and driveways, pavement ants can enter buildings in search of food, especially sugary substances and grease."
+      "Often seen around sidewalks and driveways, pavement ants can enter buildings in search of food, especially sugary substances and grease.",
+      link:"https://www.saynopest.com/army-ant-bites-saynopest/"
   }
 ];
 
@@ -88,23 +94,20 @@ export default function AntTypesPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-16 gap-10">
           {antTypes.map((type, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-            >
-              <Image
-                src={type.image}
-                alt={type.name}
-                width={600}
-                height={400}
-                className="w-full h-60 object-cover"
-              />
-              <div className="p-4 text-center">
-                <h2 className="text-xl font-semibold text-primary mb-2">
-                  {type.name}
-                </h2>
-              </div>
-            </div>
+           <Link href={type.link} key={index}>
+           <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+             <Image
+               src={type.image}
+               alt={type.name}
+               width={600}
+               height={400}
+               className="w-full h-60 object-cover"
+             />
+             <div className="p-2 text-center">
+               <h2 className="text-xl font-semibold text-primary mb-2">{type.name}</h2>
+             </div>
+           </div>
+         </Link>
           ))}
         </div>
       </div>

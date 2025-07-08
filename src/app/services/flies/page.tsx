@@ -8,30 +8,35 @@ const fliesTypes = [
     image: "/types/flies/black-fly.jpg",
     description:
       "Recognized by white markings on its legs and a marking in the form of a lyre on the upper thorax. It spreads diseases like Zika, dengue, and yellow fever. Mostly active during the daytime.",
+      link:"https://www.saynopest.com/black-flies-saynopest/"
   },
   {
     name: "Horse Fly",
     image: "/types/flies/blow-fly.jpg",
     description:
       "Black with distinct white stripes on the legs and a white stripe down the center of its back. Known for aggressive daytime biting and spreading viruses like chikungunya, dengue, and Zika.",
+      link:"https://www.saynopest.com/horse-fly-bites-saynopest/"
   },
   {
     name: "Cluster Fly",
     image: "/types/flies/bottle-fly.jpg",
     description:
       "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains.",
+      link:"https://www.saynopest.com/cluster-flies-in-house-know-what-to-do/"
   },
   {
     name: "House Fly",
     image: "/types/flies/cluster-fly.jpg",
     description:
       "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains.",
+      link:"https://www.saynopest.com/house-flies-understand-and-control-these-common-house-pests/"
   },
   {
     name: "Drain Fly",
     image: "/types/flies/crane-fly.jpg",
     description:
       "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains.",
+      link:"https://www.saynopest.com/how-do-i-get-rid-of-drain-flies-overnight-saynopest/"
   },
 ];
 
@@ -81,10 +86,8 @@ export default function FliesTypesPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {fliesTypes.map((type, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-            >
+            <Link href={type.link} key={index}>
+            <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <Image
                 src={type.image}
                 alt={type.name}
@@ -92,10 +95,11 @@ export default function FliesTypesPage() {
                 height={400}
                 className="w-full h-60 object-cover"
               />
-              <div className="p-4 text-center">
+              <div className="p-2 text-center">
                 <h2 className="text-xl font-semibold text-primary mb-2">{type.name}</h2>
               </div>
             </div>
+          </Link>
           ))}
         </div>
       </div>

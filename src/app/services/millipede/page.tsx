@@ -6,10 +6,12 @@ const millipedeTypes = [
   {
     name: "American Gaint Millipede",
     image: "/types/millipede/american-jaint-millipede.jpg",
+    link: "https://www.saynopest.com/american-giant-millipede-misunderstood-not-scary/"
   },
   {
     name: "Pink Dragon Millipede",
     image: "/types/millipede/pink-dragon-millipede.jpg",
+    link: "https://www.saynopest.com/dragon-millipedes-explore-the-unique-pest-saynopest/"
   }
 ];
 
@@ -59,10 +61,8 @@ export default function MillipedeTypesPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {millipedeTypes.map((type, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-            >
+            <Link href={type.link} key={index}>
+            <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <Image
                 src={type.image}
                 alt={type.name}
@@ -70,12 +70,11 @@ export default function MillipedeTypesPage() {
                 height={400}
                 className="w-full h-60 object-cover"
               />
-              <div className="p-4 text-center">
-                <h2 className="text-xl font-semibold text-primary mb-2">
-                  {type.name}
-                </h2>
+              <div className="p-2 text-center">
+                <h2 className="text-xl font-semibold text-primary mb-2">{type.name}</h2>
               </div>
             </div>
+          </Link>
           ))}
         </div>
       </div>

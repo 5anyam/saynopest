@@ -8,18 +8,21 @@ const tickTypes = [
     image: "/blacklegged-tick.jpg",
     description:
       "Commonly found in the Northeast and Upper Midwest, these ticks are the primary vectors of Lyme disease. They are small, dark-colored, and feed on both animals and humans.",
+      link:"https://www.saynopest.com/life-cycle-of-blacklegged-deer-tick-a-2-year-process-saynopest/"
   },
   {
     name: "Lone Star Tick",
     image: "/lone-star-tick.jpg",
     description:
       "Easily recognized by the single white dot on the female's back, this tick is aggressive and known to transmit ehrlichiosis and Southern tick-associated rash illness (STARI).",
+      link:"https://www.saynopest.com/the-lone-star-tick/"
   },
   {
     name: "American Dog Tick",
     image: "/american-dog-tick.jpg",
     description:
       "Often seen around sidewalks and driveways, pavement ants can enter buildings in search of food, especially sugary substances and grease.",
+    link:"https://www.saynopest.com/is-american-dog-tick-dangerous/"
   },
 ];
 
@@ -62,23 +65,20 @@ export default function TickTypesPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {tickTypes.map((type, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-            >
-              <Image
-                src={type.image}
-                alt={type.name}
-                width={600}
-                height={400}
-                className="w-full h-60 object-cover"
-              />
-              <div className="p-4 text-center">
-                <h2 className="text-xl font-semibold text-primary mb-2">
-                  {type.name}
-                </h2>
+            <Link href={type.link} key={index}>
+              <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <Image
+                  src={type.image}
+                  alt={type.name}
+                  width={600}
+                  height={400}
+                  className="w-full h-60 object-cover"
+                />
+                <div className="p-2 text-center">
+                  <h2 className="text-xl font-semibold text-primary mb-2">{type.name}</h2>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
