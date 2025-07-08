@@ -51,47 +51,7 @@ export default function RootLayout({
      <Script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/5f6936e797dbab1bcbc19be4/script.js"></Script>
      <meta name="google-adsense-account" content="ca-pub-7212342270102504"/>
   <link rel="canonical" href="https://www.saynopest.com/" />
-  <script
-  type="application/ld+json"
-  dangerouslySetInnerHTML={{
-    __html: JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://www.saynopest.com/"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Pest Library",
-          "item": "https://www.saynopest.com/pest-library"
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "name": "Services",
-          "item": "https://www.saynopest.com/services"
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "name": "Blogs",
-          "item": "https://www.saynopest.com/blogs"
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "name": "Contact Us",
-          "item": "https://www.saynopest.com/contact"
-        }
-      ]
-    })
-  }}
-/>
+  
   <Script
     src="https://www.googletagmanager.com/gtag/js?id=G-8BRKYL2QR2"
     strategy="afterInteractive"
