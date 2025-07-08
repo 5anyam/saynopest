@@ -10,14 +10,8 @@ const antTypes = [
       "Twig ants are often found nesting in dead branches and twigs. While not typically aggressive, they can invade homes near wooded areas or gardens."
   },
   {
-    name: "Twig Ant",
-    image: "/types/argentine-ants.jpg",
-    description:
-      "Named for their unique habit of raising their abdomen over their head when threatened, acrobat ants nest in decaying wood and sometimes inside walls."
-  },
-  {
     name: "Argentine Ant",
-    image: "/types/army-ant.jpg",
+    image: "/types/Argentine-ants.jpg",
     description:
       "Army ants are nomadic and known for their massive swarms. While less common in the U.S., they pose a risk due to their aggressive foraging behavior."
   },
@@ -29,13 +23,13 @@ const antTypes = [
   },
   {
     name: "Pavement Ant",
-    image: "/types/carpenter-ant.jpg",
+    image: "/types/pavement-ant.jpg",
     description:
       "Often seen around sidewalks and driveways, pavement ants can enter buildings in search of food, especially sugary substances and grease."
   },
   {
     name: "Army Ant",
-    image: "/types/carpenter-ant.jpg",
+    image: "/types/army-ant.jpg",
     description:
       "Often seen around sidewalks and driveways, pavement ants can enter buildings in search of food, especially sugary substances and grease."
   }

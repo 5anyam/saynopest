@@ -4,24 +4,14 @@ import Link from "next/link";
 
 const miceTypes = [
   {
-    name: "Deer Mouse",
-    image: "/types/rodents/deer-mouse.jpg",
+    name: "Rat",
+    image: "/types/rodents/rat.jpg",
     description: "These termites build large underground colonies and require moist environments. They commonly enter homes through soil contact or foundation cracks."
   },
   {
-    name: "Field Mouse",
-    image: "/types/rodents/field-mouse.jpg",
+    name: "Mice",
+    image: "/types/rodents/mice.jpg",
     description: "Highly aggressive and destructive, Formosan termites can build nests underground or in walls and attics if moisture is available."
-  },
-  {
-    name: "House Mouse",
-    image: "/types/rodents/house-mouse.jpg",
-    description: "These termites live in dry wood and don't require contact with soil. They infest wooden furniture, walls, and framing above ground."
-  },
-  {
-    name: "White Footed",
-    image: "/types/rodents/white-footed-mouse.jpg",
-    description: "Larger in size, dampwood termites prefer moist, decaying wood and are commonly found in areas with high humidity or water damage."
   }
 ];
 

@@ -4,12 +4,8 @@ import Link from "next/link";
 
 const millipedeTypes = [
   {
-    name: "Pink Dragon",
-    image: "/types/millipede/pink-dragon-millipede.jpg",
-  },
-  {
     name: "American Jaint Millipede",
-    image: "/types/millipede/pink-dragon-millipede.jpg",
+    image: "/types/millipede/american-jaint-millipede.jpg",
   }
 ];
 
