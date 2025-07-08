@@ -37,11 +37,6 @@ export default function BedBugTypesPage() {
   <p className="text-gray-700 mb-6">
     Although bed bugs have the reputation of being disease carriers, the reality says otherwise. But do not take them seriously, the bites not only lead to skin rashes, but they can also cause allergic reactions and psychological distress. Practically speaking, the affected people can suffer from itchy skin, blisters, and hives caused by the bed bugs saliva. Since these pests are incredibly hard to find and can live for a long time without food, the quick and successful method of dealing with these universal insects is to use professional help.
   </p>
-
-  <h2 className="text-3xl text-center font-bold text-primary mb-4">Types of Bed Bugs</h2>
-  <p className="text-gray-700">
-    From homes to hotels, these bed bug species are the most encountered across the country. Here are the primary types of bed bugs found in the United States, each with distinct habitats and characteristics.
-  </p>
 </div>
       </div>
     </>
