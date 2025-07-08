@@ -6,6 +6,10 @@ const millipedeTypes = [
   {
     name: "American Jaint Millipede",
     image: "/types/millipede/american-jaint-millipede.jpg",
+  },
+  {
+    name: "Pink Dragon Millipede",
+    image: "/types/millipede/pink-dragon-millipede.jpg",
   }
 ];
 
