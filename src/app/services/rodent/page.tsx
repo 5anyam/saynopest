@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 const miceTypes = [
   {
@@ -54,7 +55,10 @@ export default function RodentsPage() {
 
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Types of Rodent Infestation</h2>
           <p className="text-gray-700 mb-6">
-            Various types of rodents can invade homes easily, making them a major concern. Rodent
+            Various <b className="text-green-500">
+    <Link href="https://www.saynopest.com/discover-how-to-get-rid-of-mice-without-losing-your-mind-saynopest">
+    types of rodents
+    </Link></b> can invade homes easily, making them a major concern. Rodent
             problems affect over 16 million homes and around 38 million people across the U.S.
             Infestations are especially common in rural areas, colder regions, and older or darker
             homes.

@@ -54,10 +54,19 @@ export default function CockroachTypesPage() {
 
   <h2 className="text-xl font-semibold text-gray-800 mb-2">Common Household Cockroach Species & Their Behavior</h2>
   <p className="text-gray-700 mb-6">
-    Cockroaches are unmatched when it comes to flexibility and persistence in comparison with any other household pest, with many species doing well in home environments. Although <b>German cockroaches</b> may outnumber others, such as the <b>American and Oriental Cockroache</b>s, this is a common cockroach across the U.S, with reports usually being made within homes.
+    Cockroaches are unmatched when it comes to flexibility and persistence in comparison with any other household pest, with many species doing well in home environments. Although  <b className="text-green-500">
+    <Link href="https://www.saynopest.com/german-cockroaches-the-unwanted-guests-in-american-homes">
+    German cockroaches
+    </Link></b> may outnumber others, such as the <b className="text-green-500">
+    <Link href="https://www.saynopest.com/oriental-cockroach-identification-life-cycle-bites-control">
+    American and Oriental Cockroaches
+    </Link></b>, this is a common cockroach across the U.S, with reports usually being made within homes.
   </p>
   <p className="text-gray-700 mb-6">
-  <b>American roaches</b> are the most prevalent species and can grow up to 1.5–2 inches long and have reddish-brown bodies, on top of which they have a prominent yellowish patch at the end of the head. <b>German cockroaches</b>, for example, are smaller, 0.5–0.6 inches in length, and have light brown bodies bearing a pair of dark stripes on their backs. These insects are primarily a nocturnal species, seeking refuge in dark, warm, and moist areas like under kitchen fixtures, behind appliances, within wall crevices; when dormant during broad daylight.
+  <b className="text-green-500">
+    <Link href="https://www.saynopest.com/american-cockroaches-life-cycle-nymphs-babies">
+    American roaches
+    </Link></b> are the most prevalent species and can grow up to 1.5–2 inches long and have reddish-brown bodies, on top of which they have a prominent yellowish patch at the end of the head. <b>German cockroaches</b>, for example, are smaller, 0.5–0.6 inches in length, and have light brown bodies bearing a pair of dark stripes on their backs. These insects are primarily a nocturnal species, seeking refuge in dark, warm, and moist areas like under kitchen fixtures, behind appliances, within wall crevices; when dormant during broad daylight.
   </p>
   <p className="text-gray-700 mb-6">
     Their omnivorous diet includes food waste, grease, and starch, and even sometimes non-food items such as book bindings, wallpaper glue, and human hair. Their flexibility enables them to survive in areas ranging from crowded city sewers to the more home-like basements of residences, and even in public restaurants.

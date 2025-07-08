@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 //ximport Image from "next/image";
 
 // const fleaTypes = [
@@ -43,7 +44,10 @@ export default function FleaTypesPage() {
 
 <h2 className="text-xl font-semibold text-gray-800 mb-2">Habitat</h2>
 <p className="text-gray-700 mb-6">
-  Fleas thrive on warm-blooded animals such as dogs, cats, and rodents, and will bite humans when needed. While they are more active in warm seasons, they can survive year-round indoors due to consistent heating and cozy conditions. In the U.S., flea infestations are most severe in warm and humid regions such as the Southeast, Gulf Coast, and parts of the West Coast. Infestations peak in spring and fall, particularly persisting year-round in places like Florida and Texas.
+  Fleas thrive on warm-blooded animals such as dogs, cats, and rodents, and will bite humans when needed. While they are more active in warm seasons, they can survive year-round indoors due to consistent heating and cozy conditions. In the U.S., <b className="text-green-500">
+    <Link href="https://www.saynopest.com/why-choose-a-flea-treatment-service">
+    flea infestations
+    </Link></b> are most severe in warm and humid regions such as the Southeast, Gulf Coast, and parts of the West Coast. Infestations peak in spring and fall, particularly persisting year-round in places like Florida and Texas.
 </p>
 
 <h2 className="text-xl font-semibold text-gray-800 mb-2">Health Risks and Prevention</h2>
