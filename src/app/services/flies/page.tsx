@@ -47,7 +47,7 @@ export default function FliesTypesPage() {
 
           <p className="text-gray-700 mb-6">
             Flies attack places where there is leftover food or trash. You will mostly find different<b className="text-green-500">
-    <Link href="https://www.saynopest.com/tick-types-most-common-in-america-saynopest">
+    <Link href="https://www.saynopest.com/7-common-types-of-flies-how-to-stop-them-saynopest">
     types of flies
     </Link></b> near dirty places. They don’t bite, but they do carry and spread diseases. It becomes essential to keep things clean as it helps keep flies away from your home.
           </p>
@@ -67,7 +67,10 @@ export default function FliesTypesPage() {
 
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Health Risks and Importance of Control</h2>
           <p className="text-gray-700 mb-6">
-            Getting rid of flies such as drain flies is of primary concern to the American population due to the presence of an ideal climate for such flies, and the availability of many spots where the reproduction process of these pests can take place. Getting rid of flies in your home is essential as they are not just a botheration but have been found to be carriers of disease. They can pass several diseases to people by contaminating food and surfaces with germs of their sources of origin.
+            Getting rid of flies such as<b className="text-green-500">
+    <Link href="https://www.saynopest.com/how-do-i-get-rid-of-drain-flies-overnight-saynopest">
+    drain flies
+    </Link></b> is of primary concern to the American population due to the presence of an ideal climate for such flies, and the availability of many spots where the reproduction process of these pests can take place. Getting rid of flies in your home is essential as they are not just a botheration but have been found to be carriers of disease. They can pass several diseases to people by contaminating food and surfaces with germs of their sources of origin.
           </p>
 
           <h2 className="text-xl font-semibold text-primary text-center mb-2">Types of flies</h2>
