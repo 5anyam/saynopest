@@ -67,7 +67,7 @@ export function Footer() {
                   <img className="ml-2 w-auto h-12" src="SayNoPest-logo.svg" alt="logo"/>
               </a>
   
-              <p className="mt-4 text-sm text-center text-gray-800 text-xs lg:text-left lg:text-sm sm:mt-0">©Copyright Saynopest 2025. <br className="block lg:hidden"/> All Rights Reserved.</p>
+              <p className="mt-4 text-center text-gray-800 text-xs lg:text-left lg:text-sm sm:mt-0">©Copyright Saynopest 2025. <br className="block lg:hidden"/> All Rights Reserved.</p>
           </div>
       </div>
   </div>
