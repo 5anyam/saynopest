@@ -106,11 +106,11 @@ export function Clients(){
             </div>
 
             <div className="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1">
-            <img className="h-20 w-28" src="aptive.webp" alt="aptive"/>
+            <img className="h-20 w-28" src="aptive.png" alt="aptive"/>
             </div>
             
             <div className="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1">
-            <img className="h-16 w-24" src="ehrlich.jpg" alt="ehrlich"/>
+            <img className="h-16 w-24" src="ehrlich.png" alt="ehrlich"/>
             </div>
 
             <div className="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1">
