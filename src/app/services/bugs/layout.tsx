@@ -9,7 +9,7 @@ interface ServicesLayoutProps {
 }
 
 export default async function ServicesLayout({ children }: ServicesLayoutProps) {
-  const canonicalUrl = `https://www.saynopest.com/services/bed-bugs`;
+  const canonicalUrl = `https://www.saynopest.com/services/bugs`;
 
   return (
     <html>
