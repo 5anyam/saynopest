@@ -64,10 +64,9 @@ export default function AntTypesPage() {
     Did you ever go to your bedroom and suddenly see an army of ants in bed marching to a forgotten crumb? You’re not the only one!
     This invasion of ants is a huge problem of American homeowners. No matter if it’s grub of sugar ants in your pantry, <b className="text-green-500">
     <Link href="https://www.saynopest.com/ants-out-ways-on-how-to-get-rid-of-fire-ants-saynopest">
-      fire ants
+      fire ants 
     </Link>
-  </b>
-    in your yard, or always the <b className="text-green-500">
+  </b> in your yard, or always the <b className="text-green-500">
     <Link href="https://www.saynopest.com/do-carpenter-ants-eat-wood-like-termites-saynopest">
       carpenter ants
     </Link>

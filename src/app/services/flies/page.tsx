@@ -51,7 +51,7 @@ export default function FliesTypesPage() {
           <h1 className="text-2xl font-bold text-primary text-center mb-4">Flies</h1>
 
           <p className="text-gray-700 mb-6">
-            Flies attack places where there is leftover food or trash. You will mostly find different<b className="text-green-500">
+            Flies attack places where there is leftover food or trash. You will mostly find different <b className="text-green-500">
     <Link href="https://www.saynopest.com/7-common-types-of-flies-how-to-stop-them-saynopest">
     types of flies
     </Link></b> near dirty places. They don’t bite, but they do carry and spread diseases. It becomes essential to keep things clean as it helps keep flies away from your home.

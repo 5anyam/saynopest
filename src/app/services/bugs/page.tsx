@@ -8,7 +8,7 @@ export default function BedBugTypesPage() {
     </Head>
     <div className="min-h-screen mt-20 p-6">
     <div className="max-w-full mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
-  <h1 className="text-3xl text-center font-bold text-primary mb-4">Bed Bugs</h1>
+  <h1 className="text-3xl text-center font-bold text-primary mb-4">Bugs</h1>
 
   <p className="text-gray-700 mb-6">
     Bed bugs are the kind of pests that feed on blood. They hide close to where people sleep, causing itchy bites and distress. Understanding their appearance, habits, and risks is key to effective control and prevention.

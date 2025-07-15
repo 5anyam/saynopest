@@ -71,13 +71,6 @@ export default function TermiteTypesPage() {
           <p className="text-gray-700 mb-4">
             Not all termites are the same—some live underground, others in dry wood or damp places, and knowing the difference helps protect your home better.
           </p>
-
-          <ul className="list-disc list-inside text-gray-700 space-y-1">
-            <li>Subterranean termites</li>
-            <li>Formosan termites</li>
-            <li>Drywood termites</li>
-            <li>Dampwood termites</li>
-          </ul>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">

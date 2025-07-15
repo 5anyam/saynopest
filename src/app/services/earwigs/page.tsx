@@ -59,10 +59,13 @@ export default function EarwigTypesPage() {
             is becoming more common across the U.S. due to ideal conditions created by warm, wet climates. Frequent rainfall and high humidity promote breeding and survival, contributing to rising populations. Without proper control, large infestations can lead to food contamination, soil disruption, and environmental imbalance.
           </p>
 
-          <h2 className="text-2xl font-semibold text-primary text-center mb-2">Types of Earwigs</h2>
-          <p className="text-gray-700">
-            Discover the most common types of earwigs found in the U.S. and learn what makes each type unique in their natural and indoor habitats.
+          <h2 className="text-xl font-semibold text-gray-800 mb-2">Which Earwigs Are Most Likely to Invade Your Home</h2>
+          <p className="text-gray-700 mb-6">
+          The main types of earwigs, which are also found in different regions of the United States, are the European earwig, which is the most common of all types and mostly found inside the house, and the red-legged earwig. These are mostly found in Florida and the southern part of the USA. 
+          These insects mostly get attracted indoors by the moisture; so, they can be found where the surroundings are cool and damper such as basement, bathrooms and plants or these insects can also come into the house in huge numbers due to hot and dry conditions or heavy rain as it does not suit the outside conditions anymore.
           </p>
+
+          
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
