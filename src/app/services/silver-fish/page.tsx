@@ -38,26 +38,7 @@ export default function SilverfishTypesPage() {
             </b>{" "}
             includes starchy materials like paper, books, wallpaper, cardboard, glue, textiles, and even dried foods such as flour, cereal, and pasta. They can also feed on synthetic fabrics and, occasionally, dead insects. While silverfish don’t bite or transmit disease, they can cause significant damage to books, important documents, clothes, and food supplies.
           </p>
-
-          <h2 className="text-xl font-semibold text-gray-800 mb-2">Silverfish Infestation</h2>
-          <p className="text-gray-700 mb-6">
-            Many American households, especially in the Southeast, Midwest, and coastal regions, are vulnerable to{" "}
-            <b className="text-green-500">
-              <Link href="https://www.saynopest.com/where-do-silverfish-come-from-understanding-them">silverfish infestation</Link>
-            </b>{" "}
-            due to high humidity and ample food sources. Although silverfish aren’t harmful to people or pets, they can contaminate food, destroy valuables, and trigger allergies through their shed scales and droppings.
-          </p>
-
-          <h2 className="text-xl font-semibold text-gray-800 mb-2">Where do silverfish come from</h2>
-          <p className="text-gray-700 mb-6">
-          The most common silverfish in United States households are Common Silverfish, Gray or Long-tailed Silverfish, Four-Lined Silverfish, and Firebrat. The main cause of these insects entering our homes is that they prefer warm, humid, and dark environments, which our homes provide in attics, basements, bathrooms, and kitchens. 
-          They also have easy access to a food source, consisting of starches, glue, paper, and textiles. The primary causes of their invasion of the indoor areas include moisture, food supply and clutter; leaks, high humidity and food stored in an unprofessional manner render the households especially attractive to them.
-          </p>
-
-          
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {silverfishTypes.map((type, index) => (
             <Link href={type.link} key={index}>
               <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
@@ -76,6 +57,23 @@ export default function SilverfishTypesPage() {
               </div>
             </Link>
           ))}
+        </div>
+          <h2 className="text-xl font-semibold text-gray-800 mb-2">Silverfish Infestation</h2>
+          <p className="text-gray-700 mb-6">
+            Many American households, especially in the Southeast, Midwest, and coastal regions, are vulnerable to{" "}
+            <b className="text-green-500">
+              <Link href="https://www.saynopest.com/where-do-silverfish-come-from-understanding-them">silverfish infestation</Link>
+            </b>{" "}
+            due to high humidity and ample food sources. Although silverfish aren’t harmful to people or pets, they can contaminate food, destroy valuables, and trigger allergies through their shed scales and droppings.
+          </p>
+
+          <h2 className="text-xl font-semibold text-gray-800 mb-2">Where do silverfish come from</h2>
+          <p className="text-gray-700 mb-6">
+          The most common silverfish in United States households are Common Silverfish, Gray or Long-tailed Silverfish, Four-Lined Silverfish, and Firebrat. The main cause of these insects entering our homes is that they prefer warm, humid, and dark environments, which our homes provide in attics, basements, bathrooms, and kitchens. 
+          They also have easy access to a food source, consisting of starches, glue, paper, and textiles. The primary causes of their invasion of the indoor areas include moisture, food supply and clutter; leaks, high humidity and food stored in an unprofessional manner render the households especially attractive to them.
+          </p>
+
+          
         </div>
       </div>
     </>

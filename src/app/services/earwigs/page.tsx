@@ -43,7 +43,26 @@ export default function EarwigTypesPage() {
             </b>
             , it may be a sign of nearby moisture issues or garden proximity.
           </p>
-
+          <div className="grid justify-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          {earwigTypes.map((type, index) => (
+            <Link href={type.link} key={index}>
+              <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                <Image
+                  src={type.image}
+                  alt={type.name}
+                  width={600}
+                  height={400}
+                  className="w-full h-60 object-cover"
+                />
+                <div className="p-2 text-center">
+                  <h2 className="text-xl font-semibold text-primary mb-2">
+                    {type.name}
+                  </h2>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
           <h2 className="text-xl font-semibold text-gray-800 mb-2">When Earwigs Invade Your Home: Habitat & Danger</h2>
           <p className="text-gray-700 mb-6">
             Earwigs often travel in small groups and are usually found near moist areas inside homes, such as bathrooms, damp basements, and overly wet kitchens. Their thigmotactic behavior—seeking out close contact with surfaces—draws them to these environments. While earwigs are not dangerous to humans, their presence can cause discomfort, and in large numbers, they may damage garden plants and spoil stored food.
@@ -66,27 +85,6 @@ export default function EarwigTypesPage() {
           </p>
 
           
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {earwigTypes.map((type, index) => (
-            <Link href={type.link} key={index}>
-              <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
-                <Image
-                  src={type.image}
-                  alt={type.name}
-                  width={600}
-                  height={400}
-                  className="w-full h-60 object-cover"
-                />
-                <div className="p-2 text-center">
-                  <h2 className="text-xl font-semibold text-primary mb-2">
-                    {type.name}
-                  </h2>
-                </div>
-              </div>
-            </Link>
-          ))}
         </div>
       </div>
     </>
