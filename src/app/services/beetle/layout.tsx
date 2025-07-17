@@ -15,6 +15,7 @@ export default async function ServicesLayout({ children }: ServicesLayoutProps) 
     <html>
       <head>
         <link rel="canonical" href={canonicalUrl} />
+        <meta name="description" content="Beetles are bugs with tough shells that you can find crawling around almost anywhere, from woods to your own backyard."/>
       </head>
       <body><Header/>{children}<Footer/></body>
     </html>
