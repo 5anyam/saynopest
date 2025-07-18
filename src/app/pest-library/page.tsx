@@ -10,7 +10,7 @@ const pests = [
   {
     title: "Cockroaches",
     image: "/cockroaches.jpg",
-    category: "cockroaches",
+    category: "cockroach",
   },
   {
     title: "Termites",
@@ -20,7 +20,7 @@ const pests = [
   {
     title: "Bed Bugs",
     image: "/bugs.jpg",
-    category: "bugs",
+    category: "bed-bugs",
   },
   {
     title: "Spiders",
@@ -30,7 +30,7 @@ const pests = [
   {
     title: "Earwigs",
     image: "/types/european-earwig.jpg",
-    category: "earwigs",
+    category: "earwig",
   },
   {
     title: "Mosquitoes",
@@ -40,7 +40,7 @@ const pests = [
   {
     title: "Wasps",
     image: "/types/wasps/yellowjacket.jpg",
-    category: "wasps",
+    category: "wasp",
   },
   {
     title: "Silver Fish",

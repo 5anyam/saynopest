@@ -43,7 +43,7 @@ export default function EarwigTypesPage() {
             </b>
             , it may be a sign of nearby moisture issues or garden proximity.
           </p>
-          <div className="grid justify-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="grid items-center grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {earwigTypes.map((type, index) => (
             <Link href={type.link} key={index}>
               <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
