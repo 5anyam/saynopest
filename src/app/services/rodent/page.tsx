@@ -53,7 +53,6 @@ export default function RodentsPage() {
             Infestations are especially common in rural areas, colder regions, and older or darker
             homes.
           </p>
-
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Need for Rodent Control</h2>
           <p className="text-gray-700 mb-6">
             Rodents can carry and spread harmful diseases such as Hantavirus, Leptospirosis, and
