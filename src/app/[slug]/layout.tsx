@@ -1,4 +1,6 @@
 
+import { Footer } from '@/components/footer/footer';
+import { Header } from '@/components/header/header';
 import React from 'react';
 
 interface BlogLayoutProps {
@@ -15,7 +17,7 @@ export default async function BlogLayout({ children, params }: BlogLayoutProps) 
       <head>
         <link rel="canonical" href={canonicalUrl}/>
       </head>
-      <body>{children}</body>
+      <body><Header/>{children}<Footer/></body>
     </html>
   );
 }
