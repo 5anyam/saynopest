@@ -1,12 +1,25 @@
 "use client"
+import { useEffect, useState } from 'react';
 import { GrInstagram } from "react-icons/gr";
 import { TbBrandLinkedin } from "react-icons/tb";
 import { RiFacebookBoxLine } from "react-icons/ri";
 import Link from "next/link";
 
 export function Footer() {
+    const [shouldRender, setShouldRender] = useState(true);
+
+    useEffect(() => {
+        // Check if footer already exists on the page
+        const existingFooters = document.querySelectorAll('footer');
+        if (existingFooters.length > 0) {
+            setShouldRender(false);
+        }
+    }, []);
+
+    if (!shouldRender) return null;
+
     return (
-      <footer className="bg-primary text-white mt-auto w-full">
+      <footer className="bg-primary text-white mt-auto w-full" id="main-footer">
         <div className="px-8 py-6">
   
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
