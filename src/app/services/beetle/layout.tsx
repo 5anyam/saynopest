@@ -1,5 +1,4 @@
 
-import { Footer } from '@/components/footer/footer';
 import { Header } from '@/components/header/header';
 import React from 'react';
 
@@ -17,7 +16,7 @@ export default async function ServicesLayout({ children }: ServicesLayoutProps) 
         <link rel="canonical" href={canonicalUrl} />
         <meta name="description" content="Beetles are bugs with tough shells that you can find crawling around almost anywhere, from woods to your own backyard."/>
       </head>
-      <body><Header/>{children}<Footer/></body>
+      <body><Header/>{children}</body>
     </html>
   );
 }
