@@ -1,5 +1,6 @@
 
 
+import { Footer } from '@/components/footer/footer';
 import { Header } from '@/components/header/header';
 import React from 'react';
 
@@ -16,7 +17,7 @@ export default async function ServicesLayout({ children }: ServicesLayoutProps) 
       <head>
         <link rel="canonical" href={canonicalUrl} />
       </head>
-      <body><Header/>{children}</body>
+      <body><Header/>{children}<Footer/></body>
     </html>
   );
 }
