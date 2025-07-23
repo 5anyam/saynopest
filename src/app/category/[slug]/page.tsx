@@ -35,14 +35,14 @@ export default async function CategoryPage({
   const query = await searchParams;
 
 
-  const currentPage = query.page ? parseInt(query.page as string, 10) : 1;
+  const currentPage = query.page ? parseInt(query.page as string, 20) : 1;
   const searchTerm = typeof query.search === 'string' ? query.search : '';
 
   const category = await getCategoryBySlug(slug);
   if (!category) notFound();
 
   const categoryId = category.id;
-  const { posts, totalPages } = await getAllPosts(currentPage, 10, searchTerm, categoryId);
+  const { posts, totalPages } = await getAllPosts(currentPage, 20, searchTerm, categoryId);
 
   if (!posts || posts.length === 0) {
     return (
