@@ -116,13 +116,13 @@ export default function SpiderTypesPage() {
             Spiders are nature’s pest controllers. They feed on insects such as flies, mosquitoes, ants, and beetles—many of which are common in homes. While some spin webs to trap their prey, others like{" "}
             <b>
               <Link href="https://www.saynopest.com/wolf-spider-natures-agile-hunter-in-american-homes">
-                wolf spiders
+              <span className="text-green-500"> wolf spiders </span>
               </Link>
             </b>{" "}
             and{" "}
             <b>
               <Link href="https://www.saynopest.com/jumping-spiders-meet-the-fascinating-world-of-crawlers">
-                jumping spiders
+              <span className="text-green-500"> jumping spider </span>
               </Link>
             </b>{" "}
             actively hunt. Most spiders are solitary and non-aggressive, preferring to avoid humans. Bites from spiders like the black widow and brown recluse typically occur only in self-defense.
