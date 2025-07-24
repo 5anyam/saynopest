@@ -54,12 +54,12 @@ const pests = [
   },
   {
     title: "Rodents",
-    image: "/types/rodents/deer-mouse.jpg",
+    image: "/types/rodents/mice.jpg",
     category: "rodents",
   },
   {
     title: "Millipede",
-    image: "/types/millipede/greenhouse-millipede.jpg",
+    image: "/types/millipede/american-giant-millipede.jpg",
     category: "millipede",
   },
 ];

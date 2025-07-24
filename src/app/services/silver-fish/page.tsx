@@ -33,18 +33,7 @@ export default function SilverfishTypesPage() {
 
            {/* Now, the paragraph that should appear just beside the image */}
             <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden p-6 gap-6">
-              <div className="md:w-1/2 w-full">
-              <h2 className="text-xl font-semibold text-gray-800 mb-2">What Do Silverfish Eat?</h2>
-          <p className="text-gray-700 mb-6">
-            Being herbivores,{" "}
-            <b className="text-green-500">
-              <Link href="https://www.saynopest.com/where-do-silverfish-come-from-understanding-them">silverfish diet</Link>
-            </b>{" "}
-            includes starchy materials like paper, books, wallpaper, cardboard, glue, textiles, and even dried foods such as flour, cereal, and pasta. They can also feed on synthetic fabrics and, occasionally, dead insects. While silverfish don’t bite or transmit disease, they can cause significant damage to books, important documents, clothes, and food supplies.
-          </p>
-              </div>
-          
-              <div className="md:w-1/2 w-full h-60 relative">
+            <div className="md:w-1/2 w-full h-60 relative">
               {silverfishTypes.map((type, index) => (
               <div
                 key={index}
@@ -62,12 +51,19 @@ export default function SilverfishTypesPage() {
                   <h2 className="text-xl font-semibold text-primary mb-2">
                     {type.name}
                   </h2>
-                  <p className="text-gray-700">
-                    {type.description}
-                  </p>
                 </div>
               </div>
             ))}
+              </div>
+              <div className="md:w-1/2 w-full">
+              <h2 className="text-xl font-semibold text-gray-800 mb-2">What Do Silverfish Eat?</h2>
+          <p className="text-gray-700 mb-6">
+            Being herbivores,{" "}
+            <b className="text-green-500">
+              <Link href="https://www.saynopest.com/where-do-silverfish-come-from-understanding-them">silverfish diet</Link>
+            </b>{" "}
+            includes starchy materials like paper, books, wallpaper, cardboard, glue, textiles, and even dried foods such as flour, cereal, and pasta. They can also feed on synthetic fabrics and, occasionally, dead insects. While silverfish don’t bite or transmit disease, they can cause significant damage to books, important documents, clothes, and food supplies.
+          </p>
               </div>
             </div>
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Silverfish Infestation</h2>

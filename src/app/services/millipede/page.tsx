@@ -5,7 +5,7 @@ import Link from "next/link";
 const millipedeTypes = [
   {
     name: "American Gaint Millipede",
-    image: "/types/millipede/american-jaint-millipede.jpg",
+    image: "/types/millipede/american-giant-millipede.jpg",
     link: "https://www.saynopest.com/american-giant-millipede-misunderstood-not-scary/"
   },
   {
