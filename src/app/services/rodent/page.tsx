@@ -5,12 +5,12 @@ import Link from "next/link";
 const miceTypes = [
   {
     name: "Rat",
-    image: "/types/rodents/rat.jpg",
+    image: "https://static.saynopest.com/wp-content/uploads/2025/07/rat.jpg",
     description: "These termites build large underground colonies and require moist environments. They commonly enter homes through soil contact or foundation cracks."
   },
   {
     name: "Mice",
-    image: "/types/rodents/mice.jpg",
+    image: "https://static.saynopest.com/wp-content/uploads/2025/07/mice.jpg",
     description: "Highly aggressive and destructive, Formosan termites can build nests underground or in walls and attics if moisture is available."
   }
 ];

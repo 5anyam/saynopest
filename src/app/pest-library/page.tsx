@@ -54,7 +54,7 @@ const pests = [
   },
   {
     title: "Rodents",
-    image: "/types/rodents/rat.jpg",
+    image: "https://static.saynopest.com/wp-content/uploads/2025/07/rat.jpg",
     category: "rodents",
   },
   {
