@@ -45,29 +45,54 @@ export default function EarwigTypesPage() {
           </p>
           <div className="grid gap-10">
   {earwigTypes.map((type, index) => (
-    <Link href={type.link} key={index}>
-      <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
-        <div className="md:w-1/2 w-full h-60 relative">
-          <Image
-            src={type.image}
-            alt={type.name}
-            fill
-            className="object-cover"
-          />
-        </div>
-        <div className="p-6 md:w-1/2">
-          <h2 className="text-xl font-semibold text-primary mb-2">
-            {type.name}
-          </h2>
-        </div>
+    <div
+      key={index}
+      className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+    >
+      <div className="md:w-1/2 w-full h-60 relative">
+        <Image
+          src={type.image}
+          alt={type.name}
+          fill
+          className="object-cover"
+        />
       </div>
-    </Link>
+      <div className="p-6 md:w-1/2">
+        <h2 className="text-xl font-semibold text-primary mb-2">
+          {type.name}
+        </h2>
+        <p className="text-gray-700">
+          {type.description}
+        </p>
+      </div>
+    </div>
   ))}
-          <h2 className="text-xl font-semibold text-gray-800 mb-2">When Earwigs Invade Your Home: Habitat & Danger</h2>
-          <p className="text-gray-700 mb-6">
-            Earwigs often travel in small groups and are usually found near moist areas inside homes, such as bathrooms, damp basements, and overly wet kitchens. Their thigmotactic behavior—seeking out close contact with surfaces—draws them to these environments. While earwigs are not dangerous to humans, their presence can cause discomfort, and in large numbers, they may damage garden plants and spoil stored food.
-          </p>
-          </div>
+
+  {/* Now, the paragraph that should appear just beside the image */}
+  <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden p-6 gap-6">
+    <div className="md:w-1/2 w-full">
+      <h2 className="text-xl font-semibold text-gray-800 mb-2">
+        When Earwigs Invade Your Home: Habitat & Danger
+      </h2>
+      <p className="text-gray-700 mb-6">
+        Earwigs often travel in small groups and are usually found near moist areas inside homes,
+        such as bathrooms, damp basements, and overly wet kitchens. Their thigmotactic behavior—
+        seeking out close contact with surfaces—draws them to these environments. While earwigs are not
+        dangerous to humans, their presence can cause discomfort, and in large numbers, they may
+        damage garden plants and spoil stored food.
+      </p>
+    </div>
+
+    <div className="md:w-1/2 w-full h-60 relative">
+      <Image
+        src="/types/european-earwig.jpg"
+        alt="Earwig Image"
+        fill
+        className="object-cover rounded-xl"
+      />
+    </div>
+  </div>
+</div>
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Earwig Invasion in the USA</h2>
           <p className="text-gray-700 mb-6">
             <b className="text-green-500">

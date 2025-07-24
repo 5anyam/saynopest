@@ -45,7 +45,7 @@ export default function MillipedeTypesPage() {
             <b className="text-green-500">
     <Link href="https://www.saynopest.com/what-do-millipedes-eat">
     what do millipedes eat?
-    </Link></b>Millipedes are decomposers. They feed on dead and decaying leaves and wood. These pests are important because they offer nutrients to the soil. These pests are important because they help return nutrients to the soil. If the diet available is not sufficient, it is then that they might feed on leaves. At the same time, they do not pose a serious threat to the stability of the environment or the safety of your home. Curled up to form a spiral shape, millipedes have an advanced defense mechanism - their bodies emit a fluid that has a very unpleasant odour and thus are avoided by their enemies. 
+    </Link></b>{" "}Millipedes are decomposers. They feed on dead and decaying leaves and wood. These pests are important because they offer nutrients to the soil. These pests are important because they help return nutrients to the soil. If the diet available is not sufficient, it is then that they might feed on leaves. At the same time, they do not pose a serious threat to the stability of the environment or the safety of your home. Curled up to form a spiral shape, millipedes have an advanced defense mechanism - their bodies emit a fluid that has a very unpleasant odour and thus are avoided by their enemies. 
           </p>
 
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Infestations and Control</h2>
