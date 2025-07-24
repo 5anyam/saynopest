@@ -19,7 +19,7 @@ const antTypes = [
   },
   {
     name: "Argentine Ant",
-    image: "/types/Argentine-ants.jpg",
+    image: "/types/ants.jpg",
     description:
       "Army ants are nomadic and known for their massive swarms. While less common in the U.S., they pose a risk due to their aggressive foraging behavior.",
       link:"https://www.saynopest.com/california-argentine-ants-saynopest/"
