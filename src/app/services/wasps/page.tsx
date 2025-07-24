@@ -19,7 +19,7 @@ const waspTypes = [
     name: "Bald-faced Hornet",
     image: "/types/wasps/bald-faced-hornet.jpg",
     description: "A large black and white wasp that builds large paper nests in trees and on buildings. Known for being extremely aggressive near their nests.",
-    link: "https://static.saynopest.com/bald-face-hornet/",
+    link: "https://www.saynopest.com/bald-face-hornet/",
   },
   {
     name: "Mud Daubers",

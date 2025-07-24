@@ -52,7 +52,7 @@ export default function EarwigTypesPage() {
       key={index}
       className="flex flex-col items-center bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
     >
-      <div className="md:w-1/2 w-full h-60 relative">
+      <div className="w-full h-60 relative">
         <Image
           src={type.image}
           alt={type.name}

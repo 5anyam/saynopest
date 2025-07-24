@@ -6,12 +6,14 @@ const miceTypes = [
   {
     name: "Rat",
     image: "https://static.saynopest.com/wp-content/uploads/2025/07/rat.jpg",
-    description: "These termites build large underground colonies and require moist environments. They commonly enter homes through soil contact or foundation cracks."
+    description: "These termites build large underground colonies and require moist environments. They commonly enter homes through soil contact or foundation cracks.",
+    link: "https://www.saynopest.com/how-to-get-rid-of-rats-effective-solutions",
   },
   {
     name: "Mice",
     image: "https://static.saynopest.com/wp-content/uploads/2025/07/mice.jpg",
-    description: "Highly aggressive and destructive, Formosan termites can build nests underground or in walls and attics if moisture is available."
+    description: "Highly aggressive and destructive, Formosan termites can build nests underground or in walls and attics if moisture is available.",
+    link: "https://www.saynopest.com/types-of-house-mice-in-the-u-s",
   }
 ];
 
@@ -71,10 +73,8 @@ export default function RodentsPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 place-items-center">
   {miceTypes.map((type, index) => (
-    <div
-      key={index}
-      className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 w-full max-w-sm"
-    >
+    <Link href={type.link} key={index}>
+    <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
       <Image
         src={type.image}
         alt={type.name}
@@ -83,11 +83,10 @@ export default function RodentsPage() {
         className="w-full h-60 object-cover"
       />
       <div className="p-2 text-center">
-        <h2 className="text-xl font-semibold text-primary mb-2">
-          {type.name}
-        </h2>
+        <h2 className="text-xl font-semibold text-primary mb-2">{type.name}</h2>
       </div>
     </div>
+  </Link>
   ))}
 </div>
 

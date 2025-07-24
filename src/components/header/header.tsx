@@ -120,7 +120,7 @@ export function Header() {
         className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
         onClick={() => setIsServicesOpen(false)}
       >
-        Bed Bugs
+        Bugs
       </Link>
       <Link
         href="https://www.saynopest.com/services/wasps"

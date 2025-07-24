@@ -32,14 +32,14 @@ export default function SilverfishTypesPage() {
 
 
            {/* Now, the paragraph that should appear just beside the image */}
-            <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden p-6 gap-6">
+            <div className="flex flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden p-6 gap-6">
             <Link href="https://www.saynopest.com/common-silverfish-saynopest"><div className="md:w-1/2 w-full h-60 relative">
               {silverfishTypes.map((type, index) => (
               <div
                 key={index}
                 className="flex flex-col items-center bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
-                 <div className="md:w-1/2 w-full h-60 relative">
+                 <div className="w-full h-60 relative">
                   <Image
                     src={type.image}
                     alt={type.name}
