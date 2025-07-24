@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     siteName: "Say No Pest",
     images: [
       {
-        url: "/saynopest-logo.svg", // Place this image in /public
+        url: "/saynopest-logo.png", // Place this image in /public
         width: 1200,
         height: 630,
       },
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Say No Pest",
     description: "Your go to best pest control companies across U.S.",
-    images: ["/saynopest-logo.svg"],
+    images: ["/saynopest-logo.png"],
   },
   metadataBase: new URL("https://saynopest.com"),
 };

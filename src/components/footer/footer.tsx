@@ -65,7 +65,7 @@ export function Footer() {
           
           <div className="flex flex-col items-center py-2 w-full rounded-xl mt-5 bg-white justify-between px-2 sm:flex-row">
               <a href="#">
-                  <Image className="ml-2 w-auto h-12" src="saynopest-logo.svg" alt="logo"/>
+                  <Image className="ml-2 w-auto h-12" src="saynopest-logo.png" alt="logo"/>
               </a>
   
               <p className="mt-4 text-center text-gray-800 text-xs lg:text-left lg:text-sm sm:mt-0">©Copyright Saynopest 2025. <br className="block lg:hidden"/> All Rights Reserved.</p>

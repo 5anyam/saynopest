@@ -29,14 +29,14 @@ export function Header() {
           <Link href="/">
             <Image
               className="hidden lg:block pr-8"
-              src="/saynopest-logo.svg"
+              src="/saynopest-logo.png"
               alt="Logo"
               width={220}
               height={120}
             />
             <Image
               className="block lg:hidden"
-              src="/saynopest-logo.svg"
+              src="/saynopest-logo.png"
               alt="Logo"
               width={160}
               height={80}
