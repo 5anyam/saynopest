@@ -79,7 +79,7 @@ export default function SpiderTypesPage() {
             Meet the Eight-Legged Intruders:{" "}
             <b>
               <Link href="https://www.saynopest.com/most-common-house-spiders-in-the-united-states">
-                Common House Spiders
+                <span className="text-green-500">Common House Spiders</span>
               </Link>
             </b>{" "}
             in the U.S.
@@ -89,8 +89,7 @@ export default function SpiderTypesPage() {
             Spiders are among the most common household pests in the U.S. They have eight legs, two body sections, and can spin silk. Appearance varies widely: black widows are shiny black with a red hourglass on their underside; brown recluses are light to dark brown with a violin-shaped mark on their backs.{" "}
             <b>
               <Link href="https://www.saynopest.com/wolf-spider-natures-agile-hunter-in-american-homes">
-                Wolf spiders
-              </Link>
+              <span className="text-green-500"> Wolf spiders</span></Link>
             </b>{" "}
             are large, hairy, and usually gray or brown.{" "}
             <b>
@@ -101,13 +100,13 @@ export default function SpiderTypesPage() {
             are small, colorful, and have large eyes.{" "}
             <b>
               <Link href="https://www.saynopest.com/most-common-house-spiders-in-the-united-states">
-                House spiders
+              <span className="text-green-500"> House spiders </span>
               </Link>
             </b>{" "}
             are yellowish-brown with an elongated abdomen, while yellow sac spiders are pale yellow or beige and less than half an inch long. From fields to homes, spiders are found nearly everywhere — including{" "}
             <b>
               <Link href="https://www.saynopest.com/discover-what-cranberry-field-spiders-are">
-                cranberry field spiders
+              <span className="text-green-500"> cranberry field spiders </span>
               </Link>
             </b>.
           </p>
@@ -131,15 +130,13 @@ export default function SpiderTypesPage() {
 
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Why Spiders Love Your Home: The Hidden Invitation</h2>
           <p className="text-gray-700 mb-6">
-            Spider infestations are common in the U.S. due to accessible prey, favorable climates, and numerous hiding spots inside and around homes. These conditions make it easy for spiders to settle and thrive. While many are harmless, the presence of spiders can cause discomfort and fear. It's essential to address infestations early to prevent potential bites and create a more comfortable living environment.
+            Spider infestations are common in the U.S. due to accessible prey, favorable climates, and numerous hiding spots inside and around homes. These conditions make it easy for spiders to settle and thrive. While many are harmless, the presence of spiders can cause discomfort and fear. Its essential to address infestations early to prevent potential bites and create a more comfortable living environment.
           </p>
-
           <h2 className="text-xl font-semibold text-primary text-center mb-2">Types of Spiders</h2>
           <p className="text-gray-700">
             Discover the most common types of spiders found in the United States and learn how to identify each one.
           </p>
         </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {spiderTypes.map((type, index) => (
             <Link href={type.link} key={index}>
