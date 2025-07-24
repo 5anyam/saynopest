@@ -71,23 +71,25 @@ export default function RodentsPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 place-items-center">
-  {miceTypes.map((type, index) => (
-    <Link href={type.link} key={index}>
-    <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-      <Image
-        src={type.image}
-        alt={type.name}
-        width={600}
-        height={400}
-        className="w-full h-60 object-cover"
-      />
-      <div className="p-2 text-center">
-        <h2 className="text-xl font-semibold text-primary mb-2">{type.name}</h2>
-      </div>
-    </div>
-  </Link>
-  ))}
+        <div className="flex justify-center">
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+    {miceTypes.map((type, index) => (
+      <Link href={type.link} key={index}>
+        <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 max-w-sm">
+          <Image
+            src={type.image}
+            alt={type.name}
+            width={600}
+            height={400}
+            className="w-full h-60 object-cover"
+          />
+          <div className="p-2 text-center">
+            <h2 className="text-xl font-semibold text-primary mb-2">{type.name}</h2>
+          </div>
+        </div>
+      </Link>
+    ))}
+  </div>
 </div>
 
       </div>

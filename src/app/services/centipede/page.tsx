@@ -69,7 +69,8 @@ export default function CentipedeTypesPage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 justify-center">
+        <div className="flex justify-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
           {centipedeTypes.map((type, index) => (
             <Link href={type.link} key={index}>
               <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
@@ -88,6 +89,7 @@ export default function CentipedeTypesPage() {
               </div>
             </Link>
           ))}
+        </div>
         </div>
       </div>
     </>

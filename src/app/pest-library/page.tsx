@@ -18,7 +18,7 @@ const pests = [
     category: "termites",
   },
   {
-    title: "Bed Bugs",
+    title: "Bugs",
     image: "/bugs.jpg",
     category: "bugs",
   },

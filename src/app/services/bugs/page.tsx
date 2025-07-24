@@ -22,7 +22,7 @@ const bugsTypes = [
     image: "https://static.saynopest.com/wp-content/uploads/2025/07/MicrosoftTeams-image-2.jpg",
     description:
       "Easily recognized by its long legs and fast movement, this species is commonly found in basements and bathrooms. It preys on insects and is generally harmless to humans.",
-    link: "https://www.saynopest.com/house-centipedes/",
+    link: "https://www.saynopest.com/what-kills-bed-bugs-instantly",
   },
 ];
 
