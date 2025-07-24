@@ -5,7 +5,7 @@ const revalidateTime: number = 43200; // half-day cache
 
 export async function getAllPosts(
   pageNumber: number = 1,
-  perPage: number = 200,
+  perPage: number = 100,
   searchTerm: string = "",
   categories: number = 0
 ): Promise<{ posts: ExtendedPost[]; totalPages: number }> {
