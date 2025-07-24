@@ -92,7 +92,7 @@ export function Clients(){
 
         <hr className="my-12 border-gray-200 dark:border-gray-700"/>
 
-        <h1 className="text-center text-green-500 text-2xl"></h1>
+        <h1 className="text-center text-green-500 text-2xl">Our Partners</h1>
 
         <div className="grid grid-cols-2 gap-6 md:grid-cols-6 lg:grid-cols-6">
             <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
