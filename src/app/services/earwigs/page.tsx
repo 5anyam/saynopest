@@ -50,7 +50,7 @@ export default function EarwigTypesPage() {
     {earwigTypes.map((type, index) => (
     <div
       key={index}
-      className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+      className="flex flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
     >
       <div className="md:w-1/2 w-full h-60 relative">
         <Image
@@ -82,7 +82,7 @@ export default function EarwigTypesPage() {
     </div>
 
   </div>
-          <h2 className="text-xl font-semibold text-gray-800 mb-2">Earwig Invasion in the USA</h2>
+          <h2 className="text-xl font-semibold text-gray-800 mt-4 mb-2">Earwig Invasion in the USA</h2>
           <p className="text-gray-700 mb-6">
             <b className="text-green-500">
               <Link href="https://www.saynopest.com/how-to-get-rid-of-earwigs-an-authentic-guide-homeowners">

@@ -37,7 +37,7 @@ export default function SilverfishTypesPage() {
               {silverfishTypes.map((type, index) => (
               <div
                 key={index}
-                className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                className="flex flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="md:w-1/2 w-full h-60 relative">
                   <Image
@@ -66,7 +66,7 @@ export default function SilverfishTypesPage() {
           </p>
               </div>
             </div>
-          <h2 className="text-xl font-semibold text-gray-800 mb-2">Silverfish Infestation</h2>
+          <h2 className="text-xl font-semibold text-gray-800 mt-4 mb-2">Silverfish Infestation</h2>
           <p className="text-gray-700 mb-6">
             Many American households, especially in the Southeast, Midwest, and coastal regions, are vulnerable to{" "}
             <b className="text-green-500">

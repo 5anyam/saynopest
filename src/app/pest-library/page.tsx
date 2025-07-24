@@ -20,7 +20,7 @@ const pests = [
   {
     title: "Bed Bugs",
     image: "/bugs.jpg",
-    category: "bed-bugs",
+    category: "bugs",
   },
   {
     title: "Spiders",
