@@ -54,7 +54,7 @@ const pests = [
   },
   {
     title: "Rodents",
-    image: "/types/rodents/mice.jpg",
+    image: "/types/rodents/rat.jpg",
     category: "rodents",
   },
   {
