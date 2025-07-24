@@ -48,7 +48,7 @@ export function ServiceCard() {
                 "Bugs can silently invade your home, often going unnoticed until they become a major problem. Ever wondered where do bed bugs come from? These pests usually hitchhike in your luggage when you travel, clothes, or in second hand furniture.",
             image:
                 "bugs.jpg",
-                category: "bed-bugs",
+                category: "bugs",
         },
     ]
 
