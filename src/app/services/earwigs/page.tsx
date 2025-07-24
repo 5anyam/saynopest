@@ -46,20 +46,20 @@ export default function EarwigTypesPage() {
 
   {/* Now, the paragraph that should appear just beside the image */}
   <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden p-6 gap-6">
-  <div className="md:w-1/2 w-full h-60 relative">
+  <Link href="https://www.saynopest.com/european-earwig"><div className="md:w-1/2 w-full h-60 relative">
     {earwigTypes.map((type, index) => (
     <div
       key={index}
       className="flex flex-col items-center bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
     >
-      <Link href="https://www.saynopest.com/european-earwig"><div className="md:w-1/2 w-full h-60 relative">
+      <div className="md:w-1/2 w-full h-60 relative">
         <Image
           src={type.image}
           alt={type.name}
           fill
           className="object-cover"
         />
-      </div></Link>
+      </div>
       <div className="p-6 md:w-1/2">
         <h2 className="text-xl font-semibold text-primary mb-2">
           {type.name}
@@ -67,7 +67,7 @@ export default function EarwigTypesPage() {
       </div>
     </div>
   ))}
-    </div>
+    </div></Link>
     <div className="md:w-1/2 w-full">
       <h2 className="text-xl font-semibold text-gray-800 mb-2">
         When Earwigs Invade Your Home: Habitat & Danger

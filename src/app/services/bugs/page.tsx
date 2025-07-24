@@ -1,43 +1,98 @@
 import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+
+const bugsTypes = [
+  {
+    name: "Water Bug",
+    image: "https://static.saynopest.com/wp-content/uploads/2025/07/MicrosoftTeams-image-1.jpg",
+    description:
+      "Easily recognized by its long legs and fast movement, this species is commonly found in basements and bathrooms. It preys on insects and is generally harmless to humans.",
+    link: "https://www.saynopest.com/giant-water-bug-americas-aquatic-predator",
+  },
+  {
+    name: "Stink Bug",
+    image: "https://static.saynopest.com/wp-content/uploads/2025/07/MicrosoftTeams-image.jpg",
+    description:
+      "Easily recognized by its long legs and fast movement, this species is commonly found in basements and bathrooms. It preys on insects and is generally harmless to humans.",
+    link: "https://www.saynopest.com/what-are-stink-bugs-a-complete-guide-for-usa",
+  },
+  {
+    name: "Bed Bug",
+    image: "https://static.saynopest.com/wp-content/uploads/2025/07/MicrosoftTeams-image-2.jpg",
+    description:
+      "Easily recognized by its long legs and fast movement, this species is commonly found in basements and bathrooms. It preys on insects and is generally harmless to humans.",
+    link: "https://www.saynopest.com/house-centipedes/",
+  },
+];
 
 export default function BedBugTypesPage() {
   return (
     <>
-    <Head>
-    <link rel="canonical" href="https://www.saynopest.com/services/bed-bugs" />
-    </Head>
-    <div className="min-h-screen mt-20 p-6">
-    <div className="max-w-full mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
-  <h1 className="text-3xl text-center font-bold text-primary mb-4">Bugs</h1>
+      <Head>
+        <link rel="canonical" href="https://www.saynopest.com/services/bed-bugs" />
+      </Head>
+      <div className="min-h-screen mt-20 p-6">
+        <div className="max-w-full mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
+          <h1 className="text-3xl text-center font-bold text-primary mb-4">Bugs</h1>
 
-  <p className="text-gray-700 mb-6">
-    Bed bugs are the kind of pests that feed on blood. They hide close to where people sleep, causing itchy bites and distress. Understanding their appearance, habits, and risks is key to effective control and prevention.
-  </p>
+          <p className="text-gray-700 mb-6">
+            Bugs are a varied collection of insects that exist all over the United States, each of them having good looks, living places, and a set of habits that make them completely different from one another. Most bugs are well known by the lot of their shapes and colors: thus, stink bugs are for the most part large, ovoid, or shield-shaped, water bugs are flat, yellow-brown, which is a blend of a cockroach and a praying mantis movie, and bed bugs are little, reddish-brown and ovoid. These six-legged creatures are able to live in many different types of places, from water and trees to houses and cities. Also, consequently, their activities may be very different: they may be in search of a warm place inside during the cold seasons, they may eat plants, other insects, and even human blood, depending on the species.
+          </p>
 
-  <h2 className="text-xl font-semibold text-gray-800 mb-2">What do bed bugs look like?</h2>
-  <p className="text-gray-700 mb-6">
-    Bed bugs are nasty and persistent insects that are often found in human dwellings. <b>Adult bed bugs</b> are red-brown, and do not have wings and are roughly the size of an apple seed. Their bodies become more elongated and bloated after they have the blood meal. <b>Nymphs</b> are the younger bed bugs that are way lighter. They are almost transparent in color, except when they have fed, and thus are hard to see. The eggs of bed bugs are minute (about 1mm), and pearly white.
-  </p>
+          <h2 className="text-xl font-semibold text-gray-800 mb-2">Explore Different types of Bugs</h2>
+          <p className="text-gray-700 mb-6">
+            Water bugs are the natives of the underwater world, and hence, one can find them mostly in places where water flows gently. As for the most distinctive features of these animals, a large size, a flat brown body, and efficient front legs for catching prey are the most associated with them. Water bugs are hardly ever found wandering around the indoors of houses. Instead, they usually live in ponds or swimming pools and may give you a painful bite if you handle them, though these{" "} <b className="text-green-500">
+    <Link href="https://www.saynopest.com/giant-water-bug-americas-aquatic-predator">
+    giant water bug
+    </Link></b>{" "}  bites are usually not dangerous from a medical point of view.
+          </p>
 
-  <p className="text-gray-700 mb-6">
-    Most of the time, bed bugs can be found within 8 feet from where people sleep. They tend to live in such places as mattress seams, box springs, bed frames, closets, drawers, where furniture parts join, under wallpaper, and in other places that are hard to access.
-  </p>
+          <p className="text-gray-700 mb-6">
+          <b className="text-green-500">
+    <Link href="https://www.saynopest.com/what-are-stink-bugs-a-complete-guide-for-usa">
+    Stink bug
+    </Link></b>{" "} , in particular, brown marmorated stink bugs, are invaders that have already occupied almost all areas of the country. And therefore the greatest thing that is known about them is the stinking smell that comes out of them in purting and pressing. It is also important to note that stink bugs neither bite nor sting; moreover, they cannot be recognized as the direct cause of any damage to humans or animals. Nevertheless, they can be dangerous for crops as they can carry a disease and thus lead to a pest problem and a few more symptoms because they can be a source of allergens. Once they are inside the house, you should not expect to find an easy way of eliminating them because they are usually very numerous and are able to enter areas that human beings cannot access.
+          </p>
 
-  <h2 className="text-xl font-semibold text-gray-800 mb-2">Feeding Habits</h2>
-  <p className="text-gray-700 mb-6">
-    Bed bugs are most active between 12:00 to 5:00 am and very particularly in the midnight period when you are in your deepest sleep. Bed bugs are fearless in the choice of their only food - blood. They are fond of human blood and make them their favourite hosts for feeding. They feed for less than 15 minutes and during this time they use their mouthparts to inject saliva into the skin containing an anesthetic and an anticoagulant to avoid humans noticing and stop the feeding.
-  </p>
+          <p className="text-gray-700 mb-6">
+            Bed bugs are a kind of vampiric being that may infest such places as houses, flats, hotels, or any other place where people sleep or rest. These are also master hiders, and they exist in mattresses, furniture, and cracks. They appear at night to feed. <b className="text-green-500">
+    <Link href="https://static.saynopest.com/confused-between-bed-bug-bites-vs-mosquito-bites">
+    Bed bug bites
+    </Link></b>{" "} result in the skin being itchy, developing welts, and possibly allergic reactions; besides that, bed bugs are hard to eradicate once they infest a place.
+          </p>
 
-  <h2 className="text-xl font-semibold text-gray-800 mb-2">Bed Bug Infestation</h2>
-  <p className="text-gray-700 mb-6">
-    The other reason for this pest issue is that the old methods of getting rid of these pests is no longer effective. Bed bugs certainly can spread quite easily from hotels to residential sites; this is due to the ongoing trend of the global travel industry. As you travel, bed bugs easily hitchhike on the luggage, clothes, and personal belongings, and spread from one place to another.
-  </p>
+          <h2 className="text-xl font-semibold text-gray-800 mb-2">Harmful Effects and Risks</h2>
+          <p className="text-gray-700 mb-6">
+            Although not every bug is directly dangerous to humans, the mere presence of the bug can cause serious trouble. The <b className="text-green-500">
+    <Link href="https://www.saynopest.com/how-to-get-rid-of-water-bugs-a-complete-guide">
+    water bugs
+    </Link></b>{" "}  can cause pain when bitten, which might result in swelling or allergic reactions (on rare occasions). Though they are not harmful to humans, stink bug can cause economic damage as they feed on fruits and vegetables, as well as create major annoyance when large groups of them enter homes and emit a strong stench that can leave stains on floors and furniture. Bed bugs are regarded as the worst pests in the whole of the United States because they spread very rapidly and make their presence known by biting and causing some level of disturbance. Infestation by bed bugs may result in anxiety, insomnia, and subsequent infection of the skin from the scratches. Also, they are resilient and capable of concealment, and thus, professional pest control is mandatory in their elimination.
+          </p>
 
-  <h2 className="text-xl font-semibold text-gray-800 mb-2">Health Risks Caused By Bed Bugs</h2>
-  <p className="text-gray-700 mb-6">
-    Although bed bugs have the reputation of being disease carriers, the reality says otherwise. But do not take them seriously, the bites not only lead to skin rashes, but they can also cause allergic reactions and psychological distress. Practically speaking, the affected people can suffer from itchy skin, blisters, and hives caused by the bed bugs saliva. Since these pests are incredibly hard to find and can live for a long time without food, the quick and successful method of dealing with these universal insects is to use professional help.
-  </p>
-</div>
+          <h2 className="text-2xl font-semibold text-center text-primary mb-2">Types of Centipedes</h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 justify-center">
+          {bugsTypes.map((type, index) => (
+            <Link href={type.link} key={index}>
+              <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                <Image
+                  src={type.image}
+                  alt={type.name}
+                  width={600}
+                  height={400}
+                  className="w-full h-60 object-cover"
+                />
+                <div className="p-2 text-center">
+                  <h2 className="text-xl font-semibold text-primary mb-2">
+                    {type.name}
+                  </h2>
+                </div>
+              </div>
+            </Link>
+          ))}
+        </div>
+        </div>
       </div>
     </>
   );
