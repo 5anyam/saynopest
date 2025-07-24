@@ -70,7 +70,7 @@ export default function BedBugTypesPage() {
     </Link></b>{" "}  can cause pain when bitten, which might result in swelling or allergic reactions (on rare occasions). Though they are not harmful to humans, stink bug can cause economic damage as they feed on fruits and vegetables, as well as create major annoyance when large groups of them enter homes and emit a strong stench that can leave stains on floors and furniture. Bed bugs are regarded as the worst pests in the whole of the United States because they spread very rapidly and make their presence known by biting and causing some level of disturbance. Infestation by bed bugs may result in anxiety, insomnia, and subsequent infection of the skin from the scratches. Also, they are resilient and capable of concealment, and thus, professional pest control is mandatory in their elimination.
           </p>
 
-          <h2 className="text-2xl font-semibold text-center text-primary mb-2">Types of Centipedes</h2>
+          <h2 className="text-2xl font-semibold text-center text-primary mb-2">Types of Bugs</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 justify-center">
           {bugsTypes.map((type, index) => (
