@@ -63,12 +63,11 @@ export default function EarwigTypesPage() {
       </div>
     </Link>
   ))}
-</div>
           <h2 className="text-xl font-semibold text-gray-800 mb-2">When Earwigs Invade Your Home: Habitat & Danger</h2>
           <p className="text-gray-700 mb-6">
             Earwigs often travel in small groups and are usually found near moist areas inside homes, such as bathrooms, damp basements, and overly wet kitchens. Their thigmotactic behavior—seeking out close contact with surfaces—draws them to these environments. While earwigs are not dangerous to humans, their presence can cause discomfort, and in large numbers, they may damage garden plants and spoil stored food.
           </p>
-
+          </div>
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Earwig Invasion in the USA</h2>
           <p className="text-gray-700 mb-6">
             <b className="text-green-500">
@@ -84,8 +83,6 @@ export default function EarwigTypesPage() {
           The main types of earwigs, which are also found in different regions of the United States, are the European earwig, which is the most common of all types and mostly found inside the house, and the red-legged earwig. These are mostly found in Florida and the southern part of the USA. 
           These insects mostly get attracted indoors by the moisture; so, they can be found where the surroundings are cool and damper such as basement, bathrooms and plants or these insects can also come into the house in huge numbers due to hot and dry conditions or heavy rain as it does not suit the outside conditions anymore.
           </p>
-
-          
         </div>
       </div>
     </>
