@@ -4,7 +4,7 @@ import Link from "next/link";
 
 const bugsTypes = [
   {
-    name: "Water Bug",
+    name: "Giant Water Bug",
     image: "https://static.saynopest.com/wp-content/uploads/2025/07/MicrosoftTeams-image-1.jpg",
     description:
       "Easily recognized by its long legs and fast movement, this species is commonly found in basements and bathrooms. It preys on insects and is generally harmless to humans.",
