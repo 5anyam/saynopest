@@ -46,7 +46,7 @@ export default function EarwigTypesPage() {
 
   {/* Now, the paragraph that should appear just beside the image */}
   <div className="flex flex-col md:flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden p-6 gap-6">
-  <Link href="https://www.saynopest.com/european-earwig"><div className="md:w-1/2 w-full h-60 relative">
+  <Link href="https://www.saynopest.com/european-earwig"><div className="w-full h-60 relative">
     {earwigTypes.map((type, index) => (
     <div
       key={index}

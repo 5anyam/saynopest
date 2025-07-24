@@ -24,7 +24,6 @@ export default function SilverfishTypesPage() {
           <p className="text-gray-700 mb-6">
             Silverfish get their name from being small, having no wings and moving so quickly you might think they’re swimming. The dampness and dark of your house can make these insects hide and quietly ruin your property.
           </p>
-
           <h2 className="text-xl font-semibold text-gray-800 mb-2">What are Silverfish?</h2>
           <p className="text-gray-700 mb-6">
             Silverfish are very small, without wings, and they look and move like fish—earning their name from being silver and gray. Their bodies typically measure 1/2 to 3/4 inches, are slender, flat, and shaped like a carrot or tiny fish. They have long antennae at the front and three tail-like extensions at the back. Their metallic scales make them easily recognizable. Silverfish are nocturnal pests that prefer dark areas and typically hide in damp places such as bathrooms, basements, attics, kitchens, and laundry rooms.
@@ -33,7 +32,7 @@ export default function SilverfishTypesPage() {
 
            {/* Now, the paragraph that should appear just beside the image */}
             <div className="flex flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden p-6 gap-6">
-            <Link href="https://www.saynopest.com/common-silverfish-saynopest"><div className="md:w-1/2 w-full h-60 relative">
+            <Link href="https://www.saynopest.com/common-silverfish-saynopest"><div className="w-full h-60 relative">
               {silverfishTypes.map((type, index) => (
               <div
                 key={index}
