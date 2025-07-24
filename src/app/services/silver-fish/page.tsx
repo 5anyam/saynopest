@@ -37,16 +37,16 @@ export default function SilverfishTypesPage() {
               {silverfishTypes.map((type, index) => (
               <div
                 key={index}
-                className="flex flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
+                className="flex flex-col items-center bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="md:w-1/2 w-full h-60 relative">
+                 <Link href="https://www.saynopest.com/common-silverfish-saynopest"><div className="md:w-1/2 w-full h-60 relative">
                   <Image
                     src={type.image}
                     alt={type.name}
                     fill
                     className="object-cover"
                   />
-                </div>
+                </div></Link>
                 <div className="p-6 md:w-1/2">
                   <h2 className="text-xl font-semibold text-primary mb-2">
                     {type.name}

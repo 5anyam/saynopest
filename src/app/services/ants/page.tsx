@@ -12,14 +12,14 @@ const antTypes = [
   },
   {
     name: "Twig Ant",
-    image: "/types/twig-ant.jpg",
+    image: "https://static.saynopest.com/wp-content/uploads/2025/07/twig-ant.jpg",
     description:
       "Twig ants are often found nesting in dead branches and twigs. While not typically aggressive, they can invade homes near wooded areas or gardens.",
       link:"https://www.saynopest.com/elongated-twig-ants-saynopest/"
   },
   {
     name: "Argentine Ant",
-    image: "/types/ants.jpg",
+    image: "https://static.saynopest.com/wp-content/uploads/2025/07/ants.jpg",
     description:
       "Army ants are nomadic and known for their massive swarms. While less common in the U.S., they pose a risk due to their aggressive foraging behavior.",
       link:"https://www.saynopest.com/california-argentine-ants-saynopest/"

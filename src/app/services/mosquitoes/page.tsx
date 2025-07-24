@@ -84,9 +84,6 @@ export default function MosquitoTypesPage() {
           </ul>
 
           <h2 className="text-xl font-semibold text-primary text-center mb-2">Types of Mosquitoes</h2>
-          <p className="text-gray-700 mb-8 text-center">
-            From silent biters to buzzing nuisances, the <b><li className="text-green-500"><Link href="https://www.saynopest.com/types-of-mosquitoes-saynopest">top 3 mosquito species </Link> </li></b>have very different appearances and characteristics. 
-          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
