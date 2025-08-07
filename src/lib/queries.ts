@@ -5,45 +5,36 @@ const revalidateTime: number = 43200; // half-day cache
 
 export async function getAllPosts(
   pageNumber: number = 1,
-  perPage: number = 20,
+  perPage: number = 100,
   searchTerm: string = "",
   categories: number = 0
 ): Promise<{ posts: ExtendedPost[]; totalPages: number }> {
-  let currentPage = pageNumber;
-  let allPosts: ExtendedPost[] = [];
-  let totalPages = 1;
+  const params = new URLSearchParams({
+    per_page: perPage.toString(),
+    page: pageNumber.toString(), // Only fetch requested page
+    search: searchTerm,
+    _embed: "true",
+  });
+  
+  if (categories !== 0) {
+    params.set("categories", categories.toString());
+  }
 
-  do {
-    const params = new URLSearchParams({
-      per_page: perPage.toString(),
-      page: currentPage.toString(),
-      search: searchTerm,
-      _embed: "true",
-    });
-    if (categories !== 0) {
-      params.set("categories", categories.toString());
-    }
+  const response = await fetch(`${baseUrl}/wp-json/wp/v2/posts?${params.toString()}`, {
+    next: {
+      revalidate: revalidateTime,
+    },
+  });
 
-    const response = await fetch(`${baseUrl}/wp-json/wp/v2/posts?${params.toString()}`, {
-      next: {
-        revalidate: revalidateTime,
-      },
-    });
+  if (!response.ok) {
+    console.error(`Error fetching page ${pageNumber}: ${response.status}`);
+    return { posts: [], totalPages: 1 };
+  }
 
-    if (!response.ok) {
-      console.error(`Error fetching page ${currentPage}: ${response.status}`);
-      break;
-    }
+  const posts = await response.json();
+  const totalPages = parseInt(response.headers.get("X-WP-TotalPages") ?? "1");
 
-    const posts = await response.json();
-    const pageTotal = parseInt(response.headers.get("X-WP-TotalPages") ?? "1");
-    allPosts = [...allPosts, ...posts];
-    totalPages = pageTotal;
-
-    currentPage++;
-  } while (currentPage <= totalPages);
-
-  return { posts: allPosts, totalPages };
+  return { posts, totalPages };
 }
 
 export async function getPostBySlug(slug: string): Promise<ExtendedPost | null> {
@@ -96,4 +87,39 @@ export async function getAllCategories() {
     throw new Error("Failed to fetch categories");
   }
   return res.json();
+}
+
+// If you need a function to get ALL posts (for sitemap etc.), create a separate function:
+export async function getAllPostsForSitemap(): Promise<ExtendedPost[]> {
+  let currentPage = 1;
+  let allPosts: ExtendedPost[] = [];
+  let totalPages = 1;
+
+  do {
+    const params = new URLSearchParams({
+      per_page: "100",
+      page: currentPage.toString(),
+      _embed: "true",
+    });
+
+    const response = await fetch(`${baseUrl}/wp-json/wp/v2/posts?${params.toString()}`, {
+      next: {
+        revalidate: revalidateTime,
+      },
+    });
+
+    if (!response.ok) {
+      console.error(`Error fetching page ${currentPage}: ${response.status}`);
+      break;
+    }
+
+    const posts = await response.json();
+    const pageTotal = parseInt(response.headers.get("X-WP-TotalPages") ?? "1");
+    allPosts = [...allPosts, ...posts];
+    totalPages = pageTotal;
+
+    currentPage++;
+  } while (currentPage <= totalPages);
+
+  return allPosts;
 }
