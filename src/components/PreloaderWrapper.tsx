@@ -8,7 +8,7 @@ export default function PreloaderWrapper({ children }: { children: React.ReactNo
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    const timeout = setTimeout(() => setLoading(false), 400)
+    const timeout = setTimeout(() => setLoading(false))
     return () => clearTimeout(timeout)
   }, [])
 
