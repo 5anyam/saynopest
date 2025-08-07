@@ -34,7 +34,7 @@ export default async function BlogPage(props: {
           {searchTerm ? `Search Results for "${searchTerm}"` : "Our Blog"}
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Discover insights, tutorials, and the latest updates from our team
+          Discover insights, news and the latest updates from our team
         </p>
       </div>
 
