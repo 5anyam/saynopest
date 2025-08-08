@@ -11,7 +11,7 @@ export default async function BlogPage(props: {
 }) {
   const searchParams = await props.searchParams
   const currentPage = searchParams?.page ? parseInt(searchParams.page as string, 10) : 1;
-  const postsPerPage = 20;
+  const postsPerPage = 22;
   const searchTerm = typeof searchParams.search === 'string' ? searchParams.search : '';
   const categories = parseInt(searchParams.categories as string) || 0;
 
