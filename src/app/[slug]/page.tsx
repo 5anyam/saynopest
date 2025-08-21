@@ -47,7 +47,7 @@ export async function generateMetadata(
     ? post.excerpt.rendered.replace(/<[^>]*>/g, '').substring(0, 160)
     : post.content?.rendered?.replace(/<[^>]*>/g, '').substring(0, 160) || '';
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://yourdomain.com';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com';
   const canonicalUrl = `${baseUrl}/${slugData.slug}`;
   const featuredImage = post.yoast_head_json?.og_image?.[0]?.url || `${baseUrl}/open-graph.jpg`;
 
@@ -57,14 +57,14 @@ export async function generateMetadata(
     keywords: categories.map(cat => cat.name).join(', '),
     authors: [{ name: author?.name || 'Unknown Author' }],
     creator: author?.name || 'Unknown Author',
-    publisher: 'Your Site Name', // Replace with your site name
+    publisher: 'Say No Pest', // Replace with your site name
     
     // Open Graph
     openGraph: {
       title: post.title?.rendered ? post.title.rendered.replace(/<[^>]*>/g, '') : 'Blog Post',
       description: plainTextContent,
       url: canonicalUrl,
-      siteName: 'Your Site Name', // Replace with your site name
+      siteName: 'Say No Pest', // Replace with your site name
       images: [
         {
           url: featuredImage,
