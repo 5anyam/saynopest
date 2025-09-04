@@ -92,33 +92,42 @@ export function Clients(){
 
         <hr className="my-12 border-gray-200 dark:border-gray-700"/>
 
-        <h1 className="text-center text-green-600 font-bold text-2xl">Our Partners</h1>
+        <h3 className="text-center text-green-600 font-bold text-2xl">Our Partners</h3>
 
-        <div className="grid grid-cols-2 gap-6 md:grid-cols-6 lg:grid-cols-6">
-            <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
-            <img className="h-20 w-28" src="orkin.png" alt="orkin"/>
-            </div>
+        <div className="py-12 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl font-bold text-gray-900 mb-4">Our Partners</h2>
+    </div>
+    
+    <div className="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-6">
+      <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+        <img className="h-20 w-28 object-contain" src="orkin.png" alt="orkin"/>
+      </div>
 
-            <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
-            <img className="h-24 w-28" src="terminix.svg" alt="terminix"/>
-            </div>
+      <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+        <img className="h-24 w-28 object-contain" src="terminix.svg" alt="terminix"/>
+      </div>
 
-            <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
-            <img className="h-20 w-24" src="diy.png" alt="diy"/>
-            </div>
+      <div className="flex items-center justify-center col-span-1 md:col-span-2 lg:col-span-1">
+        <img className="h-20 w-24 object-contain" src="diy.png" alt="diy"/>
+      </div>
 
-            <div className="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1">
-            <img className="h-20 w-28" src="aptive.png" alt="aptive"/>
-            </div>
-            
-            <div className="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1">
-            <img className="h-16 w-24" src="ehrlich.png" alt="ehrlich"/>
-            </div>
+      <div className="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1">
+        <img className="h-20 w-28 object-contain" src="aptive.png" alt="aptive"/>
+      </div>
+      
+      <div className="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1">
+        <img className="h-16 w-24 object-contain" src="ehrlich.png" alt="ehrlich"/>
+      </div>
 
-            <div className="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1">
-            <img className="h-20 w-24" src="truly-nolen.svg" alt="truly-nolen"/>
-            </div>
-        </div>
+      <div className="flex items-center justify-center col-span-1 md:col-span-3 lg:col-span-1">
+        <img className="h-20 w-24 object-contain" src="truly-nolen.svg" alt="truly-nolen"/>
+      </div>
+    </div>
+  </div>
+</div>
+
     </div>
 </section>
     )
