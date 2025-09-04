@@ -7,7 +7,6 @@ export function Clients(){
             <div className="w-full space-y-12 lg:w-1/2 ">
                 <div>
                     <h2 className="text-2xl font-semibold text-gray-800 capitalize lg:text-3xl">explore our <br/> awesome Components</h2>
-
                     <div className="mt-2">
                         <span className="inline-block w-40 h-1 bg-primary rounded-full"></span>
                         <span className="inline-block w-3 h-1 ml-1 bg-primary rounded-full"></span>

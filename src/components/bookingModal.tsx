@@ -74,9 +74,9 @@ export default function EstimateModal() {
               <input name="zip" required onChange={handleChange} value={formData.zip} placeholder="Zip Code *" className="text-gray-400 border p-2 w-full" />
               <input name="address" required onChange={handleChange} value={formData.address} placeholder="Address *" className="text-gray-400 border p-2 w-full" />
               <div className="flex gap-2">
-                <input name="phone1" onChange={handleChange} value={formData.phone1} placeholder="###" className="border p-2 w-1/3" />
-                <input name="phone2" onChange={handleChange} value={formData.phone2} placeholder="###" className="border p-2 w-1/3" />
-                <input name="phone3" onChange={handleChange} value={formData.phone3} placeholder="####" className="border p-2 w-1/3" />
+                <input name="phone1" onChange={handleChange} value={formData.phone1} placeholder="217" className="border p-2 w-1/3" />
+                <input name="phone2" onChange={handleChange} value={formData.phone2} placeholder="773" className="border p-2 w-1/3" />
+                <input name="phone3" onChange={handleChange} value={formData.phone3} placeholder="5600" className="border p-2 w-1/3" />
               </div>
 
               <select name="service" required onChange={handleChange} value={formData.service} className="border text-gray-400 p-2 w-full col-span-full">
