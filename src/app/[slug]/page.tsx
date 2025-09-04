@@ -11,7 +11,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import BookNowForm from '@/components/BookNowForm';
 
-// 👇 Category type define karo yahi (ya types.ts mein export karo)
+// Category type define
 type Category = {
   id: number;
   name: string;
@@ -42,35 +42,43 @@ export async function generateMetadata(
   const categories = await getCategoriesByIds(post.categories);
   const previousImages = (await parent).openGraph?.images || [];
   
-  // Extract plain text from HTML content for description
-  const plainTextContent = post.excerpt?.rendered 
+  // 👇 Correct properties from Yoast
+  const yoastTitle = post.yoast_head_json?.og_title || post.yoast_head_json?.title;
+  const yoastDescription = post.yoast_head_json?.og_description; // Changed from 'description' to 'og_description'
+  
+  // Fallback options
+  const fallbackTitle = post.title?.rendered ? post.title.rendered.replace(/<[^>]*>/g, '') : 'Blog Post';
+  const fallbackDescription = post.excerpt?.rendered 
     ? post.excerpt.rendered.replace(/<[^>]*>/g, '').substring(0, 160)
     : post.content?.rendered?.replace(/<[^>]*>/g, '').substring(0, 160) || '';
+
+  const finalTitle = yoastTitle || fallbackTitle;
+  const finalDescription = yoastDescription || fallbackDescription;
 
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com';
   const canonicalUrl = `${baseUrl}/${slugData.slug}`;
   const featuredImage = post.yoast_head_json?.og_image?.[0]?.url || `${baseUrl}/open-graph.jpg`;
 
   return {
-    title: post.title?.rendered ? post.title.rendered.replace(/<[^>]*>/g, '') : 'Blog Post',
-    description: plainTextContent,
+    title: finalTitle,
+    description: finalDescription,
     keywords: categories.map(cat => cat.name).join(', '),
     authors: [{ name: author?.name || 'Unknown Author' }],
     creator: author?.name || 'Unknown Author',
-    publisher: 'Say No Pest', // Replace with your site name
+    publisher: 'Say No Pest',
     
     // Open Graph
     openGraph: {
-      title: post.title?.rendered ? post.title.rendered.replace(/<[^>]*>/g, '') : 'Blog Post',
-      description: plainTextContent,
+      title: finalTitle,
+      description: finalDescription,
       url: canonicalUrl,
-      siteName: 'Say No Pest', // Replace with your site name
+      siteName: 'Say No Pest',
       images: [
         {
           url: featuredImage,
           width: 1200,
           height: 630,
-          alt: post.title?.rendered ? post.title.rendered.replace(/<[^>]*>/g, '') : 'Featured Image',
+          alt: finalTitle,
         },
         ...previousImages,
       ],
@@ -85,10 +93,10 @@ export async function generateMetadata(
     // Twitter Card
     twitter: {
       card: 'summary_large_image',
-      title: post.title?.rendered ? post.title.rendered.replace(/<[^>]*>/g, '') : 'Blog Post',
-      description: plainTextContent,
+      title: finalTitle,
+      description: finalDescription,
       images: [featuredImage],
-      creator: '@yourtwitterhandle', // Replace with your Twitter handle
+      creator: '@saynopest',
     },
 
     // Canonical URL
@@ -123,7 +131,18 @@ export async function generateMetadata(
 export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
   const slugData = await params;
   const post = await getPostBySlug(slugData.slug);
-  if (!post) return <div>Post not found</div>;
+  
+  if (!post) {
+    return (
+      <div className="container mx-auto px-4 mt-24 text-center">
+        <h1 className="text-4xl font-bold mb-4">Post Not Found</h1>
+        <p className="text-gray-600 mb-8">The requested blog post could not be found.</p>
+        <Link href="/blog" className="bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700">
+          Back to Blog
+        </Link>
+      </div>
+    );
+  }
 
   const author = await getAuthorById(post.author);
   const categories = await getCategoriesByIds(post.categories);
@@ -138,12 +157,19 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     day: 'numeric',
   });
 
+  // 👇 Correct Yoast properties for JSON-LD
+  const yoastTitle = post.yoast_head_json?.og_title || post.yoast_head_json?.title;
+  const yoastDescription = post.yoast_head_json?.og_description; // Fixed property name
+  
+  const fallbackTitle = post.title?.rendered ? post.title.rendered.replace(/<[^>]*>/g, '') : 'Blog Post';
+  const fallbackDescription = post.excerpt?.rendered ? post.excerpt.rendered.replace(/<[^>]*>/g, '') : '';
+
   // JSON-LD Structured Data
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: post.title?.rendered ? post.title.rendered.replace(/<[^>]*>/g, '') : 'Blog Post',
-    description: post.excerpt?.rendered ? post.excerpt.rendered.replace(/<[^>]*>/g, '') : '',
+    headline: yoastTitle || fallbackTitle,
+    description: yoastDescription || fallbackDescription,
     image: post.yoast_head_json?.og_image?.[0]?.url || '',
     datePublished: post.date,
     dateModified: post.modified,
@@ -153,15 +179,15 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Your Site Name', // Replace with your site name
+      name: 'Say No Pest',
       logo: {
         '@type': 'ImageObject',
-        url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://yourdomain.com'}/logo.png`, // Replace with your logo URL
+        url: `${process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com'}/logo.png`,
       },
     },
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': `${process.env.NEXT_PUBLIC_BASE_URL || 'https://yourdomain.com'}/${slugData.slug}`,
+      '@id': `${process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com'}/${slugData.slug}`,
     },
     articleSection: categories[0]?.name || 'Blog',
     keywords: categories.map(cat => cat.name).join(', '),
@@ -170,13 +196,11 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   return (
     <>
       <Head>
-        {/* Additional meta tags */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
         <meta name="revisit-after" content="7 days" />
         
-        {/* JSON-LD Structured Data */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -212,7 +236,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             <div className="mb-8">
               <Image
                 src={post.yoast_head_json.og_image[0].url}
-                alt="Featured"
+                alt={yoastTitle || fallbackTitle}
                 width={600}
                 height={400}
                 className="rounded-xl w-full h-full object-cover"
@@ -257,7 +281,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         <aside className="lg:w-1/3 w-full relative">
           <div className="sticky top-24 space-y-8">
             {/* Book Now Form */}
-            <BookNowForm/>
+            <BookNowForm />
 
             {/* Categories Sidebar */}
             <div className="border p-6 rounded-md shadow-md bg-white">
