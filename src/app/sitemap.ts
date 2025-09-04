@@ -32,7 +32,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const posts = await getAllPosts(pageNumber, perPage);
 
     posts.posts.forEach((post) => {
-      const url = `${baseUrl}/${post.slug}`;
+      const url = `${baseUrl}/${post.slug}/`;
       if (!postUrlsMap.has(url)) {
         postUrlsMap.set(url, {
           url,
