@@ -55,7 +55,6 @@ export default function RootLayout({
           name="google-adsense-account"
           content="ca-pub-7212342270102504"
         />
-        <link rel="canonical" href="https://www.saynopest.com/" />
         <meta
           name="google-site-verification"
           content="SrhB-NOlpPpJPL5wP3FpRwuT1yDTE2e0SdFOtcrkfa0"
