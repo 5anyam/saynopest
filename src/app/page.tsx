@@ -10,8 +10,10 @@ export default async function Page() {
   const { posts } = await getAllPosts();
 
   return (
+    <>
     <Head>
    <link rel="canonical" href="https://www.saynopest.com/" />
+   </Head>
     <div className="mt-6">
       <Hero/>
       <Services/>
@@ -19,6 +21,6 @@ export default async function Page() {
       <Testimonials/>
       <LatestPosts posts={posts} />  
     </div>
-    </Head>
+    </>
   );
 }
