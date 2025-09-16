@@ -34,7 +34,7 @@ export default function BeetleTypesPage() {
   return (
     <>
       <Head>
-        <link rel="canonical" href="https://www.saynopest.com/services/beetles" />
+      <link rel="canonical" href="https://www.saynopest.com/services/beetle"/>
         <title>Types of Beetles in the U.S. | SayNoPest</title>
       </Head>
 
