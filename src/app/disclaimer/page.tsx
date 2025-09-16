@@ -1,3 +1,83 @@
+import { Metadata } from "next";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com';
+  const canonicalUrl = `${baseUrl}/disclaimer`;
+  const featuredImage = `${baseUrl}/types/ants-hero-image.jpg`; // or use your main ant image
+  
+  const title = "Common Types of Ants in the US | Identification & Control Guide";
+  const description = "Discover the most common ant species found in American homes including Fire Ants, Carpenter Ants, Pavement Ants, and more. Learn identification tips and effective control methods.";
+  
+  return {
+    title: title,
+    description: description,
+    keywords: "ants, ant types, fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, ant identification, pest control, ant removal, ant infestation",
+    authors: [{ name: 'Say No Pest' }],
+    creator: 'Say No Pest',
+    publisher: 'Say No Pest',
+    
+    // Open Graph
+    openGraph: {
+      title: title,
+      description: description,
+      url: canonicalUrl,
+      siteName: 'Say No Pest',
+      images: [
+        {
+          url: featuredImage,
+          width: 1200,
+          height: 630,
+          alt: "Common types of ants found in US homes - identification guide",
+        },
+      ],
+      locale: 'en_US',
+      type: 'website',
+    },
+
+    // Twitter Card
+    twitter: {
+      card: 'summary_large_image',
+      title: title,
+      description: description,
+      images: [featuredImage],
+      creator: '@saynopest',
+    },
+
+    // Canonical URL
+    alternates: {
+      canonical: canonicalUrl,
+    },
+
+    // Additional SEO
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    
+    // Category and topic metadata
+    category: 'Pest Control',
+    
+    // Additional structured metadata
+    other: {
+      'article:section': 'Ant Control',
+      'article:tag': 'fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, pest identification',
+      'og:image:alt': 'Guide to common ant types found in US homes',
+      'twitter:image:alt': 'Guide to common ant types found in US homes',
+      // Schema.org hints
+      'schema:breadcrumb': 'Home > Pest Control > Ants > Ant Types',
+      'geo:region': 'US',
+      'geo:placename': 'United States',
+    },
+  };
+}
+
 export default function DisclaimerPage() {
     return (
       <main className="max-w-4xl mx-auto px-4 py-12">

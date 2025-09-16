@@ -1,25 +1,94 @@
-import type { Metadata, ResolvingMetadata } from 'next';
+import type { Metadata } from 'next';
 import { getAllPosts, getCategoryBySlug } from '@/lib/queries';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
-type Props = {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+export async function generateMetadata({
+  params,
+}: {
   params: Promise<{ slug: string }>;
-};
-
-export async function generateMetadata(
-  { params }: Props,
-  parent: ResolvingMetadata
-): Promise<Metadata> {
+}): Promise<Metadata> {
   const { slug } = await params;
-  const previousImages = (await parent).openGraph?.images || [];
-
+  
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com';
+  const canonicalUrl = `${baseUrl}/category/${slug}`;
+  const featuredImage = `${baseUrl}/types/ants-hero-image.jpg`;
+  
+  // Get category data for dynamic metadata
+  const category = await getCategoryBySlug(slug);
+  
+  const title = category ? `${category.name} | Say No Pest` : "Pest Control Category | Say No Pest";
+  const description = category 
+    ? `Browse our comprehensive ${category.name.toLowerCase()} guides and expert advice. Professional pest control solutions and tips.`
+    : "Browse our comprehensive pest control guides and expert advice. Professional pest control solutions and tips.";
+  
   return {
-    title: `Category: ${slug}`,
+    title: title,
+    description: description,
+    keywords: `${category?.name || 'pest control'}, pest control, extermination, pest removal, pest management, home pest control`,
+    authors: [{ name: 'Say No Pest' }],
+    creator: 'Say No Pest',
+    publisher: 'Say No Pest',
+    
+    // Open Graph
     openGraph: {
-      images: ['/open-graph.jpg', ...previousImages],
+      title: title,
+      description: description,
+      url: canonicalUrl,
+      siteName: 'Say No Pest',
+      images: [
+        {
+          url: featuredImage,
+          width: 1200,
+          height: 630,
+          alt: `${category?.name || 'Pest Control'} guides and solutions`,
+        },
+      ],
+      locale: 'en_US',
+      type: 'website',
+    },
+
+    // Twitter Card
+    twitter: {
+      card: 'summary_large_image',
+      title: title,
+      description: description,
+      images: [featuredImage],
+      creator: '@saynopest',
+    },
+
+    // Canonical URL
+    alternates: {
+      canonical: canonicalUrl,
+    },
+
+    // Additional SEO
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
+    
+    // Category and topic metadata
+    category: 'Pest Control',
+    
+    // Additional structured metadata
+    other: {
+      'article:section': category?.name || 'Pest Control',
+      'article:tag': `${category?.name || 'pest control'}, pest management, extermination`,
+      'og:image:alt': `${category?.name || 'Pest Control'} guides and solutions`,
+      'twitter:image:alt': `${category?.name || 'Pest Control'} guides and solutions`,
+      // Schema.org hints
+      'schema:breadcrumb': `Home > Categories > ${category?.name || 'Pest Control'}`,
+      'geo:region': 'US',
+      'geo:placename': 'United States',
     },
   };
 }
@@ -34,8 +103,7 @@ export default async function CategoryPage({
   const { slug } = await params;
   const query = await searchParams;
 
-
-  const currentPage = query.page ? parseInt(query.page as string, 20) : 1;
+  const currentPage = query.page ? parseInt(query.page as string, 10) : 1;
   const searchTerm = typeof query.search === 'string' ? query.search : '';
 
   const category = await getCategoryBySlug(slug);
@@ -54,7 +122,6 @@ export default async function CategoryPage({
   }
 
   return (
-  
     <div className="mt-20 px-4 max-w-7xl mx-auto">
       <h1 className="text-4xl font-bold text-center text-primary mb-12">
         {category.name}
@@ -140,6 +207,5 @@ export default async function CategoryPage({
         )}
       </div>
     </div>
-    
   );
 }

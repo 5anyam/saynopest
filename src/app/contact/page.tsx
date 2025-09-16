@@ -1,8 +1,8 @@
 'use client';
-
 import { useState } from 'react';
 import { db } from '@/lib/firebase'; // adjust this import based on your Firebase setup
 import { collection, addDoc, Timestamp } from 'firebase/firestore';
+import Head from 'next/head';
 
 export default function Page() {
   const [form, setForm] = useState({
@@ -37,6 +37,25 @@ export default function Page() {
   };
 
   return (
+    <>
+    <Head>
+        <title>Contact Say No Pest | Professional Pest Control Services</title>
+        <meta name="description" content="Get in touch with Say No Pest for professional pest control services. Contact us for quotes, consultations, and expert pest removal solutions." />
+        <meta name="keywords" content="contact pest control, pest control services, pest removal quote, professional extermination" />
+        <link rel="canonical" href="https://www.saynopest.com/contact" />
+        
+        {/* Open Graph */}
+        <meta property="og:title" content="Contact Say No Pest | Professional Pest Control Services" />
+        <meta property="og:description" content="Get in touch with Say No Pest for professional pest control services." />
+        <meta property="og:url" content="https://www.saynopest.com/contact" />
+        <meta property="og:type" content="website" />
+        
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Contact Say No Pest | Professional Pest Control Services" />
+        <meta name="twitter:description" content="Get in touch with Say No Pest for professional pest control services." />
+      </Head>
+   
     <div className="my-20 max-w-6xl mx-auto px-4">
      
 
@@ -121,5 +140,6 @@ export default function Page() {
         </div>
       </div>
     </div>
+    </>
   );
 }
