@@ -203,8 +203,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}/>
       </Head>
 
       <div className="container mx-auto px-4 mt-24 flex flex-col lg:flex-row gap-12">
