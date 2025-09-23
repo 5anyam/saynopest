@@ -1,6 +1,31 @@
+import FAQSection from "@/components/FAQSection";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+const spiderFaqData = [
+  {
+    question: "What types of spiders are commonly found in homes?",
+    answer: "Common house spiders which you can easily see in your homes are: house spider, cellar spider (or daddy longlegs), wolf spider, yellow sac spider, hobo spider, jumping spider. These spiders make their webs in the basements, attics, and corners. These house spiders are not harmful until they are being disturbed."
+  },
+  {
+    question: "Are all spiders dangerous to humans?",
+    answer: "Spiders that live inside the house are not a threat in most cases. Although all spiders are venomous as they do not cohabit with other insects, only a few species, such as the black widow and the brown recluse, have venomous bites that can cause health problems for humans. Most spiders will at that time bite only when people forcibly handle them."
+  },
+  {
+    question: "Why do spiders infest homes?",
+    answer: "The spiders move into the houses in search of food, water, and shelter, as well as areas where they can lay their eggs. The things that attract them are the other insects, warm areas during cold seasons and easy to enter through taking advantage of small cracks or open windows."
+  },
+  {
+    question: "How can I prevent spider infestations?",
+    answer: "Simple cleaning and proper care can help to get rid of them: Maintain a Neat & Clean home, mainly basements, cupboards, and furniture. Get rid of spider-webs and egg-cases. Stuff the cracks and the holes of doors, windows, and foundations. Store food in tightly packed storage containers in order to prevent insect pests that attract spiders. Clean up your yard, take the firewood out of your yard and trim the bushes around the house. Use natural materials such as peppermint oil, diatomaceous earth at entry points."
+  },
+  {
+    question: "When should I contact a professional for spider control?",
+    answer: "It is important to contact a pest control expert at the time when spider invasion has increased in your home and property. The expert pest control knows how to handle these pests by using effective methods and treatments. Experts are able to identify, treat and prevent spider problems safely."
+  }
+];
+
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
@@ -232,6 +257,11 @@ export default function SpiderTypesPage() {
             </Link>
           ))}
         </div>
+        <FAQSection 
+  faqs={spiderFaqData}
+  title="Frequently Asked Questions About Spiders"
+  subtitle="Get answers to common questions about spider identification, prevention, and professional control services."
+/>
       </div>
     </>
   );

@@ -1,13 +1,38 @@
+import FAQSection from "@/components/FAQSection";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+const beetleFaqData = [
+  {
+    question: "What types of beetles are commonly found around homes?",
+    answer: "The most common beetle which people spot near their homes are: carpet beetles, powderpost beetles, wood-boring beetles and pantry beetles. These insects are capable of destroying food, garments, wood and even carpeting. Although all the species have their habits, they all have problems when they find their way into our house."
+  },
+  {
+    question: "How can I identify a beetle infestation?",
+    answer: "The indicators of a beetle problem largely rely on the type of beetle; however, signs usually include: The wood-boring beetles create holes in timber or furniture. Carpet Beetles have the potential to destroy carpets, clothing. Pantry beetles creep on the stored food, such as flour, rice, or cereal and destroy them. Small beetle shells or larvae may be found near windows and storage places."
+  },
+  {
+    question: "What are the risks associated with beetle infestations?",
+    answer: "Beetles can cause several problems: Property damage: These beetles can cause serious damage to your property, which is made up of wood, and several beetles can destroy your carpet and fabrics. Food contamination: Pantry beetles destroy dry goods like grains, pasta and pet food. Allergies: Some beetles shed hairs and skins that can cause skin problems to individuals. Ignoring a beetle invasion can cause serious repairs and food waste."
+  },
+  {
+    question: "How can I prevent beetle infestations?",
+    answer: "You can reduce the chances of beetle invasion by following these steps: Store food in tight boxes to keep pantry pests out. Clean the carpet, mate and furniture properly so that you can remove the beetle larvae. Fill breaks and gaps of windows, doors, and the main entry. Check wood material & second-hand items before bringing them inside. Keep your home dry and allow the air to pass through, since some beetles live in damp areas."
+  },
+  {
+    question: "When should I contact a professional for beetle control?",
+    answer: "You should call a pest control expert if: The infestation is large & huge. You notice serious wood damage or multiple small holes in furniture or the surface. Pantry pests keep returning even after cleaning and storing food properly. DIY methods don't seem to work. The best pest control experts have the right products and treatments to remove beetles."
+  }
+];
+
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
   const canonicalUrl = `${baseUrl}/beetle`;
   const featuredImage = `${baseUrl}/types/ants-hero-image.jpg`; // or use your main ant image
   
-  const title = "Common Types of Ants in the US | Identification & Control Guide";
+  const title = "Centipede Removal Service, Safe & Thorough Treatment in USA";
   const description = "Discover the most common ant species found in American homes including Fire Ants, Carpenter Ants, Pavement Ants, and more. Learn identification tips and effective control methods.";
   
   return {
@@ -172,6 +197,11 @@ export default function BeetleTypesPage() {
             </Link>
           ))}
         </div>
+        <FAQSection
+  faqs={beetleFaqData}
+  title="Frequently Asked Questions About Beetles"
+  subtitle="Get answers to common questions about beetle identification, prevention, and professional control services."
+/>
       </div>
   );
 }

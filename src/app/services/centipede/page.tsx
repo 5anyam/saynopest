@@ -2,6 +2,31 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
+import FAQSection from "@/components/FAQSection";
+
+const centipedeFaqData = [
+  {
+    question: "How can I identify different types of centipedes inside homes vs outdoors?",
+    answer: "The house centipede is the most common form of centipede. They are yellowish-grey in colour. They are very fast and they have long legs. You will find large centipedes, more dark in colour, which are chiefly found under rocks, logs, and indoor centipedes are smaller, and preying upon other insects; outdoor kinds may become larger, and are fond of soil or of damp gardens."
+  },
+  {
+    question: "Why do I see centipedes more often during damp or humid weather?",
+    answer: "Centipedes like moist and damp places, and can live in humid and wet climates easily. You can easily spot them in basements, bathrooms or in the kitchens at the time of rainfall and the humid season. They are more active in moist soil, and some of them may even get into your house to find a dry yet still moist shelter."
+  },
+  {
+    question: "Are centipede bites dangerous to humans?",
+    answer: "Centipede bites are few and not dangerous to humans. Most house centipedes are so small that they cannot even bite humans. Big outdoor species can bite, but the effect is as same as a bee sting. Their bite causes less pain, a bump in the skin, and makes the skin red."
+  },
+  {
+    question: "How can I reduce centipedes naturally before calling a professional?",
+    answer: "You can lower centipede numbers with a few simple steps: Dry it out by repairing the leaks and installing. Close cracks and gaps as well as areas of entry around doors and windows. Make your house clean and without any clutter in places where insects can conceal themselves. Check for other pests, as centipedes are parasites of other pests. Mow the lawn, rake up the piles of leaves and store firewood off the house."
+  },
+  {
+    question: "Why is seeing centipedes a sign of other pest issues or moisture problems?",
+    answer: "If you spot centipedes, this means that: Your home has high moisture, which attracts them. There may be other insects near your home, like ants, cockroaches, or spiders, which centipedes eat. So, centipedes are not just a creepy themselves—they are a signal that your home may need both pest control and moisture control."
+  }
+];
+
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
@@ -165,6 +190,11 @@ export default function CentipedeTypesPage() {
             </Link>
           ))}
         </div>
+        <FAQSection 
+  faqs={centipedeFaqData}
+  title="Frequently Asked Questions About Centipedes"
+  subtitle="Get answers to common questions about centipede identification, behavior, safety concerns, and natural control methods."
+/>
         </div>
       </div>
     </>

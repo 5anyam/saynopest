@@ -2,6 +2,31 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
+import FAQSection from "@/components/FAQSection";
+
+const cockroachFaqData = [
+  {
+    question: "What types of cockroaches are commonly found in homes?",
+    answer: "In the U.S., the most common cockroaches that come in your homes are: German cockroaches, American cockroaches, Oriental cockroaches, Brown-banded cockroaches. German cockroaches are the most widely occurring indoor pests whereas the American cockroaches are larger and often located in the basements or sewers. Oriental cockroaches such as wet places, and brown-banded cockroaches are primarily found in warmer regions such as attics and kitchens."
+  },
+  {
+    question: "Why are cockroach infestations so common in the U.S.?",
+    answer: "Cockroaches live in environments where they can easily find food, water, and make their web. Homes mainly give these situations, mainly in kitchens, bathrooms, and basements. Warmer states like Florida, Texas, and California face higher cockroach activity in the year, while colder states still see invasion in heated buildings."
+  },
+  {
+    question: "What health risks are associated with cockroach infestations?",
+    answer: "The cockroaches are not only a nuisance -they can influence your health. These are carriers of bacteria such as Salmonella and E. coli that are capable of spoiling food and surfaces. Their cast off and excrements may also lead to skin complications and asthma, primarily among children and sensitive individuals."
+  },
+  {
+    question: "How can I prevent cockroach infestations?",
+    answer: "Follow these points to get rid of cockroaches: Keep your kitchen clean and remove left food. Store food in packed boxes, and do not keep pet food out full night. Remove waste regularly and use garbage bins. Fix leaks and remove water because they are attracted to moisture. Fill breaks, gaps, and entry places of doors, windows, and pipes."
+  },
+  {
+    question: "When should I contact a professional for cockroach control?",
+    answer: "If you see cockroaches during the day, identify the signs like droppings or a strong smell; it is time to call an expert. A single cockroach means there are many hiding in your home. Professional pest control experts have the products and treatments to remove the invasion safely and effectively. Understand the level of invasion and take early action to deal with this problem."
+  }
+];
+
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
@@ -185,7 +210,11 @@ export default function CockroachTypesPage() {
     </Link>
   ))}
 </div>
-
+<FAQSection 
+  faqs={cockroachFaqData}
+  title="Frequently Asked Questions About Cockroaches"
+  subtitle="Get answers to common questions about cockroach identification, health risks, prevention, and professional control services."
+/>
       </div>
 </>
   );

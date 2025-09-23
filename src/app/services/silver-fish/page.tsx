@@ -1,6 +1,31 @@
+import FAQSection from "@/components/FAQSection";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+const silverfishFaqData = [
+  {
+    question: "What conditions in a home attract silverfish infestations?",
+    answer: "Silverfish like dark, damp and humid places and all these things attract them in your house. Hiding places include basements, bathrooms, attic, laundry and kitchen areas. They also like over-crowded houses, with aged papers, and with a lot of moisture, hence it is easy to survive."
+  },
+  {
+    question: "What materials do silverfish feed on, and what damage can they do?",
+    answer: "Silverfish live on food that has high sugar and high-protein products. Their common food materials are glue, wallpaper, book bindings, old papers, clothing, cardboard and even stored pantry materials like cereal and flour. Silverfish can also ruin books, valuable documents, wallpaper and fabric, which prove valuable to the households in the long-run, and therefore, they are a big nuisance."
+  },
+  {
+    question: "Are silverfish harmful to human health or pets?",
+    answer: "No, silverfish do not harm people or pets. They do not bite or cause diseases. But they are not very pleasant and in some cases cause allergic to some sensitive people. The biggest issue with silverfish is how it causes damage to property and household materials."
+  },
+  {
+    question: "What are good preventative steps for reducing silverfish infestations?",
+    answer: "To get rid of silverfish from your house, follow these points: Keep your home dry by using dehumidifiers. Treat all the pipes, the drainage system and the surface. Keep books, papers, and clothes in packed boxes. Vacuum and dust properly to remove food. Fill gaps and slit where silverfish can enter or hide."
+  },
+  {
+    question: "How does SayNoPest treat silverfish once they're found?",
+    answer: "At SayNoPest, we use proven, family-safe methods to get rid of silverfish effectively. Our process includes: A full inspection to locate where silverfish are hiding. Targeted treatments using safe, professional-grade products. Moisture and sanitation recommendations to stop future infestations. Follow-up services if needed, to make sure your home stays pest-free. With our expert team, you can trust that silverfish won't stand a chance in your home."
+  }
+];
+
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
@@ -155,7 +180,11 @@ export default function SilverfishTypesPage() {
           They also have easy access to a food source, consisting of starches, glue, paper, and textiles. The primary causes of their invasion of the indoor areas include moisture, food supply and clutter; leaks, high humidity and food stored in an unprofessional manner render the households especially attractive to them.
           </p>
 
-          
+          <FAQSection 
+  faqs={silverfishFaqData}
+  title="Frequently Asked Questions About Silverfish"
+  subtitle="Get answers to common questions about silverfish prevention, damage control, and professional treatment services."
+/>
         </div>
       </div>
     </>

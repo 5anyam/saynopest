@@ -1,6 +1,31 @@
+import FAQSection from "@/components/FAQSection";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+const waspFaqData = [
+  {
+    question: "What types of wasps are commonly found around homes?",
+    answer: "The most common wasps you will see near our house are: Yellowjackets are harmful and mainly found near the garbage, outdoor meals, or outdoor food. Paper wasps make their nest in open, umbrella-shaped nests under shelf, decks, and porches. Hornets are big and more dangerous; they make their nest in trees and on shrubs."
+  },
+  {
+    question: "Where do wasps typically build their nests?",
+    answer: "Wasps mainly make their nests in places that are cover and safe. Common spots include: Under the roof shelf and shelters, Inside sheds, garages, & attics, In trees, bushes, & shrubs, Underground (mainly yellowjackets), Inside wall gaps or cracks around the home."
+  },
+  {
+    question: "How can I prevent wasp infestations?",
+    answer: "To control the risks of a wasp nesting around your home, follow these pointers to avoid stung: Cover garbage containers well. Wipe down food and sugar-containing drinks at the time of outdoor meals. Fill cracks and gaps in walls, & the roofline. Look at early nests in the spring season and take off small nests even before they are big enough. Do not leave pet food or bird feeders uncovered; they are a wasp attraction."
+  },
+  {
+    question: "Are wasp stings dangerous?",
+    answer: "Yes, the wasp stings are dangerous. Stings are painful and can cause redness and a bump in your skin in many people. Many people have skin problems and allergies, and this can cause serious problems for them, like not unable to breathe, dizziness, and face and swelling. Take medical help in these cases as soon as possible. A series of stings can be dangerous, mainly to children, the elderly, and pets."
+  },
+  {
+    question: "When should I contact a professional for wasp control?",
+    answer: "You should contact an expert pest control service at the time of: If you spot a large nest in your home. The nest is inside a wall, attic, & place where you can not go easily. Wasps are harmful and frequently fly near family or pets. Someone in your family has have allergy to stings."
+  }
+];
+
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
@@ -194,6 +219,11 @@ export default function WaspTypesPage() {
             </Link>
           ))}
         </div>
+        <FAQSection 
+  faqs={waspFaqData}
+  title="Frequently Asked Questions About Wasps"
+  subtitle="Get answers to common questions about wasp identification, prevention, and professional control services."
+/>
       </div>
     </>
   );
