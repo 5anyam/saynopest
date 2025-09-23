@@ -1,6 +1,31 @@
+import FAQSection from "@/components/FAQSection";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+const fleasFaqData = [
+  {
+    question: "How do fleas infest homes through pets?",
+    answer: "Fleas ride on the fur of pets and within minutes proliferate inside the home by detaching themselves into the carpets, bedding, and furniture."
+  },
+  {
+    question: "Why are flea bites concentrated on feet and ankles?",
+    answer: "Fleas are low-lying and focus on the exposed body parts which ankles and feet are among the most frequent biting areas."
+  },
+  {
+    question: "How do flea eggs and larvae survive in carpets and furniture?",
+    answer: "Flea pupae fall off the animals and lie on soft surfaces, and the larvae feed on organic debris until they get big."
+  },
+  {
+    question: "Are there natural ways to repel or reduce fleas indoors?",
+    answer: "Yes- it can be facilitated through routine vacuum cleaning, body bedding washing and natural repulsions like essential oils or diatomaceous earth."
+  },
+  {
+    question: "How does SayNoPest treat flea infestations in multi-pet homes?",
+    answer: "SayNoPest cares about the environment of pets, as well as in the apartments, applying safe solutions to the surroundings with the assurance that all life stages of fleas will be eradicated."
+  }
+];
+
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
@@ -176,6 +201,11 @@ export default function FliesTypesPage() {
           </Link>
           ))}
         </div>
+        <FAQSection 
+  faqs={fleasFaqData}
+  title="Frequently Asked Questions About Fleas"
+  subtitle="Get answers to common questions about flea infestations through pets, bite patterns, natural prevention methods, and professional treatment services."
+/>
       </div>
     </>
   );

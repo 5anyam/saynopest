@@ -1,6 +1,27 @@
+import FAQSection from "@/components/FAQSection";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+const millipedesFaqData = [
+  {
+    question: "What physical traits help identify millipedes vs other similar pests?",
+    answer: "Millipedes are cylindrically shaped and with each segment, the insect possesses two pairs of legs and moves slowly compared to centipedes."
+  },
+  {
+    question: "Why do I see millipedes indoors after heavy rain or in damp weather?",
+    answer: "In case the soil outside is very wet, then the millipedes will find refuge in the house since they are normally found in damp places."
+  },
+  {
+    question: "Do millipedes pose any health risk to humans or pets?",
+    answer: "Millipedes never bite or sting, are harmless, though some have a weak irritating juice that could be discharged on being touched."
+  },
+  {
+    question: "How can I reduce millipedes around my home naturally?",
+    answer: "Millipedes within the house can be prevented by ensuring that the areas are dry, removing shrubs, litter, and closing entry points."
+  }
+];
+
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
@@ -152,6 +173,11 @@ export default function MillipedeTypesPage() {
           </Link>
           ))}
         </div>
+        <FAQSection 
+  faqs={millipedesFaqData}
+  title="Frequently Asked Questions About Millipedes"
+  subtitle="Get answers to common questions about millipede identification, seasonal behavior, safety concerns, and natural prevention methods."
+/>
         </div>
       </div>
     </>

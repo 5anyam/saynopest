@@ -1,6 +1,31 @@
+import FAQSection from "@/components/FAQSection";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+const rodentsFaqData = [
+  {
+    question: "What health risks are associated with a rodent infestation?",
+    answer: "Rats and mice give rise to such diseases as: hantavirus, salmonella, and leptospirosis, can bring about allergies and asthma because of their droppings."
+  },
+  {
+    question: "How fast do rodent populations grow in a house?",
+    answer: "Rodent reproduction is rapid; in several months, a couple of mice can have a dozen children."
+  },
+  {
+    question: "What attracts rodents into homes, and what habitats do they prefer?",
+    answer: "Food waste, debris and heat are an attraction to rodents and in most instances they nest in the attics, basements and the wall cavities."
+  },
+  {
+    question: "Are rodent poisons safe, and what alternative treatments exist?",
+    answer: "Pets and children may become victims of poisons, thus, less harmful traps, exclusion, and professional pest control can be employed."
+  },
+  {
+    question: "How does SayNoPest address recurring rodent problems?",
+    answer: "SayNoPest implies the reinfestation prevention through the use of exclusion methods, preventing openings and around-the-clock watchfulness."
+  }
+];
+
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
@@ -165,6 +190,11 @@ export default function RodentsPage() {
       </Link>
     ))}
   </div>
+  <FAQSection 
+  faqs={rodentsFaqData}
+  title="Frequently Asked Questions About Rodents"
+  subtitle="Get answers to common questions about rodent health risks, population growth, prevention methods, and professional control services."
+/>
 </div>
 
       </div>

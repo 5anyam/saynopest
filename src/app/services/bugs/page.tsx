@@ -2,6 +2,31 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
+import FAQSection from "@/components/FAQSection";
+
+const bugsFaqData = [
+  {
+    question: "How does SayNoPest handle multi-bug infestations?",
+    answer: "SayNoPest is based on the specific treatment plans that identify the particular species of pests and apply some safe and specific treatment to the pest."
+  },
+  {
+    question: "How do bed bugs differ from other household bugs?",
+    answer: "The bed bugs are unlike other bugs, as they only feed on blood then hide behind the mattresses and furniture and bite individuals who leave itchy."
+  },
+  {
+    question: "Can water bugs or stink bugs damage property?",
+    answer: "The water bugs and the stink bugs are not generally property destroying, though are a nuisance pest, and are able to emit foul odours E. coli."
+  },
+  {
+    question: "What signs indicate a hidden bug infestation?",
+    answer: "Inappropriate feces, scabs and cracks, dusty odor, bites or unwrapped food wrappings are typical symptoms of latent infections."
+  },
+  {
+    question: "Are chemical treatments necessary for all types of bugs?",
+    answer: "It may not be always the case, some of the pests may be controlled with the help of traps, heat or even with the help of natural control, however, serious ones may require the intervention of chemicals."
+  }
+];
+
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
@@ -168,6 +193,11 @@ export default function BedBugTypesPage() {
             </Link>
           ))}
         </div>
+        <FAQSection 
+  faqs={bugsFaqData}
+  title="Frequently Asked Questions About Bugs"
+  subtitle="Get answers to common questions about bug identification, property damage risks, treatment options, and professional multi-species control services."
+/>
         </div>
       </div>
     </>

@@ -1,6 +1,31 @@
+import FAQSection from '@/components/FAQSection';
 import { Metadata } from 'next';
 import Image from "next/image";
 import Link from "next/link";
+
+const antFaqData = [
+  {
+    question: "How do ant infestations spread between rooms?",
+    answer: "Ants enter via the cracks, wall, wiring and lines of plumbing. They track odour trails which have been left by scout ants to food and water sources. One colony is able to spread nests in several rooms within a short period of time."
+  },
+  {
+    question: "What signs show ants are nesting in my home?",
+    answer: "The most common evidence is small piles of soil or shavings of wood rustling on the walls. Swarmers of winged ants there should be too. Such signs are an excellent indicator that usually there exists a nest."
+  },
+  {
+    question: "What are natural or low-chemical options for controlling ants?",
+    answer: "Vinegar, lemon juice and some of the most important oils like peppermint disrupt ant trails. The diatomaceous earth is non-toxic and makes the ants highly inactive. One can reduce the infestations by close food containers and sweeping away the crumbs."
+  },
+  {
+    question: "Do ants pose health risks or trigger allergies?",
+    answer: "Yes, ants are able to contaminate food with bacteria on their way. Some species such as fire ants provide painful stings which can be allergic. Interior infestations may increase the severity of asthma in vulnerable persons."
+  },
+  {
+    question: "How does SayNoPest handle multi-species ant infestations?",
+    answer: "SayNoPest recognizes the individual ant species prior to treatment because they need various treatment. They are a combination of target baits, nontoxic sprays and barrier treatments. Their combination is a guarantee of long-term inter-species prevention."
+  }
+];
+
 
 // Metadata generation function
 export async function generateMetadata(): Promise<Metadata> {
@@ -9,7 +34,7 @@ export async function generateMetadata(): Promise<Metadata> {
   const featuredImage = `${baseUrl}/types/ants-hero-image.jpg`; // or use your main ant image
   
   const title = "Ant Control Solutions, Targeted, Safe, Effective | SayNoPest";
-  const description = "Ant Control Solutions, Targeted, Safe, Effective | SayNoPest";
+  const description = "Eliminate ant infestations with safe, effective pest control solutions. SayNoPest helps you connect with trusted pest control providers across the USA.";
   
   return {
     title: title,
@@ -189,6 +214,11 @@ export default function AntTypesPage() {
        </Link>
         ))}
       </div>
+      <FAQSection 
+  faqs={antFaqData}
+  title="Frequently Asked Questions About Ants"
+  subtitle="Get answers to common questions about ant infestations, natural control methods, health risks, and professional treatment services."
+/>
     </div>
   );
 }
