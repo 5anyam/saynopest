@@ -9,16 +9,16 @@ import { Footer } from "@/components/footer/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Say No Pest",
-  description: "Your go to best pest control companies across U.S.",
+  title: "Best Pest Control Services & Insect Information | SayNoPest",
+  description: "SayNoPest connects you with trusted pest control providers and offers expert insights on insects, treatments, and home protection across the USA.",
   openGraph: {
     title: "Say No Pest",
     description: "Top pest control services across the U.S.",
-    url: "https://saynopest.com",
+    url: "https://www.saynopest.com",
     siteName: "Say No Pest",
     images: [
       {
-        url: "/saynopest-logo.png", // Place this image in /public
+        url: "/saynopest-logo.png",
         width: 1200,
         height: 630,
       },
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description: "Your go to best pest control companies across U.S.",
     images: ["/saynopest-logo.png"],
   },
-  metadataBase: new URL("https://saynopest.com"),
+  metadataBase: new URL("https://www.saynopest.com"),
 };
 
 export default function RootLayout({
@@ -40,6 +40,62 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // Website Schema
+  const websiteSchema = {
+    "@context": "https://schema.org/",
+    "@type": "WebSite",
+    "name": "SayNoPest",
+    "url": "https://www.saynopest.com/",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.saynopest.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  // Local Business Schema
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "SayNoPest",
+    "image": "https://www.saynopest.com/_next/image?url=%2Fsaynopest-logo.png&w=384&q=75",
+    "@id": "https://www.saynopest.com/",
+    "url": "https://www.saynopest.com/",
+    "telephone": "+121-7773-5600",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "16192 Coastal Highway",
+      "addressLocality": "Lewes",
+      "addressRegion": "DE",
+      "postalCode": "19958",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 38.7646723,
+      "longitude": -75.21184819999999
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "00:00",
+      "closes": "23:59"
+    },
+    "sameAs": [
+      "https://www.facebook.com/people/Saynopest/61575434679519/",
+      "https://www.instagram.com/saynopest/",
+      "https://www.linkedin.com/company/saynopest/"
+    ]
+  };
+
   return (
     <html lang="en">
       <head>
@@ -102,6 +158,20 @@ export default function RootLayout({
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
+
+        {/* Schema.org Structured Data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema).replace(/</g, '\\u003c'),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema).replace(/</g, '\\u003c'),
+          }}
+        />
 
         <div className="w-screen p-4 md:p-10 mx-auto bg-white">
           <Header />

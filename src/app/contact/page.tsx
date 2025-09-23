@@ -39,8 +39,8 @@ export default function Page() {
   return (
     <>
     <Head>
-        <title>Contact Say No Pest | Professional Pest Control Services</title>
-        <meta name="description" content="Get in touch with Say No Pest for professional pest control services. Contact us for quotes, consultations, and expert pest removal solutions." />
+        <title>Contact SayNoPest | Connect with Pest Control Experts</title>
+        <meta name="description" content="Contact SayNoPest to connect with pest control experts. Get assistance, ask questions, and find reliable providers for safe, effective treatments." />
         <meta name="keywords" content="contact pest control, pest control services, pest removal quote, professional extermination" />
         <link rel="canonical" href="https://www.saynopest.com/contact" />
         

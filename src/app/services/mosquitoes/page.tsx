@@ -7,8 +7,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const canonicalUrl = `${baseUrl}/mosquitoes`;
   const featuredImage = `${baseUrl}/types/ants-hero-image.jpg`; // or use your main ant image
   
-  const title = "Common Types of Ants in the US | Identification & Control Guide";
-  const description = "Discover the most common ant species found in American homes including Fire Ants, Carpenter Ants, Pavement Ants, and more. Learn identification tips and effective control methods.";
+  const title = "Mosquito Control Services, Enjoy Your Yard Again | SayNoPest";
+  const description = "SayNoPest connects you with trusted mosquito control services. Protect your family and enjoy your yard again with safe, effective treatments.";
   
   return {
     title: title,

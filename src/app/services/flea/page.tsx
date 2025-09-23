@@ -28,8 +28,8 @@ export async function generateMetadata(): Promise<Metadata> {
   const canonicalUrl = `${baseUrl}/flea`;
   const featuredImage = `${baseUrl}/types/ants-hero-image.jpg`; // or use your main ant image
   
-  const title = "Common Types of Ants in the US | Identification & Control Guide";
-  const description = "Discover the most common ant species found in American homes including Fire Ants, Carpenter Ants, Pavement Ants, and more. Learn identification tips and effective control methods.";
+  const title = "Professional Flea Treatments, Effective & Safe | SayNoPest";
+  const description = "Protect your home from fleas with safe, professional treatments. SayNoPest links you to reliable providers for effective, lasting results.";
   
   return {
     title: title,
