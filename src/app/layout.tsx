@@ -96,6 +96,55 @@ export default function RootLayout({
     ]
   };
 
+  const faqPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are termite treatment methods safe for children and pets?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, most expert termite treatments in the U.S. are made to be safe for children and pets when applied correctly. Many Licensed pest control companies use products which are approved by the Environmental Protection Agency (EPA) and follow all the strict safety guidelines. As a care, your expert may suggest keeping kids and pets away from infected areas till the products have settled."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Are there eco-friendly termite treatments?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, their are many eco-friendly options are available. Methods like baiting systems, orange oil treatments, and heat treatments are famous eco friendly treatments. The use of these treatments reduce the use of heavy chemicals and are safe for the environment & best to deal with termites. If you choose eco-friendly termite control, tell your pest control expert to know so that they can inform you the best treatments for your home."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What should I check for termites before buying a house?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Before buying a house, it's smart to look for signs of termite, such as: Mud tubes along walls or foundations, Empty or damaged wood, Small discarded wings near windows or doors, Small droppings that look like dust. It's also advised to call a expert termite inspection before booking an treatment. This inform you that home is termite-free or that any existing issues are handled properly."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do termites damage offices and commercial buildings, too?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, termites can cause serious damage to offices & commercial buildings, not just homes. Any design that contains wood—whether frames, furniture, or surface—can be at risk. Businesses many time experience expensive repairs. That's why regular check up and take preventive treatments are very important to keep your property safe."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does termite treatment last?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The best result of termite treatment depends on the type of method used. Liquid treatments can protect your home for about five to ten years, depending on soil conditions and product quality. Bait systems require ongoing checking but can provide long-term protection when maintained regularly."
+        }
+      }
+    ]
+  };
+  
+ 
+
   return (
     <html lang="en">
       <head>
@@ -121,6 +170,12 @@ export default function RootLayout({
           src="https://www.googletagmanager.com/gtag/js?id=G-8BRKYL2QR2"
           strategy="afterInteractive"
         />
+         <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify(faqPageSchema).replace(/</g, '\\u003c'),
+                }}
+                />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
@@ -145,6 +200,7 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-5PWLLD2N');
           `}
         </Script>
+        
       </head>
       <body
         className={`${inter.className} antialiased overflow-y-scroll w-full overflow-x-hidden`}
