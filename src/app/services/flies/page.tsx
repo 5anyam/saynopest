@@ -26,19 +26,34 @@ const fleasFaqData = [
   }
 ];
 
+// Generate FAQ Schema
+const generateFleasFAQSchema = () => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": fleasFaqData.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
-  const canonicalUrl = `${baseUrl}/flies`;
-  const featuredImage = `${baseUrl}/types/ants-hero-image.jpg`; // or use your main ant image
+  const canonicalUrl = `${baseUrl}/fleas`;
+  const featuredImage = `${baseUrl}/types/flea-hero-image.jpg`;
   
-  const title = "Common Types of Ants in the US | Identification & Control Guide";
-  const description = "Discover the most common ant species found in American homes including Fire Ants, Carpenter Ants, Pavement Ants, and more. Learn identification tips and effective control methods.";
+  const title = "Flea Control & Treatment Services for Pet Owners | SayNoPest";
+  const description = "Professional flea control services for homes with pets. Get effective treatment for flea infestations and protect your family and pets with expert solutions.";
   
   return {
     title: title,
     description: description,
-    keywords: "ants, ant types, fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, ant identification, pest control, ant removal, ant infestation",
+    keywords: "flea control, flea infestation, pet fleas, flea treatment, flea bites, flea removal, pest control, flea prevention",
     authors: [{ name: 'Say No Pest' }],
     creator: 'Say No Pest',
     publisher: 'Say No Pest',
@@ -54,7 +69,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: featuredImage,
           width: 1200,
           height: 630,
-          alt: "Common types of ants found in US homes - identification guide",
+          alt: "Flea control and treatment services for pet owners - identification guide",
         },
       ],
       locale: 'en_US',
@@ -93,119 +108,111 @@ export async function generateMetadata(): Promise<Metadata> {
     
     // Additional structured metadata
     other: {
-      'article:section': 'Ant Control',
-      'article:tag': 'fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, pest identification',
-      'og:image:alt': 'Guide to common ant types found in US homes',
-      'twitter:image:alt': 'Guide to common ant types found in US homes',
+      'article:section': 'Flea Control',
+      'article:tag': 'flea control, pet fleas, flea infestation, flea bites, flea prevention',
+      'og:image:alt': 'Guide to flea control and treatment for pet owners',
+      'twitter:image:alt': 'Guide to flea control and treatment for pet owners',
       // Schema.org hints
-      'schema:breadcrumb': 'Home > Pest Control > Ants > Ant Types',
+      'schema:breadcrumb': 'Home > Pest Control > Fleas > Flea Control',
       'geo:region': 'US',
       'geo:placename': 'United States',
     },
   };
 }
 
-const fliesTypes = [
+const fleaTypes = [
   {
-    name: "Black Fly",
-    image: "/types/flies/black-fly.jpg",
-    description:
-      "Recognized by white markings on its legs and a marking in the form of a lyre on the upper thorax. It spreads diseases like Zika, dengue, and yellow fever. Mostly active during the daytime.",
-      link:"https://www.saynopest.com/black-flies-saynopest/"
+    name: "Cat Flea",
+    image: "/types/fleas/cat-flea.jpg",
+    description: "The most common flea species found on both cats and dogs. Small, dark brown insects that can jump up to 8 inches vertically.",
+    link: "https://www.saynopest.com/cat-fleas/"
   },
   {
-    name: "Horse Fly",
-    image: "/types/flies/blow-fly.jpg",
-    description:
-      "Black with distinct white stripes on the legs and a white stripe down the center of its back. Known for aggressive daytime biting and spreading viruses like chikungunya, dengue, and Zika.",
-      link:"https://www.saynopest.com/horse-fly-bites-saynopest/"
+    name: "Dog Flea", 
+    image: "/types/fleas/dog-flea.jpg",
+    description: "Similar to cat fleas but slightly larger. Prefer dogs as hosts but will also feed on cats and humans when necessary.",
+    link: "https://www.saynopest.com/dog-fleas/"
   },
   {
-    name: "Cluster Fly",
-    image: "/types/flies/bottle-fly.jpg",
-    description:
-      "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains.",
-      link:"https://www.saynopest.com/cluster-flies-in-house-know-what-to-do/"
+    name: "Human Flea",
+    image: "/types/fleas/human-flea.jpg", 
+    description: "Less common today due to improved hygiene. Can live in human hair and bedding, causing itchy bites primarily on legs and feet.",
+    link: "https://www.saynopest.com/human-fleas/"
   },
   {
-    name: "House Fly",
-    image: "/types/flies/cluster-fly.jpg",
-    description:
-      "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains.",
-      link:"https://www.saynopest.com/house-flies-understand-and-control-these-common-house-pests/"
-  },
-  {
-    name: "Drain Fly",
-    image: "/types/flies/crane-fly.jpg",
-    description:
-      "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains.",
-      link:"https://www.saynopest.com/how-do-i-get-rid-of-drain-flies-overnight-saynopest/"
-  },
+    name: "Oriental Rat Flea",
+    image: "/types/fleas/rat-flea.jpg",
+    description: "Primary vector for plague transmission. Usually found on rodents but can bite humans when rodent hosts are unavailable.",
+    link: "https://www.saynopest.com/rat-fleas/"
+  }
 ];
 
-export default function FliesTypesPage() {
+export default function FleasTypesPage() {
+  const fleasFaqSchema = generateFleasFAQSchema();
+
   return (
     <>
+      {/* Schema.org FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(fleasFaqSchema).replace(/</g, '\\u003c'),
+        }}
+      />
+
       <div className="min-h-screen mt-20 p-6">
         <div className="max-w-full mx-auto mb-14 bg-white p-6 rounded-lg shadow-md">
-          <h1 className="text-2xl font-bold text-primary text-center mb-4">Flies</h1>
+          <h1 className="text-2xl font-bold text-primary text-center mb-4">Fleas</h1>
 
           <p className="text-gray-700 mb-6">
-            Flies attack places where there is leftover food or trash. You will mostly find different {" "}<b className="text-green-500">
-    <Link href="https://www.saynopest.com/7-common-types-of-flies-how-to-stop-them-saynopest"> 
-    types of flies{" "}
-    </Link></b> near dirty places. They don’t bite, but they do carry and spread diseases. It becomes essential to keep things clean as it helps keep flies away from your home.
+            Fleas are small, wingless parasites that feed on the blood of mammals and birds. They are particularly problematic for pet owners, as they can quickly infest homes and cause discomfort for both pets and humans through their itchy bites.
           </p>
 
-          <h2 className="text-xl font-semibold text-gray-800 mb-2">Physical Appearance of Flies</h2>
+          <h2 className="text-xl font-semibold text-gray-800 mb-2">Physical Appearance of Fleas</h2>
           <p className="text-gray-700 mb-6">
-            Of all the numerous species of pests, it is the flies that are the most common in the United States. Flies are small to the middle in size; they are normally 1/8 to 1/4 inches long with Gray or black bodies which are occasionally striped. Flies are a kind of pests that are hairy, have a pair of transparent wings, and large eyes that are red in color.
+            Fleas are small insects, typically 1-3mm in length, with dark brown or reddish-brown bodies. They have powerful hind legs that allow them to jump up to 8 inches vertically and 16 inches horizontally. Their bodies are flattened from side to side, making it easy for them to move through pet fur and human hair.
           </p>
 
-          <h2 className="text-xl font-semibold text-gray-800 mb-2">Habitat and Population Growth</h2>
+          <h2 className="text-xl font-semibold text-gray-800 mb-2">Flea Life Cycle and Infestation Patterns</h2>
           <p className="text-gray-700 mb-6">
-            As their habitats are very adaptable, flies can remain and multiply anywhere, from urban to rural areas, and are especially attracted to hotspots where organic matter is in plenty. Flies, by using their specialized mouthparts to either dip the liquid or to dissolve the solid food by the regurgitation of their digestive fluids, can consume a variety of foodstuff such as rotting food, garbage, animal waste, and even sugary liquids.
-          </p>
-          <p className="text-gray-700 mb-6">
-            Fly populations in the United States has increased due to the weather (heat and humidity), an increase in food waste, and there is a growth in the number of places where flies may lay their eggs – both in homes and in the localities of the business.
+            Understanding the flea life cycle is crucial for effective control. Fleas undergo complete metamorphosis with four stages: egg, larva, pupa, and adult. Adult fleas spend most of their time on their host, but eggs fall off into carpets, bedding, and furniture where they develop into larvae. This is why treating both pets and the environment is essential for successful flea control.
           </p>
 
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Health Risks and Importance of Control</h2>
           <p className="text-gray-700 mb-6">
-            Getting rid of flies such as{" "}<b className="text-green-500">
-    <Link href="https://www.saynopest.com/how-do-i-get-rid-of-drain-flies-overnight-saynopest"> drain flies 
-    </Link></b>{" "} is of primary concern to the American population due to the presence of an ideal climate for such flies, and the availability of many spots where the reproduction process of these pests can take place. Getting rid of flies in your home is essential as they are not just a botheration but have been found to be carriers of disease. They can pass several diseases to people by contaminating food and surfaces with germs of their sources of origin.
+            Fleas can transmit diseases and cause allergic reactions in both pets and humans. Heavy infestations can lead to anemia in small pets, and flea bites can become infected from scratching. Some people are highly sensitive to flea saliva, developing severe allergic reactions. Professional treatment is often necessary to completely eliminate infestations.
           </p>
 
-          <h2 className="text-xl font-semibold text-primary text-center mb-2">Types of flies</h2>
+          <h2 className="text-xl font-semibold text-primary text-center mb-2">Types of Fleas</h2>
           <p className="text-gray-700">
-            From household pests to agricultural threats, each fly species contributes in different ways to its ecosystem and have different human impact.
+            Different flea species have varying host preferences, but all can become problematic when they infest homes with pets or in areas with high rodent populations.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
-          {fliesTypes.map((type, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+          {fleaTypes.map((type, index) => (
             <Link href={type.link} key={index}>
-            <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <Image
-                src={type.image}
-                alt={type.name}
-                width={600}
-                height={400}
-                className="w-full h-60 object-cover"
-              />
-              <div className="p-2 text-center">
-                <h2 className="text-xl font-semibold text-primary mb-2">{type.name}</h2>
+              <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                <Image
+                  src={type.image}
+                  alt={type.name}
+                  width={600}
+                  height={400}
+                  className="w-full h-60 object-cover"
+                />
+                <div className="p-2 text-center">
+                  <h2 className="text-xl font-semibold text-primary mb-2">{type.name}</h2>
+                </div>
               </div>
-            </div>
-          </Link>
+            </Link>
           ))}
         </div>
+        
         <FAQSection 
-  faqs={fleasFaqData}
-  title="Frequently Asked Questions About Fleas"
-  subtitle="Get answers to common questions about flea infestations through pets, bite patterns, natural prevention methods, and professional treatment services."
-/>
+          faqs={fleasFaqData}
+          title="Frequently Asked Questions About Fleas"
+          subtitle="Get answers to common questions about flea infestations through pets, bite patterns, natural prevention methods, and professional treatment services."
+        />
       </div>
     </>
   );

@@ -3,10 +3,49 @@ import Image from "next/image";
 import Link from "next/link";
 import FAQSection from "@/components/FAQSection";
 
+const faqData = [
+  {
+    question: "Are termite treatment methods safe for children and pets?",
+    answer: "Yes, most expert termite treatments in the U.S. are made to be safe for children and pets when applied correctly. Many Licensed pest control companies use products which are approved by the Environmental Protection Agency (EPA) and follow all the strict safety guidelines. As a care, your expert may suggest keeping kids and pets away from infected areas till the products have settled."
+  },
+  {
+    question: "Are there eco-friendly termite treatments?",
+    answer: "Yes, their are many eco-friendly options are available. Methods like baiting systems, orange oil treatments, and heat treatments are famous eco friendly treatments. The use of these treatments reduce the use of heavy chemicals and are safe for the environment & best to deal with termites. If you choose eco-friendly termite control, tell your pest control expert to know so that they can inform you the best treatments for your home."
+  },
+  {
+    question: "What should I check for termites before buying a house?",
+    answer: "Before buying a house, it's smart to look for signs of termite, such as: Mud tubes along walls or foundations, Empty or damaged wood, Small discarded wings near windows or doors, Small droppings that look like dust. It's also advised to call a expert termite inspection before booking an treatment. This inform you that home is termite-free or that any existing issues are handled properly."
+  },
+  {
+    question: "Do termites damage offices and commercial buildings, too?",
+    answer: "Yes, termites can cause serious damage to offices & commercial buildings, not just homes. Any design that contains wood—whether frames, furniture, or surface—can be at risk. Businesses many time experience expensive repairs. That's why regular check up and take preventive treatments are very important to keep your property safe."
+  },
+  {
+    question: "How long does termite treatment last?",
+    answer: "The best result of termite treatment depends on the type of method used. Liquid treatments can protect your home for about five to ten years, depending on soil conditions and product quality. Bait systems require ongoing checking but can provide long-term protection when maintained regularly."
+  }
+];
+
+// Generate FAQ Schema
+const generateTermiteFAQSchema = () => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+};
+
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
   const canonicalUrl = `${baseUrl}/termites`;
-  const featuredImage = `${baseUrl}/types/ants-hero-image.jpg`; // or use your main ant image
+  const featuredImage = `${baseUrl}/types/termite-hero-image.jpg`;
   
   const title = "Termite Protection & Eradication Services in USA | SayNoPest";
   const description = "Safeguard your property with expert termite protection. SayNoPest connects you to trusted providers for fast, reliable eradication services.";
@@ -14,7 +53,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: title,
     description: description,
-    keywords: "ants, ant types, fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, ant identification, pest control, ant removal, ant infestation",
+    keywords: "termite control, subterranean termites, drywood termites, termite treatment, termite inspection, formosan termites, dampwood termites, pest control, termite protection",
     authors: [{ name: 'Say No Pest' }],
     creator: 'Say No Pest',
     publisher: 'Say No Pest',
@@ -30,7 +69,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: featuredImage,
           width: 1200,
           height: 630,
-          alt: "Common types of ants found in US homes - identification guide",
+          alt: "Termite protection and eradication services - subterranean and drywood termites guide",
         },
       ],
       locale: 'en_US',
@@ -69,12 +108,12 @@ export async function generateMetadata(): Promise<Metadata> {
     
     // Additional structured metadata
     other: {
-      'article:section': 'Ant Control',
-      'article:tag': 'fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, pest identification',
-      'og:image:alt': 'Guide to common ant types found in US homes',
-      'twitter:image:alt': 'Guide to common ant types found in US homes',
+      'article:section': 'Termite Control',
+      'article:tag': 'termite control, subterranean termites, drywood termites, termite treatment, termite inspection',
+      'og:image:alt': 'Guide to termite protection and eradication services',
+      'twitter:image:alt': 'Guide to termite protection and eradication services',
       // Schema.org hints
-      'schema:breadcrumb': 'Home > Pest Control > Ants > Ant Types',
+      'schema:breadcrumb': 'Home > Pest Control > Termites > Termite Control',
       'geo:region': 'US',
       'geo:placename': 'United States',
     },
@@ -112,32 +151,19 @@ const termiteTypes = [
   },
 ];
 
-const faqData = [
-  {
-    question: "Are termite treatment methods safe for children and pets?",
-    answer: "Yes, most expert termite treatments in the U.S. are made to be safe for children and pets when applied correctly. Many Licensed pest control companies use products which are approved by the Environmental Protection Agency (EPA) and follow all the strict safety guidelines. As a care, your expert may suggest keeping kids and pets away from infected areas till the products have settled."
-  },
-  {
-    question: "Are there eco-friendly termite treatments?",
-    answer: "Yes, their are many eco-friendly options are available. Methods like baiting systems, orange oil treatments, and heat treatments are famous eco friendly treatments. The use of these treatments reduce the use of heavy chemicals and are safe for the environment & best to deal with termites. If you choose eco-friendly termite control, tell your pest control expert to know so that they can inform you the best treatments for your home."
-  },
-  {
-    question: "What should I check for termites before buying a house?",
-    answer: "Before buying a house, it's smart to look for signs of termite, such as: Mud tubes along walls or foundations, Empty or damaged wood, Small discarded wings near windows or doors, Small droppings that look like dust. It's also advised to call a expert termite inspection before booking an treatment. This inform you that home is termite-free or that any existing issues are handled properly."
-  },
-  {
-    question: "Do termites damage offices and commercial buildings, too?",
-    answer: "Yes, termites can cause serious damage to offices & commercial buildings, not just homes. Any design that contains wood—whether frames, furniture, or surface—can be at risk. Businesses many time experience expensive repairs. That's why regular check up and take preventive treatments are very important to keep your property safe."
-  },
-  {
-    question: "How long does termite treatment last?",
-    answer: "The best result of termite treatment depends on the type of method used. Liquid treatments can protect your home for about five to ten years, depending on soil conditions and product quality. Bait systems require ongoing checking but can provide long-term protection when maintained regularly."
-  }
-];
-
 export default function TermiteTypesPage() {
+  const termiteFaqSchema = generateTermiteFAQSchema();
+
   return (
     <>
+      {/* Schema.org FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(termiteFaqSchema).replace(/</g, '\\u003c'),
+        }}
+      />
+
       <div className="min-h-screen mt-20 p-6">
         <div className="max-w-full mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
           <h1 className="text-3xl text-center font-bold text-primary mb-4">Termites</h1>

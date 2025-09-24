@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import { Metadata } from "next";
@@ -27,11 +26,26 @@ const centipedeFaqData = [
   }
 ];
 
+// Generate FAQ Schema
+const generateCentipedeFAQSchema = () => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": centipedeFaqData.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
   const canonicalUrl = `${baseUrl}/centipede`;
-  const featuredImage = `${baseUrl}/types/ants-hero-image.jpg`; // or use your main ant image
+  const featuredImage = `${baseUrl}/types/centipede-hero-image.jpg`;
   
   const title = "Centipede Removal Service, Safe & Thorough Treatment in USA";
   const description = "Protect your home from centipedes with safe, thorough removal. SayNoPest connects you to expert pest control services trusted across the USA.";
@@ -39,7 +53,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: title,
     description: description,
-    keywords: "ants, ant types, fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, ant identification, pest control, ant removal, ant infestation",
+    keywords: "centipede control, house centipedes, centipede identification, centipede removal, pest control, moisture control, centipede bites",
     authors: [{ name: 'Say No Pest' }],
     creator: 'Say No Pest',
     publisher: 'Say No Pest',
@@ -55,7 +69,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: featuredImage,
           width: 1200,
           height: 630,
-          alt: "Common types of ants found in US homes - identification guide",
+          alt: "Common types of centipedes found in US homes - identification guide",
         },
       ],
       locale: 'en_US',
@@ -94,12 +108,12 @@ export async function generateMetadata(): Promise<Metadata> {
     
     // Additional structured metadata
     other: {
-      'article:section': 'Ant Control',
-      'article:tag': 'fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, pest identification',
-      'og:image:alt': 'Guide to common ant types found in US homes',
-      'twitter:image:alt': 'Guide to common ant types found in US homes',
+      'article:section': 'Centipede Control',
+      'article:tag': 'house centipedes, centipede identification, moisture control, centipede bites, pest control',
+      'og:image:alt': 'Guide to common centipede types found in US homes',
+      'twitter:image:alt': 'Guide to common centipede types found in US homes',
       // Schema.org hints
-      'schema:breadcrumb': 'Home > Pest Control > Ants > Ant Types',
+      'schema:breadcrumb': 'Home > Pest Control > Centipedes > Centipede Types',
       'geo:region': 'US',
       'geo:placename': 'United States',
     },
@@ -124,8 +138,18 @@ const centipedeTypes = [
 ];
 
 export default function CentipedeTypesPage() {
+  const centipedeFaqSchema = generateCentipedeFAQSchema();
+
   return (
     <>
+      {/* Schema.org FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(centipedeFaqSchema).replace(/</g, '\\u003c'),
+        }}
+      />
+
       <div className="min-h-screen mt-20 p-6">
         <div className="max-w-full mx-auto mb-14">
           <h1 className="text-2xl text-center font-bold text-primary mb-4">Centipedes</h1>
@@ -190,11 +214,12 @@ export default function CentipedeTypesPage() {
             </Link>
           ))}
         </div>
+        
         <FAQSection 
-  faqs={centipedeFaqData}
-  title="Frequently Asked Questions About Centipedes"
-  subtitle="Get answers to common questions about centipede identification, behavior, safety concerns, and natural control methods."
-/>
+          faqs={centipedeFaqData}
+          title="Frequently Asked Questions About Centipedes"
+          subtitle="Get answers to common questions about centipede identification, behavior, safety concerns, and natural control methods."
+        />
         </div>
       </div>
     </>

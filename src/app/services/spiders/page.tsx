@@ -26,11 +26,26 @@ const spiderFaqData = [
   }
 ];
 
+// Generate FAQ Schema
+const generateSpiderFAQSchema = () => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": spiderFaqData.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
   const canonicalUrl = `${baseUrl}/spiders`;
-  const featuredImage = `${baseUrl}/types/ants-hero-image.jpg`; // or use your main ant image
+  const featuredImage = `${baseUrl}/types/spider-hero-image.jpg`;
   
   const title = "Spider Control & Prevention Services | SayNoPest Experts";
   const description = "SayNoPest connects you with experts for safe spider control. Eliminate infestations and prevent future issues with trusted pest services.";
@@ -38,7 +53,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: title,
     description: description,
-    keywords: "ants, ant types, fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, ant identification, pest control, ant removal, ant infestation",
+    keywords: "spider control, black widow, brown recluse, house spiders, spider identification, venomous spiders, spider bites, pest control, spider prevention",
     authors: [{ name: 'Say No Pest' }],
     creator: 'Say No Pest',
     publisher: 'Say No Pest',
@@ -54,7 +69,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: featuredImage,
           width: 1200,
           height: 630,
-          alt: "Common types of ants found in US homes - identification guide",
+          alt: "Spider identification and control services - black widow and brown recluse guide",
         },
       ],
       locale: 'en_US',
@@ -93,12 +108,12 @@ export async function generateMetadata(): Promise<Metadata> {
     
     // Additional structured metadata
     other: {
-      'article:section': 'Ant Control',
-      'article:tag': 'fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, pest identification',
-      'og:image:alt': 'Guide to common ant types found in US homes',
-      'twitter:image:alt': 'Guide to common ant types found in US homes',
+      'article:section': 'Spider Control',
+      'article:tag': 'spider control, black widow, brown recluse, house spiders, spider identification, venomous spiders',
+      'og:image:alt': 'Guide to spider identification and control services',
+      'twitter:image:alt': 'Guide to spider identification and control services',
       // Schema.org hints
-      'schema:breadcrumb': 'Home > Pest Control > Ants > Ant Types',
+      'schema:breadcrumb': 'Home > Pest Control > Spiders > Spider Control',
       'geo:region': 'US',
       'geo:placename': 'United States',
     },
@@ -165,14 +180,24 @@ const spiderTypes = [
 ];
 
 export default function SpiderTypesPage() {
+  const spiderFaqSchema = generateSpiderFAQSchema();
+
   return (
     <>
+      {/* Schema.org FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(spiderFaqSchema).replace(/</g, '\\u003c'),
+        }}
+      />
+
       <div className="min-h-screen mt-20 p-6">
         <div className="max-w-full mx-auto mb-16">
           <h1 className="text-2xl font-bold text-primary text-center mb-4">Spiders</h1>
 
           <p className="text-gray-700 mb-6">
-            Many American homes include spiders. Although most spiders aren’t dangerous, black widows and brown recluses should be handled carefully, as their bites are poisonous.
+            Many American homes include spiders. Although most spiders aren't dangerous, black widows and brown recluses should be handled carefully, as their bites are poisonous.
           </p>
 
           <h2 className="text-xl font-semibold text-gray-800 mb-2">
@@ -213,7 +238,7 @@ export default function SpiderTypesPage() {
 
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Spiders: The Silent Bug Hunters</h2>
           <p className="text-gray-700 mb-6">
-            Spiders are nature’s pest controllers. They feed on insects such as flies, mosquitoes, ants, and beetles—many of which are common in homes. While some spin webs to trap their prey, others like{" "}
+            Spiders are nature's pest controllers. They feed on insects such as flies, mosquitoes, ants, and beetles—many of which are common in homes. While some spin webs to trap their prey, others like{" "}
             <b>
               <Link href="https://www.saynopest.com/wolf-spider-natures-agile-hunter-in-american-homes">
               <span className="text-green-500"> wolf spiders </span>
@@ -257,11 +282,12 @@ export default function SpiderTypesPage() {
             </Link>
           ))}
         </div>
+        
         <FAQSection 
-  faqs={spiderFaqData}
-  title="Frequently Asked Questions About Spiders"
-  subtitle="Get answers to common questions about spider identification, prevention, and professional control services."
-/>
+          faqs={spiderFaqData}
+          title="Frequently Asked Questions About Spiders"
+          subtitle="Get answers to common questions about spider identification, prevention, and professional control services."
+        />
       </div>
     </>
   );

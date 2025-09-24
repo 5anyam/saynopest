@@ -26,19 +26,34 @@ const beetleFaqData = [
   }
 ];
 
+// Generate FAQ Schema
+const generateBeetleFAQSchema = () => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": beetleFaqData.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
   const canonicalUrl = `${baseUrl}/beetle`;
   const featuredImage = `${baseUrl}/types/ants-hero-image.jpg`; // or use your main ant image
   
-  const title = "Centipede Removal Service, Safe & Thorough Treatment in USA";
-  const description = "Discover the most common ant species found in American homes including Fire Ants, Carpenter Ants, Pavement Ants, and more. Learn identification tips and effective control methods.";
+  const title = "Beetle Control Services, Safe & Thorough Treatment in USA";
+  const description = "Professional beetle control services for carpet beetles, wood-boring beetles, and pantry beetles. Connect with trusted pest control providers across the USA.";
   
   return {
     title: title,
     description: description,
-    keywords: "ants, ant types, fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, ant identification, pest control, ant removal, ant infestation",
+    keywords: "beetle control, carpet beetles, wood-boring beetles, pantry beetles, beetle identification, pest control, beetle removal, beetle infestation",
     authors: [{ name: 'Say No Pest' }],
     creator: 'Say No Pest',
     publisher: 'Say No Pest',
@@ -54,7 +69,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: featuredImage,
           width: 1200,
           height: 630,
-          alt: "Common types of ants found in US homes - identification guide",
+          alt: "Common types of beetles found in US homes - identification guide",
         },
       ],
       locale: 'en_US',
@@ -93,12 +108,12 @@ export async function generateMetadata(): Promise<Metadata> {
     
     // Additional structured metadata
     other: {
-      'article:section': 'Ant Control',
-      'article:tag': 'fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, pest identification',
-      'og:image:alt': 'Guide to common ant types found in US homes',
-      'twitter:image:alt': 'Guide to common ant types found in US homes',
+      'article:section': 'Beetle Control',
+      'article:tag': 'carpet beetles, wood-boring beetles, pantry beetles, beetle identification, pest control',
+      'og:image:alt': 'Guide to common beetle types found in US homes',
+      'twitter:image:alt': 'Guide to common beetle types found in US homes',
       // Schema.org hints
-      'schema:breadcrumb': 'Home > Pest Control > Ants > Ant Types',
+      'schema:breadcrumb': 'Home > Pest Control > Beetles > Beetle Types',
       'geo:region': 'US',
       'geo:placename': 'United States',
     },
@@ -134,7 +149,18 @@ const beetleTypes = [
 ];
 
 export default function BeetleTypesPage() {
+  const beetleFaqSchema = generateBeetleFAQSchema();
+
   return (
+    <>
+      {/* Schema.org FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(beetleFaqSchema).replace(/</g, '\\u003c'),
+        }}
+      />
+
       <div className="min-h-screen mt-20 p-6">
         <div className="max-w-full mx-auto mb-16">
           <h1 className="text-2xl font-bold text-primary text-center mb-4">Beetles</h1>
@@ -159,7 +185,7 @@ export default function BeetleTypesPage() {
     <Link href="https://www.saynopest.com/carpet-beetle-bites-what-every-american-needs-to-know">
     carpet beetles 
     </Link>
-  </b> and Asian ladybugs, move into houses when it’s cold. Their flexibility and ability to recover from adversities are reasons why they can succeed in a lot of places, and at the same time, why they become so difficult to handle when they are in homes or crops or when they are destroying structures.
+  </b> and Asian ladybugs, move into houses when it's cold. Their flexibility and ability to recover from adversities are reasons why they can succeed in a lot of places, and at the same time, why they become so difficult to handle when they are in homes or crops or when they are destroying structures.
           </p>
 
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Beetle Infestation</h2>
@@ -173,7 +199,7 @@ export default function BeetleTypesPage() {
 
           <h2 className="text-xl font-semibold text-primary text-center mb-2">Types of Beetles</h2>
           <p className="text-gray-700 mb-6">
-            Beetles show up in all kinds of shapes, sizes, and colours, and you’ll spot them just about everywhere across the U.S.
+            Beetles show up in all kinds of shapes, sizes, and colours, and you'll spot them just about everywhere across the U.S.
           </p>
         </div>
 
@@ -197,11 +223,13 @@ export default function BeetleTypesPage() {
             </Link>
           ))}
         </div>
+        
         <FAQSection
-  faqs={beetleFaqData}
-  title="Frequently Asked Questions About Beetles"
-  subtitle="Get answers to common questions about beetle identification, prevention, and professional control services."
-/>
+          faqs={beetleFaqData}
+          title="Frequently Asked Questions About Beetles"
+          subtitle="Get answers to common questions about beetle identification, prevention, and professional control services."
+        />
       </div>
+    </>
   );
 }

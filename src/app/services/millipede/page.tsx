@@ -22,11 +22,26 @@ const millipedesFaqData = [
   }
 ];
 
+// Generate FAQ Schema
+const generateMillipedesFAQSchema = () => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": millipedesFaqData.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
   const canonicalUrl = `${baseUrl}/millipede`;
-  const featuredImage = `${baseUrl}/types/ants-hero-image.jpg`; // or use your main ant image
+  const featuredImage = `${baseUrl}/types/millipede-hero-image.jpg`;
   
   const title = "Millipede Pest Control Services | Identify & Remove Quickly ";
   const description = "Identify and remove millipedes effectively with expert help. SayNoPest links you to trusted pest control providers for fast, safe treatment.";
@@ -34,7 +49,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: title,
     description: description,
-    keywords: "ants, ant types, fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, ant identification, pest control, ant removal, ant infestation",
+    keywords: "millipede control, millipede identification, millipede vs centipede, millipede removal, moisture control, pest control, millipede infestation",
     authors: [{ name: 'Say No Pest' }],
     creator: 'Say No Pest',
     publisher: 'Say No Pest',
@@ -50,7 +65,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: featuredImage,
           width: 1200,
           height: 630,
-          alt: "Common types of ants found in US homes - identification guide",
+          alt: "Millipede identification and control services - pest control guide",
         },
       ],
       locale: 'en_US',
@@ -89,12 +104,12 @@ export async function generateMetadata(): Promise<Metadata> {
     
     // Additional structured metadata
     other: {
-      'article:section': 'Ant Control',
-      'article:tag': 'fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, pest identification',
-      'og:image:alt': 'Guide to common ant types found in US homes',
-      'twitter:image:alt': 'Guide to common ant types found in US homes',
+      'article:section': 'Millipede Control',
+      'article:tag': 'millipede identification, millipede vs centipede, moisture control, millipede removal',
+      'og:image:alt': 'Guide to millipede identification and control services',
+      'twitter:image:alt': 'Guide to millipede identification and control services',
       // Schema.org hints
-      'schema:breadcrumb': 'Home > Pest Control > Ants > Ant Types',
+      'schema:breadcrumb': 'Home > Pest Control > Millipedes > Millipede Control',
       'geo:region': 'US',
       'geo:placename': 'United States',
     },
@@ -103,7 +118,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 const millipedeTypes = [
   {
-    name: "American Gaint Millipede",
+    name: "American Giant Millipede",
     image: "/types/millipede/american-giant-millipede.jpg",
     link: "https://www.saynopest.com/american-giant-millipede-misunderstood-not-scary/"
   },
@@ -115,24 +130,34 @@ const millipedeTypes = [
 ];
 
 export default function MillipedeTypesPage() {
+  const millipedesFaqSchema = generateMillipedesFAQSchema();
+
   return (
     <>
+      {/* Schema.org FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(millipedesFaqSchema).replace(/</g, '\\u003c'),
+        }}
+      />
+
       <div className="min-h-screen mt-20 p-6">
         <div className="max-w-full mx-auto mb-16">
           <h1 className="text-2xl font-bold text-primary text-center mb-4">Millipedes</h1>
 
           <p className="text-gray-700 mb-6">
-            Millipedes are moisture-loving arthropods. They have long, segmented bodies and hundreds of legs. Though harmless, understanding their habits and habitats helps manage the infestations effectively. 
+            Millipedes are moisture-loving arthropods. They have long, segmented bodies and hundreds of legs. Though harmless, understanding their habits and habitats helps manage the infestations effectively. 
           </p>
 
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Physical Description of Millipedes</h2>
           <p className="text-gray-700 mb-6">
-            Millipedes are slow-moving arthropods. Their bodies are very long and cylindrical, in other words, they are segmented into many parts, each of which consists of two pairs of legs. In the United States, millipedes are of various sizes, from less than an inch to over four inches long, with the common North American native species (<em>Narceus americanus</em>) being one of the species that is about four inches long. Their bodies are usually black or dark gray, sometimes, however, they can be of red color or with other colored parts along the segments.  
+            Millipedes are slow-moving arthropods. Their bodies are very long and cylindrical, in other words, they are segmented into many parts, each of which consists of two pairs of legs. In the United States, millipedes are of various sizes, from less than an inch to over four inches long, with the common North American native species (<em>Narceus americanus</em>) being one of the species that is about four inches long. Their bodies are usually black or dark gray, sometimes, however, they can be of red color or with other colored parts along the segments.  
           </p>
 
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Habitat</h2>
           <p className="text-gray-700 mb-6">
-            They are often found in and under leaf litter, soil, mulch, logs and other damp areas in woods, gardens and yards. They require a lot of moisture and are commonly found in basements or crawl spaces when the weather changes. They come out at night and are active in search of food until the sun is up and they are back to their safe hideouts. 
+            They are often found in and under leaf litter, soil, mulch, logs and other damp areas in woods, gardens and yards. They require a lot of moisture and are commonly found in basements or crawl spaces when the weather changes. They come out at night and are active in search of food until the sun is up and they are back to their safe hideouts. 
           </p>
 
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Know What do Millipedes Eat</h2>
@@ -140,17 +165,17 @@ export default function MillipedeTypesPage() {
             <b className="text-green-500">
     <Link href="https://www.saynopest.com/what-do-millipedes-eat">
     what do millipedes eat?
-    </Link></b>{" "}Millipedes are decomposers. They feed on dead and decaying leaves and wood. These pests are important because they offer nutrients to the soil. These pests are important because they help return nutrients to the soil. If the diet available is not sufficient, it is then that they might feed on leaves. At the same time, they do not pose a serious threat to the stability of the environment or the safety of your home. Curled up to form a spiral shape, millipedes have an advanced defense mechanism - their bodies emit a fluid that has a very unpleasant odour and thus are avoided by their enemies. 
+    </Link></b>{" "}Millipedes are decomposers. They feed on dead and decaying leaves and wood. These pests are important because they offer nutrients to the soil. These pests are important because they help return nutrients to the soil. If the diet available is not sufficient, it is then that they might feed on leaves. At the same time, they do not pose a serious threat to the stability of the environment or the safety of your home. Curled up to form a spiral shape, millipedes have an advanced defense mechanism - their bodies emit a fluid that has a very unpleasant odour and thus are avoided by their enemies. 
           </p>
 
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Infestations and Control</h2>
           <p className="text-gray-700 mb-6">
-            One of the most significant issues with millipedes in the United States is that the infestations in moist regions increase. This is particularly problematic during the rainy season when many move in search of comfortable living spaces both inside and outside houses thus becoming a nuisance to the occupants. Accordingly, the regulation of millipede populations in the vicinity of houses is an integral part of the prevention process of the pest infestations and maintenance of comfort and hygiene. 
+            One of the most significant issues with millipedes in the United States is that the infestations in moist regions increase. This is particularly problematic during the rainy season when many move in search of comfortable living spaces both inside and outside houses thus becoming a nuisance to the occupants. Accordingly, the regulation of millipede populations in the vicinity of houses is an integral part of the prevention process of the pest infestations and maintenance of comfort and hygiene. 
           </p>
 
           <h2 className="text-xl font-semibold text-primary text-center mb-2">Types of Millipedes</h2>
           <p className="text-gray-700">
-            While generally harmless, different millipede species in the U.S. can become occasional household nuisances. 
+            While generally harmless, different millipede species in the U.S. can become occasional household nuisances. 
           </p>
         </div>
 
@@ -173,11 +198,12 @@ export default function MillipedeTypesPage() {
           </Link>
           ))}
         </div>
+        
         <FAQSection 
-  faqs={millipedesFaqData}
-  title="Frequently Asked Questions About Millipedes"
-  subtitle="Get answers to common questions about millipede identification, seasonal behavior, safety concerns, and natural prevention methods."
-/>
+          faqs={millipedesFaqData}
+          title="Frequently Asked Questions About Millipedes"
+          subtitle="Get answers to common questions about millipede identification, seasonal behavior, safety concerns, and natural prevention methods."
+        />
         </div>
       </div>
     </>

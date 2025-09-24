@@ -26,11 +26,26 @@ const waspFaqData = [
   }
 ];
 
+// Generate FAQ Schema
+const generateWaspFAQSchema = () => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": waspFaqData.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
   const canonicalUrl = `${baseUrl}/wasps`;
-  const featuredImage = `${baseUrl}/types/ants-hero-image.jpg`; // or use your main ant image
+  const featuredImage = `${baseUrl}/types/wasp-hero-image.jpg`;
   
   const title = "Wasp Nest Removal Service, Immediate & Secure | SayNoPest";
   const description = "Eliminate wasp nests quickly and safely. SayNoPest connects you with expert providers offering secure and reliable wasp control solutions.";
@@ -38,7 +53,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: title,
     description: description,
-    keywords: "ants, ant types, fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, ant identification, pest control, ant removal, ant infestation",
+    keywords: "wasp control, wasp nest removal, yellowjackets, paper wasps, hornet control, wasp stings, wasp prevention, pest control, wasp extermination",
     authors: [{ name: 'Say No Pest' }],
     creator: 'Say No Pest',
     publisher: 'Say No Pest',
@@ -54,7 +69,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: featuredImage,
           width: 1200,
           height: 630,
-          alt: "Common types of ants found in US homes - identification guide",
+          alt: "Wasp nest removal services - yellowjackets and hornet control guide",
         },
       ],
       locale: 'en_US',
@@ -93,12 +108,12 @@ export async function generateMetadata(): Promise<Metadata> {
     
     // Additional structured metadata
     other: {
-      'article:section': 'Ant Control',
-      'article:tag': 'fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, pest identification',
-      'og:image:alt': 'Guide to common ant types found in US homes',
-      'twitter:image:alt': 'Guide to common ant types found in US homes',
+      'article:section': 'Wasp Control',
+      'article:tag': 'wasp control, wasp nest removal, yellowjackets, paper wasps, hornet control, wasp stings',
+      'og:image:alt': 'Guide to wasp nest removal and control services',
+      'twitter:image:alt': 'Guide to wasp nest removal and control services',
       // Schema.org hints
-      'schema:breadcrumb': 'Home > Pest Control > Ants > Ant Types',
+      'schema:breadcrumb': 'Home > Pest Control > Wasps > Wasp Control',
       'geo:region': 'US',
       'geo:placename': 'United States',
     },
@@ -151,8 +166,18 @@ const waspTypes = [
 ];
 
 export default function WaspTypesPage() {
+  const waspFaqSchema = generateWaspFAQSchema();
+
   return (
     <>
+      {/* Schema.org FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(waspFaqSchema).replace(/</g, '\\u003c'),
+        }}
+      />
+
       <div className="min-h-screen mt-20 p-6">
         <div className="max-w-full mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
           <h1 className="text-3xl text-center font-bold text-primary mb-4">Wasp</h1>
@@ -219,11 +244,12 @@ export default function WaspTypesPage() {
             </Link>
           ))}
         </div>
+        
         <FAQSection 
-  faqs={waspFaqData}
-  title="Frequently Asked Questions About Wasps"
-  subtitle="Get answers to common questions about wasp identification, prevention, and professional control services."
-/>
+          faqs={waspFaqData}
+          title="Frequently Asked Questions About Wasps"
+          subtitle="Get answers to common questions about wasp identification, prevention, and professional control services."
+        />
       </div>
     </>
   );

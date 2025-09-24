@@ -26,19 +26,34 @@ const rodentsFaqData = [
   }
 ];
 
+// Generate FAQ Schema
+const generateRodentsFAQSchema = () => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": rodentsFaqData.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
   const canonicalUrl = `${baseUrl}/rodent`;
-  const featuredImage = `${baseUrl}/types/ants-hero-image.jpg`; // or use your main ant image
+  const featuredImage = `${baseUrl}/types/rodent-hero-image.jpg`;
   
-  const title = "Common Types of Ants in the US | Identification & Control Guide";
-  const description = "Discover the most common ant species found in American homes including Fire Ants, Carpenter Ants, Pavement Ants, and more. Learn identification tips and effective control methods.";
+  const title = "Rodent Control Services - Rats & Mice Removal | SayNoPest";
+  const description = "Professional rodent control services for rats and mice infestations. Get safe, effective removal solutions to protect your home and family from health risks.";
   
   return {
     title: title,
     description: description,
-    keywords: "ants, ant types, fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, ant identification, pest control, ant removal, ant infestation",
+    keywords: "rodent control, rat removal, mice control, rodent infestation, hantavirus, rodent diseases, pest control, rodent prevention",
     authors: [{ name: 'Say No Pest' }],
     creator: 'Say No Pest',
     publisher: 'Say No Pest',
@@ -54,7 +69,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: featuredImage,
           width: 1200,
           height: 630,
-          alt: "Common types of ants found in US homes - identification guide",
+          alt: "Rodent control services for rats and mice - health risks and removal guide",
         },
       ],
       locale: 'en_US',
@@ -93,12 +108,12 @@ export async function generateMetadata(): Promise<Metadata> {
     
     // Additional structured metadata
     other: {
-      'article:section': 'Ant Control',
-      'article:tag': 'fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, pest identification',
-      'og:image:alt': 'Guide to common ant types found in US homes',
-      'twitter:image:alt': 'Guide to common ant types found in US homes',
+      'article:section': 'Rodent Control',
+      'article:tag': 'rodent control, rat removal, mice control, hantavirus, rodent diseases, pest prevention',
+      'og:image:alt': 'Guide to rodent control services and health risks',
+      'twitter:image:alt': 'Guide to rodent control services and health risks',
       // Schema.org hints
-      'schema:breadcrumb': 'Home > Pest Control > Ants > Ant Types',
+      'schema:breadcrumb': 'Home > Pest Control > Rodents > Rodent Control',
       'geo:region': 'US',
       'geo:placename': 'United States',
     },
@@ -109,20 +124,30 @@ const miceTypes = [
   {
     name: "Rat",
     image: "https://static.saynopest.com/wp-content/uploads/2025/07/rat.jpg",
-    description: "These termites build large underground colonies and require moist environments. They commonly enter homes through soil contact or foundation cracks.",
+    description: "Large rodents that can carry serious diseases like hantavirus and leptospirosis. They commonly enter homes through small openings and can cause structural damage.",
     link: "https://www.saynopest.com/how-to-get-rid-of-rats-effective-solutions",
   },
   {
     name: "Mice",
     image: "https://static.saynopest.com/wp-content/uploads/2025/07/mice.jpg",
-    description: "Highly aggressive and destructive, Formosan termites can build nests underground or in walls and attics if moisture is available.",
+    description: "Small, agile rodents that reproduce rapidly and can spread diseases through contaminated food and surfaces. They prefer warm, hidden areas for nesting.",
     link: "https://www.saynopest.com/types-of-house-mice-in-the-u-s",
   }
 ];
 
 export default function RodentsPage() {
+  const rodentsFaqSchema = generateRodentsFAQSchema();
+
   return (
     <>
+      {/* Schema.org FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(rodentsFaqSchema).replace(/</g, '\\u003c'),
+        }}
+      />
+
       <div className="min-h-screen mt-20 p-6">
         <div className="max-w-full mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
           <h1 className="text-2xl text-center font-bold text-primary mb-4">Rodents</h1>
@@ -172,33 +197,32 @@ export default function RodentsPage() {
         </div>
 
         <div className="flex justify-center">
-  <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
-    {miceTypes.map((type, index) => (
-      <Link href={type.link} key={index}>
-        <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 max-w-sm">
-          <Image
-            src={type.image}
-            alt={type.name}
-            width={600}
-            height={400}
-            className="w-full h-60 object-cover"
-          />
-          <div className="p-2 text-center">
-            <h2 className="text-xl font-semibold text-primary mb-2">{type.name}</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+            {miceTypes.map((type, index) => (
+              <Link href={type.link} key={index}>
+                <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 max-w-sm">
+                  <Image
+                    src={type.image}
+                    alt={type.name}
+                    width={600}
+                    height={400}
+                    className="w-full h-60 object-cover"
+                  />
+                  <div className="p-2 text-center">
+                    <h2 className="text-xl font-semibold text-primary mb-2">{type.name}</h2>
+                  </div>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
-      </Link>
-    ))}
-  </div>
-  <FAQSection 
-  faqs={rodentsFaqData}
-  title="Frequently Asked Questions About Rodents"
-  subtitle="Get answers to common questions about rodent health risks, population growth, prevention methods, and professional control services."
-/>
-</div>
-
+        
+        <FAQSection 
+          faqs={rodentsFaqData}
+          title="Frequently Asked Questions About Rodents"
+          subtitle="Get answers to common questions about rodent health risks, population growth, prevention methods, and professional control services."
+        />
       </div>
     </>
   );
 }
-

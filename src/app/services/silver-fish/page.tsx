@@ -26,11 +26,26 @@ const silverfishFaqData = [
   }
 ];
 
+// Generate FAQ Schema
+const generateSilverfishFAQSchema = () => {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": silverfishFaqData.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+};
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
   const canonicalUrl = `${baseUrl}/silver-fish`;
-  const featuredImage = `${baseUrl}/types/ants-hero-image.jpg`; // or use your main ant image
+  const featuredImage = `${baseUrl}/types/silverfish-hero-image.jpg`;
   
   const title = "Silverfish Pest Treatment Services | Protection Guaranteed";
   const description = "Remove silverfish with expert treatment services. SayNoPest connects you to trusted providers ensuring safe, lasting home protection.";
@@ -38,7 +53,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: title,
     description: description,
-    keywords: "ants, ant types, fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, ant identification, pest control, ant removal, ant infestation",
+    keywords: "silverfish control, silverfish infestation, silverfish damage, moisture control, book damage, wallpaper damage, pest control, silverfish prevention",
     authors: [{ name: 'Say No Pest' }],
     creator: 'Say No Pest',
     publisher: 'Say No Pest',
@@ -54,7 +69,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: featuredImage,
           width: 1200,
           height: 630,
-          alt: "Common types of ants found in US homes - identification guide",
+          alt: "Silverfish pest control services - damage prevention and treatment guide",
         },
       ],
       locale: 'en_US',
@@ -93,12 +108,12 @@ export async function generateMetadata(): Promise<Metadata> {
     
     // Additional structured metadata
     other: {
-      'article:section': 'Ant Control',
-      'article:tag': 'fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, pest identification',
-      'og:image:alt': 'Guide to common ant types found in US homes',
-      'twitter:image:alt': 'Guide to common ant types found in US homes',
+      'article:section': 'Silverfish Control',
+      'article:tag': 'silverfish control, silverfish damage, moisture control, book damage, wallpaper damage',
+      'og:image:alt': 'Guide to silverfish pest control and damage prevention',
+      'twitter:image:alt': 'Guide to silverfish pest control and damage prevention',
       // Schema.org hints
-      'schema:breadcrumb': 'Home > Pest Control > Ants > Ant Types',
+      'schema:breadcrumb': 'Home > Pest Control > Silverfish > Silverfish Control',
       'geo:region': 'US',
       'geo:placename': 'United States',
     },
@@ -115,20 +130,29 @@ const silverfishTypes = [
 ];
 
 export default function SilverfishTypesPage() {
+  const silverfishFaqSchema = generateSilverfishFAQSchema();
+
   return (
     <>
+      {/* Schema.org FAQPage JSON-LD */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(silverfishFaqSchema).replace(/</g, '\\u003c'),
+        }}
+      />
+
       <div className="min-h-screen mt-20 p-6">
         <div className="max-w-full mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
           <h1 className="text-3xl text-center font-bold text-primary mb-4">Silverfish</h1>
 
           <p className="text-gray-700 mb-6">
-            Silverfish get their name from being small, having no wings and moving so quickly you might think they’re swimming. The dampness and dark of your house can make these insects hide and quietly ruin your property.
+            Silverfish get their name from being small, having no wings and moving so quickly you might think they're swimming. The dampness and dark of your house can make these insects hide and quietly ruin your property.
           </p>
           <h2 className="text-xl font-semibold text-gray-800 mb-2">What are Silverfish?</h2>
           <p className="text-gray-700 mb-6">
             Silverfish are very small, without wings, and they look and move like fish—earning their name from being silver and gray. Their bodies typically measure 1/2 to 3/4 inches, are slender, flat, and shaped like a carrot or tiny fish. They have long antennae at the front and three tail-like extensions at the back. Their metallic scales make them easily recognizable. Silverfish are nocturnal pests that prefer dark areas and typically hide in damp places such as bathrooms, basements, attics, kitchens, and laundry rooms.
           </p>
-
 
            {/* Now, the paragraph that should appear just beside the image */}
             <div className="flex flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden p-6 gap-6">
@@ -161,7 +185,7 @@ export default function SilverfishTypesPage() {
             <b className="text-green-500">
               <Link href="https://www.saynopest.com/where-do-silverfish-come-from-understanding-them">silverfish diet</Link>
             </b>{" "}
-            includes starchy materials like paper, books, wallpaper, cardboard, glue, textiles, and even dried foods such as flour, cereal, and pasta. They can also feed on synthetic fabrics and, occasionally, dead insects. While silverfish don’t bite or transmit disease, they can cause significant damage to books, important documents, clothes, and food supplies.
+            includes starchy materials like paper, books, wallpaper, cardboard, glue, textiles, and even dried foods such as flour, cereal, and pasta. They can also feed on synthetic fabrics and, occasionally, dead insects. While silverfish don't bite or transmit disease, they can cause significant damage to books, important documents, clothes, and food supplies.
           </p>
               </div>
             </div>
@@ -171,7 +195,7 @@ export default function SilverfishTypesPage() {
             <b className="text-green-500">
               <Link href="https://www.saynopest.com/where-do-silverfish-come-from-understanding-them">silverfish infestation</Link>
             </b>{" "}
-            due to high humidity and ample food sources. Although silverfish aren’t harmful to people or pets, they can contaminate food, destroy valuables, and trigger allergies through their shed scales and droppings.
+            due to high humidity and ample food sources. Although silverfish aren't harmful to people or pets, they can contaminate food, destroy valuables, and trigger allergies through their shed scales and droppings.
           </p>
 
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Where do silverfish come from</h2>
@@ -181,10 +205,10 @@ export default function SilverfishTypesPage() {
           </p>
 
           <FAQSection 
-  faqs={silverfishFaqData}
-  title="Frequently Asked Questions About Silverfish"
-  subtitle="Get answers to common questions about silverfish prevention, damage control, and professional treatment services."
-/>
+            faqs={silverfishFaqData}
+            title="Frequently Asked Questions About Silverfish"
+            subtitle="Get answers to common questions about silverfish prevention, damage control, and professional treatment services."
+          />
         </div>
       </div>
     </>
