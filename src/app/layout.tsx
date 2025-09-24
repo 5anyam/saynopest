@@ -175,7 +175,7 @@ export default function RootLayout({
             dangerouslySetInnerHTML={{
               __html: JSON.stringify(faqPageSchema).replace(/</g, '\\u003c'),
                 }}
-                />
+              />
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];

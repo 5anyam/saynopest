@@ -8,11 +8,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = process.env.WORDPRESS_URL || 'https://www.saynopest.com';
   
   try {
-    // Read the sitemap file
-    const sitemapPath = path.join(process.cwd(), 'Saynopes New Sitemap.txt');
+    // Read from public directory
+    const sitemapPath = path.join(process.cwd(), 'public', 'sitemap-data.txt');
     const sitemapContent = fs.readFileSync(sitemapPath, 'utf8');
 
-    // Parse the XML content
+    // Rest of your parsing logic remains the same...
     const urlBlocks = sitemapContent.match(/<url>[\s\S]*?<\/url>/g) || [];
     
     const sitemapEntries: MetadataRoute.Sitemap = urlBlocks.map((block) => {
@@ -38,25 +38,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   } catch (error) {
     console.error('Error reading sitemap file:', error);
     
-    // Fallback to basic static pages if file reading fails
+    // Your fallback code...
     return [
       { 
         url: `${baseUrl}/`, 
         lastModified: new Date(), 
-        changeFrequency: 'yearly', 
+        changeFrequency: 'yearly' as const, 
         priority: 1 
-      },
-      { 
-        url: `${baseUrl}/about`, 
-        lastModified: new Date(), 
-        changeFrequency: 'monthly', 
-        priority: 0.8 
-      },
-      { 
-        url: `${baseUrl}/contact`, 
-        lastModified: new Date(), 
-        changeFrequency: 'monthly', 
-        priority: 0.8 
       },
     ];
   }
