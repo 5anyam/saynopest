@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { db } from '../lib/firebase';
 import { doc, collection, addDoc } from 'firebase/firestore';
 
@@ -11,22 +11,36 @@ export default function EstimateModal() {
     phone1: '', phone2: '', phone3: '',
     service: '', comments: '',
   });
+  
+  // Use ref to prevent multiple executions
+  const hasInitialized = useRef(false);
 
   // Auto-show modal logic
   useEffect(() => {
+    // Prevent multiple executions
+    if (hasInitialized.current) return;
+    
     // Check if user has already seen the modal
     const hasSeenModal = localStorage.getItem('hasSeenEstimateModal');
     
     if (!hasSeenModal) {
-      // Show modal after 10 seconds for first-time visitors
+      // Show modal after 5 seconds for first-time visitors
       const timer = setTimeout(() => {
         setShowModal(true);
         // Mark that user has seen the modal
         localStorage.setItem('hasSeenEstimateModal', 'true');
-      }, 10000); // 10 seconds
+      }, 5000); // 5 seconds
+
+      // Mark as initialized
+      hasInitialized.current = true;
 
       // Cleanup timer if component unmounts
-      return () => clearTimeout(timer);
+      return () => {
+        clearTimeout(timer);
+      };
+    } else {
+      // Mark as initialized even if modal was already seen
+      hasInitialized.current = true;
     }
   }, []);
 
@@ -38,7 +52,7 @@ export default function EstimateModal() {
 
   const handleSubmit = async () => {
     const phone = `${formData.phone1}-${formData.phone2}-${formData.phone3}`;
-    const selectedService = formData.name.trim(); // Changed from service to name as per your validation
+    const selectedService = formData.name.trim();
 
     if (!selectedService) {
       alert('Name is required to submit the form.');

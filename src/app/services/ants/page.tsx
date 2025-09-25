@@ -46,7 +46,7 @@ const generateFAQSchema = () => {
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
   const canonicalUrl = `${baseUrl}/ants`;
-  const featuredImage = `${baseUrl}/types/ants-hero-image.jpg`; // or use your main ant image
+  const featuredImage = `${baseUrl}/types/ants-hero-image.jpg`;
   
   const title = "Ant Control Solutions, Targeted, Safe, Effective | SayNoPest";
   const description = "Eliminate ant infestations with safe, effective pest control solutions. SayNoPest helps you connect with trusted pest control providers across the USA.";
@@ -127,7 +127,7 @@ const antTypes = [
     name: "Fire Ant",
     image: "/types/grease-ants.jpg",
     description:
-      "Twig ants are often found nesting in dead branches and twigs. While not typically aggressive, they can invade homes near wooded areas or gardens.",
+      "Known for their aggressive nature and painful stings, fire ants build large mounds in yards and can pose serious health risks, especially to children and pets.",
     link: "https://www.saynopest.com/fire-ants-vs-red-ants-saynopest/"
   },
   {
@@ -141,14 +141,14 @@ const antTypes = [
     name: "Argentine Ant",
     image: "https://static.saynopest.com/wp-content/uploads/2025/07/ants.jpg",
     description:
-      "Army ants are nomadic and known for their massive swarms. While less common in the U.S., they pose a risk due to their aggressive foraging behavior.",
+      "Highly invasive species that form massive super-colonies. They're particularly common in California and can quickly overwhelm native ant species.",
     link: "https://www.saynopest.com/california-argentine-ants-saynopest/"
   },
   {
     name: "Carpenter Ant",
     image: "/types/carpenter-ant.jpg",
     description:
-      "Often seen around sidewalks and driveways, pavement ants can enter buildings in search of food, especially sugary substances and grease.",
+      "Large black ants that tunnel through wood to create their nests. Unlike termites, they don't eat wood but can cause significant structural damage.",
     link: "https://www.saynopest.com/carpenter-ants-vs-black-ants-saynopest/"
   },
   {
@@ -162,7 +162,7 @@ const antTypes = [
     name: "Army Ant",
     image: "/types/army-ant.jpg",
     description:
-      "Often seen around sidewalks and driveways, pavement ants can enter buildings in search of food, especially sugary substances and grease.",
+      "Army ants are nomadic and known for their massive swarms. While less common in the U.S., they pose a risk due to their aggressive foraging behavior.",
     link: "https://www.saynopest.com/army-ant-bites-saynopest/"
   }
 ];
