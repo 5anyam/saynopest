@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import { db } from '../lib/firebase';
 import { doc, collection, addDoc } from 'firebase/firestore';
 
@@ -11,38 +11,40 @@ export default function EstimateModal() {
     phone1: '', phone2: '', phone3: '',
     service: '', comments: '',
   });
-  
-  // Use ref to prevent multiple executions
-  const hasInitialized = useRef(false);
 
-  // Auto-show modal logic
+  // Auto-show modal logic with sessionStorage to prevent duplicates
   useEffect(() => {
-    // Prevent multiple executions
-    if (hasInitialized.current) return;
+    // Early return if not in browser
+    if (typeof window === 'undefined') return;
     
-    // Check if user has already seen the modal
     const hasSeenModal = localStorage.getItem('hasSeenEstimateModal');
+    const isProcessingModal = sessionStorage.getItem('isProcessingModal');
     
-    if (!hasSeenModal) {
-      // Show modal after 5 seconds for first-time visitors
+    // Only proceed if user hasn't seen modal and we're not already processing
+    if (!hasSeenModal && !isProcessingModal) {
+      // Mark as processing immediately to prevent duplicate execution
+      sessionStorage.setItem('isProcessingModal', 'true');
+      
       const timer = setTimeout(() => {
-        setShowModal(true);
-        // Mark that user has seen the modal
-        localStorage.setItem('hasSeenEstimateModal', 'true');
+        // Double check before showing (in case multiple useEffects fire)
+        const stillProcessing = sessionStorage.getItem('isProcessingModal');
+        if (stillProcessing) {
+          setShowModal(true);
+          localStorage.setItem('hasSeenEstimateModal', 'true');
+          sessionStorage.removeItem('isProcessingModal');
+        }
       }, 5000); // 5 seconds
 
-      // Mark as initialized
-      hasInitialized.current = true;
-
-      // Cleanup timer if component unmounts
+      // Cleanup function
       return () => {
         clearTimeout(timer);
+        // Only remove processing flag if timer was cleared before execution
+        if (sessionStorage.getItem('isProcessingModal')) {
+          sessionStorage.removeItem('isProcessingModal');
+        }
       };
-    } else {
-      // Mark as initialized even if modal was already seen
-      hasInitialized.current = true;
     }
-  }, []);
+  }, []); // Empty dependency array
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -60,10 +62,7 @@ export default function EstimateModal() {
     }
 
     try {
-      // Create a reference to the document: /Bookings/{userName}
       const userDocRef = doc(db, "Bookings", selectedService);
-
-      // Add a new entry under the subcollection: /Bookings/{userName}/submissions
       await addDoc(collection(userDocRef, "submissions"), {
         name: formData.name,
         email: formData.email,
@@ -90,7 +89,6 @@ export default function EstimateModal() {
 
   return (
     <div>
-      {/* Optional: Keep the manual trigger button */}
       <button
         onClick={() => setShowModal(true)}
         className="px-6 py-3 bg-primary text-white rounded-md hover:bg-green-700"
