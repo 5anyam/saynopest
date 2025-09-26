@@ -3,35 +3,35 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-const fleasFaqData = [
+const fliesFaqData = [
   {
-    question: "How do fleas infest homes through pets?",
-    answer: "Fleas ride on the fur of pets and within minutes proliferate inside the home by detaching themselves into the carpets, bedding, and furniture."
+    question: "What are the most common fly species infesting homes in the U.S.?",
+    answer: "Fruit flies, cluster flies, drain flies and house flies are the most widespread varieties in the U.S. where they are found indoors."
   },
   {
-    question: "Why are flea bites concentrated on feet and ankles?",
-    answer: "Fleas are low-lying and focus on the exposed body parts which ankles and feet are among the most frequent biting areas."
+    question: "How do flies enter homes, and why are they attracted?",
+    answer: "Fly can enter the building using open doors, windows, and cracks and flies are drawn to food waste, moisture, and organic substances. Any hole or broken screens can give them access, and it is necessary to close the points of access and keep them clean."
   },
   {
-    question: "How do flea eggs and larvae survive in carpets and furniture?",
-    answer: "Flea pupae fall off the animals and lie on soft surfaces, and the larvae feed on organic debris until they get big."
+    question: "What health risks do flies pose to humans?",
+    answer: "Flies can impregnate food and surfaces, therefore resulting in diseases like food poisoning or diarrhea. They are able to transfer junk or feces to your food contaminating it, thus putting you in danger of infections."
   },
   {
-    question: "Are there natural ways to repel or reduce fleas indoors?",
-    answer: "Yes- it can be facilitated through routine vacuum cleaning, body bedding washing and natural repulsions like essential oils or diatomaceous earth."
+    question: "How can I prevent fly infestations in my home?",
+    answer: "Close garbage, clean up drains, food kept, and door and window screens helping to block entry. Fly breeding grounds can also be reduced by cleaning up the hidden places regularly like under appliances."
   },
   {
-    question: "How does SayNoPest treat flea infestations in multi-pet homes?",
-    answer: "SayNoPest cares about the environment of pets, as well as in the apartments, applying safe solutions to the surroundings with the assurance that all life stages of fleas will be eradicated."
+    question: "When should I contact a professional for fly control?",
+    answer: "When flies keep returning even when they have been prevented or when it appears that flies are considerable in number, one is supposed to seek the assistance of the professionals. Professionals have the opportunity to determine the origin of the infestation and implement specific remedies that are more efficient compared to domestic ones."
   }
 ];
 
 // Generate FAQ Schema
-const generateFleasFAQSchema = () => {
+const generateFliesFAQSchema = () => {
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": fleasFaqData.map(faq => ({
+    "mainEntity": fliesFaqData.map(faq => ({
       "@type": "Question",
       "name": faq.question,
       "acceptedAnswer": {
@@ -44,16 +44,16 @@ const generateFleasFAQSchema = () => {
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
-  const canonicalUrl = `${baseUrl}/fleas`;
-  const featuredImage = `${baseUrl}/types/flea-hero-image.jpg`;
+  const canonicalUrl = `${baseUrl}/flies`;
+  const featuredImage = `${baseUrl}/types/flies-hero-image.jpg`;
   
-  const title = "Flea Control & Treatment Services for Pet Owners | SayNoPest";
-  const description = "Professional flea control services for homes with pets. Get effective treatment for flea infestations and protect your family and pets with expert solutions.";
+  const title = "Fly Control & Treatment Services for Homes | SayNoPest";
+  const description = "Professional fly control services for homes and businesses. Get effective treatment for fly infestations including house flies, drain flies, and fruit flies with expert solutions.";
   
   return {
     title: title,
     description: description,
-    keywords: "flea control, flea infestation, pet fleas, flea treatment, flea bites, flea removal, pest control, flea prevention",
+    keywords: "fly control, fly infestation, house flies, fruit flies, drain flies, fly treatment, fly removal, pest control, fly prevention",
     authors: [{ name: 'Say No Pest' }],
     creator: 'Say No Pest',
     publisher: 'Say No Pest',
@@ -69,7 +69,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: featuredImage,
           width: 1200,
           height: 630,
-          alt: "Flea control and treatment services for pet owners - identification guide",
+          alt: "Fly control and treatment services - identification guide",
         },
       ],
       locale: 'en_US',
@@ -108,47 +108,47 @@ export async function generateMetadata(): Promise<Metadata> {
     
     // Additional structured metadata
     other: {
-      'article:section': 'Flea Control',
-      'article:tag': 'flea control, pet fleas, flea infestation, flea bites, flea prevention',
-      'og:image:alt': 'Guide to flea control and treatment for pet owners',
-      'twitter:image:alt': 'Guide to flea control and treatment for pet owners',
+      'article:section': 'Fly Control',
+      'article:tag': 'fly control, house flies, fruit flies, drain flies, fly prevention',
+      'og:image:alt': 'Guide to fly control and treatment services',
+      'twitter:image:alt': 'Guide to fly control and treatment services',
       // Schema.org hints
-      'schema:breadcrumb': 'Home > Pest Control > Fleas > Flea Control',
+      'schema:breadcrumb': 'Home > Pest Control > Flies > Fly Control',
       'geo:region': 'US',
       'geo:placename': 'United States',
     },
   };
 }
 
-const fleaTypes = [
+const flyTypes = [
   {
-    name: "Cat Flea",
-    image: "/types/fleas/cat-flea.jpg",
-    description: "The most common flea species found on both cats and dogs. Small, dark brown insects that can jump up to 8 inches vertically.",
-    link: "https://www.saynopest.com/cat-fleas/"
+    name: "House Fly",
+    image: "/types/flies/house-fly.jpg",
+    description: "The most common fly species found in homes. Gray or black bodies that feed on garbage, food waste, and organic matter.",
+    link: "https://www.saynopest.com/how-to-get-rid-of-house-flies/"
   },
   {
-    name: "Dog Flea", 
-    image: "/types/fleas/dog-flea.jpg",
-    description: "Similar to cat fleas but slightly larger. Prefer dogs as hosts but will also feed on cats and humans when necessary.",
-    link: "https://www.saynopest.com/dog-fleas/"
+    name: "Fruit Fly", 
+    image: "/types/flies/fruit-fly.jpg",
+    description: "Small flies attracted to overripe fruits and sugary substances. Commonly found in kitchens and around food storage areas.",
+    link: "https://www.saynopest.com/fruit-flies/"
   },
   {
-    name: "Human Flea",
-    image: "/types/fleas/human-flea.jpg", 
-    description: "Less common today due to improved hygiene. Can live in human hair and bedding, causing itchy bites primarily on legs and feet.",
-    link: "https://www.saynopest.com/human-fleas/"
+    name: "Drain Fly",
+    image: "/types/flies/drain-fly.jpg", 
+    description: "Small, fuzzy flies that breed in drains and sewers. Often found in bathrooms and areas with standing water or organic buildup.",
+    link: "https://www.saynopest.com/how-do-i-get-rid-of-drain-flies-overnight-saynopest"
   },
   {
-    name: "Oriental Rat Flea",
-    image: "/types/fleas/rat-flea.jpg",
-    description: "Primary vector for plague transmission. Usually found on rodents but can bite humans when rodent hosts are unavailable.",
-    link: "https://www.saynopest.com/rat-fleas/"
+    name: "Cluster Fly",
+    image: "/types/flies/cluster-fly.jpg",
+    description: "Larger flies that gather in large numbers, especially during fall. They seek shelter in homes for overwintering.",
+    link: "https://www.saynopest.com/cluster-flies-in-house-know-what-to-do"
   }
 ];
 
-export default function FleasTypesPage() {
-  const fleasFaqSchema = generateFleasFAQSchema();
+export default function FliesTypesPage() {
+  const fliesFaqSchema = generateFliesFAQSchema();
 
   return (
     <>
@@ -156,41 +156,49 @@ export default function FleasTypesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(fleasFaqSchema).replace(/</g, '\\u003c'),
+          __html: JSON.stringify(fliesFaqSchema).replace(/</g, '\\u003c'),
         }}
       />
 
       <div className="min-h-screen mt-20 p-6">
         <div className="max-w-full mx-auto mb-14 bg-white p-6 rounded-lg shadow-md">
-          <h1 className="text-2xl font-bold text-primary text-center mb-4">Fleas</h1>
+          <h1 className="text-2xl font-bold text-primary text-center mb-4">Flies</h1>
 
           <p className="text-gray-700 mb-6">
-            Fleas are small, wingless parasites that feed on the blood of mammals and birds. They are particularly problematic for pet owners, as they can quickly infest homes and cause discomfort for both pets and humans through their itchy bites.
+            Flies attack places where there is leftover food or trash. You will mostly find different{" "}
+            <Link href="https://www.saynopest.com/7-common-types-of-flies-how-to-stop-them-saynopest" className="text-green-500 font-semibold">
+              types of flies
+            </Link>{" "}
+            near dirty places. They do not bite, but they do carry and spread diseases. It becomes essential to keep things clean as it helps keep flies away from your home.
           </p>
 
-          <h2 className="text-xl font-semibold text-gray-800 mb-2">Physical Appearance of Fleas</h2>
+          <h2 className="text-xl font-semibold text-gray-800 mb-2">Physical Appearance of Flies</h2>
           <p className="text-gray-700 mb-6">
-            Fleas are small insects, typically 1-3mm in length, with dark brown or reddish-brown bodies. They have powerful hind legs that allow them to jump up to 8 inches vertically and 16 inches horizontally. Their bodies are flattened from side to side, making it easy for them to move through pet fur and human hair.
+            Of all the numerous species of pests, it is the flies that are the most common in the United States. Flies are small to the middle in size; they are normally 1/8 to 1/4 inches long with Gray or black bodies which are occasionally striped. Flies are a kind of pests that are hairy, have a pair of transparent wings, and large eyes that are red in color.
           </p>
 
-          <h2 className="text-xl font-semibold text-gray-800 mb-2">Flea Life Cycle and Infestation Patterns</h2>
+          <h2 className="text-xl font-semibold text-gray-800 mb-2">Habitat and Population Growth</h2>
           <p className="text-gray-700 mb-6">
-            Understanding the flea life cycle is crucial for effective control. Fleas undergo complete metamorphosis with four stages: egg, larva, pupa, and adult. Adult fleas spend most of their time on their host, but eggs fall off into carpets, bedding, and furniture where they develop into larvae. This is why treating both pets and the environment is essential for successful flea control.
+            As their habitats are very adaptable, flies can remain and multiply anywhere, from urban to rural areas, and are especially attracted to hotspots where organic matter is in plenty. Flies, by using their specialized mouthparts to either dip the liquid or to dissolve the solid food by the regurgitation of their digestive fluids, can consume a variety of foodstuff such as rotting food, garbage, animal waste, and even sugary liquids. Fly populations in the United States has increased due to the weather (heat and humidity), an increase in food waste, and there is a growth in the number of places where flies may lay their eggs – both in homes and in the localities of the business.
           </p>
 
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Health Risks and Importance of Control</h2>
           <p className="text-gray-700 mb-6">
-            Fleas can transmit diseases and cause allergic reactions in both pets and humans. Heavy infestations can lead to anemia in small pets, and flea bites can become infected from scratching. Some people are highly sensitive to flea saliva, developing severe allergic reactions. Professional treatment is often necessary to completely eliminate infestations.
+            Getting rid of flies such as{" "}
+            <Link href="https://www.saynopest.com/how-do-i-get-rid-of-drain-flies-overnight-saynopest" className="text-green-500 font-semibold">
+              drain flies
+            </Link>{" "}
+            is of primary concern to the American population due to the presence of an ideal climate for such flies, and the availability of many spots where the reproduction process of these pests can take place. Getting rid of flies in your home is essential as they are not just a botheration but have been found to be carriers of disease. They can pass several diseases to people by contaminating food and surfaces with germs of their sources of origin.
           </p>
 
-          <h2 className="text-xl font-semibold text-primary text-center mb-2">Types of Fleas</h2>
+          <h2 className="text-xl font-semibold text-primary text-center mb-2">Types of flies</h2>
           <p className="text-gray-700">
-            Different flea species have varying host preferences, but all can become problematic when they infest homes with pets or in areas with high rodent populations.
+            From household pests to agricultural threats, each fly species contributes in different ways to its ecosystem and have different human impact.
           </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {fleaTypes.map((type, index) => (
+          {flyTypes.map((type, index) => (
             <Link href={type.link} key={index}>
               <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <Image
@@ -209,9 +217,9 @@ export default function FleasTypesPage() {
         </div>
         
         <FAQSection 
-          faqs={fleasFaqData}
-          title="Frequently Asked Questions About Fleas"
-          subtitle="Get answers to common questions about flea infestations through pets, bite patterns, natural prevention methods, and professional treatment services."
+          faqs={fliesFaqData}
+          title="Frequently Asked Questions About Flies"
+          subtitle="Get answers to common questions about fly infestations, prevention methods, health risks, and professional treatment services."
         />
       </div>
     </>
