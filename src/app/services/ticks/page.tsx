@@ -114,7 +114,7 @@ export default function TickTypesPage() {
           <p className="text-gray-700 mb-6">
             Different <b className="text-green-500">
     <Link href="https://www.saynopest.com/tick-types-most-common-in-america-saynopest">
-    types of termites
+    types of ticks
     </Link></b> live in grass and woods and feed on blood. It can be your pet&absop;s blood or your own. Although they’re small, their bites can spread serious diseases. Therefore, it becomes important to be careful and check for them after being outside.
           </p>
 

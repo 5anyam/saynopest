@@ -123,19 +123,13 @@ export async function generateMetadata(): Promise<Metadata> {
 const flyTypes = [
   {
     name: "House Fly",
-    image: "/types/flies/house-fly.jpg",
+    image: "/types/flies/black-fly.jpg",
     description: "The most common fly species found in homes. Gray or black bodies that feed on garbage, food waste, and organic matter.",
     link: "https://www.saynopest.com/how-to-get-rid-of-house-flies/"
   },
   {
-    name: "Fruit Fly", 
-    image: "/types/flies/fruit-fly.jpg",
-    description: "Small flies attracted to overripe fruits and sugary substances. Commonly found in kitchens and around food storage areas.",
-    link: "https://www.saynopest.com/fruit-flies/"
-  },
-  {
     name: "Drain Fly",
-    image: "/types/flies/drain-fly.jpg", 
+    image: "/types/flies/crane-fly.jpg", 
     description: "Small, fuzzy flies that breed in drains and sewers. Often found in bathrooms and areas with standing water or organic buildup.",
     link: "https://www.saynopest.com/how-do-i-get-rid-of-drain-flies-overnight-saynopest"
   },
