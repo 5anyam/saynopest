@@ -1,27 +1,37 @@
 import { Metadata } from "next";
 import Link from "next/link";
-//ximport Image from "next/image";
+import Image from "next/image";
 
-// const fleaTypes = [
-//   {
-//     name: "Aedes Mosquitoes",
-//     image: "/types/mosquitoes/aedes-mosquitoes.jpg",
-//     description:
-//       "Recognized by white markings on its legs and a marking in the form of a lyre on the upper thorax. It spreads diseases like Zika, dengue, and yellow fever. Mostly active during the daytime."
-//   },
-//   {
-//     name: "Anopheles Mosquito",
-//     image: "/types/mosquitoes/anopheles-mosquito.jpg",
-//     description:
-//       "Black with distinct white stripes on the legs and a white stripe down the center of its back. Known for aggressive daytime biting and spreading viruses like chikungunya, dengue, and Zika."
-//   },
-//   {
-//     name: "Culex Mosquitoes",
-//     image: "/types/mosquitoes/culex-mosquitoes.jpg",
-//     description:
-//       "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains."
-//   }
-// ];
+const fleaTypes = [
+  {
+    name: "Cat Flea",
+    image: "/types/flies/cat-flea.jpg",
+    description:
+      "Recognized by white markings on its legs and a marking in the form of a lyre on the upper thorax. It spreads diseases like Zika, dengue, and yellow fever. Mostly active during the daytime.",
+    link: "https://www.saynopest.com/fire-ants-behavior-habitat-and-impact-on-human-health-and-environment"
+  },
+  {
+    name: "Dog Flea",
+    image: "/types/flies/dog-flea.jpg",
+    description:
+      "Black with distinct white stripes on the legs and a white stripe down the center of its back. Known for aggressive daytime biting and spreading viruses like chikungunya, dengue, and Zika.",
+    link:"https://www.saynopest.com/human-flea-rare-but-possible-infestations-explained"
+  },
+  {
+    name: "Human Flea",
+    image: "/types/flies/humanflea.jpg",
+    description:
+      "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains.",
+    link: "https://www.saynopest.com/human-flea-rare-but-possible-infestations-explained"
+  },
+  {
+    name: "Orient Rat Flea",
+    image: "/types/flies/orient-flea.jpg",
+    description:
+      "Black with distinct white stripes on the legs and a white stripe down the center of its back. Known for aggressive daytime biting and spreading viruses like chikungunya, dengue, and Zika.",
+    link:"https://www.saynopest.com/oriental-rat-flea-disease-transmission"
+  },
+];
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
@@ -130,13 +140,13 @@ export default function FleaTypesPage() {
   Flea bites can cause discomfort, allergic reactions, and transmit diseases such as murine typhus, plague, and cat scratch disease. They can also carry tapeworms that pose health risks to both pets and humans. Regular flea treatment for pets, maintaining cleanliness, and controlling humidity indoors are essential steps to prevent infestations and protect family members.
 </p>
 
-{/* <h2 className="text-xl font-semibold text-primary text-center mb-2">Types of Fleas</h2>
+<h2 className="text-xl font-semibold text-primary text-center mb-2">Types of Fleas</h2>
 <p className="text-gray-700">
   Despite their size, fleas are a diverse group of parasites, each adapted with impressive survival tactics for living on different hosts and in varying environments.
-</p> */}
+</p>
         </div>
 
-        {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {fleaTypes.map((type, index) => (
             <div
               key={index}
@@ -157,7 +167,7 @@ export default function FleaTypesPage() {
               </div>
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
       </>
   );

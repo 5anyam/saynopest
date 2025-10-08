@@ -125,10 +125,10 @@ export async function generateMetadata(): Promise<Metadata> {
 const antTypes = [
   {
     name: "Fire Ant",
-    image: "/types/grease-ants.jpg",
+    image: "/types/fire-ants.jpg",
     description:
       "Known for their aggressive nature and painful stings, fire ants build large mounds in yards and can pose serious health risks, especially to children and pets.",
-    link: "https://www.saynopest.com/fire-ants-vs-red-ants-saynopest/"
+    link: "https://www.saynopest.com/fire-ants-behavior-habitat-and-impact-on-human-health-and-environment"
   },
   {
     name: "Twig Ant",
@@ -139,10 +139,10 @@ const antTypes = [
   },
   {
     name: "Argentine Ant",
-    image: "https://static.saynopest.com/wp-content/uploads/2025/07/ants.jpg",
+    image: "/types/argentine-ants.jpg",
     description:
       "Highly invasive species that form massive super-colonies. They're particularly common in California and can quickly overwhelm native ant species.",
-    link: "https://www.saynopest.com/california-argentine-ants-saynopest/"
+    link: "https://www.saynopest.com/argentine-ant-global-spread-and-invasive-behaviour"
   },
   {
     name: "Carpenter Ant",
