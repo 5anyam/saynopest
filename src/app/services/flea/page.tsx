@@ -7,36 +7,36 @@ const fleaTypes = [
     name: "Cat Flea",
     image: "/types/flies/cat-flea.jpg",
     description:
-      "Recognized by white markings on its legs and a marking in the form of a lyre on the upper thorax. It spreads diseases like Zika, dengue, and yellow fever. Mostly active during the daytime.",
-    link: "https://www.saynopest.com/fire-ants-behavior-habitat-and-impact-on-human-health-and-environment"
+      "The most common flea species affecting both cats and dogs. Small, dark reddish-brown insects capable of jumping up to 8 inches vertically to find a host.",
+    link: "https://www.saynopest.com/cat-flea-prevention-treatment"
   },
   {
     name: "Dog Flea",
     image: "/types/flies/dog-flea.jpg",
     description:
-      "Black with distinct white stripes on the legs and a white stripe down the center of its back. Known for aggressive daytime biting and spreading viruses like chikungunya, dengue, and Zika.",
-    link:"https://www.saynopest.com/human-flea-rare-but-possible-infestations-explained"
+      "Similar to cat fleas but slightly larger and prefer dogs as their primary host. They can also infest cats and will bite humans when pet hosts are unavailable.",
+    link: "https://www.saynopest.com/dog-flea-identification-control"
   },
   {
     name: "Human Flea",
     image: "/types/flies/humanflea.jpg",
     description:
-      "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains.",
+      "Less common today due to improved hygiene standards. These fleas can live in human hair and bedding, causing itchy bites primarily on legs and feet.",
     link: "https://www.saynopest.com/human-flea-rare-but-possible-infestations-explained"
   },
   {
-    name: "Orient Rat Flea",
+    name: "Oriental Rat Flea",
     image: "/types/flies/orient-flea.jpg",
     description:
-      "Black with distinct white stripes on the legs and a white stripe down the center of its back. Known for aggressive daytime biting and spreading viruses like chikungunya, dengue, and Zika.",
-    link:"https://www.saynopest.com/oriental-rat-flea-disease-transmission"
+      "Primary vector for plague transmission and historically significant. Usually found on rodents but will bite humans when rodent hosts become unavailable.",
+    link: "https://www.saynopest.com/oriental-rat-flea-disease-transmission"
   },
 ];
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://www.saynopest.com/services';
   const canonicalUrl = `${baseUrl}/flea`;
-  const featuredImage = `${baseUrl}/types/ants-hero-image.jpg`; // or use your main ant image
+  const featuredImage = `${baseUrl}/types/flea-hero-image.jpg`;
   
   const title = "Professional Flea Treatments, Effective & Safe | SayNoPest";
   const description = "Protect your home from fleas with safe, professional treatments. SayNoPest links you to reliable providers for effective, lasting results.";
@@ -44,7 +44,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: title,
     description: description,
-    keywords: "ants, ant types, fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, ant identification, pest control, ant removal, ant infestation",
+    keywords: "flea control, cat flea, dog flea, human flea, rat flea, flea types, flea identification, pest control, flea removal, flea infestation, flea treatment",
     authors: [{ name: 'Say No Pest' }],
     creator: 'Say No Pest',
     publisher: 'Say No Pest',
@@ -60,7 +60,7 @@ export async function generateMetadata(): Promise<Metadata> {
           url: featuredImage,
           width: 1200,
           height: 630,
-          alt: "Common types of ants found in US homes - identification guide",
+          alt: "Common types of fleas found in US homes - identification guide",
         },
       ],
       locale: 'en_US',
@@ -99,12 +99,12 @@ export async function generateMetadata(): Promise<Metadata> {
     
     // Additional structured metadata
     other: {
-      'article:section': 'Ant Control',
-      'article:tag': 'fire ants, carpenter ants, pavement ants, army ants, twig ants, argentine ants, pest identification',
-      'og:image:alt': 'Guide to common ant types found in US homes',
-      'twitter:image:alt': 'Guide to common ant types found in US homes',
+      'article:section': 'Flea Control',
+      'article:tag': 'cat flea, dog flea, human flea, rat flea, oriental rat flea, flea identification, pest control',
+      'og:image:alt': 'Guide to common flea types found in US homes',
+      'twitter:image:alt': 'Guide to common flea types found in US homes',
       // Schema.org hints
-      'schema:breadcrumb': 'Home > Pest Control > Ants > Ant Types',
+      'schema:breadcrumb': 'Home > Pest Control > Fleas > Flea Types',
       'geo:region': 'US',
       'geo:placename': 'United States',
     },
@@ -148,24 +148,22 @@ export default function FleaTypesPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
           {fleaTypes.map((type, index) => (
-            <div
-              key={index}
-              className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300"
-            >
-              <Image
-                src={type.image}
-                alt={type.name}
-                width={600}
-                height={400}
-                className="w-full h-60 object-cover"
-              />
-              <div className="p-4 text-center">
-                <h2 className="text-xl font-semibold text-primary mb-2">
-                  {type.name}
-                </h2>
-                
+            <Link href={type.link} key={index}>
+              <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                <Image
+                  src={type.image}
+                  alt={type.name}
+                  width={600}
+                  height={400}
+                  className="w-full h-60 object-cover"
+                />
+                <div className="p-4 text-center">
+                  <h2 className="text-xl font-semibold text-primary mb-2">
+                    {type.name}
+                  </h2>
+                </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
