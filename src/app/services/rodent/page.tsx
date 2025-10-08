@@ -132,6 +132,24 @@ const miceTypes = [
     image: "https://static.saynopest.com/wp-content/uploads/2025/07/mice.jpg",
     description: "Small, agile rodents that reproduce rapidly and can spread diseases through contaminated food and surfaces. They prefer warm, hidden areas for nesting.",
     link: "https://www.saynopest.com/types-of-house-mice-in-the-u-s",
+  },
+  {
+    name: "Raccoons",
+    image: "types/rodents/raccoons.jpg",
+    description: "Small, agile rodents that reproduce rapidly and can spread diseases through contaminated food and surfaces. They prefer warm, hidden areas for nesting.",
+    link: "https://www.saynopest.com/raccoons-behavior-diet-and-habitat",
+  },
+  {
+    name: "Chipmunks",
+    image: "types/rodents/chipmunks.jpg",
+    description: "Small, agile rodents that reproduce rapidly and can spread diseases through contaminated food and surfaces. They prefer warm, hidden areas for nesting.",
+    link: "https://www.saynopest.com/chipmunks-identification-and-lifestyle",
+  },
+  {
+    name: "Squirrels",
+    image: "types/rodents/squirrels.jpg",
+    description: "Small, agile rodents that reproduce rapidly and can spread diseases through contaminated food and surfaces. They prefer warm, hidden areas for nesting.",
+    link: "https://www.saynopest.com/squirrels-types-characteristics-and-habits/",
   }
 ];
 
