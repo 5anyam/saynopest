@@ -149,7 +149,7 @@ const antTypes = [
     image: "/types/carpenter-ant.jpg",
     description:
       "Large black ants that tunnel through wood to create their nests. Unlike termites, they don't eat wood but can cause significant structural damage.",
-    link: "https://www.saynopest.com/carpenter-ants-vs-black-ants-saynopest/"
+    link: "https://www.saynopest.com/carpenter-ant-wood-nesting-habits-and-identification"
   },
   {
     name: "Pavement Ant",

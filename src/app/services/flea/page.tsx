@@ -8,7 +8,7 @@ const fleaTypes = [
     image: "/types/flies/cat-flea.jpg",
     description:
       "The most common flea species affecting both cats and dogs. Small, dark reddish-brown insects capable of jumping up to 8 inches vertically to find a host.",
-    link: "https://www.saynopest.com/cat-flea-prevention-treatment"
+    link: "https://saynopest.com/cat-flea-this-is-the-worldwide-most-prevalent-fleet-of-fleas/"
   },
   {
     name: "Dog Flea",
