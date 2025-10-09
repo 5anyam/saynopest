@@ -96,6 +96,49 @@ export default function RootLayout({
     ]
   };
 
+  // Breadcrumb Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.saynopest.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Services",
+        "item": "https://www.saynopest.com/services"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Pest Library",
+        "item": "https://www.saynopest.com/pest-library"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Blogs",
+        "item": "https://www.saynopest.com/blogs"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "About Us",
+        "item": "https://www.saynopest.com/about-us"
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "name": "Contact Us",
+        "item": "https://www.saynopest.com/contact-us"
+      }
+    ]
+  };
 
   return (
     <html lang="en">
@@ -172,6 +215,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(localBusinessSchema).replace(/</g, '\\u003c'),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(breadcrumbSchema).replace(/</g, '\\u003c'),
           }}
         />
 
