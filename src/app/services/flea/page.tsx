@@ -12,10 +12,10 @@ const fleaTypes = [
   },
   {
     name: "Dog Flea",
-    image: "/types/flies/dog-flea.jpg",
+    image: "/types/flies/DogFlea.jpg",
     description:
       "Similar to cat fleas but slightly larger and prefer dogs as their primary host. They can also infest cats and will bite humans when pet hosts are unavailable.",
-    link: "https://www.saynopest.com/dog-flea-identification-control"
+    link: "https://www.saynopest.com/dog-flea-identification-behaviour-and-habitat"
   },
   {
     name: "Human Flea",
