@@ -33,6 +33,14 @@ export const metadata: Metadata = {
     images: ["/saynopest-logo.png"],
   },
   metadataBase: new URL("https://www.saynopest.com"),
+  // Add hreflang through alternates
+  alternates: {
+    canonical: "https://www.saynopest.com",
+    languages: {
+      'en-US': 'https://www.saynopest.com',
+      'x-default': 'https://www.saynopest.com',
+    },
+  },
 };
 
 export default function RootLayout({
@@ -149,7 +157,7 @@ export default function RootLayout({
           src="https://cdn-cookieyes.com/client_data/5f6936e797dbab1bcbc19be4/script.js"
           strategy="afterInteractive"
         />
-        <link rel="alternate" hreflang="en-US" href="https://www.saynopest.com/"/>
+        
         {/* SEO Meta Tags */}
         <meta
           name="google-adsense-account"
@@ -189,7 +197,6 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-5PWLLD2N');
           `}
         </Script>
-        
       </head>
       <body
         className={`${inter.className} antialiased overflow-y-scroll w-full overflow-x-hidden`}
