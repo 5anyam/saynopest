@@ -135,20 +135,20 @@ const miceTypes = [
   },
   {
     name: "Raccoons",
-    image: "types/rodents/raccoons.jpg",
-    description: "Small, agile rodents that reproduce rapidly and can spread diseases through contaminated food and surfaces. They prefer warm, hidden areas for nesting.",
+    image: "/types/rodents/raccoons.jpg",
+    description: "Intelligent mammals known for their distinctive masked faces and dexterous paws. They can cause property damage and carry rabies.",
     link: "https://www.saynopest.com/raccoons-behavior-diet-and-habitat",
   },
   {
     name: "Chipmunks",
-    image: "types/rodents/chipmunks.jpg",
-    description: "Small, agile rodents that reproduce rapidly and can spread diseases through contaminated food and surfaces. They prefer warm, hidden areas for nesting.",
+    image: "/types/rodents/chipmunks.jpg",
+    description: "Small striped rodents that burrow and store food. While mostly outdoor pests, they can damage gardens and foundations.",
     link: "https://www.saynopest.com/chipmunks-identification-and-lifestyle",
   },
   {
     name: "Squirrels",
-    image: "types/rodents/squirrels.jpg",
-    description: "Small, agile rodents that reproduce rapidly and can spread diseases through contaminated food and surfaces. They prefer warm, hidden areas for nesting.",
+    image: "/types/rodents/squirrels.jpg",
+    description: "Tree-dwelling rodents that can invade attics and cause damage by chewing wires and insulation. They're active during the day.",
     link: "https://www.saynopest.com/squirrels-types-characteristics-and-habits/",
   }
 ];
@@ -167,7 +167,8 @@ export default function RodentsPage() {
       />
 
       <div className="min-h-screen mt-20 p-6">
-        <div className="max-w-full mx-auto p-6 bg-white rounded-lg shadow-md mb-10">
+        {/* Content Section */}
+        <div className="max-w-full mx-auto p-6 bg-white rounded-lg shadow-md mb-16">
           <h1 className="text-2xl text-center font-bold text-primary mb-4">Rodents</h1>
 
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Appearance</h2>
@@ -190,14 +191,18 @@ export default function RodentsPage() {
 
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Types of Rodent Infestation</h2>
           <p className="text-gray-700 mb-6">
-            Various <b className="text-green-500">
-    <Link href="https://www.saynopest.com/discover-how-to-get-rid-of-mice-without-losing-your-mind-saynopest">
-    types of rodents
-    </Link></b> can invade homes easily, making them a major concern. Rodent
+            Various{" "}
+            <b className="text-green-500">
+              <Link href="https://www.saynopest.com/discover-how-to-get-rid-of-mice-without-losing-your-mind-saynopest">
+                types of rodents
+              </Link>
+            </b>{" "}
+            can invade homes easily, making them a major concern. Rodent
             problems affect over 16 million homes and around 38 million people across the U.S.
             Infestations are especially common in rural areas, colder regions, and older or darker
             homes.
           </p>
+
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Need for Rodent Control</h2>
           <p className="text-gray-700 mb-6">
             Rodents can carry and spread harmful diseases such as Hantavirus, Leptospirosis, and
@@ -207,18 +212,19 @@ export default function RodentsPage() {
           </p>
 
           <h2 className="text-2xl font-semibold text-primary text-center mb-2">Types of Rodents</h2>
-          <p className="text-gray-700">
+          <p className="text-gray-700 text-center mb-8">
             There are several types of rodents found across the United States. Recognizing them is
             the first step in determining the best way to eliminate them and prevent future
             infestations.
           </p>
         </div>
 
-        <div className="flex justify-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
+        {/* Rodent Types Grid - Centered */}
+        <div className="flex justify-center mb-16">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl">
             {miceTypes.map((type, index) => (
               <Link href={type.link} key={index}>
-                <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 max-w-sm">
+                <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
                   <Image
                     src={type.image}
                     alt={type.name}
@@ -226,7 +232,7 @@ export default function RodentsPage() {
                     height={400}
                     className="w-full h-60 object-cover"
                   />
-                  <div className="p-2 text-center">
+                  <div className="p-4 text-center">
                     <h2 className="text-xl font-semibold text-primary mb-2">{type.name}</h2>
                   </div>
                 </div>
@@ -234,7 +240,8 @@ export default function RodentsPage() {
             ))}
           </div>
         </div>
-        
+
+        {/* FAQ Section - Separate and Full Width */}
         <FAQSection 
           faqs={rodentsFaqData}
           title="Frequently Asked Questions About Rodents"

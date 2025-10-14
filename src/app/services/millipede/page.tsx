@@ -143,6 +143,7 @@ export default function MillipedeTypesPage() {
       />
 
       <div className="min-h-screen mt-20 p-6">
+        {/* Content Section */}
         <div className="max-w-full mx-auto mb-16">
           <h1 className="text-2xl font-bold text-primary text-center mb-4">Millipedes</h1>
 
@@ -163,9 +164,11 @@ export default function MillipedeTypesPage() {
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Know What do Millipedes Eat</h2>
           <p className="text-gray-700 mb-6">
             <b className="text-green-500">
-    <Link href="https://www.saynopest.com/what-do-millipedes-eat">
-    what do millipedes eat?
-    </Link></b>{" "}Millipedes are decomposers. They feed on dead and decaying leaves and wood. These pests are important because they offer nutrients to the soil. These pests are important because they help return nutrients to the soil. If the diet available is not sufficient, it is then that they might feed on leaves. At the same time, they do not pose a serious threat to the stability of the environment or the safety of your home. Curled up to form a spiral shape, millipedes have an advanced defense mechanism - their bodies emit a fluid that has a very unpleasant odour and thus are avoided by their enemies. 
+              <Link href="https://www.saynopest.com/what-do-millipedes-eat">
+                what do millipedes eat?
+              </Link>
+            </b>{" "}
+            Millipedes are decomposers. They feed on dead and decaying leaves and wood. These pests are important because they offer nutrients to the soil. These pests are important because they help return nutrients to the soil. If the diet available is not sufficient, it is then that they might feed on leaves. At the same time, they do not pose a serious threat to the stability of the environment or the safety of your home. Curled up to form a spiral shape, millipedes have an advanced defense mechanism - their bodies emit a fluid that has a very unpleasant odour and thus are avoided by their enemies. 
           </p>
 
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Infestations and Control</h2>
@@ -174,37 +177,39 @@ export default function MillipedeTypesPage() {
           </p>
 
           <h2 className="text-xl font-semibold text-primary text-center mb-2">Types of Millipedes</h2>
-          <p className="text-gray-700">
+          <p className="text-gray-700 text-center mb-8">
             While generally harmless, different millipede species in the U.S. can become occasional household nuisances. 
           </p>
         </div>
 
-        <div className="flex justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
-          {millipedeTypes.map((type, index) => (
-            <Link href={type.link} key={index}>
-            <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300">
-              <Image
-                src={type.image}
-                alt={type.name}
-                width={600}
-                height={400}
-                className="w-full h-60 object-cover"
-              />
-              <div className="p-2 text-center">
-                <h2 className="text-xl font-semibold text-primary mb-2">{type.name}</h2>
-              </div>
-            </div>
-          </Link>
-          ))}
+        {/* Millipede Types Grid - Centered */}
+        <div className="flex justify-center mb-16">
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-10 max-w-4xl">
+            {millipedeTypes.map((type, index) => (
+              <Link href={type.link} key={index}>
+                <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                  <Image
+                    src={type.image}
+                    alt={type.name}
+                    width={600}
+                    height={400}
+                    className="w-full h-60 object-cover"
+                  />
+                  <div className="p-4 text-center">
+                    <h2 className="text-xl font-semibold text-primary mb-2">{type.name}</h2>
+                  </div>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
-        
+
+        {/* FAQ Section - Separate and Full Width */}
         <FAQSection 
           faqs={millipedesFaqData}
           title="Frequently Asked Questions About Millipedes"
           subtitle="Get answers to common questions about millipede identification, seasonal behavior, safety concerns, and natural prevention methods."
         />
-        </div>
       </div>
     </>
   );

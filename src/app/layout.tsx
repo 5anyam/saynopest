@@ -149,7 +149,7 @@ export default function RootLayout({
           src="https://cdn-cookieyes.com/client_data/5f6936e797dbab1bcbc19be4/script.js"
           strategy="afterInteractive"
         />
-
+        <link rel="alternate" hreflang="en-US" href="https://www.saynopest.com/"/>
         {/* SEO Meta Tags */}
         <meta
           name="google-adsense-account"

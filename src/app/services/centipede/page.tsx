@@ -151,6 +151,7 @@ export default function CentipedeTypesPage() {
       />
 
       <div className="min-h-screen mt-20 p-6">
+        {/* Content Section */}
         <div className="max-w-full mx-auto mb-14">
           <h1 className="text-2xl text-center font-bold text-primary mb-4">Centipedes</h1>
 
@@ -188,39 +189,41 @@ export default function CentipedeTypesPage() {
           </p>
 
           <h2 className="text-2xl font-semibold text-center text-primary mb-2">Types of Centipedes</h2>
-          <p className="text-gray-700">
+          <p className="text-gray-700 text-center mb-8">
             Explore the variety of centipedes commonly found in U.S. homes and desert regions. Each type plays a unique role in the ecosystem—and understanding them can help in managing their presence effectively.
           </p>
         </div>
 
-        <div className="flex justify-center">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
-          {centipedeTypes.map((type, index) => (
-            <Link href={type.link} key={index}>
-              <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
-                <Image
-                  src={type.image}
-                  alt={type.name}
-                  width={600}
-                  height={400}
-                  className="w-full h-60 object-cover"
-                />
-                <div className="p-2 text-center">
-                  <h2 className="text-xl font-semibold text-primary mb-2">
-                    {type.name}
-                  </h2>
+        {/* Centipede Types Grid - Centered */}
+        <div className="flex justify-center mb-16">
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-10 max-w-4xl">
+            {centipedeTypes.map((type, index) => (
+              <Link href={type.link} key={index}>
+                <div className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-xl transition-shadow duration-300 cursor-pointer">
+                  <Image
+                    src={type.image}
+                    alt={type.name}
+                    width={600}
+                    height={400}
+                    className="w-full h-60 object-cover"
+                  />
+                  <div className="p-4 text-center">
+                    <h2 className="text-xl font-semibold text-primary mb-2">
+                      {type.name}
+                    </h2>
+                  </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            ))}
+          </div>
         </div>
-        
+
+        {/* FAQ Section - Separate and Full Width */}
         <FAQSection 
           faqs={centipedeFaqData}
           title="Frequently Asked Questions About Centipedes"
           subtitle="Get answers to common questions about centipede identification, behavior, safety concerns, and natural control methods."
         />
-        </div>
       </div>
     </>
   );
