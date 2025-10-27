@@ -199,7 +199,7 @@ export default async function BlogPage(props: {
                     })}
                   </p>
                   <Link
-                    href={`/${posts[0].slug}`}
+                    href={`/blog/${posts[0].slug}`}
                     className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors font-medium w-fit"
                   >
                     Read Full Article
@@ -234,7 +234,7 @@ export default async function BlogPage(props: {
                   key={post.id}
                   className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
                 >
-                  <Link href={`/${post.slug}`} className="block">
+                  <Link href={`/blog/${post.slug}`} className="block">
                     <div className="relative h-48 bg-gray-100">
                       {imageUrl ? (
                         <Image
