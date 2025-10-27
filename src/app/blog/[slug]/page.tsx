@@ -257,7 +257,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
                   .filter((p: any) => p.slug !== post.slug)
                   .map((related: any) => (
                     <Link
-                      href={`/${related.slug}`}
+                      href={`/blog/${related.slug}`}
                       key={related.id}
                       className="block p-4 border rounded-md hover:shadow transition bg-white"
                     >

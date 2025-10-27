@@ -182,7 +182,7 @@ export function Header() {
     </div>
   )}
 </div>
-            <Link href="/blog" className="mt-2 lg:mt-0 hover:text-gray-900">Blogs</Link>
+            <Link href="/blogs" className="mt-2 lg:mt-0 hover:text-gray-900">Blogs</Link>
             <Link href="/about" className="mt-2 lg:mt-0 hover:text-gray-900">About Us</Link>
             <Link href="/contact" className="mt-2 lg:mt-0 hover:text-gray-900">Contact Us</Link>
 

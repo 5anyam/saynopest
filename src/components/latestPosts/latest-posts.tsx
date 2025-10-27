@@ -44,7 +44,7 @@ export async function LatestPosts({
               key={post.id}
               className="border rounded-xl overflow-hidden shadow hover:shadow-lg transition bg-white flex flex-col"
             >
-              <Link href={`/${post.slug}`} className="flex flex-col h-full">
+              <Link href={`/blog/${post.slug}`} className="flex flex-col h-full">
                 {imageUrl && (
                   <div className="w-full h-72 bg-white flex items-center justify-center">
                     <Image
@@ -74,7 +74,7 @@ export async function LatestPosts({
                   </p>
                   <div className="mt-auto text-center">
                     <Link
-                      href={`/${post.slug}`}
+                      href={`/blog/${post.slug}`}
                       className="inline-block text-center bg-primary text-white px-4 py-2 rounded hover:bg-primary/90 transition"
                     >
                       Read Now
@@ -113,7 +113,7 @@ export async function LatestPosts({
             )}
           </div>
         ) : (
-          <Link href="/blog" className="text-blue-600 hover:underline">
+          <Link href="/blogs" className="text-blue-600 hover:underline">
             View More Posts
           </Link>
         )}
