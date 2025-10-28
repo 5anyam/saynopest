@@ -125,31 +125,31 @@ const miceTypes = [
     name: "Rat",
     image: "https://static.saynopest.com/wp-content/uploads/2025/07/rat.jpg",
     description: "Large rodents that can carry serious diseases like hantavirus and leptospirosis. They commonly enter homes through small openings and can cause structural damage.",
-    link: "https://www.saynopest.com/how-to-get-rid-of-rats-effective-solutions",
+    link: "https://www.saynopest.com/blog/how-to-get-rid-of-rats-effective-solutions",
   },
   {
     name: "Mice",
     image: "https://static.saynopest.com/wp-content/uploads/2025/07/mice.jpg",
     description: "Small, agile rodents that reproduce rapidly and can spread diseases through contaminated food and surfaces. They prefer warm, hidden areas for nesting.",
-    link: "https://www.saynopest.com/types-of-house-mice-in-the-u-s",
+    link: "https://www.saynopest.com/blog/types-of-house-mice-in-the-u-s",
   },
   {
     name: "Raccoons",
     image: "/types/rodents/raccoons.jpg",
     description: "Intelligent mammals known for their distinctive masked faces and dexterous paws. They can cause property damage and carry rabies.",
-    link: "https://www.saynopest.com/raccoons-behavior-diet-and-habitat",
+    link: "https://www.saynopest.com/blog/raccoons-behavior-diet-and-habitat",
   },
   {
     name: "Chipmunks",
     image: "/types/rodents/chipmunks.jpg",
     description: "Small striped rodents that burrow and store food. While mostly outdoor pests, they can damage gardens and foundations.",
-    link: "https://www.saynopest.com/chipmunks-identification-and-lifestyle",
+    link: "https://www.saynopest.com/blog/chipmunks-identification-and-lifestyle",
   },
   {
     name: "Squirrels",
     image: "/types/rodents/squirrels.jpg",
     description: "Tree-dwelling rodents that can invade attics and cause damage by chewing wires and insulation. They're active during the day.",
-    link: "https://www.saynopest.com/squirrels-types-characteristics-and-habits/",
+    link: "https://www.saynopest.com/blog/squirrels-types-characteristics-and-habits/",
   }
 ];
 
@@ -193,7 +193,7 @@ export default function RodentsPage() {
           <p className="text-gray-700 mb-6">
             Various{" "}
             <b className="text-green-500">
-              <Link href="https://www.saynopest.com/discover-how-to-get-rid-of-mice-without-losing-your-mind-saynopest">
+              <Link href="https://www.saynopest.com/blog/discover-how-to-get-rid-of-mice-without-losing-your-mind-saynopest">
                 types of rodents
               </Link>
             </b>{" "}

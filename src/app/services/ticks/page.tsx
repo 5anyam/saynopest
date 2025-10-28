@@ -86,21 +86,21 @@ const tickTypes = [
     image: "/blacklegged-tick.jpg",
     description:
       "Commonly found in the Northeast and Upper Midwest, these ticks are the primary vectors of Lyme disease. They are small, dark-colored, and feed on both animals and humans.",
-      link:"https://www.saynopest.com/life-cycle-of-blacklegged-deer-tick-a-2-year-process-saynopest/"
+      link:"https://www.saynopest.com/blog/life-cycle-of-blacklegged-deer-tick-a-2-year-process-saynopest/"
   },
   {
     name: "Lone Star Tick",
     image: "/lone-star-tick.jpg",
     description:
       "Easily recognized by the single white dot on the female's back, this tick is aggressive and known to transmit ehrlichiosis and Southern tick-associated rash illness (STARI).",
-      link:"https://www.saynopest.com/the-lone-star-tick/"
+      link:"https://www.saynopest.com/blog/the-lone-star-tick/"
   },
   {
     name: "American Dog Tick",
     image: "/american-dog-tick.jpg",
     description:
       "Often seen around sidewalks and driveways, pavement ants can enter buildings in search of food, especially sugary substances and grease.",
-    link:"https://www.saynopest.com/is-american-dog-tick-dangerous/"
+    link:"https://www.saynopest.com/blog/is-american-dog-tick-dangerous/"
   },
 ];
 
@@ -113,7 +113,7 @@ export default function TickTypesPage() {
 
           <p className="text-gray-700 mb-6">
             Different <b className="text-green-500">
-    <Link href="https://www.saynopest.com/tick-types-most-common-in-america-saynopest">
+    <Link href="https://www.saynopest.com/blog/tick-types-most-common-in-america-saynopest">
     types of ticks
     </Link></b> live in grass and woods and feed on blood. It can be your pet&absop;s blood or your own. Although they’re small, their bites can spread serious diseases. Therefore, it becomes important to be careful and check for them after being outside.
           </p>

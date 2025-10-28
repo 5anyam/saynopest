@@ -48,28 +48,28 @@ const fleaTypes = [
     image: "/types/flies/cat-flea.jpg",
     description:
       "The most common flea species affecting both cats and dogs. Small, dark reddish-brown insects capable of jumping up to 8 inches vertically to find a host.",
-    link: "https://saynopest.com/cat-flea-this-is-the-worldwide-most-prevalent-fleet-of-fleas/"
+    link: "https://saynopest.com/blog/cat-flea-this-is-the-worldwide-most-prevalent-fleet-of-fleas/"
   },
   {
     name: "Dog Flea",
     image: "/types/flies/DogFlea.jpg",
     description:
       "Similar to cat fleas but slightly larger and prefer dogs as their primary host. They can also infest cats and will bite humans when pet hosts are unavailable.",
-    link: "https://www.saynopest.com/dog-flea-identification-behaviour-and-habitat"
+    link: "https://www.saynopest.com/blog/dog-flea-identification-behaviour-and-habitat"
   },
   {
     name: "Human Flea",
     image: "/types/flies/humanflea.jpg",
     description:
       "Less common today due to improved hygiene standards. These fleas can live in human hair and bedding, causing itchy bites primarily on legs and feet.",
-    link: "https://www.saynopest.com/human-flea-rare-but-possible-infestations-explained"
+    link: "https://www.saynopest.com/blog/human-flea-rare-but-possible-infestations-explained"
   },
   {
     name: "Oriental Rat Flea",
     image: "/types/flies/orient-flea.jpg",
     description:
       "Primary vector for plague transmission and historically significant. Usually found on rodents but will bite humans when rodent hosts become unavailable.",
-    link: "https://www.saynopest.com/oriental-rat-flea-disease-transmission"
+    link: "https://www.saynopest.com/blog/oriental-rat-flea-disease-transmission"
   },
 ];
 
@@ -182,7 +182,7 @@ export default function FleaTypesPage() {
           <p className="text-gray-700 mb-6">
             Fleas thrive on warm-blooded animals such as dogs, cats, and rodents, and will bite humans when needed. While they are more active in warm seasons, they can survive year-round indoors due to consistent heating and cozy conditions. In the U.S.,{" "}
             <b className="text-green-500">
-              <Link href="https://www.saynopest.com/why-choose-a-flea-treatment-service">
+              <Link href="https://www.saynopest.com/blog/why-choose-a-flea-treatment-service">
                 flea infestations
               </Link>
             </b>{" "}

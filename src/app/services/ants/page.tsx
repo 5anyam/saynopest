@@ -128,42 +128,42 @@ const antTypes = [
     image: "/types/fire-ants.jpg",
     description:
       "Known for their aggressive nature and painful stings, fire ants build large mounds in yards and can pose serious health risks, especially to children and pets.",
-    link: "https://www.saynopest.com/fire-ants-behavior-habitat-and-impact-on-human-health-and-environment"
+    link: "https://www.saynopest.com/blog/fire-ants-behavior-habitat-and-impact-on-human-health-and-environment"
   },
   {
     name: "Twig Ant",
     image: "https://static.saynopest.com/wp-content/uploads/2025/07/twig-ant.jpg",
     description:
       "Twig ants are often found nesting in dead branches and twigs. While not typically aggressive, they can invade homes near wooded areas or gardens.",
-    link: "https://www.saynopest.com/elongated-twig-ants-saynopest/"
+    link: "https://www.saynopest.com/blog/elongated-twig-ants-saynopest/"
   },
   {
     name: "Argentine Ant",
     image: "/types/argentine-ants.jpg",
     description:
       "Highly invasive species that form massive super-colonies. They're particularly common in California and can quickly overwhelm native ant species.",
-    link: "https://www.saynopest.com/argentine-ant-global-spread-and-invasive-behaviour"
+    link: "https://www.saynopest.com/blog/argentine-ant-global-spread-and-invasive-behaviour"
   },
   {
     name: "Carpenter Ant",
     image: "/types/carpenter-ant.jpg",
     description:
       "Large black ants that tunnel through wood to create their nests. Unlike termites, they don't eat wood but can cause significant structural damage.",
-    link: "https://www.saynopest.com/carpenter-ant-wood-nesting-habits-and-identification"
+    link: "https://www.saynopest.com/blog/carpenter-ant-wood-nesting-habits-and-identification"
   },
   {
     name: "Pavement Ant",
     image: "/types/pavement-ant.jpg",
     description:
       "Often seen around sidewalks and driveways, pavement ants can enter buildings in search of food, especially sugary substances and grease.",
-    link: "https://www.saynopest.com/how-to-get-rid-of-pavement-ants-permanently-saynopest"
+    link: "https://www.saynopest.com/blog/how-to-get-rid-of-pavement-ants-permanently-saynopest"
   },
   {
     name: "Army Ant",
     image: "/types/army-ant.jpg",
     description:
       "Army ants are nomadic and known for their massive swarms. While less common in the U.S., they pose a risk due to their aggressive foraging behavior.",
-    link: "https://www.saynopest.com/army-ant-bites-saynopest/"
+    link: "https://www.saynopest.com/blog/army-ant-bites-saynopest/"
   }
 ];
 
@@ -195,11 +195,11 @@ export default function AntTypesPage() {
           <p className="text-gray-700 mb-6">
             Did you ever go to your bedroom and suddenly see an army of ants in bed marching to a forgotten crumb? You are not the only one!
             This invasion of ants is a huge problem of American homeowners. No matter if its grub of sugar ants in your pantry, <b className="text-green-500">
-            <Link href="https://www.saynopest.com/ants-out-ways-on-how-to-get-rid-of-fire-ants-saynopest">
+            <Link href="https://www.saynopest.com/blog/ants-out-ways-on-how-to-get-rid-of-fire-ants-saynopest">
               fire ants 
             </Link>
           </b> in your yard, or always the <b className="text-green-500">
-            <Link href="https://www.saynopest.com/do-carpenter-ants-eat-wood-like-termites-saynopest">
+            <Link href="https://www.saynopest.com/blog/do-carpenter-ants-eat-wood-like-termites-saynopest">
               carpenter ants
             </Link>
           </b> coming from nowhere to sneak into your walls, these annoying creatures are very good

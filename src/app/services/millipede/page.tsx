@@ -120,12 +120,12 @@ const millipedeTypes = [
   {
     name: "American Giant Millipede",
     image: "/types/millipede/american-giant-millipede.jpg",
-    link: "https://www.saynopest.com/american-giant-millipede-misunderstood-not-scary/"
+    link: "https://www.saynopest.com/blog/american-giant-millipede-misunderstood-not-scary/"
   },
   {
     name: "Pink Dragon Millipede",
     image: "/types/millipede/pink-dragon-millipede.jpg",
-    link: "https://www.saynopest.com/dragon-millipedes-explore-the-unique-pest-saynopest/"
+    link: "https://www.saynopest.com/blog/dragon-millipedes-explore-the-unique-pest-saynopest/"
   }
 ];
 
@@ -164,7 +164,7 @@ export default function MillipedeTypesPage() {
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Know What do Millipedes Eat</h2>
           <p className="text-gray-700 mb-6">
             <b className="text-green-500">
-              <Link href="https://www.saynopest.com/what-do-millipedes-eat">
+              <Link href="https://www.saynopest.com/blog/what-do-millipedes-eat">
                 what do millipedes eat?
               </Link>
             </b>{" "}

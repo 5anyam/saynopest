@@ -125,19 +125,19 @@ const flyTypes = [
     name: "House Fly",
     image: "/types/flies/black-fly.jpg",
     description: "The most common fly species found in homes. Gray or black bodies that feed on garbage, food waste, and organic matter.",
-    link: "https://www.saynopest.com/how-to-get-rid-of-house-flies/"
+    link: "https://www.saynopest.com/blog/how-to-get-rid-of-house-flies/"
   },
   {
     name: "Drain Fly",
     image: "/types/flies/crane-fly.jpg", 
     description: "Small, fuzzy flies that breed in drains and sewers. Often found in bathrooms and areas with standing water or organic buildup.",
-    link: "https://www.saynopest.com/how-do-i-get-rid-of-drain-flies-overnight-saynopest"
+    link: "https://www.saynopest.com/blog/how-do-i-get-rid-of-drain-flies-overnight-saynopest"
   },
   {
     name: "Cluster Fly",
     image: "/types/flies/cluster-fly.jpg",
     description: "Larger flies that gather in large numbers, especially during fall. They seek shelter in homes for overwintering.",
-    link: "https://www.saynopest.com/cluster-flies-in-house-know-what-to-do"
+    link: "https://www.saynopest.com/blog/cluster-flies-in-house-know-what-to-do"
   }
 ];
 
@@ -160,7 +160,7 @@ export default function FliesTypesPage() {
 
           <p className="text-gray-700 mb-6">
             Flies attack places where there is leftover food or trash. You will mostly find different{" "}
-            <Link href="https://www.saynopest.com/7-common-types-of-flies-how-to-stop-them-saynopest" className="text-green-500 font-semibold">
+            <Link href="https://www.saynopest.com/blog/7-common-types-of-flies-how-to-stop-them-saynopest" className="text-green-500 font-semibold">
               types of flies
             </Link>{" "}
             near dirty places. They do not bite, but they do carry and spread diseases. It becomes essential to keep things clean as it helps keep flies away from your home.
@@ -179,7 +179,7 @@ export default function FliesTypesPage() {
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Health Risks and Importance of Control</h2>
           <p className="text-gray-700 mb-6">
             Getting rid of flies such as{" "}
-            <Link href="https://www.saynopest.com/how-do-i-get-rid-of-drain-flies-overnight-saynopest" className="text-green-500 font-semibold">
+            <Link href="https://www.saynopest.com/blog/how-do-i-get-rid-of-drain-flies-overnight-saynopest" className="text-green-500 font-semibold">
               drain flies
             </Link>{" "}
             is of primary concern to the American population due to the presence of an ideal climate for such flies, and the availability of many spots where the reproduction process of these pests can take place. Getting rid of flies in your home is essential as they are not just a botheration but have been found to be carriers of disease. They can pass several diseases to people by contaminating food and surfaces with germs of their sources of origin.

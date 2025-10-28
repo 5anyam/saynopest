@@ -126,14 +126,14 @@ const centipedeTypes = [
     image: "/types/centipede/house-centipede.jpg",
     description:
       "Easily recognized by its long legs and fast movement, this species is commonly found in basements and bathrooms. It preys on insects and is generally harmless to humans.",
-    link: "https://www.saynopest.com/house-centipedes/",
+    link: "https://www.saynopest.com/blog/house-centipedes/",
   },
   {
     name: "Giant Desert Centipede",
     image: "/types/centipede/giant-desert-centipede.jpg",
     description:
       "One of the largest centipedes in the U.S., growing up to 8 inches. Found in the Southwest, it can deliver a painful bite but is not deadly.",
-    link: "https://www.saynopest.com/the-giant-desert-centipede-a-closer-look/",
+    link: "https://www.saynopest.com/blog/the-giant-desert-centipede-a-closer-look/",
   },
 ];
 
@@ -157,7 +157,7 @@ export default function CentipedeTypesPage() {
 
           <p className="text-gray-700 mb-6">
             <b className="text-green-500">
-              <Link href="https://www.saynopest.com/what-are-centipedes-an-in-depth-guide-for-u-s-homeowners">Centipedes</Link>
+              <Link href="https://www.saynopest.com/blog/what-are-centipedes-an-in-depth-guide-for-u-s-homeowners">Centipedes</Link>
             </b>{" "}
             are fast-moving creatures often found in damp, dark environments. Although their appearance may seem intimidating, they actually help control other insect pests and are typically harmless to humans.
           </p>
@@ -183,7 +183,7 @@ export default function CentipedeTypesPage() {
           <p className="text-gray-700 mb-6">
             Centipede infestations are fairly common in areas with high humidity or during colder seasons when they seek warmth indoors. Their presence can also indicate underlying moisture issues or an existing pest problem. Recognizing and managing a centipede infestation is important not only for comfort but also to address potential root causes. Learn{" "}
             <b className="text-green-500">
-              <Link href="https://www.saynopest.com/how-to-get-rid-of-centipedes-signs-safety-and-effective-control">how to rid of house centipedes</Link>
+              <Link href="https://www.saynopest.com/blog/how-to-get-rid-of-centipedes-signs-safety-and-effective-control">how to rid of house centipedes</Link>
             </b>{" "}
             safely and effectively to keep your living space pest-free.
           </p>

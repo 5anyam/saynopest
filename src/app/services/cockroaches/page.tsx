@@ -126,28 +126,28 @@ const cockroachTypes = [
     image: "/types/american-cockroach.jpg",
     description:
       "The American cockroach is one of the largest species commonly found in homes. It has a reddish-brown color and can grow up to 2 inches in length.",
-    link: "https://www.saynopest.com/american-cockroaches-life-cycle-nymphs-babies/"
+    link: "https://www.saynopest.com/blog/american-cockroaches-life-cycle-nymphs-babies/"
   },
   {
     name: "German Cockroach",
     image: "/types/german-cockroach.jpg",
     description:
       "German cockroaches are small, tan to light brown insects with two dark stripes on their back. They reproduce rapidly and are commonly found in kitchens.",
-    link: "https://www.saynopest.com/german-cockroaches-the-unwanted-guests-in-american-homes/"
+    link: "https://www.saynopest.com/blog/german-cockroaches-the-unwanted-guests-in-american-homes/"
   },
   {
     name: "Oriental Cockroach",
     image: "/types/oriental-cockroach.jpg",
     description:
       "Oriental cockroaches are large, dark-colored, and often found in damp environments like basements. They are slower than other types.",
-    link: "https://www.saynopest.com/oriental-cockroach-identification-life-cycle-bites-control/"
+    link: "https://www.saynopest.com/blog/oriental-cockroach-identification-life-cycle-bites-control/"
   },
   {
     name: "Brown-banded Cockroach",
     image: "/types/brown-banded-cockroach.jpg",
     description:
       "These cockroaches are smaller and lighter in color, with distinct brown bands across their wings. They prefer warm, dry places.",
-    link: "https://www.saynopest.com/brown-banded-cockroach-in-house/"
+    link: "https://www.saynopest.com/blog/brown-banded-cockroach-in-house/"
   }
 ];
 

@@ -125,7 +125,7 @@ const silverfishTypes = [
     name: "Common Silverfish",
     image: "/types/common-silverfish.jpg",
     description: "Recognized by their silvery, carrot-shaped bodies and fast movements. They are frequently found in damp and dark household areas.",
-    link: "https://www.saynopest.com/common-silverfish-saynopest",
+    link: "https://www.saynopest.com/blog/common-silverfish-saynopest",
   },
 ];
 
@@ -156,7 +156,7 @@ export default function SilverfishTypesPage() {
 
            {/* Now, the paragraph that should appear just beside the image */}
             <div className="flex flex-row items-center bg-white rounded-2xl shadow-md overflow-hidden p-6 gap-6">
-            <Link href="https://www.saynopest.com/common-silverfish-saynopest"><div className="w-full h-60 relative">
+            <Link href="https://www.saynopest.com/blog/common-silverfish-saynopest"><div className="w-full h-60 relative">
               {silverfishTypes.map((type, index) => (
               <div
                 key={index}
@@ -183,7 +183,7 @@ export default function SilverfishTypesPage() {
           <p className="text-gray-700 mb-6">
             Being herbivores,{" "}
             <b className="text-green-500">
-              <Link href="https://www.saynopest.com/where-do-silverfish-come-from-understanding-them">silverfish diet</Link>
+              <Link href="https://www.saynopest.com/blog/where-do-silverfish-come-from-understanding-them">silverfish diet</Link>
             </b>{" "}
             includes starchy materials like paper, books, wallpaper, cardboard, glue, textiles, and even dried foods such as flour, cereal, and pasta. They can also feed on synthetic fabrics and, occasionally, dead insects. While silverfish don't bite or transmit disease, they can cause significant damage to books, important documents, clothes, and food supplies.
           </p>
@@ -193,7 +193,7 @@ export default function SilverfishTypesPage() {
           <p className="text-gray-700 mb-6">
             Many American households, especially in the Southeast, Midwest, and coastal regions, are vulnerable to{" "}
             <b className="text-green-500">
-              <Link href="https://www.saynopest.com/where-do-silverfish-come-from-understanding-them">silverfish infestation</Link>
+              <Link href="https://www.saynopest.com/blog/where-do-silverfish-come-from-understanding-them">silverfish infestation</Link>
             </b>{" "}
             due to high humidity and ample food sources. Although silverfish aren't harmful to people or pets, they can contaminate food, destroy valuables, and trigger allergies through their shed scales and droppings.
           </p>

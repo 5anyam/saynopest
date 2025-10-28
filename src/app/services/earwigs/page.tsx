@@ -130,7 +130,7 @@ const earwigTypes = [
     image: "/types/european-earwig.jpg",
     description:
       "The most common species in the U.S., known for their prominent pincers. They are nocturnal, thrive in damp areas, and often enter homes in search of moisture and food.",
-    link: "https://www.saynopest.com/european-earwig",
+    link: "https://www.saynopest.com/blog/european-earwig",
   },
 ];
 
@@ -165,7 +165,7 @@ export default function EarwigTypesPage() {
           <p className="text-gray-700 mb-6">
             Being nocturnal, earwigs tend to hide during the day in damp, dark places such as under rocks, mulch, leaf litter, or logs. At night, they become active and feed on a wide variety of materials, including decomposing plant matter, live plants, fruits, flowers, and even other insects. This makes them both scavengers and occasional predators. If you spot an{" "}
             <b className="text-green-500">
-              <Link href="https://www.saynopest.com/how-to-get-rid-of-earwigs-in-house-effective-control-methods">
+              <Link href="https://www.saynopest.com/blog/how-to-get-rid-of-earwigs-in-house-effective-control-methods">
                 Earwig in house
               </Link>
             </b>
@@ -174,7 +174,7 @@ export default function EarwigTypesPage() {
 
           {/* Earwig Type with Side-by-Side Layout */}
           <div className="flex flex-col md:flex-row items-start bg-white rounded-2xl shadow-md overflow-hidden p-6 gap-6 mb-6">
-            <Link href="https://www.saynopest.com/european-earwig" className="w-full md:w-1/2">
+            <Link href="https://www.saynopest.com/blog/european-earwig" className="w-full md:w-1/2">
               <div className="relative w-full h-60 rounded-xl overflow-hidden hover:shadow-xl transition-shadow duration-300">
                 <Image
                   src={earwigTypes[0].image}
@@ -207,7 +207,7 @@ export default function EarwigTypesPage() {
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Earwig Invasion in the USA</h2>
           <p className="text-gray-700 mb-6">
             <b className="text-green-500">
-              <Link href="https://www.saynopest.com/how-to-get-rid-of-earwigs-an-authentic-guide-homeowners">
+              <Link href="https://www.saynopest.com/blog/how-to-get-rid-of-earwigs-an-authentic-guide-homeowners">
                 Earwig Infestation
               </Link>
             </b>{" "}

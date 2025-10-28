@@ -126,28 +126,28 @@ const termiteTypes = [
     image: "/types/subterranean-termites.jpg",
     description:
       "These termites build large underground colonies and require moist environments. They commonly enter homes through soil contact or foundation cracks.",
-    link: "https://www.saynopest.com/subterranean-termites-the-hidden-threat-beneath-your-home/",
+    link: "https://www.saynopest.com/blog/subterranean-termites-the-hidden-threat-beneath-your-home/",
   },
   {
     name: "Formosan Termites",
     image: "/types/formosan-termites.jpg",
     description:
       "Highly aggressive and destructive, Formosan termites can build nests underground or in walls and attics if moisture is available.",
-    link: "https://www.saynopest.com/formosan-termites",
+    link: "https://www.saynopest.com/blog/formosan-termites",
   },
   {
     name: "Drywood Termites",
     image: "/types/drywood-termites.jpg",
     description:
       "These termites live in dry wood and don't require contact with soil. They infest wooden furniture, walls, and framing above ground.",
-    link: "https://www.saynopest.com/drywood-termites-identification-eggs-elimination/",
+    link: "https://www.saynopest.com/blog/drywood-termites-identification-eggs-elimination/",
   },
   {
     name: "Dampwood Termites",
     image: "/types/dampwood-termites.jpg",
     description:
       "Larger in size, dampwood termites prefer moist, decaying wood and are commonly found in areas with high humidity or water damage.",
-    link: "https://www.saynopest.com/dampwood-termite",
+    link: "https://www.saynopest.com/blog/dampwood-termite",
   },
 ];
 
@@ -175,7 +175,7 @@ export default function TermiteTypesPage() {
           <h2 className="text-xl font-semibold text-gray-800 mb-2">The silent destroyers: How termites damage homes across U.S</h2>
           <p className="text-gray-700 mb-6">
             Termites are relatively small, soft-bodied insects ranging from approximately 1/8 to 1 inch long, depending on caste and species. Their appearance ranges from white or naturally pale cream (particularly worker termites) to off-white, to light brown, dark brown and even black with the reproductive <b className="text-green-500">
-    <Link href="https://www.saynopest.com/termite-swarm-in-usa">
+    <Link href="https://www.saynopest.com/blog/termite-swarm-in-usa">
     termite swarm
     </Link></b>. Termites are equipped with straight, beaded antennae, a straight waist (different from the pinched waist of ants) and, in the swarm stage, two equal pairs of wings.
           </p>
@@ -183,7 +183,7 @@ export default function TermiteTypesPage() {
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Termite Habitat & Behavior</h2>
           <p className="text-gray-700 mb-6">
             His habitat does not change depending on the <b className="text-green-500">
-    <Link href="https://www.saynopest.com/what-does-a-termite-look-like-a-complete-guide-2025">
+    <Link href="https://www.saynopest.com/blog/what-does-a-termite-look-like-a-complete-guide-2025">
     types of termites
     </Link></b> : Subterranean termites construct large colonies in the soil and need a moist environment; they usually enter the house through soil and foundation cracks, dry wood termites reside in dry wood above ground, and Formosan termites can also nest underground or in walls attics if they can find moist environments. In respect of behaviour, termites are social insects that dwell in large colonies and each has a specialised role, and they feed largely on cellulose materials including wood, papers and plant debris but remain hidden and cause damage only after being detected.
           </p>

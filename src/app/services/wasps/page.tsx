@@ -200,11 +200,11 @@ export default function WaspTypesPage() {
           <p className="text-gray-700 mb-6">
             Adult wasps feed on nectar and sweet substances, while larvae are fed a protein-rich diet consisting of insects and spiders brought by worker wasps. Species like{" "}
             <b className="text-green-500">
-              <Link href="https://www.saynopest.com/paper-wasp">paper wasp</Link>
+              <Link href="https://www.saynopest.com/blog/paper-wasp">paper wasp</Link>
             </b>
             ,{" "}
             <b className="text-green-500">
-              <Link href="https://www.saynopest.com/yellow-jacket-wasp-lifecycle-and-control">yellow jacket</Link>
+              <Link href="https://www.saynopest.com/blog/yellow-jacket-wasp-lifecycle-and-control">yellow jacket</Link>
             </b>
             , and hornets are social and may become aggressive when their nests are threatened. While wasps play a role in pest control and pollination, their stings can be painful and dangerous—especially for individuals with allergies.
           </p>
@@ -216,7 +216,7 @@ export default function WaspTypesPage() {
 
           <h2 className="text-3xl text-center font-bold text-primary mb-4">
             <b className="text-green-500">
-              <Link href="https://www.saynopest.com/types-of-hornets-identification-diet-pest-control-and-comparison">Types of Wasps</Link>
+              <Link href="https://www.saynopest.com/blog/types-of-hornets-identification-diet-pest-control-and-comparison">Types of Wasps</Link>
             </b>
           </h2>
           <p className="text-gray-700">

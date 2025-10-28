@@ -126,56 +126,56 @@ const spiderTypes = [
     image: "/types/spiders/black-widow-spider.jpg",
     description:
       "Easily recognized by its shiny black body and red hourglass marking on its abdomen. Found in dark, undisturbed areas like basements and garages. Its venomous bite can cause severe pain and muscle cramps.",
-    link: "https://www.saynopest.com/black-widow-spider-identification-bite-symptoms-webs/"
+    link: "https://www.saynopest.com/blog/black-widow-spider-identification-bite-symptoms-webs/"
   },
   {
     name: "Brown Recluse Spider",
     image: "/types/spiders/brown-recluse-spider.jpg",
     description:
       "Light to dark brown with a distinctive violin-shaped mark on its back. Prefers dry, undisturbed places like closets or attics. Its bite can cause serious skin damage in rare cases.",
-    link: "https://www.saynopest.com/brown-recluse-spider-what-every-american-homeowner-know/"
+    link: "https://www.saynopest.com/blog/brown-recluse-spider-what-every-american-homeowner-know/"
   },
   {
     name: "Wolf Spider",
     image: "/types/spiders/wolf-spider.jpg",
     description:
       "Large, hairy, and fast-moving. Often mistaken for tarantulas. They don't spin webs but hunt their prey and are usually found near the ground, inside or outside.",
-    link: "https://www.saynopest.com/wolf-spider-natures-agile-hunter-in-american-homes/"
+    link: "https://www.saynopest.com/blog/wolf-spider-natures-agile-hunter-in-american-homes/"
   },
   {
     name: "Jumping Spider",
     image: "/types/spiders/jumping-spider.jpg",
     description:
       "Small and compact with vivid colors and large forward-facing eyes. Known for their agility and curious behavior. Harmless to humans and very active hunters.",
-    link: "https://www.saynopest.com/jumping-spiders-meet-the-fascinating-world-of-crawlers/"
+    link: "https://www.saynopest.com/blog/jumping-spiders-meet-the-fascinating-world-of-crawlers/"
   },
   {
     name: "House Spider",
     image: "/types/spiders/house-spider.jpg",
     description:
       "Yellowish-brown with an elongated abdomen. Includes species like the American House Spider. Common in corners, ceilings, and basements where they build messy webs.",
-    link: "https://www.saynopest.com/most-common-house-spiders-in-the-united-states/"
+    link: "https://www.saynopest.com/blog/most-common-house-spiders-in-the-united-states/"
   },
   {
     name: "Yellow Sac Spider",
     image: "/types/spiders/yellow-sac-spider.jpg",
     description:
       "Pale yellow or beige spider, under half an inch long. Active at night and known for wandering instead of webbing. Its bite is mildly venomous and can cause skin irritation.",
-    link: "https://www.saynopest.com/yellow-sac-spider"
+    link: "https://www.saynopest.com/blog/yellow-sac-spider"
   },
   {
     name: "Southern House Spider",
     image: "/types/spiders/southern-house-spider.jpg",
     description:
       "Brown to gray, commonly found in southern states. Males often resemble brown recluses but are harmless. Females build funnel webs in cracks and corners.",
-    link: "https://www.saynopest.com/southern-house-spider"
+    link: "https://www.saynopest.com/blog/southern-house-spider"
   },
   {
     name: "Hobo Spider",
     image: "/types/spiders/hobo-spider.jpg",
     description:
       "Found mainly in the Pacific Northwest. Brown with chevron markings on the abdomen. Builds funnel-shaped webs and can occasionally bite, though it is not considered highly dangerous.",
-    link: "https://www.saynopest.com/hobo-spiders"
+    link: "https://www.saynopest.com/blog/hobo-spiders"
   }
 ];
 
@@ -203,7 +203,7 @@ export default function SpiderTypesPage() {
           <h2 className="text-xl font-semibold text-gray-800 mb-2">
             Meet the Eight-Legged Intruders:{" "}
             <b>
-              <Link href="https://www.saynopest.com/most-common-house-spiders-in-the-united-states">
+              <Link href="https://www.saynopest.com/blog/most-common-house-spiders-in-the-united-states">
                 <span className="text-green-500">Common House Spiders</span>
               </Link>
             </b>{" "}
@@ -213,24 +213,24 @@ export default function SpiderTypesPage() {
           <p className="text-gray-700 mb-6">
             Spiders are among the most common household pests in the U.S. They have eight legs, two body sections, and can spin silk. Appearance varies widely: black widows are shiny black with a red hourglass on their underside; brown recluses are light to dark brown with a violin-shaped mark on their backs.{" "}
             <b>
-              <Link href="https://www.saynopest.com/wolf-spider-natures-agile-hunter-in-american-homes">
+              <Link href="https://www.saynopest.com/blog/wolf-spider-natures-agile-hunter-in-american-homes">
               <span className="text-green-500"> Wolf spiders</span></Link>
             </b>{" "}
             are large, hairy, and usually gray or brown.{" "}
             <b>
-              <Link href="https://www.saynopest.com/jumping-spiders-meet-the-fascinating-world-of-crawlers">
+              <Link href="https://www.saynopest.com/blog/jumping-spiders-meet-the-fascinating-world-of-crawlers">
                 Jumping spiders
               </Link>
             </b>{" "}
             are small, colorful, and have large eyes.{" "}
             <b>
-              <Link href="https://www.saynopest.com/most-common-house-spiders-in-the-united-states">
+              <Link href="https://www.saynopest.com/blog/most-common-house-spiders-in-the-united-states">
               <span className="text-green-500"> House spiders </span>
               </Link>
             </b>{" "}
             are yellowish-brown with an elongated abdomen, while yellow sac spiders are pale yellow or beige and less than half an inch long. From fields to homes, spiders are found nearly everywhere — including{" "}
             <b>
-              <Link href="https://www.saynopest.com/discover-what-cranberry-field-spiders-are">
+              <Link href="https://www.saynopest.com/blog/discover-what-cranberry-field-spiders-are">
               <span className="text-green-500"> cranberry field spiders </span>
               </Link>
             </b>.
@@ -240,13 +240,13 @@ export default function SpiderTypesPage() {
           <p className="text-gray-700 mb-6">
             Spiders are nature's pest controllers. They feed on insects such as flies, mosquitoes, ants, and beetles—many of which are common in homes. While some spin webs to trap their prey, others like{" "}
             <b>
-              <Link href="https://www.saynopest.com/wolf-spider-natures-agile-hunter-in-american-homes">
+              <Link href="https://www.saynopest.com/blog/wolf-spider-natures-agile-hunter-in-american-homes">
               <span className="text-green-500"> wolf spiders </span>
               </Link>
             </b>{" "}
             and{" "}
             <b>
-              <Link href="https://www.saynopest.com/jumping-spiders-meet-the-fascinating-world-of-crawlers">
+              <Link href="https://www.saynopest.com/blog/jumping-spiders-meet-the-fascinating-world-of-crawlers">
               <span className="text-green-500"> jumping spider </span>
               </Link>
             </b>{" "}

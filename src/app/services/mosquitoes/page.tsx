@@ -86,21 +86,21 @@ const mosquitoTypes = [
     image: "/types/mosquitoes/aedes-mosquitoes.jpg",
     description:
       "Recognized by white markings on its legs and a marking in the form of a lyre on the upper thorax. It spreads diseases like Zika, dengue, and yellow fever. Mostly active during the daytime.",
-      link:"https://www.saynopest.com/aedes-mosquitoes-saynopest/"
+      link:"https://www.saynopest.com/blog/aedes-mosquitoes-saynopest/"
   },
   {
     name: "Anopheles Mosquito",
     image: "/types/mosquitoes/anopheles-mosquito.jpg",
     description:
       "Black with distinct white stripes on the legs and a white stripe down the center of its back. Known for aggressive daytime biting and spreading viruses like chikungunya, dengue, and Zika.",
-      link:"https://www.saynopest.com/anopheles-mosquitoes-saynopest/"
+      link:"https://www.saynopest.com/blog/anopheles-mosquitoes-saynopest/"
   },
   {
     name: "Culex Mosquitoes",
     image: "/types/mosquitoes/culex-mosquitoes.jpg",
     description:
       "Brownish in color and common in the northern U.S. They are carriers of West Nile virus and breed in stagnant water sources like birdbaths and storm drains.",
-      link:"https://www.saynopest.com/culex-mosquito-top-diseases-they-transmit-and-how-to-stay-safe/"
+      link:"https://www.saynopest.com/blog/culex-mosquito-top-diseases-they-transmit-and-how-to-stay-safe/"
   }
 ];
 
@@ -151,7 +151,7 @@ export default function MosquitoTypesPage() {
           <h2 className="text-xl font-semibold text-gray-800 mb-2">Common Mosquito Species in America </h2>
           <ul className="list-disc list-inside text-gray-700 mb-6">
             <li>Yellow fever mosquito </li>
-            <b><li className="text-green-500"><Link href="https://www.saynopest.com/aedes-mosquitoes-saynopest">Asian tiger mosquito</Link> </li></b>
+            <b><li className="text-green-500"><Link href="https://www.saynopest.com/blog/aedes-mosquitoes-saynopest">Asian tiger mosquito</Link> </li></b>
             <li>Northern house mosquito </li>
             <li>Southern house mosquito </li>
             <li>Common malaria mosquito </li>
