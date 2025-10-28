@@ -137,7 +137,7 @@ export default async function CategoryPage({
               key={post.id}
               className="border rounded-xl overflow-hidden shadow hover:shadow-lg transition bg-white flex flex-col"
             >
-              <Link href={`/${post.slug}`} className="flex flex-col h-full">
+              <Link href={`/blog/${post.slug}`} className="flex flex-col h-full">
                 {imageUrl && (
                   <div className="w-full h-72 bg-white flex items-center justify-center">
                     <Image

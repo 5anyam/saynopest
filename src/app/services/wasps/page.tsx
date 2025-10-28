@@ -125,43 +125,43 @@ const waspTypes = [
     name: "Yellowjackets",
     image: "/types/wasps/yellowjacket.jpg",
     description: "Aggressive social wasps that live in colonies and are known for their painful stings. They often build nests underground or in wall cavities.",
-    link: "https://www.saynopest.com/yellow-jacket-wasp-lifecycle-and-control/",
+    link: "https://www.saynopest.com/blog/yellow-jacket-wasp-lifecycle-and-control/",
   },
   {
     name: "Paper Wasps",
     image: "/types/wasps/paper-wasp.jpg",
     description: "Slender with long legs and brownish bodies with yellow markings. They build open, umbrella-shaped nests under eaves and ledges.",
-    link: "https://www.saynopest.com/paper-wasp",
+    link: "https://www.saynopest.com/blog/paper-wasp",
   },
   {
     name: "Bald-faced Hornet",
     image: "/types/wasps/bald-faced-hornet.jpg",
     description: "A large black and white wasp that builds large paper nests in trees and on buildings. Known for being extremely aggressive near their nests.",
-    link: "https://www.saynopest.com/bald-face-hornet/",
+    link: "https://www.saynopest.com/blog/bald-face-hornet/",
   },
   {
     name: "Mud Daubers",
     image: "/types/wasps/mud-dauber.jpg",
     description: "Solitary wasps that build tube-like nests from mud. They are generally non-aggressive and help control spider populations.",
-    link: "https://www.saynopest.com/mud-dauber-wasp-identification-nests-and-control-methods/",
+    link: "https://www.saynopest.com/blog/mud-dauber-wasp-identification-nests-and-control-methods/",
   },
   {
     name: "Digger Wasps",
     image: "/types/wasps/digger-wasp.jpg",
     description: "Ground-nesting wasps that dig burrows in sandy soil. They are solitary and prey on insects to feed their larvae.",
-    link: "https://www.saynopest.com/digger-wasp/",
+    link: "https://www.saynopest.com/blog/digger-wasp/",
   },
   {
     name: "Cicada Killer Wasps",
     image: "/types/wasps/cicada-killer.jpg",
     description: "Large wasps that paralyze cicadas and bury them as food for their young. They are not typically aggressive toward humans.",
-    link: "https://www.saynopest.com/cicada-killer-wasp/",
+    link: "https://www.saynopest.com/blog/cicada-killer-wasp/",
   },
   {
     name: "Blue-winged Wasp",
     image: "/types/wasps/blue-winged-wasp.jpg",
     description: "Recognizable by their metallic blue wings and reddish-orange body. They help control beetle larvae populations.",
-    link: "https://www.saynopest.com/blue-winged-wasp",
+    link: "https://www.saynopest.com/blog/blue-winged-wasp",
   }
 ];
 
