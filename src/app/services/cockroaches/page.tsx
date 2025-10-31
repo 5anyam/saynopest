@@ -182,20 +182,20 @@ export default function CockroachTypesPage() {
           <p className="text-gray-700 mb-6">
             Cockroaches are unmatched when it comes to flexibility and persistence in comparison with any other household pest, with many species doing well in home environments. Although{" "}
             <b className="text-green-500">
-              <Link href="https://www.saynopest.com/german-cockroaches-the-unwanted-guests-in-american-homes">
+              <Link href="https://www.saynopest.com/blog/german-cockroaches-the-unwanted-guests-in-american-homes">
                 German cockroaches
               </Link>
             </b>{" "}
             may outnumber others, such as the{" "}
             <b className="text-green-500">
-              <Link href="https://www.saynopest.com/oriental-cockroach-identification-life-cycle-bites-control">
+              <Link href="https://www.saynopest.com/blog/oriental-cockroach-identification-life-cycle-bites-control">
                 American and Oriental Cockroaches
               </Link>
             </b>, this is a common cockroach across the U.S, with reports usually being made within homes.
           </p>
           <p className="text-gray-700 mb-6">
             <b className="text-green-500">
-              <Link href="https://www.saynopest.com/american-cockroaches-life-cycle-nymphs-babies">
+              <Link href="https://www.saynopest.com/blog/american-cockroaches-life-cycle-nymphs-babies">
                 American roaches
               </Link>
             </b>{" "}
