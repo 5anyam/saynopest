@@ -165,7 +165,7 @@ export default async function CategoryPage({
                   </p>
                   <div className="mt-auto text-center">
                     <Link
-                      href={`/${post.slug}`}
+                      href={`/blog/${post.slug}`}
                       className="inline-block bg-primary text-white px-4 py-2 rounded hover:bg-primary/90 transition"
                     >
                       Read Now
