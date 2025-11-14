@@ -170,6 +170,9 @@ export default function RootLayout({
         <meta name="fo-verify" 
         content="dafa11da-0b60-458d-a0b2-6272b13e29fb" 
         />
+        <meta name="commission-factory-verification"
+         content="30b28faaa4d14941916857aeb81aa529" 
+         />
 
         {/* Google Analytics */}
         <Script
