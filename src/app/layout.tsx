@@ -167,6 +167,9 @@ export default function RootLayout({
           name="google-site-verification"
           content="SrhB-NOlpPpJPL5wP3FpRwuT1yDTE2e0SdFOtcrkfa0"
         />
+        <meta name="fo-verify" 
+        content="dafa11da-0b60-458d-a0b2-6272b13e29fb" 
+        />
 
         {/* Google Analytics */}
         <Script
