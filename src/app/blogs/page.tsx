@@ -292,7 +292,7 @@ export default async function BlogPage(props: {
             <div className="flex items-center space-x-2">
               {currentPage > 1 && (
                 <Link
-                  href={`/blog?page=${currentPage - 1}${searchTerm ? `&search=${searchTerm}` : ""}${categories ? `&categories=${categories}` : ""}`}
+                  href={`/blogs?page=${currentPage - 1}${searchTerm ? `&search=${searchTerm}` : ""}${categories ? `&categories=${categories}` : ""}`}
                   className="flex items-center px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                 >
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -310,7 +310,7 @@ export default async function BlogPage(props: {
                   return (
                     <Link
                       key={pageNum}
-                      href={`/blog?page=${pageNum}${searchTerm ? `&search=${searchTerm}` : ""}${categories ? `&categories=${categories}` : ""}`}
+                      href={`/blogs?page=${pageNum}${searchTerm ? `&search=${searchTerm}` : ""}${categories ? `&categories=${categories}` : ""}`}
                       className={`px-3 py-2 rounded-lg transition-colors ${
                         pageNum === currentPage
                           ? "bg-primary text-white"
@@ -325,7 +325,7 @@ export default async function BlogPage(props: {
 
               {currentPage < totalPages && (
                 <Link
-                  href={`/blog?page=${currentPage + 1}${searchTerm ? `&search=${searchTerm}` : ""}${categories ? `&categories=${categories}` : ""}`}
+                  href={`/blogs?page=${currentPage + 1}${searchTerm ? `&search=${searchTerm}` : ""}${categories ? `&categories=${categories}` : ""}`}
                   className="flex items-center px-4 py-2 bg-white border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors"
                 >
                   Next
