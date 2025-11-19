@@ -169,7 +169,7 @@ export default async function SearchPage({ searchParams }: SearchPageProps) {
           <div className="flex flex-col gap-6">
             {filteredPosts.map((post) => (
               <Link
-                href={`/${post.slug}`}
+                href={`/blog/${post.slug}`}
                 key={post.id}
                 className="bg-white border rounded-lg shadow hover:shadow-md transition overflow-hidden flex flex-col sm:flex-row"
               >
